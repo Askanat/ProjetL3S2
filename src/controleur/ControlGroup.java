@@ -5,10 +5,6 @@ import vue.Fenetre;
 
 import java.io.IOException;
 
-/**
- * Created by bastien on 28/09/16.
- */
-
 public class ControlGroup {
 
     public Fenetre fenetre;

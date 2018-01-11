@@ -8,15 +8,11 @@ import java.awt.*;
 import static vue.Fenetre.X;
 import static vue.Fenetre.Y;
 
-/**
- * Created by bastien on 29/09/16.
- */
-
 public class MenuPrincipal extends JPanel {
 
     private Image imageMenuPrincipal;
 
-    public JButton nouvellePartie, chargerPartie, options, credits, quitter;
+    public JButton nouvellePartie, GuideJeu, options, credits, quitter;
 
     public MenuPrincipal() {
 
@@ -27,8 +23,8 @@ public class MenuPrincipal extends JPanel {
 
         nouvellePartie = new JButton("");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        chargerPartie = new JButton("");
-        chargerPartie.setActionCommand("Charger Partie");
+        GuideJeu = new JButton("");
+        GuideJeu.setActionCommand("Charger Partie");
         options = new JButton("");
         options.setActionCommand("Options");
         credits = new JButton("");
@@ -37,7 +33,7 @@ public class MenuPrincipal extends JPanel {
         quitter.setActionCommand("Quitter");
 
         this.add(nouvellePartie);
-        this.add(chargerPartie);
+        this.add(GuideJeu);
         this.add(options);
         this.add(credits);
         this.add(quitter);
@@ -45,7 +41,7 @@ public class MenuPrincipal extends JPanel {
 
     public void setControl(ControlMenuPrincipal controlMenuPrincipal) {
         nouvellePartie.addActionListener(controlMenuPrincipal);
-        chargerPartie.addActionListener(controlMenuPrincipal);
+        GuideJeu.addActionListener(controlMenuPrincipal);
         options.addActionListener(controlMenuPrincipal);
         credits.addActionListener(controlMenuPrincipal);
         quitter.addActionListener(controlMenuPrincipal);
@@ -62,11 +58,11 @@ public class MenuPrincipal extends JPanel {
         nouvellePartie.setCursor(new Cursor(Cursor.HAND_CURSOR));
         nouvellePartie.setBorder(null);
 
-        chargerPartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        chargerPartie.setBackground(new Color(0, 0, 0, 0));
-        chargerPartie.setFocusable(false);
-        chargerPartie.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        chargerPartie.setBorder(null);
+        GuideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
+        GuideJeu.setBackground(new Color(0, 0, 0, 0));
+        GuideJeu.setFocusable(false);
+        GuideJeu.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        GuideJeu.setBorder(null);
 
         options.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(570), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         options.setBackground(new Color(0, 0, 0, 0));

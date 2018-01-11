@@ -8,10 +8,6 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-/**
- * Created by bastien on 29/09/16.
- */
-
 public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
@@ -152,11 +148,11 @@ public class FenetreJeu extends JPanel {
                     tuileImage[i][j] = tableauTuile[tuileInt[i][j]];
     }*/
 
-    /*public void setControl(ControlFenetreJeu controlFenetreJeu) {
+    public void setControl(ControlFenetreJeu controlFenetreJeu) {
         menu.addActionListener(controlFenetreJeu);
     }
 
-    protected void paintComponent(Graphics g) {
+    /*protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
         // dessine la carte

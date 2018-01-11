@@ -1,5 +1,6 @@
 package vue;
 
+import controleur.*;
 import model.Jeu;
 
 import javax.imageio.ImageIO;
@@ -11,10 +12,6 @@ import java.io.IOException;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER;
-
-/**
- * Created by bastien on 28/09/16.
- */
 
 public class Fenetre extends JFrame {
 
@@ -110,16 +107,12 @@ public class Fenetre extends JFrame {
     }
 
 
-    /*public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {
+    public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {
         panelMenuPrincipal.setControl(controlMenuPrincipal);
     }
 
-    public void setControlFenetreNouvellePartie(ControlFenetreNouvellePartie controlFenetreNouvellePartie) {
+    /*public void setControlFenetreNouvellePartie(ControlFenetreNouvellePartie controlFenetreNouvellePartie) {
         panelFenetreNouvellePartie.setControl(controlFenetreNouvellePartie);
-    }
-
-    public void setControlFenetreCreationPersonnage(ControlFenetreCreationPersonnage controlFenetreCreationPersonnage) {
-        panelFenetreCreationPersonnage.setControl(controlFenetreCreationPersonnage);
     }
 
     public void setControlFenetreOptions(ControlFenetreOptions controlFenetreOptions) {
@@ -128,13 +121,13 @@ public class Fenetre extends JFrame {
 
     public void setControlFenetreCredits(ControlFenetreCredits controlFenetreCredits) {
         panelFenetreCredits.setControl(controlFenetreCredits);
-    }
+    }*/
 
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
     }
 
-    public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
+    /*public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
         panelMenuEnJeu.setControl(controlMenuEnJeu);
     }
 
