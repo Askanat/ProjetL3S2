@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="203d8101-6a16-4468-bef2-0d1d83c7c0fc" name="Default" comment="" />
+    <list default="true" id="203d8101-6a16-4468-bef2-0d1d83c7c0fc" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/Vue/Fenetre.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -9,6 +12,27 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Vue/Fenetre.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -54,6 +78,11 @@
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -179,12 +208,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1515664423798</updated>
-      <workItem from="1515664433767" duration="132000" />
+      <workItem from="1515664433767" duration="319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132000" />
+    <option name="totallyTimeSpent" value="319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -227,5 +256,15 @@
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Vue/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
