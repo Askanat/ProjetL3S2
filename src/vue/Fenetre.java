@@ -27,12 +27,16 @@ public class Fenetre extends JFrame {
     public static int numeroPorte; // permet de selectionner la porte avec les flammes
 
     private Jeu jeu;
-    public MenuPrincipal panelMenuPrincipal;
-    public FenetreJeu panelFenetreJeu;
 
-    public static JScrollPane scrollPane;
-    public JPanel panelScrollFenetreJeu;
-    public JLayeredPane layeredPane;
+    public MenuPrincipal    panelMenuPrincipal;
+    public FenetreJeu       panelFenetreJeu;
+    public FenetreRegles    panelFenetreRegles;
+    public FenetreCredits   panelFenetreCredits;
+    public FenetreOptions   panelFenetreOptions;
+
+    public static JScrollPane   scrollPane;
+    public JPanel               panelScrollFenetreJeu;
+    public JLayeredPane         layeredPane;
 
     public Fenetre(Jeu jeu) {
 
@@ -67,13 +71,16 @@ public class Fenetre extends JFrame {
     }
 
     public void init() {
-        try {
+        /*try {
             tableauTuile = decoupage(ImageIO.read(new File("tuile/tuile.png")), DECOUPE_TUILE_EN_X, DECOUPE_TUILE_EN_Y);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
 
         panelMenuPrincipal = new MenuPrincipal();
+        panelFenetreJeu = new FenetreJeu(jeu);
+        panelFenetreRegles = new FenetreRegles();
+        panelFenetreCredits = new FenetreCredits();
 
         vueJeu();
     }
@@ -93,11 +100,6 @@ public class Fenetre extends JFrame {
         panelScrollFenetreJeu.add(scrollPane);
     }
 
-    /*public void initFenetreOptions(ControlTouche controlTouche) {
-        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
-    }*/
-
-
     public static int adapterResolutionEnX(int valeur) {
         return (int) (valeur / DEFAUT_X * X);
     }
@@ -106,13 +108,12 @@ public class Fenetre extends JFrame {
         return (int) (valeur / DEFAUT_Y * Y);
     }
 
+    public void initFenetreOptions(ControlTouche controlTouche) {
+        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
+    }
 
     public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {
         panelMenuPrincipal.setControl(controlMenuPrincipal);
-    }
-
-    /*public void setControlFenetreNouvellePartie(ControlFenetreNouvellePartie controlFenetreNouvellePartie) {
-        panelFenetreNouvellePartie.setControl(controlFenetreNouvellePartie);
     }
 
     public void setControlFenetreOptions(ControlFenetreOptions controlFenetreOptions) {
@@ -121,7 +122,11 @@ public class Fenetre extends JFrame {
 
     public void setControlFenetreCredits(ControlFenetreCredits controlFenetreCredits) {
         panelFenetreCredits.setControl(controlFenetreCredits);
-    }*/
+    }
+
+    public void setControlFenetreRegles(ControlFenetreRegles controlFenetreRegles) {
+        panelFenetreRegles.setControl(controlFenetreRegles);
+    }
 
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
@@ -129,9 +134,9 @@ public class Fenetre extends JFrame {
 
     /*public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
         panelMenuEnJeu.setControl(controlMenuEnJeu);
-    }
+    }*/
 
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
-    }*/
+    }
 }

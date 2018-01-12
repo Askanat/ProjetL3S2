@@ -13,13 +13,10 @@ public class FenetreJeu extends JPanel {
     private Jeu jeu;
 
     public static int tailleMapX, tailleMapY;
-    public static final int TAILLE_TUILE = Fenetre.adapterResolutionEnX(50);
     public static int tuileInt[][];
-    public BufferedImage tuileImage[][];
     public static Dimension ZONE;
 
-
-    private Image imageIconeSave;
+    private Image imageFenetreJeu;
     public JButton menu;
 
 
@@ -28,14 +25,9 @@ public class FenetreJeu extends JPanel {
         this.jeu = jeu;
 
         this.setLayout(null);
-        //readMap("map/mapFenetreDepart.txt");
-        tuileImage = new BufferedImage[tailleMapY][tailleMapX];
-        //chargerMap();
-
-        ZONE = new Dimension(TAILLE_TUILE * tailleMapX, TAILLE_TUILE * tailleMapY);
+        imageFenetreJeu = getToolkit().getImage("images/menuPrincipale.jpg");
         this.setPreferredSize(ZONE);
 
-        imageIconeSave = getToolkit().getImage("images/iconeSave.png");
         menu = new JButton("");
         menu.setActionCommand("Menu");
         Image img = getToolkit().getImage("images/iconeMenu.png").getScaledInstance(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(40), java.awt.Image.SCALE_SMOOTH);
@@ -107,58 +99,15 @@ public class FenetreJeu extends JPanel {
 
     }*/
 
-    /*public void readMap(String chemin) {
-        ArrayList<String> listS = new ArrayList<>();
-        int indice = 0;
-
-        File fichier = new File(chemin);
-        try {
-            FileReader reader = new FileReader(fichier);
-            BufferedReader br = new BufferedReader(reader);
-            String s;
-
-            while ((s = br.readLine()) != null) {
-                indice++;
-                listS.add(s);
-            }
-            reader.close();
-        } catch (Exception e) {
-            System.out.println("Impossible de lire le fichier");
-        }
-
-        tailleMapX = listS.get(0).split(",").length;
-        tailleMapY = indice;
-
-        tuileInt = new int[tailleMapY][tailleMapX];
-        String tableau[][] = new String[tailleMapY][tailleMapX];
-
-        for (int i = 0; i < tailleMapY; i++)
-            tableau[i] = listS.get(i).split(",");
-
-        for (int i = 0; i < tailleMapY; i++)
-            for (int j = 0; j < tailleMapX; j++)
-
-                tuileInt[i][j] = Integer.parseInt(tableau[i][j]);
-    }*/
-
-    /*public void chargerMap() {
-        for (int i = 0; i < tailleMapY; i++)
-            for (int j = 0; j < tailleMapX; j++)
-                if (tuileInt[i][j] != -1)
-                    tuileImage[i][j] = tableauTuile[tuileInt[i][j]];
-    }*/
-
     public void setControl(ControlFenetreJeu controlFenetreJeu) {
         menu.addActionListener(controlFenetreJeu);
     }
 
-    /*protected void paintComponent(Graphics g) {
+    protected void paintComponent(Graphics g) {
         super.paintComponent(g);
 
-        // dessine la carte
-        for (int i = 0; i < tailleMapY; i++)
-            for (int j = 0; j < tailleMapX; j++)
-                g.drawImage(tuileImage[i][j], TAILLE_TUILE * j, TAILLE_TUILE * i, TAILLE_TUILE, TAILLE_TUILE, this);
+        // fond du jeu
+        g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
 
         // dessine les entites
         /*for (EntiteVue e : monstre)
@@ -172,9 +121,8 @@ public class FenetreJeu extends JPanel {
         menu.setFocusable(false);
         menu.setCursor(new Cursor(Cursor.HAND_CURSOR));
         menu.setBorder(null);
+        */
 
-        if (jeu.getEtat().getSave())
-            g.drawImage(imageIconeSave, (int) (scrollPane.getViewport().getViewPosition().getX() + Fenetre.adapterResolutionEnX(5)), (int) (scrollPane.getViewport().getViewPosition().getY() + Fenetre.adapterResolutionEnY(5)), Fenetre.adapterResolutionEnX(50), Fenetre.adapterResolutionEnY(50), this);
 
-    }*/
+    }
 }

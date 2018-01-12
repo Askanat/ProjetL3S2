@@ -19,17 +19,17 @@ public class MenuPrincipal extends JPanel {
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
 
-        imageMenuPrincipal = getToolkit().getImage("images/testMenu.png");
+        imageMenuPrincipal = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        nouvellePartie = new JButton("");
+        nouvellePartie = new JButton("Nouvelle Partie");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        GuideJeu = new JButton("");
-        GuideJeu.setActionCommand("Charger Partie");
-        options = new JButton("");
+        GuideJeu = new JButton("Règles");
+        GuideJeu.setActionCommand("Règles");
+        options = new JButton("Options");
         options.setActionCommand("Options");
-        credits = new JButton("");
+        credits = new JButton("Crédits");
         credits.setActionCommand("Crédits");
-        quitter = new JButton("");
+        quitter = new JButton("Quitter");
         quitter.setActionCommand("Quitter");
 
         this.add(nouvellePartie);

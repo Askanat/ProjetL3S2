@@ -14,30 +14,14 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
     }
 
     public void actionPerformed(ActionEvent e) {
-        /*jeu.setNbPartieLibre(jeu.getBDDNbPartieLibre());
         switch (e.getActionCommand()) {
             case "Nouvelle Partie":
-                if (jeu.getNbPartieLibre() >= 1) {
-                    fenetre.setContentPane(fenetre.panelFenetreCreationPersonnage);
-                    changerVue();
-                } else {
-                    fenetre.panelFenetreNouvellePartie.init();
-
-                    fenetre.setContentPane(fenetre.panelFenetreNouvellePartie);
-                    changerVue();
-                    fenetre.panelFenetreNouvellePartie.setPaneSelectionnePersonnageASupprimer();
-                }
+                fenetre.setContentPane(fenetre.panelFenetreJeu);
+                changerVue();
                 break;
-            case "Charger Partie":
-                if (3 - jeu.getNbPartieLibre() > 0) {
-                    fenetre.panelFenetreCharger.init();
-
-                    fenetre.setContentPane(fenetre.panelFenetreCharger);
-                    changerVue();
-                } else {
-                    fenetre.setContentPane(fenetre.panelFenetreCreationPersonnage);
-                    changerVue();
-                }
+            case "Règles":
+                fenetre.setContentPane(fenetre.panelFenetreRegles);
+                changerVue();
                 break;
             case "Options":
                 fenetre.setContentPane(fenetre.panelFenetreOptions);
@@ -50,6 +34,6 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
             case "Quitter":
                 System.exit(0);
                 break;
-        }*/
+        }
     }
 }

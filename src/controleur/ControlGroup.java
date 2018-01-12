@@ -13,7 +13,10 @@ public class ControlGroup {
         fenetre = new Fenetre(jeu);
 
         ControlMenuPrincipal controlMenuPrincipal = new ControlMenuPrincipal(jeu, fenetre);
-
         ControlFenetreJeu controlFenetreJeu = new ControlFenetreJeu(jeu, fenetre);
+        ControlFenetreRegles controlFenetreRegles = new ControlFenetreRegles(jeu, fenetre);
+        ControlFenetreCredits controlFenetreCredits = new ControlFenetreCredits(jeu, fenetre);
+
+        ControlClavier controlClavier = new ControlClavier(jeu, fenetre);
     }
 }
