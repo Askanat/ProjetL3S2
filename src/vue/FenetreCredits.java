@@ -19,7 +19,7 @@ public class FenetreCredits extends JPanel {
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
 
-        imageFenetreCredits = getToolkit().getImage("images/Credits.png");
+        imageFenetreCredits = getToolkit().getImage("images/menuPrincipale.jpg");
 
         retour = new JButton("");
         retour.setActionCommand("Retour");

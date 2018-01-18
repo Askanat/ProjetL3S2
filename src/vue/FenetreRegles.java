@@ -42,9 +42,6 @@ public class FenetreRegles extends JPanel {
     }
 
     public void setControl(ControlFenetreRegles controlFenetreRegles) {
-        for (int i = 0; i < NOMBRE_DE_SLOT_FENETRE_CHARGER; i++)
-            tabSlot[i].addActionListener(controlFenetreRegles);
-
         retour.addActionListener(controlFenetreRegles);
     }
 
