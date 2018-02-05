@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ProjetL3S2.iml" filepath="$PROJECT_DIR$/ProjetL3S2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mysql-connector-java/mysql-connector-java.iml" filepath="$PROJECT_DIR$/mysql-connector-java/mysql-connector-java.iml" />
     </modules>
   </component>
 </project>
