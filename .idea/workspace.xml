@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/model/BDD.java" afterPath="$PROJECT_DIR$/src/model/BDD.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Entite.java" afterPath="$PROJECT_DIR$/src/model/Entite.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BDD.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BDD.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/BDD.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+              <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding>
                 <element signature="e#602#603#0" expanded="true" />
                 <element signature="e#632#633#0" expanded="true" />
@@ -26,6 +26,18 @@
                 <marker date="1517847193732" expanded="true" signature="829:887" ph="Select nomJo... classement" />
                 <marker date="1517847193732" expanded="true" signature="1336:1409" ph="INSERT INTO classement... " />
                 <marker date="1517847193732" expanded="true" signature="1347:1409" ph="UPDATE classement... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entite.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/model/Entite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="537">
+              <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -45,6 +57,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/model/BDD.java" />
+        <option value="$PROJECT_DIR$/src/model/Entite.java" />
       </list>
     </option>
   </component>
@@ -251,12 +264,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1517843827854</updated>
-      <workItem from="1517843832637" duration="3032000" />
+      <workItem from="1517843832637" duration="5111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3032000" />
+    <option name="totallyTimeSpent" value="5111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
@@ -306,7 +319,7 @@
     <entry file="file://$PROJECT_DIR$/src/model/BDD.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="40" column="22" lean-forward="true" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
+          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
             <element signature="e#602#603#0" expanded="true" />
             <element signature="e#632#633#0" expanded="true" />
@@ -314,6 +327,16 @@
             <marker date="1517847193732" expanded="true" signature="829:887" ph="Select nomJo... classement" />
             <marker date="1517847193732" expanded="true" signature="1336:1409" ph="INSERT INTO classement... " />
             <marker date="1517847193732" expanded="true" signature="1347:1409" ph="UPDATE classement... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Entite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="65" column="5" lean-forward="true" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
