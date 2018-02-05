@@ -14,7 +14,7 @@ public class BDD {
 
         try {
             Class.forName(pilote);
-            connexion = DriverManager.getConnection("jdbc:mysql://localhost/projet", "L3info", "0000");
+            connexion = DriverManager.getConnection("jdbc:mysql://localhost/projetl3", "l3info", "0000");
             instruction = connexion.createStatement();
             bddIsOk = true;
         } catch (Exception e) {
