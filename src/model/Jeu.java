@@ -5,9 +5,8 @@ public class Jeu {
     private BDD bdd;
     public Joueur joueur;
 
-    public Jeu(String nomJoueur) {
+    public Jeu() {
         bdd = new BDD();
-        joueur = new Joueur(nomJoueur);
     }
 
     public BDD getBdd() {
