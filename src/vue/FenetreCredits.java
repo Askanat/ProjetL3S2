@@ -21,7 +21,7 @@ public class FenetreCredits extends JPanel {
 
         imageFenetreCredits = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        retour = new JButton("");
+        retour = new JButton("Retour");
         retour.setActionCommand("Retour");
 
         this.add(retour);

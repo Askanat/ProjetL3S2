@@ -34,6 +34,8 @@ public class Fenetre extends JFrame {
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
 
+    public ControlTouche    controlTouche;
+
     public static JScrollPane   scrollPane;
     public JPanel               panelScrollFenetreJeu;
     public JLayeredPane         layeredPane;
@@ -76,9 +78,10 @@ public class Fenetre extends JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }*/
-
+        controlTouche = new ControlTouche();  // @Maxime je ne pense pas que cela doit etre initialisé ici
         panelMenuPrincipal = new MenuPrincipal();
         panelFenetreJeu = new FenetreJeu(jeu);
+        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
         panelFenetreRegles = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
 
