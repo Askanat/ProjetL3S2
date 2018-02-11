@@ -17,7 +17,7 @@ public class FenetreJeu extends JPanel {
     public static Dimension ZONE;
 
     private Image imageFenetreJeu;
-    public JButton menu;
+    public Bouton menu;
 
 
     public FenetreJeu(Jeu jeu) {
@@ -28,7 +28,7 @@ public class FenetreJeu extends JPanel {
         imageFenetreJeu = getToolkit().getImage("images/menuPrincipale.jpg");
         this.setPreferredSize(ZONE);
 
-        menu = new JButton("");
+        menu = new Bouton("pwet");
         menu.setActionCommand("Menu");
         Image img = getToolkit().getImage("images/iconeMenu.png").getScaledInstance(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(40), java.awt.Image.SCALE_SMOOTH);
         menu.setIcon(new ImageIcon(img));

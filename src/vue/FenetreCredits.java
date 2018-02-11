@@ -12,7 +12,7 @@ public class FenetreCredits extends JPanel {
 
     private Image imageFenetreCredits;
 
-    public JButton retour;
+    public Bouton retour;
 
     public FenetreCredits() {
 
@@ -21,7 +21,7 @@ public class FenetreCredits extends JPanel {
 
         imageFenetreCredits = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        retour = new JButton("Retour");
+        retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
 
         this.add(retour);

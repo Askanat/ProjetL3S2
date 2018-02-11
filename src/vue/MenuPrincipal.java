@@ -12,7 +12,7 @@ public class MenuPrincipal extends JPanel {
 
     private Image imageMenuPrincipal;
 
-    public JButton nouvellePartie, GuideJeu, options, credits, quitter;
+    public Bouton nouvellePartie, GuideJeu, options, credits, quitter;
 
     public MenuPrincipal() {
 
@@ -21,15 +21,15 @@ public class MenuPrincipal extends JPanel {
 
         imageMenuPrincipal = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        nouvellePartie = new JButton("Nouvelle Partie");
+        nouvellePartie = new Bouton("Nouvelle Partie");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        GuideJeu = new JButton("Règles");
+        GuideJeu = new Bouton("Règles");
         GuideJeu.setActionCommand("Règles");
-        options = new JButton("Options");
+        options = new Bouton("Options");
         options.setActionCommand("Options");
-        credits = new JButton("Crédits");
+        credits = new Bouton("Crédits");
         credits.setActionCommand("Crédits");
-        quitter = new JButton("Quitter");
+        quitter = new Bouton("Quitter");
         quitter.setActionCommand("Quitter");
 
         this.add(nouvellePartie);

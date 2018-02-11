@@ -21,8 +21,7 @@ public class FenetreRegles extends JPanel {
     private Font taillePolice;
 
     public JButton tabSlot[];
-    public JButton retour;
-
+    public Bouton retour;
 
     public FenetreRegles() {
 
@@ -34,15 +33,14 @@ public class FenetreRegles extends JPanel {
         imageFenetreRegles = getToolkit().getImage("images/menuPrincipale.jpg");
         taillePolice = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(20));
 
-
-        retour = new JButton("Retour");
+        retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
-
         this.add(retour);
     }
 
     public void setControl(ControlFenetreRegles controlFenetreRegles) {
         retour.addActionListener(controlFenetreRegles);
+        
     }
 
     protected void paintComponent(Graphics g) {

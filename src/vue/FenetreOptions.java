@@ -13,8 +13,8 @@ public class FenetreOptions extends JPanel {
 
     Jeu jeu;
     ControlTouche controlTouche;
-    public JButton retour, hitBox;
-    public JButton[] controlButton;
+    public Bouton retour, hitBox;
+    public Bouton[] controlButton;
 
     private Image imageFenetreOption;
     private Font f, fControlTouche;
@@ -30,30 +30,30 @@ public class FenetreOptions extends JPanel {
         f = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(20));
         fControlTouche = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(35));
 
-        retour = new JButton("");
+        retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
-        hitBox = new JButton("Hitbox");
+        hitBox = new Bouton("Hitbox");
         hitBox.setActionCommand("Hitbox");
 
-        controlButton = new JButton[controlTouche.getNbActions() - 1];
+        controlButton = new Bouton[controlTouche.getNbActions() - 1];
         String[] repAction = new String[]{"Avancer", "Reculer", "Sauter", "Descendre", "Attaquer", "Sort1", "Sort2", "Sort3", "Sort4", "Sort5", "Sort6", "Sort7", "Sort8"};
 
         for (int i = 0; i < controlButton.length; i++) {
-            controlButton[i] = new JButton(controlTouche.getNomTouche(i + 1));
+            controlButton[i] = new Bouton(controlTouche.getNomTouche(i + 1));
             controlButton[i].setActionCommand(repAction[i]);
         }
 
         this.add(retour);
         this.add(hitBox);
 
-        for (JButton b : controlButton)
+        for (Bouton b : controlButton)
             this.add(b);
     }
 
     public void setControl(ControlFenetreOptions controlFenetreOptions) {
         retour.addActionListener(controlFenetreOptions);
 
-        for (JButton b : controlButton) {
+        for (Bouton b : controlButton) {
             b.addActionListener(controlFenetreOptions);
             b.addKeyListener(controlFenetreOptions);
         }
