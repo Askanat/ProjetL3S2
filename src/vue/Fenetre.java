@@ -21,11 +21,6 @@ public class Fenetre extends JFrame {
     public static final int X = 960; // (int) tailleEcran.getWidth();
     public static final int Y = 540; // (int) tailleEcran.getHeight();
 
-    public static BufferedImage[] tableauTuile;
-    public static final int DECOUPE_TUILE_EN_X = 7, DECOUPE_TUILE_EN_Y = 12;
-
-    public static int numeroPorte; // permet de selectionner la porte avec les flammes
-
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
@@ -33,6 +28,8 @@ public class Fenetre extends JFrame {
     public FenetreRegles    panelFenetreRegles;
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
+
+    public ControlTouche    controlTouche;
 
     public static JScrollPane   scrollPane;
     public JPanel               panelScrollFenetreJeu;
@@ -51,34 +48,13 @@ public class Fenetre extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-
-        numeroPorte = -1;
-    }
-
-    public static BufferedImage[] decoupage(BufferedImage origin, int divisionHorizontale, int divisionVerticale) {
-
-        BufferedImage tab[] = new BufferedImage[divisionHorizontale * divisionVerticale];
-        int tailleBaseHeight = origin.getHeight() / divisionVerticale;
-        int tailleBaseWidth = origin.getWidth() / divisionHorizontale;
-        int k = 0;
-        for (int i = 0; i < divisionVerticale; i++) {
-            for (int j = 0; j < divisionHorizontale; j++) {
-                tab[k] = origin.getSubimage(j * tailleBaseWidth, i * tailleBaseHeight, tailleBaseWidth, tailleBaseHeight);
-                k++;
-            }
-        }
-        return tab;
     }
 
     public void init() {
-        /*try {
-            tableauTuile = decoupage(ImageIO.read(new File("tuile/tuile.png")), DECOUPE_TUILE_EN_X, DECOUPE_TUILE_EN_Y);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
-
+        controlTouche = new ControlTouche();
         panelMenuPrincipal = new MenuPrincipal();
         panelFenetreJeu = new FenetreJeu(jeu);
+        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
         panelFenetreRegles = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
 

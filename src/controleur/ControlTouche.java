@@ -3,13 +3,6 @@ package controleur;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.Field;
 
-/**
- * Created by raphael on 11/8/16.
- * <p>
- * Le fichier contient la liste des actions possible en cours de jeu. Il associe à chaque action une touche.
- * Lors de l'ajout d'une action : ne pas oublier de mettre à jour le constructeur afin d'y associer une touche par défaut.
- */
-
 public class ControlTouche {
     // Liste des actions possibles en cours de jeu
 

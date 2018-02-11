@@ -1,0 +1,8 @@
+
+*.class
+out/production/ProjetL3S2/model/BDD.class
+out/production/ProjetL3S2/model/Jeu.class
+out/production/ProjetL3S2/model/Entite.class
+*.xml
+.idea/workspace.xml
+*.class
