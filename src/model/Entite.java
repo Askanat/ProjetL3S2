@@ -65,4 +65,44 @@ public class Entite {
         }
     }
 
+    public boolean getDeplacement() {
+        return deplacement;
+    }
+
+    public void setPositionX(int positionX) {
+        this.positionX = positionX;
+    }
+
+    public final int getPositionX() {
+        return positionX;
+    }
+
+    public void setPositionY(int positionY) {
+        this.positionY = positionY;
+    }
+
+    public final int getPositionY() {
+        return positionY;
+    }
+
+    public boolean getCollision() {
+        return collision;
+    }
+
+    public int getVitesseDeDeplacementEnX() {
+        return vitesseDeDeplacementEnX;
+    }
+
+    public int getVitesseDeDeplacementEnY() {
+        return vitesseDeDeplacementEnY;
+    }
+
+    public void setVecteurDeplacementEnX(int x) {
+        vecteurDeplacementEnX = x;
+    }
+
+    public int getVecteurDeplacementEnX() {
+        return vecteurDeplacementEnX;
+    }
+
 }
