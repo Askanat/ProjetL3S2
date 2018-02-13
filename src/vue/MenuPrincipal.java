@@ -12,7 +12,7 @@ public class MenuPrincipal extends JPanel {
 
     private Image imageMenuPrincipal;
 
-    public JButton nouvellePartie, GuideJeu, options, credits, quitter;
+    public JButton nouvellePartie, guideJeu, options, credits, quitter;
 
     public MenuPrincipal() {
 
@@ -23,8 +23,8 @@ public class MenuPrincipal extends JPanel {
 
         nouvellePartie = new JButton("Nouvelle Partie");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        GuideJeu = new JButton("Règles");
-        GuideJeu.setActionCommand("Règles");
+        guideJeu = new JButton("Règles");
+        guideJeu.setActionCommand("Règles");
         options = new JButton("Options");
         options.setActionCommand("Options");
         credits = new JButton("Crédits");
@@ -33,7 +33,7 @@ public class MenuPrincipal extends JPanel {
         quitter.setActionCommand("Quitter");
 
         this.add(nouvellePartie);
-        this.add(GuideJeu);
+        this.add(guideJeu);
         this.add(options);
         this.add(credits);
         this.add(quitter);
@@ -41,7 +41,7 @@ public class MenuPrincipal extends JPanel {
 
     public void setControl(ControlMenuPrincipal controlMenuPrincipal) {
         nouvellePartie.addActionListener(controlMenuPrincipal);
-        GuideJeu.addActionListener(controlMenuPrincipal);
+        guideJeu.addActionListener(controlMenuPrincipal);
         options.addActionListener(controlMenuPrincipal);
         credits.addActionListener(controlMenuPrincipal);
         quitter.addActionListener(controlMenuPrincipal);
@@ -54,30 +54,35 @@ public class MenuPrincipal extends JPanel {
 
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         nouvellePartie.setBackground(new Color(0, 0, 0, 0));
+        nouvellePartie.setForeground(Color.WHITE);
         nouvellePartie.setFocusable(false);
         nouvellePartie.setCursor(new Cursor(Cursor.HAND_CURSOR));
         nouvellePartie.setBorder(null);
 
-        GuideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        GuideJeu.setBackground(new Color(0, 0, 0, 0));
-        GuideJeu.setFocusable(false);
-        GuideJeu.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        GuideJeu.setBorder(null);
+        guideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
+        guideJeu.setBackground(new Color(0, 0, 0, 0));
+        guideJeu.setForeground(Color.WHITE);
+        guideJeu.setFocusable(false);
+        guideJeu.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        guideJeu.setBorder(null);
 
         options.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(570), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         options.setBackground(new Color(0, 0, 0, 0));
+        options.setForeground(Color.WHITE);
         options.setFocusable(false);
         options.setCursor(new Cursor(Cursor.HAND_CURSOR));
         options.setBorder(null);
 
         credits.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         credits.setBackground(new Color(0, 0, 0, 0));
+        credits.setForeground(Color.WHITE);
         credits.setFocusable(false);
         credits.setCursor(new Cursor(Cursor.HAND_CURSOR));
         credits.setBorder(null);
 
         quitter.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         quitter.setBackground(new Color(0, 0, 0, 0));
+        quitter.setForeground(Color.WHITE);
         quitter.setFocusable(false);
         quitter.setCursor(new Cursor(Cursor.HAND_CURSOR));
         quitter.setBorder(null);
