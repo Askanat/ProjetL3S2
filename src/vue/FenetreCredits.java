@@ -37,9 +37,6 @@ public class FenetreCredits extends JPanel {
         g.drawImage(imageFenetreCredits, 0, 0, getWidth(), getHeight(), this);
 
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
-        retour.setBackground(new Color(0, 0, 0, 0));
-        retour.setFocusable(false);
-        retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        retour.setBorder(null);
+
     }
 }

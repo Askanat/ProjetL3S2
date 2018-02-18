@@ -1,19 +1,9 @@
 package vue;
-import controleur.ControlFenetreJeu;
-import model.Jeu;
 
 import javax.swing.*;
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.Image;
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JButton;
 
 public class Bouton extends JButton implements MouseListener{
     private String nom;
@@ -28,6 +18,10 @@ public class Bouton extends JButton implements MouseListener{
         g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
         g2d.setColor(Color.white);
         g2d.drawString(this.nom, this.getWidth() / 2 - (this.getWidth()/ 2 /4), (this.getHeight() / 2) + 5);
+
+        this.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        this.setBorder(null);
+        this.setFocusable(false);
     }
 
     //Méthode appelée lors du clic de souris

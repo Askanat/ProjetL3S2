@@ -49,10 +49,5 @@ public class FenetreRegles extends JPanel {
         g.drawImage(imageFenetreRegles, 0, 0, getWidth(), getHeight(), this);
 
         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-        retour.setBackground(new Color(0, 0, 0, 0));
-        retour.setFocusable(false);
-        retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        retour.setBorder(null);
-
     }
 }

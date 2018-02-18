@@ -65,9 +65,7 @@ public class FenetreOptions extends JPanel {
         g.drawImage(imageFenetreOption, 0, 0, getWidth(), getHeight(), this);
 
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
-        retour.setBackground(new Color(0, 0, 0, 0));
-        retour.setFocusable(false);
-        retour.setBorder(null);
+
 
         int x1 = 600, y1 = 390;
         int x2 = 1300, y2 = 323;
