@@ -48,19 +48,43 @@ public class Fenetre extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+        bouleQuiAvance();
     }
 
     public void init() {
         controlTouche = new ControlTouche();
         panelMenuPrincipal = new MenuPrincipal();
-        panelFenetreJeu = new FenetreJeu(jeu);
-        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
+        panelFenetreJeu = new FenetreJeu();
+        panelFenetreOptions = new FenetreOptions();
         panelFenetreRegles = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
 
+
+
         vueJeu();
     }
+    private void bouleQuiAvance(){
+        for(int i = -50; i < panelMenuPrincipal.getWidth(); i++){
+            int x = panelMenuPrincipal.getPosX(), y = panelMenuPrincipal.getPosY();
+            int x2 = panelMenuPrincipal.getX2(), y2 = panelMenuPrincipal.getY2();
+            x++;
+            y++;
+            x2++;
+            y2++;
 
+            panelMenuPrincipal.setPosX(x);
+            panelMenuPrincipal.setPosY(y);
+            panelMenuPrincipal.setX2(x2);
+            panelMenuPrincipal.setY2(y2);
+
+            panelMenuPrincipal.repaint();
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
     /*public void vueMenuEnJeu() {
         layeredPane = getLayeredPane();
         JPanel top = panelMenuEnJeu;
@@ -84,9 +108,9 @@ public class Fenetre extends JFrame {
         return (int) (valeur / DEFAUT_Y * Y);
     }
 
-    public void initFenetreOptions(ControlTouche controlTouche) {
+    /*public void initFenetreOptions(ControlTouche controlTouche) {
         panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
-    }
+    }*/
 
     public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {
         panelMenuPrincipal.setControl(controlMenuPrincipal);
@@ -115,4 +139,5 @@ public class Fenetre extends JFrame {
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
+
 }

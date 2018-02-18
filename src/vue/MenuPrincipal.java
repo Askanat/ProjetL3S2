@@ -11,8 +11,12 @@ import static vue.Fenetre.Y;
 public class MenuPrincipal extends JPanel {
 
     private Image imageMenuPrincipal;
+    private int posX = 0;
+    private int posY = 0;
+    private int x2 = 200 ;
+    private int y2 = 20;
 
-    public JButton nouvellePartie, guideJeu, options, credits, quitter;
+    public Bouton nouvellePartie, guideJeu, options, credits, quitter;
 
     public MenuPrincipal() {
 
@@ -21,15 +25,15 @@ public class MenuPrincipal extends JPanel {
 
         imageMenuPrincipal = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        nouvellePartie = new JButton("Nouvelle Partie");
+        nouvellePartie = new Bouton("Nouvelle Partie");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        guideJeu = new JButton("Règles");
+        guideJeu = new Bouton("Règles");
         guideJeu.setActionCommand("Règles");
-        options = new JButton("Options");
+        options = new Bouton("Options");
         options.setActionCommand("Options");
-        credits = new JButton("Crédits");
+        credits = new Bouton("Crédits");
         credits.setActionCommand("Crédits");
-        quitter = new JButton("Quitter");
+        quitter = new Bouton("Quitter");
         quitter.setActionCommand("Quitter");
 
         this.add(nouvellePartie);
@@ -51,6 +55,11 @@ public class MenuPrincipal extends JPanel {
         super.paintComponent(g);
 
         g.drawImage(imageMenuPrincipal, 0, 0, getWidth(), getHeight(), this);
+
+        g.setColor(Color.white);
+        g.fillOval(posX, posY, 50, 50);
+        g.setColor(Color.pink);
+        g.fillOval(x2, y2, 200 ,200);
 
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         nouvellePartie.setBackground(new Color(0, 0, 0, 0));
@@ -87,4 +96,36 @@ public class MenuPrincipal extends JPanel {
         quitter.setCursor(new Cursor(Cursor.HAND_CURSOR));
         quitter.setBorder(null);
     }
+    public int getPosX() {
+        return posX;
+    }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+    public int getX2() {
+        return x2;
+    }
+
+    public void setX2(int x2) {
+        this.x2 = x2;
+    }
+
+    public int getY2() {
+        return y2;
+    }
+
+    public void setY2(int y2) {
+        this.y2 = y2;
+    }
+
+
 }
