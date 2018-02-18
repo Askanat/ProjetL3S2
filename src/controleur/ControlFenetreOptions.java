@@ -126,11 +126,6 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
         if((key = keyEvent.getKeyCode()) != keyEvent.VK_ESCAPE) {
             int index = getNumToucheSelectionneTrue() - 1, actionConcernee;
 
-            if(index < 0)
-                index = ControlTouche.ACTION_ATTAQUE - 1;
-            else if(index >= 3)
-                index++;
-
             actionConcernee = index + 1;
 
             toucheSelectionne[index] = false;
