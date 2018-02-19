@@ -11,10 +11,10 @@ import static vue.Fenetre.Y;
 public class MenuPrincipal extends JPanel {
 
     private Image imageMenuPrincipal;
-    private int posX = 0;
-    private int posY = 0;
-    private int x2 = 200 ;
-    private int y2 = 20;
+    private int posX = -50;
+    private int posY = -50;
+    private int posX2 = 100 ;
+    private int posY2 = 100;
 
     public Bouton nouvellePartie, guideJeu, options, credits, quitter;
 
@@ -59,7 +59,7 @@ public class MenuPrincipal extends JPanel {
         g.setColor(Color.white);
         g.fillOval(posX, posY, 50, 50);
         g.setColor(Color.pink);
-        g.fillOval(x2, y2, 200 ,200);
+        g.fillOval(posX2, posY2, 100 ,100);
 
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         nouvellePartie.setBackground(new Color(0, 0, 0, 0));
@@ -111,20 +111,20 @@ public class MenuPrincipal extends JPanel {
     public void setPosY(int posY) {
         this.posY = posY;
     }
-    public int getX2() {
-        return x2;
+    public int getPosX2() {
+        return posX2;
     }
 
-    public void setX2(int x2) {
-        this.x2 = x2;
+    public void setPosX2(int x2) {
+        this.posX2 = x2;
     }
 
-    public int getY2() {
-        return y2;
+    public int getPosY2() {
+        return posY2;
     }
 
-    public void setY2(int y2) {
-        this.y2 = y2;
+    public void setPosY2(int y2) {
+        this.posY2 = y2;
     }
 
 

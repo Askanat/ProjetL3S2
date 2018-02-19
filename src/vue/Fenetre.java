@@ -59,32 +59,82 @@ public class Fenetre extends JFrame {
         panelFenetreRegles = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
 
-
-
         vueJeu();
     }
     private void bouleQuiAvance(){
-        for(int i = -50; i < panelMenuPrincipal.getWidth(); i++){
-            int x = panelMenuPrincipal.getPosX(), y = panelMenuPrincipal.getPosY();
-            int x2 = panelMenuPrincipal.getX2(), y2 = panelMenuPrincipal.getY2();
-            x++;
-            y++;
-            x2++;
-            y2++;
 
-            panelMenuPrincipal.setPosX(x);
-            panelMenuPrincipal.setPosY(y);
-            panelMenuPrincipal.setX2(x2);
-            panelMenuPrincipal.setY2(y2);
 
-            panelMenuPrincipal.repaint();
-            try {
-                Thread.sleep(10);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int positionX = panelMenuPrincipal.getPosX();
+            int positionY = panelMenuPrincipal.getPosY();
+            int positionX2 = panelMenuPrincipal.getPosX2();
+            int positionY2 = panelMenuPrincipal.getPosY2();
+
+            boolean backX = false;
+            boolean backY = false;
+            boolean backX2 = false;
+            boolean backY2 = false;
+
+            @Override
+            public void run() {
+                for (;;) {
+                    /*1er rond*/
+                    if(positionX < 1) //on avance
+                        backX = false;
+                    if(positionX > panelMenuPrincipal.getWidth()-50) //on recule
+                        backX = true;
+
+                    if(positionY < 1)
+                        backY = false;
+                    if(positionY > panelMenuPrincipal.getHeight()-50)
+                        backY = true;
+
+
+                    if(!backX)// si on avance on incremente
+                        panelMenuPrincipal.setPosX(++positionX);
+                    else// si on recule on decremente
+                        panelMenuPrincipal.setPosX(--positionX);
+
+                    if(!backY)
+                        panelMenuPrincipal.setPosY(++positionY);
+                    else
+                        panelMenuPrincipal.setPosY(--positionY);
+
+                    /*2eme rond */
+                    if(positionX2 < 1) //on avance
+                        backX2 = false;
+                    if(positionX2 > panelMenuPrincipal.getWidth()-100) //on recule
+                        backX2 = true;
+
+                    if(positionY2 < 1)
+                        backY2 = false;
+                    if(positionY2 > panelMenuPrincipal.getHeight()-100)
+                        backY2 = true;
+
+
+                    if(!backX2)// si on avance on incremente
+                        panelMenuPrincipal.setPosX2(++positionX2);
+                    else// si on recule on decremente
+                        panelMenuPrincipal.setPosX2(--positionX2);
+
+                    if(!backY2)
+                        panelMenuPrincipal.setPosY2(++positionY2);
+                    else
+                        panelMenuPrincipal.setPosY2(--positionY2);
+
+
+                    panelMenuPrincipal.repaint();
+                    try {
+                        Thread.sleep(5);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }
-        }
+        }).start();
     }
+
     /*public void vueMenuEnJeu() {
         layeredPane = getLayeredPane();
         JPanel top = panelMenuEnJeu;
