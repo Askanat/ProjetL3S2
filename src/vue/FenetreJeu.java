@@ -44,8 +44,8 @@ public class FenetreJeu extends JPanel {
 
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
-
+       
         g.setColor(Color.white);
-        g.fillOval(posX, posY, 50, 50);
+        g.fillOval(this.getWidth()/2-25, this.getHeight()/2-25, 50, 50);
     }
 }

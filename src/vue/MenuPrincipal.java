@@ -53,48 +53,24 @@ public class MenuPrincipal extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         g.drawImage(imageMenuPrincipal, 0, 0, getWidth(), getHeight(), this);
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setFont(new Font("TimesRoman",Font.PLAIN, 50));
+        g2.setColor(Color.blue);
+        g2.drawString("Color",350,100);
+        g2.setColor(Color.green);
+        g2.drawString("Switch",475,100);
 
-        g.setColor(Color.white);
+        g.setColor(Color.blue);
         g.fillOval(posX, posY, 50, 50);
-        g.setColor(Color.pink);
+        g.setColor(Color.green);
         g.fillOval(posX2, posY2, 100 ,100);
 
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        nouvellePartie.setBackground(new Color(0, 0, 0, 0));
-        nouvellePartie.setForeground(Color.WHITE);
-        nouvellePartie.setFocusable(false);
-        nouvellePartie.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        nouvellePartie.setBorder(null);
-
         guideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        guideJeu.setBackground(new Color(0, 0, 0, 0));
-        guideJeu.setForeground(Color.WHITE);
-        guideJeu.setFocusable(false);
-        guideJeu.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        guideJeu.setBorder(null);
-
         options.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(570), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        options.setBackground(new Color(0, 0, 0, 0));
-        options.setForeground(Color.WHITE);
-        options.setFocusable(false);
-        options.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        options.setBorder(null);
-
         credits.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        credits.setBackground(new Color(0, 0, 0, 0));
-        credits.setForeground(Color.WHITE);
-        credits.setFocusable(false);
-        credits.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        credits.setBorder(null);
-
         quitter.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        quitter.setBackground(new Color(0, 0, 0, 0));
-        quitter.setForeground(Color.WHITE);
-        quitter.setFocusable(false);
-        quitter.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        quitter.setBorder(null);
     }
     public int getPosX() {
         return posX;
@@ -126,6 +102,4 @@ public class MenuPrincipal extends JPanel {
     public void setPosY2(int y2) {
         this.posY2 = y2;
     }
-
-
 }

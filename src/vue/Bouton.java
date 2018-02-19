@@ -18,7 +18,6 @@ public class Bouton extends JButton implements MouseListener{
         g2d.fillRect(0, 0, this.getWidth(), this.getHeight());
         g2d.setColor(Color.white);
         g2d.drawString(this.nom, this.getWidth() / 2 - (this.getWidth()/ 2 /4), (this.getHeight() / 2) + 5);
-
         this.setCursor(new Cursor(Cursor.HAND_CURSOR));
         this.setBorder(null);
         this.setFocusable(false);

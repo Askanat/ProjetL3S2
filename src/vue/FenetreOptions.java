@@ -37,6 +37,7 @@ public class FenetreOptions extends JPanel {
 
         g.drawImage(imageFenetreOptions, 0, 0, getWidth(), getHeight(), this);
 
+
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
 
     }

@@ -126,7 +126,7 @@ public class Fenetre extends JFrame {
 
                     panelMenuPrincipal.repaint();
                     try {
-                        Thread.sleep(5);
+                        Thread.sleep(4);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

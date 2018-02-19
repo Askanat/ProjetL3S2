@@ -45,8 +45,9 @@ public class FenetreRegles extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         g.drawImage(imageFenetreRegles, 0, 0, getWidth(), getHeight(), this);
+
+
 
         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
     }

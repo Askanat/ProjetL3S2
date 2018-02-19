@@ -33,9 +33,14 @@ public class FenetreCredits extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         g.drawImage(imageFenetreCredits, 0, 0, getWidth(), getHeight(), this);
 
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setFont(new Font("TimesRoman",Font.PLAIN, 30));
+        g2.setColor(Color.white);
+        g2.drawString("Florian Vaissiere",150,100);
+        g2.drawString("Kevin Caneval",150,200);
+        g2.drawString("Maxime Nicot",150,300);
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
 
     }
