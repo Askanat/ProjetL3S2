@@ -21,7 +21,7 @@ public class FenetreCredits extends JPanel {
 
         imageFenetreCredits = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        retour = new JButton("");
+        retour = new JButton("Retour");
         retour.setActionCommand("Retour");
 
         this.add(retour);
@@ -38,6 +38,7 @@ public class FenetreCredits extends JPanel {
 
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
         retour.setBackground(new Color(0, 0, 0, 0));
+        retour.setForeground(Color.WHITE);
         retour.setFocusable(false);
         retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
         retour.setBorder(null);

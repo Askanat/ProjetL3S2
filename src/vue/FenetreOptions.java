@@ -13,7 +13,7 @@ public class FenetreOptions extends JPanel {
 
     Jeu jeu;
     ControlTouche controlTouche;
-    public JButton retour, hitBox;
+    public JButton retour;
     public JButton[] controlButton;
 
     private Image imageFenetreOption;
@@ -26,17 +26,15 @@ public class FenetreOptions extends JPanel {
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
 
-        imageFenetreOption = getToolkit().getImage("images/menuOptionsTest.png");
+        imageFenetreOption = getToolkit().getImage("images/menuPrincipale.jpg");
         f = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(20));
         fControlTouche = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(35));
 
-        retour = new JButton("");
+        retour = new JButton("Retour");
         retour.setActionCommand("Retour");
-        hitBox = new JButton("Hitbox");
-        hitBox.setActionCommand("Hitbox");
 
         controlButton = new JButton[controlTouche.getNbActions() - 1];
-        String[] repAction = new String[]{"Avancer", "Reculer", "Sauter", "Descendre", "Attaquer", "Sort1", "Sort2", "Sort3", "Sort4", "Sort5", "Sort6", "Sort7", "Sort8"};
+        String[] repAction = new String[]{"Droite", "Gauche", "Sauter"};
 
         for (int i = 0; i < controlButton.length; i++) {
             controlButton[i] = new JButton(controlTouche.getNomTouche(i + 1));
@@ -44,7 +42,6 @@ public class FenetreOptions extends JPanel {
         }
 
         this.add(retour);
-        this.add(hitBox);
 
         for (JButton b : controlButton)
             this.add(b);
@@ -66,6 +63,7 @@ public class FenetreOptions extends JPanel {
 
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
         retour.setBackground(new Color(0, 0, 0, 0));
+        retour.setForeground(Color.WHITE);
         retour.setFocusable(false);
         retour.setBorder(null);
 
@@ -76,17 +74,19 @@ public class FenetreOptions extends JPanel {
             if (i <= 4) {
                 controlButton[i].setBounds(Fenetre.adapterResolutionEnX(x1), Fenetre.adapterResolutionEnY(y1), Fenetre.adapterResolutionEnX(270), Fenetre.adapterResolutionEnY(55));
                 controlButton[i].setBackground(new Color(0, 0, 0, 0));
+                controlButton[i].setForeground(Color.WHITE);
                 controlButton[i].setFont(fControlTouche);
                 controlButton[i].setBorder(null);
                 y1 += 75;
             }
-            if (i >= 5) {
+            /*if (i >= 5) {
                 controlButton[i].setBounds(Fenetre.adapterResolutionEnX(x2), Fenetre.adapterResolutionEnY(y2), Fenetre.adapterResolutionEnX(270), Fenetre.adapterResolutionEnY(50));
                 controlButton[i].setBackground(new Color(0, 0, 0, 0));
+                controlButton[i].setForeground(Color.WHITE);
                 controlButton[i].setFont(fControlTouche);
                 controlButton[i].setBorder(null);
                 y2 += 58;
-            }
+            }*/
         }
     }
 }

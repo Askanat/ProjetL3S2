@@ -18,5 +18,7 @@ public class ControlGroup {
         ControlFenetreCredits controlFenetreCredits = new ControlFenetreCredits(jeu, fenetre);
 
         ControlClavier controlClavier = new ControlClavier(jeu, fenetre);
+
+        ControlFenetreOptions controlFenetreOptions = new ControlFenetreOptions(jeu, fenetre, controlClavier);
     }
 }

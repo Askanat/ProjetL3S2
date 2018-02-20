@@ -52,6 +52,7 @@ public class FenetreRegles extends JPanel {
 
         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
         retour.setBackground(new Color(0, 0, 0, 0));
+        retour.setForeground(Color.WHITE);
         retour.setFocusable(false);
         retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
         retour.setBorder(null);
