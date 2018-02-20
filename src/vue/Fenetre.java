@@ -50,6 +50,7 @@ public class Fenetre extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         bouleQuiAvance();
+        bouleColor();
     }
 
     public void init() {
@@ -130,6 +131,27 @@ public class Fenetre extends JFrame {
                     panelMenuPrincipal.repaint();
                     try {
                         Thread.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private void bouleColor(){
+
+
+        new Thread(new Runnable(){
+
+            @Override
+            public void run() {
+                for (;;) {
+                    panelMenuPrincipal.updateColor();
+
+                    panelMenuPrincipal.repaint();
+                    try {
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

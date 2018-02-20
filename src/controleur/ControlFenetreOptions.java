@@ -42,19 +42,16 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Retour":
-                fenetre.setContentPane(fenetre.panelMenuPrincipal);
-                changerVue();
-                break;
-                /*if (!jeu.getEtat().getPause()) {
+                if (!jeu.getEtat().getPause()) {
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
                 } else {
-                    //Control.enPartie = true;
+                    Control.enPartie = true;
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
-                    //fenetre.vueMenuEnJeu();
-                //}
-                break;*/
+                    fenetre.vueMenuEnJeu();
+                }
+                break;
             case "Droite":
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_DROITE - 1] = true;
