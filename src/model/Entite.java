@@ -7,7 +7,6 @@ import java.util.Random;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.random;
-import static vue.FenetreJeu.tuileInt;
 
 public class Entite {
 

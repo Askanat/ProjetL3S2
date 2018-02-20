@@ -13,7 +13,7 @@ public class FenetreOptions extends JPanel {
 
     Jeu jeu;
     ControlTouche controlTouche;
-    public JButton retour;
+    public Button retour;
     public JButton[] controlButton;
 
     private Image imageFenetreOption;
@@ -30,7 +30,7 @@ public class FenetreOptions extends JPanel {
         f = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(20));
         fControlTouche = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(35));
 
-        retour = new JButton("Retour");
+        retour = new Button("Retour");
         retour.setActionCommand("Retour");
 
         controlButton = new JButton[controlTouche.getNbActions() - 1];
@@ -62,10 +62,6 @@ public class FenetreOptions extends JPanel {
         g.drawImage(imageFenetreOption, 0, 0, getWidth(), getHeight(), this);
 
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
-        retour.setBackground(new Color(0, 0, 0, 0));
-        retour.setForeground(Color.WHITE);
-        retour.setFocusable(false);
-        retour.setBorder(null);
 
         int x1 = 600, y1 = 390;
         int x2 = 1300, y2 = 323;

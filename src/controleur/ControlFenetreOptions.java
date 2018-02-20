@@ -42,10 +42,8 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Retour":
-                System.out.println("pouet");
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 changerVue();
-
                 break;
                 /*if (!jeu.getEtat().getPause()) {
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);

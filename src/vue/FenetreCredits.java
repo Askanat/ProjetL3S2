@@ -12,7 +12,7 @@ public class FenetreCredits extends JPanel {
 
     private Image imageFenetreCredits;
 
-    public JButton retour;
+    public Bouton retour;
 
     public FenetreCredits() {
 
@@ -21,7 +21,7 @@ public class FenetreCredits extends JPanel {
 
         imageFenetreCredits = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        retour = new JButton("Retour");
+        retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
 
         this.add(retour);
@@ -33,14 +33,15 @@ public class FenetreCredits extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-
         g.drawImage(imageFenetreCredits, 0, 0, getWidth(), getHeight(), this);
 
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setFont(new Font("TimesRoman",Font.PLAIN, 30));
+        g2.setColor(Color.white);
+        g2.drawString("Florian Vaissiere",150,100);
+        g2.drawString("Kevin Caneval",150,200);
+        g2.drawString("Maxime Nicot",150,300);
         retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
-        retour.setBackground(new Color(0, 0, 0, 0));
-        retour.setForeground(Color.WHITE);
-        retour.setFocusable(false);
-        retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        retour.setBorder(null);
+
     }
 }
