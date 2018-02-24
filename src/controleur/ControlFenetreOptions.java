@@ -21,7 +21,7 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
         this.controlClavier = controlClavier;
         this.toucheSelectionne = new boolean[controlClavier.getControlTouche().getNbActions() - 1];
 
-        //setTouchesSelectionneesToFalse();
+        setTouchesSelectionneesToFalse();
     }
 
     private void setTouchesSelectionneesToFalse() {
@@ -40,35 +40,23 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
     }
 
     public void actionPerformed(ActionEvent e) {
-        /*switch (e.getActionCommand()) {
-            case "Hitbox":
-                if (!jeu.getEtat().getHitBox()) {
-                    jeu.getEtat().setHitBox(true);
-                    fenetre.panelFenetreOptions.hitBox.setForeground(Color.GREEN);
-                    changerVue();
-                } else {
-                    jeu.getEtat().setHitBox(false);
-                    fenetre.panelFenetreOptions.hitBox.setForeground(Color.RED);
-                    changerVue();
-                }
-                break;
-
+        switch (e.getActionCommand()) {
             case "Retour":
                 if (!jeu.getEtat().getPause()) {
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
                 } else {
                     Control.enPartie = true;
-                    fenetre.setContentPane(fenetre.panelScrollFenetreJeu);
+                    fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
                     fenetre.vueMenuEnJeu();
                 }
                 break;
-            case "Avancer":
+            case "Droite":
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_DROITE - 1] = true;
                 break;
-            case "Reculer":
+            case "Gauche":
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_GAUCHE - 1] = true;
                 break;
@@ -76,43 +64,7 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_SAUT - 1] = true;
                 break;
-            case "Attaquer":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_ATTAQUE - 1] = true;
-                break;
-            case "Sort1":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT1 - 1] = true;
-                break;
-            case "Sort2":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT2 - 1] = true;
-                break;
-            case "Sort3":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT3 - 1] = true;
-                break;
-            case "Sort4":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT4 - 1] = true;
-                break;
-            case "Sort5":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT5 - 1] = true;
-                break;
-            case "Sort6":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT6 - 1] = true;
-                break;
-            case "Sort7":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT7 - 1] = true;
-                break;
-            case "Sort8":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_SORT8 - 1] = true;
-                break;
-        }*/
+        }
     }
 
     @Override
