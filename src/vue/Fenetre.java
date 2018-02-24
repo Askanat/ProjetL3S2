@@ -50,6 +50,7 @@ public class Fenetre extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         bouleQuiAvance();
+
         bouleColor();
     }
 
@@ -64,10 +65,37 @@ public class Fenetre extends JFrame {
 
         vueJeu();
     }
+    public void bouleQuiAvanceJeu(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int positionY = panelFenetreJeu.getPosY();
+
+            boolean backY = false;
+            @Override
+            public void run() {
+                for (;;) {
+                    if(positionY < 0)
+                        backY = false;
+                    if(positionY > panelFenetreJeu.getHeight()-50)
+                        backY = true;
+
+                    if(!backY)
+                        panelFenetreJeu.setPosY(++positionY);
+                    else
+                        panelFenetreJeu.setPosY(--positionY);
+
+                    panelFenetreJeu.repaint();
+                    try {
+                        Thread.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
 
     private void bouleQuiAvance(){
-
-
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionX = panelMenuPrincipal.getPosX();
@@ -140,10 +168,7 @@ public class Fenetre extends JFrame {
     }
 
     private void bouleColor(){
-
-
         new Thread(new Runnable(){
-
             @Override
             public void run() {
                 for (;;) {

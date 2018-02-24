@@ -26,6 +26,7 @@ public class ControlFenetreJeu extends Control implements ActionListener {
                     changerVue();
                 }
                 break;
+
         }
     }
 }

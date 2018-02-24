@@ -38,7 +38,6 @@ public class ControlClavier extends Control implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-
         int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)
@@ -51,7 +50,6 @@ public class ControlClavier extends Control implements KeyListener {
 
     @Override
     public void keyReleased(KeyEvent e) {
-
         int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)
