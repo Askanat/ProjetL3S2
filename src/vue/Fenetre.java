@@ -65,6 +65,7 @@ public class Fenetre extends JFrame {
 
         vueJeu();
     }
+
     public void bouleQuiAvanceJeu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
@@ -86,7 +87,7 @@ public class Fenetre extends JFrame {
 
                     panelFenetreJeu.repaint();
                     try {
-                        Thread.sleep(4);
+                        Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

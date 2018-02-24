@@ -45,7 +45,7 @@ public class ControlClavier extends Control implements KeyListener {
             i++;
         }
 
-        //System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer
+        System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer
     }
 
     @Override
