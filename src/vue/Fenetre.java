@@ -90,7 +90,7 @@ public class Fenetre extends JFrame {
                     degree++;
                     panelFenetreJeu.setDegree(degree);
                     try {
-                        Thread.sleep(2);
+                        Thread.sleep(1);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

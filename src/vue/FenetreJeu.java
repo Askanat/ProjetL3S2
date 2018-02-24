@@ -54,6 +54,7 @@ public class FenetreJeu extends JPanel {
             Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
             Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
+           // barre horizontale
             g.drawImage(imgR, 0-posY*2, 50, this);
             g.drawImage(imgB, 200-posY*2, 50, this);
             g.drawImage(imgV, 400-posY*2, 50, this);
@@ -73,13 +74,24 @@ public class FenetreJeu extends JPanel {
             g.drawImage(imgCV, 491-posY*2, 159, this);*/
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2+11, this.getHeight()/2-2); // je comprends pas les coordonnée
-            g2d.drawImage(imgCJ, 491, 268, this);//600 50
-            g2d.drawImage(imgCV, 382, 268, this);//491 50
-            g2d.drawImage(imgCR, 491, 159, this);//600 159
-            g2d.drawImage(imgCB, 382, 159, this);//491 159
-            g2d.setTransform(old);
-            //things you draw after here will not be rotated
+            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2+11, this.getHeight()/2-2);
+            // 4 morceaux d'un cercle qui tourne
+            g2d.drawImage(imgCJ, 491, 268, this);
+            g2d.drawImage(imgCV, 382, 268, this);
+            g2d.drawImage(imgCR, 491, 159, this);
+            g2d.drawImage(imgCB, 382, 159, this);
+
+            AffineTransform old2 = g2d.getTransform();
+            // 4 barres pour le carré
+            g2d.rotate((Math.toRadians(90)),200, 200);
+            g2d.drawImage(imgR, this.getWidth()/2-300, this.getHeight()/2-450, this);
+            g2d.setTransform(old2);
+            g2d.drawImage(imgB, this.getWidth()/2-100, this.getHeight()/2-90, this);
+            g2d.rotate((Math.toRadians(90)),200, 200);
+            g2d.drawImage(imgV,this.getWidth()/2-300, this.getHeight()/2-270, this);
+            g2d.setTransform(old2);
+            g2d.drawImage(imgJ, this.getWidth()/2-100, this.getHeight()/2+90, this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
