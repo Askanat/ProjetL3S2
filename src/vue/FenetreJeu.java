@@ -48,7 +48,10 @@ public class FenetreJeu extends JPanel {
             Image imgB = ImageIO.read(new File("images\\rectangleBleu.png"));
             Image imgV = ImageIO.read(new File("images\\rectangleVert.png"));
             Image imgJ = ImageIO.read(new File("images\\rectangleJaune.png"));
-
+            Image imgCR = ImageIO.read(new File("images\\cercleRouge.png"));
+            Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
+            Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
+            Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
             g.drawImage(imgR, 0-posY*2, 50, this);
             g.drawImage(imgB, 200-posY*2, 50, this);
             g.drawImage(imgV, 400-posY*2, 50, this);
@@ -59,6 +62,14 @@ public class FenetreJeu extends JPanel {
             g.drawImage(imgJ, 1400-posY*2, 50, this);
             g.drawImage(imgR, 1600-posY*2, 50, this);
             g.drawImage(imgV, 1800-posY*2, 50, this);
+
+
+            // un cercle
+            g.drawImage(imgCR, 600-posY*2, 50, this);
+            g.drawImage(imgCB, 491-posY*2, 50, this);
+            g.drawImage(imgCJ, 600-posY*2, 159, this);
+            g.drawImage(imgCV, 491-posY*2, 159, this);
+
         } catch (IOException e) {
             e.printStackTrace();
         }
