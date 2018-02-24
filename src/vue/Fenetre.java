@@ -28,6 +28,7 @@ public class Fenetre extends JFrame {
     public FenetreRegles    panelFenetreRegles;
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
+    public MenuEnJeu        panelMenuEnJeu;
 
     public ControlTouche    controlTouche;
 
@@ -49,18 +50,21 @@ public class Fenetre extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         bouleQuiAvance();
+        bouleColor();
     }
 
     public void init() {
-        controlTouche = new ControlTouche();
-        panelMenuPrincipal = new MenuPrincipal();
-        panelFenetreJeu = new FenetreJeu();
-        panelFenetreOptions = new FenetreOptions();
-        panelFenetreRegles = new FenetreRegles();
+        controlTouche       = new ControlTouche();
+        panelMenuPrincipal  = new MenuPrincipal();
+        panelFenetreJeu     = new FenetreJeu(jeu);
+        panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
+        panelFenetreRegles  = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
+        panelMenuEnJeu      = new MenuEnJeu();
 
         vueJeu();
     }
+
     private void bouleQuiAvance(){
 
 
@@ -135,12 +139,33 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    /*public void vueMenuEnJeu() {
+    private void bouleColor(){
+
+
+        new Thread(new Runnable(){
+
+            @Override
+            public void run() {
+                for (;;) {
+                    panelMenuPrincipal.updateColor();
+
+                    panelMenuPrincipal.repaint();
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    public void vueMenuEnJeu() {
         layeredPane = getLayeredPane();
         JPanel top = panelMenuEnJeu;
         top.setBounds((int) (X / 4.0), (int) (Y / 4.0), (int) (X / 2.0), (int) (Y / 2.0));
         layeredPane.add(top, new Integer(1));
-    }*/
+    }
 
     public void vueJeu() {
         scrollPane = new JScrollPane(panelFenetreJeu, VERTICAL_SCROLLBAR_NEVER, HORIZONTAL_SCROLLBAR_NEVER);
@@ -158,9 +183,9 @@ public class Fenetre extends JFrame {
         return (int) (valeur / DEFAUT_Y * Y);
     }
 
-    /*public void initFenetreOptions(ControlTouche controlTouche) {
+    public void initFenetreOptions(ControlTouche controlTouche) {
         panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
-    }*/
+    }
 
     public void setControlMenuPrincipal(ControlMenuPrincipal controlMenuPrincipal) {
         panelMenuPrincipal.setControl(controlMenuPrincipal);
@@ -182,12 +207,11 @@ public class Fenetre extends JFrame {
         panelFenetreJeu.setControl(controlFenetreJeu);
     }
 
-    /*public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
+    public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
         panelMenuEnJeu.setControl(controlMenuEnJeu);
-    }*/
+    }
 
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
-
 }

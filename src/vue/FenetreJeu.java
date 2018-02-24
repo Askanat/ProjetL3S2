@@ -23,7 +23,7 @@ public class FenetreJeu extends JPanel {
     public JButton tabSlot[];
     public Bouton retour;
     private Image imageFenetreJeu;
-    public FenetreJeu() {
+    public FenetreJeu(Jeu jeu) {
 
         this.jeu = jeu;
         imageFenetreJeu = getToolkit().getImage("images/menuPrincipale.jpg");
@@ -44,7 +44,7 @@ public class FenetreJeu extends JPanel {
 
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
-       
+
         g.setColor(Color.white);
         g.fillOval(this.getWidth()/2-25, this.getHeight()/2-25, 50, 50);
     }
