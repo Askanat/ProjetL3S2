@@ -8,6 +8,7 @@ import model.Jeu;
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.io.File;
 import java.io.IOException;
 
@@ -22,6 +23,7 @@ public class FenetreJeu extends JPanel {
     private Font taillePolice;
     private int posX = 0;
     private int posY = 0;
+    private int degree = 0;
     public Bouton retour;
     private Image imageFenetreJeu;
     public FenetreJeu(Jeu jeu) {
@@ -65,11 +67,19 @@ public class FenetreJeu extends JPanel {
 
 
             // un cercle
-            g.drawImage(imgCR, 600-posY*2, 50, this);
+            /*g.drawImage(imgCR, 600-posY*2, 50, this);
             g.drawImage(imgCB, 491-posY*2, 50, this);
             g.drawImage(imgCJ, 600-posY*2, 159, this);
-            g.drawImage(imgCV, 491-posY*2, 159, this);
-
+            g.drawImage(imgCV, 491-posY*2, 159, this);*/
+            Graphics2D g2d = (Graphics2D)g;
+            AffineTransform old = g2d.getTransform();
+            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2+11, this.getHeight()/2-2); // je comprends pas les coordonnée
+            g2d.drawImage(imgCJ, 491, 268, this);//600 50
+            g2d.drawImage(imgCV, 382, 268, this);//491 50
+            g2d.drawImage(imgCR, 491, 159, this);//600 159
+            g2d.drawImage(imgCB, 382, 159, this);//491 159
+            g2d.setTransform(old);
+            //things you draw after here will not be rotated
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -89,5 +99,12 @@ public class FenetreJeu extends JPanel {
 
     public void setPosY(int posY) {
         this.posY = posY;
+    }
+    public int getDegree() {
+        return degree;
+    }
+
+    public void setDegree(int degree) {
+        this.degree = degree;
     }
 }

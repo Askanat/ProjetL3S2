@@ -70,6 +70,7 @@ public class Fenetre extends JFrame {
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionY = panelFenetreJeu.getPosY();
+            int degree = panelFenetreJeu.getDegree();
 
             boolean backY = false;
             @Override
@@ -86,8 +87,10 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.setPosY(--positionY);
 
                     panelFenetreJeu.repaint();
+                    degree++;
+                    panelFenetreJeu.setDegree(degree);
                     try {
-                        Thread.sleep(200);
+                        Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
