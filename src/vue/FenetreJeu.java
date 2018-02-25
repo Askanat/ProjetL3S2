@@ -1,8 +1,6 @@
 package vue;
 
-import controleur.ControlClavier;
 import controleur.ControlFenetreJeu;
-import controleur.ControlFenetreRegles;
 import model.Jeu;
 
 import javax.imageio.ImageIO;
@@ -23,6 +21,10 @@ public class FenetreJeu extends JPanel {
     private Font taillePolice;
     private int posX = 0;
     private int posY = 0;
+    private int defilementY = -1;
+    private int defilementX = 0;
+    Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
+
     private int degree = 0;
     public Bouton retour;
     private Image imageFenetreJeu;
@@ -32,7 +34,10 @@ public class FenetreJeu extends JPanel {
         imageFenetreJeu = getToolkit().getImage("images/menuPrincipale.jpg");
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
-
+        for(int i = 0; i< choixFigure.length; i++){
+            choixFigure[i] = false;
+        }
+        
     }
 
     public void setControl(ControlFenetreJeu controlFenetreJeu) {
@@ -40,12 +45,12 @@ public class FenetreJeu extends JPanel {
     }
 
     protected void paintComponent(Graphics g) {
+        // Le rond du joueur
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(Color.white);
-        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50-posY, 50, 50);
+        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
-
-        try { //taille de chaque image est de 200 sur 20
+        try {
             Image imgR = ImageIO.read(new File("images\\rectangleRouge.png"));
             Image imgB = ImageIO.read(new File("images\\rectangleBleu.png"));
             Image imgV = ImageIO.read(new File("images\\rectangleVert.png"));
@@ -54,58 +59,66 @@ public class FenetreJeu extends JPanel {
             Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
             Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
-           // barres horizontale
-            g.drawImage(imgR, 0-posY*2, 50+posY, this);
-            g.drawImage(imgB, 200-posY*2, 50+posY, this);
-            g.drawImage(imgV, 400-posY*2, 50+posY, this);
-            g.drawImage(imgJ, 600-posY*2, 50+posY, this);
-            g.drawImage(imgB, 800-posY*2, 50+posY, this);
-            g.drawImage(imgR, 1000-posY*2, 50+posY, this);
-            g.drawImage(imgV, 1200-posY*2, 50+posY, this);
-            g.drawImage(imgJ, 1400-posY*2, 50+posY, this);
-            g.drawImage(imgR, 1600-posY*2, 50+posY, this);
-            g.drawImage(imgV, 1800-posY*2, 50+posY, this);
-            g.drawImage(imgB, 2000-posY*2, 50+posY, this);
-            g.drawImage(imgJ, 2200-posY*2, 50+posY, this);
 
-            // un cercle
+           if (defilementY > -200 && choixFigure[0]) {
+               // Les barres horizontales
+               g.drawImage(imgR, 0 - defilementY * 2, defilementY, this);
+               g.drawImage(imgB, 200 - defilementY * 2, defilementY, this);
+               g.drawImage(imgV, 400 - defilementY * 2, defilementY, this);
+               g.drawImage(imgJ, 600 - defilementY * 2, defilementY, this);
+               g.drawImage(imgB, 800 - defilementY * 2, defilementY, this);
+               g.drawImage(imgR, 1000 - defilementY * 2, defilementY, this);
+               g.drawImage(imgV, 1200 - defilementY * 2, defilementY, this);
+               g.drawImage(imgJ, 1400 - defilementY * 2, defilementY, this);
+               g.drawImage(imgR, 1600 - defilementY * 2, defilementY, this);
+               g.drawImage(imgV, 1800 - defilementY * 2, defilementY, this);
+               g.drawImage(imgB, 2000 - defilementY * 2, defilementY, this);
+               g.drawImage(imgJ, 2200 - defilementY * 2, defilementY, this);
+           }
+
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2, this.getHeight()/2+posY);
-            // 4 morceaux d'un cercle qui tourne
-            g2d.drawImage(imgCJ, this.getWidth()/2, this.getHeight()/2+posY, this);//109 = taille de l'image
-            g2d.drawImage(imgCV, this.getWidth()/2-109, this.getHeight()/2+posY, this);
-            g2d.drawImage(imgCR, this.getWidth()/2, this.getHeight()/2-109+posY, this);
-            g2d.drawImage(imgCB, this.getWidth()/2-109, this.getHeight()/2-109+posY, this);
-
+            if (defilementY > -200 && choixFigure[1]) {
+                g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
+                // 4 morceaux d'un cercle qui tourne
+                g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
+                g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
+                g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
+                g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);
+            }
             AffineTransform old2 = g2d.getTransform();
 
-            if (posY>100){
+            if (defilementY > -200 && choixFigure[2]){
                 //un carré
-                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
-                g2d.drawImage(imgR, this.getWidth() / 2 - 100, this.getHeight() / 2 + 80 + posY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, defilementY);
+                g2d.drawImage(imgR, this.getWidth() / 2 - 100, 80 + defilementY, this);
                 g2d.setTransform(old2);
-                g2d.drawImage(imgB, this.getWidth() / 2 - 100, this.getHeight() / 2 + 80 + posY, this);
-                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
-                g2d.drawImage(imgV, this.getWidth() / 2 - 100, this.getHeight() / 2 - 100 + posY, this);
+                g2d.drawImage(imgB, this.getWidth() / 2 - 100, 80 + defilementY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, + defilementY);
+                g2d.drawImage(imgV, this.getWidth() / 2 - 100,  defilementY - 100, this);
                 g2d.setTransform(old2);
-                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, this.getHeight() / 2 - 100 + posY, this);
+                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, defilementY - 100, this);
             }
 
-            // une croix
-            g2d.drawImage(imgR, this.getWidth() / 2, this.getHeight() / 2 + posY, this);
-            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
-            g2d.drawImage(imgB, this.getWidth() / 2 , this.getHeight() / 2 + posY, this);
-            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
-            g2d.drawImage(imgV, this.getWidth() / 2 , this.getHeight() / 2 + posY, this);
-            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
-            g2d.drawImage(imgJ, this.getWidth() / 2, this.getHeight() / 2 + posY, this);
+            g2d.setTransform(old);
 
+            if (defilementY > -200 && choixFigure[3]) {
+                g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
+                // une croix
+                g2d.drawImage(imgR, this.getWidth() / 2 - 100, defilementY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
+                g2d.drawImage(imgB, this.getWidth() / 2 - 100, defilementY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
+                g2d.drawImage(imgV, this.getWidth() / 2 - 100, defilementY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
+                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, defilementY, this);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    // Getters Setters
     public int getPosX() {
         return posX;
     }
@@ -114,12 +127,12 @@ public class FenetreJeu extends JPanel {
         this.posX = posX;
     }
 
-    public int getPosY() {
-        return posY;
+    public int getDefilementY() {
+        return defilementY;
     }
 
-    public void setPosY(int posY) {
-        this.posY = posY;
+    public void setDefilementY(int defilementY) {
+        this.defilementY = defilementY;
     }
     public int getDegree() {
         return degree;
@@ -127,5 +140,20 @@ public class FenetreJeu extends JPanel {
 
     public void setDegree(int degree) {
         this.degree = degree;
+    }
+    public int getDefilementX() {
+        return defilementX;
+    }
+
+    public void setDefilementX(int defilementX) {
+        this.defilementX = defilementX;
+    }
+
+    public int getPosY() {
+        return posY;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
     }
 }

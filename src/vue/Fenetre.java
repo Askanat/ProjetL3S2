@@ -3,12 +3,8 @@ package vue;
 import controleur.*;
 import model.Jeu;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER;
@@ -50,7 +46,6 @@ public class Fenetre extends JFrame {
         this.setLocationRelativeTo(null);
         this.setVisible(true);
         bouleQuiAvance();
-
         bouleColor();
     }
 
@@ -69,8 +64,7 @@ public class Fenetre extends JFrame {
     public void bouleQuiAvanceJeu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
-            int positionY = panelFenetreJeu.getPosY();
-            int degree = panelFenetreJeu.getDegree();
+            int positionY = panelFenetreJeu.getY();
 
             boolean backY = false;
             @Override
@@ -87,10 +81,43 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.setPosY(--positionY);
 
                     panelFenetreJeu.repaint();
+
+                    try {
+                        Thread.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+    public void formeDefilement(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int defilementX = panelFenetreJeu.getDefilementX();
+            int defilementY = panelFenetreJeu.getDefilementY();
+            int degree = panelFenetreJeu.getDegree();
+            int i = 0;
+            @Override
+            public void run() {
+                for (;;) {
                     degree++;
                     panelFenetreJeu.setDegree(degree);
+
+                    defilementY++;
+                    panelFenetreJeu.repaint();
+                    panelFenetreJeu.setDefilementY(defilementY);
+
+                    if(defilementY == 1100){
+                        panelFenetreJeu.setDefilementY(-200);
+                        defilementY=panelFenetreJeu.getDefilementY();
+                        panelFenetreJeu.choixFigure[i] = false;
+                        i = (int) (Math.random() * 4 );
+                        panelFenetreJeu.choixFigure[i] = true;
+
+                    }
                     try {
-                        Thread.sleep(5);
+                        Thread.sleep(1);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

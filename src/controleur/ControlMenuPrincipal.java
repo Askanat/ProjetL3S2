@@ -18,6 +18,7 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
             case "Nouvelle Partie":
                 fenetre.setContentPane(fenetre.panelFenetreJeu);
                 fenetre.bouleQuiAvanceJeu();
+                fenetre.formeDefilement();
                 changerVue();
                 break;
             case "Règles":
