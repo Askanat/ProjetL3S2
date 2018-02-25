@@ -37,7 +37,7 @@ public class FenetreJeu extends JPanel {
         for(int i = 0; i< choixFigure.length; i++){
             choixFigure[i] = false;
         }
-        
+
     }
 
     public void setControl(ControlFenetreJeu controlFenetreJeu) {
@@ -90,14 +90,15 @@ public class FenetreJeu extends JPanel {
 
             if (defilementY > -200 && choixFigure[2]){
                 //un carré
+                g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 , defilementY);
+                g2d.drawImage(imgB, this.getWidth() / 2 - 100, 80 + defilementY, this);
+                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, defilementY - 100, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, defilementY);
                 g2d.drawImage(imgR, this.getWidth() / 2 - 100, 80 + defilementY, this);
-                g2d.setTransform(old2);
-                g2d.drawImage(imgB, this.getWidth() / 2 - 100, 80 + defilementY, this);
-                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, + defilementY);
+                g2d.rotate((Math.toRadians(360)), this.getWidth() / 2, + defilementY);
                 g2d.drawImage(imgV, this.getWidth() / 2 - 100,  defilementY - 100, this);
                 g2d.setTransform(old2);
-                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, defilementY - 100, this);
+
             }
 
             g2d.setTransform(old);
