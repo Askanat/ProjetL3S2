@@ -54,43 +54,52 @@ public class FenetreJeu extends JPanel {
             Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
             Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
-           // barre horizontale
-            g.drawImage(imgR, 0-posY*2, 50, this);
-            g.drawImage(imgB, 200-posY*2, 50, this);
-            g.drawImage(imgV, 400-posY*2, 50, this);
-            g.drawImage(imgJ, 600-posY*2, 50, this);
-            g.drawImage(imgB, 800-posY*2, 50, this);
-            g.drawImage(imgR, 1000-posY*2, 50, this);
-            g.drawImage(imgV, 1200-posY*2, 50, this);
-            g.drawImage(imgJ, 1400-posY*2, 50, this);
-            g.drawImage(imgR, 1600-posY*2, 50, this);
-            g.drawImage(imgV, 1800-posY*2, 50, this);
-
+           // barres horizontale
+            g.drawImage(imgR, 0-posY*2, 50+posY, this);
+            g.drawImage(imgB, 200-posY*2, 50+posY, this);
+            g.drawImage(imgV, 400-posY*2, 50+posY, this);
+            g.drawImage(imgJ, 600-posY*2, 50+posY, this);
+            g.drawImage(imgB, 800-posY*2, 50+posY, this);
+            g.drawImage(imgR, 1000-posY*2, 50+posY, this);
+            g.drawImage(imgV, 1200-posY*2, 50+posY, this);
+            g.drawImage(imgJ, 1400-posY*2, 50+posY, this);
+            g.drawImage(imgR, 1600-posY*2, 50+posY, this);
+            g.drawImage(imgV, 1800-posY*2, 50+posY, this);
+            g.drawImage(imgB, 2000-posY*2, 50+posY, this);
+            g.drawImage(imgJ, 2200-posY*2, 50+posY, this);
 
             // un cercle
-            /*g.drawImage(imgCR, 600-posY*2, 50, this);
-            g.drawImage(imgCB, 491-posY*2, 50, this);
-            g.drawImage(imgCJ, 600-posY*2, 159, this);
-            g.drawImage(imgCV, 491-posY*2, 159, this);*/
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2+11, this.getHeight()/2-2);
+            g2d.rotate((Math.toRadians(degree)),this.getWidth()/2, this.getHeight()/2+posY);
             // 4 morceaux d'un cercle qui tourne
-            g2d.drawImage(imgCJ, 491, 268, this);
-            g2d.drawImage(imgCV, 382, 268, this);
-            g2d.drawImage(imgCR, 491, 159, this);
-            g2d.drawImage(imgCB, 382, 159, this);
+            g2d.drawImage(imgCJ, this.getWidth()/2, this.getHeight()/2+posY, this);//109 = taille de l'image
+            g2d.drawImage(imgCV, this.getWidth()/2-109, this.getHeight()/2+posY, this);
+            g2d.drawImage(imgCR, this.getWidth()/2, this.getHeight()/2-109+posY, this);
+            g2d.drawImage(imgCB, this.getWidth()/2-109, this.getHeight()/2-109+posY, this);
 
             AffineTransform old2 = g2d.getTransform();
-            // 4 barres pour le carré
-            g2d.rotate((Math.toRadians(90)),200, 200);
-            g2d.drawImage(imgR, this.getWidth()/2-300, this.getHeight()/2-450, this);
-            g2d.setTransform(old2);
-            g2d.drawImage(imgB, this.getWidth()/2-100, this.getHeight()/2-90, this);
-            g2d.rotate((Math.toRadians(90)),200, 200);
-            g2d.drawImage(imgV,this.getWidth()/2-300, this.getHeight()/2-270, this);
-            g2d.setTransform(old2);
-            g2d.drawImage(imgJ, this.getWidth()/2-100, this.getHeight()/2+90, this);
+
+            if (posY>100){
+                //un carré
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
+                g2d.drawImage(imgR, this.getWidth() / 2 - 100, this.getHeight() / 2 + 80 + posY, this);
+                g2d.setTransform(old2);
+                g2d.drawImage(imgB, this.getWidth() / 2 - 100, this.getHeight() / 2 + 80 + posY, this);
+                g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
+                g2d.drawImage(imgV, this.getWidth() / 2 - 100, this.getHeight() / 2 - 100 + posY, this);
+                g2d.setTransform(old2);
+                g2d.drawImage(imgJ, this.getWidth() / 2 - 100, this.getHeight() / 2 - 100 + posY, this);
+            }
+
+            // une croix
+            g2d.drawImage(imgR, this.getWidth() / 2, this.getHeight() / 2 + posY, this);
+            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
+            g2d.drawImage(imgB, this.getWidth() / 2 , this.getHeight() / 2 + posY, this);
+            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
+            g2d.drawImage(imgV, this.getWidth() / 2 , this.getHeight() / 2 + posY, this);
+            g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, this.getHeight() / 2 + posY);
+            g2d.drawImage(imgJ, this.getWidth() / 2, this.getHeight() / 2 + posY, this);
 
         } catch (IOException e) {
             e.printStackTrace();

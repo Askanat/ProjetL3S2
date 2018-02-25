@@ -67,9 +67,9 @@ public class MenuPrincipal extends JPanel {
 
         g2.setFont(new Font("TimesRoman",Font.PLAIN, 50));
         g2.setColor(Color.BLUE);
-        g2.drawString("Color",350,100);
+        g2.drawString("Color",this.getWidth()/2,100);
         g2.setColor(Color.GREEN);
-        g2.drawString("Switch",475,100);
+        g2.drawString("Switch",this.getWidth()/2-150,100);
 
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         guideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
