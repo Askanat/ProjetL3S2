@@ -94,19 +94,22 @@ public class Fenetre extends JFrame {
     public void formeDefilement(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
-            int defilementX = panelFenetreJeu.getDefilementX();
+            int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
             int defilementY = panelFenetreJeu.getDefilementY();
             int degree = panelFenetreJeu.getDegree();
-            int i = 0;
+            int i = (int) (Math.random() * 4 );
             @Override
             public void run() {
+                panelFenetreJeu.choixFigure[i] =true;
                 for (;;) {
                     degree++;
-                    panelFenetreJeu.setDegree(degree);
-
                     defilementY++;
+                    defilementRondChangementCouleur++;
+
                     panelFenetreJeu.repaint();
                     panelFenetreJeu.setDefilementY(defilementY);
+                    panelFenetreJeu.setDegree(degree);
+                    panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
 
                     if(defilementY == 1100){
                         panelFenetreJeu.setDefilementY(-200);
@@ -116,8 +119,13 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.choixFigure[i] = true;
 
                     }
+                    if(defilementY == 550){
+                        panelFenetreJeu.setDefilementRondChangementCouleur(-100);
+                        defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
+                    }
+
                     try {
-                        Thread.sleep(1);
+                        Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
