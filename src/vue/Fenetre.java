@@ -17,6 +17,7 @@ public class Fenetre extends JFrame {
     public static final int X = 600; // (int) tailleEcran.getWidth();
     public static final int Y = 900; // (int) tailleEcran.getHeight();
 
+
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
@@ -60,16 +61,20 @@ public class Fenetre extends JFrame {
 
         vueJeu();
     }
+    public void redeclareFenetreJeu(){
+        panelFenetreJeu = new FenetreJeu(jeu);
+    }
 
     public void bouleQuiAvanceJeu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionY = panelFenetreJeu.getY();
-
+            boolean arretJeu = panelFenetreJeu.isArretJeu();
             boolean backY = false;
             @Override
             public void run() {
-                for (;;) {
+                while(!arretJeu) {
+
                     if(positionY < 0)
                         backY = false;
                     if(positionY > panelFenetreJeu.getHeight()-50)
@@ -81,9 +86,9 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.setPosY(--positionY);
 
                     panelFenetreJeu.repaint();
-
+                    arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(4);
+                        Thread.sleep(3);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -94,22 +99,42 @@ public class Fenetre extends JFrame {
     public void formeDefilement(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
+            boolean arretJeu = panelFenetreJeu.isArretJeu();
+
             int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
             int defilementY = panelFenetreJeu.getDefilementY();
             int degree = panelFenetreJeu.getDegree();
+            int defilementFigureX = panelFenetreJeu.getDefilementFigureX();
+
             int i = (int) (Math.random() * 4 );
             @Override
             public void run() {
                 panelFenetreJeu.choixFigure[i] =true;
-                for (;;) {
-                    degree++;
+                while(!arretJeu) {
+
                     defilementY++;
                     defilementRondChangementCouleur++;
+                    defilementFigureX++;
 
                     panelFenetreJeu.repaint();
                     panelFenetreJeu.setDefilementY(defilementY);
-                    panelFenetreJeu.setDegree(degree);
+
                     panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
+                    panelFenetreJeu.setDefilementFigureX(defilementFigureX);
+
+                    if (panelFenetreJeu.choixFigure[1]){
+                        degree++;
+                        panelFenetreJeu.setDegree(degree);
+                        if(degree == 360){
+                            panelFenetreJeu.setDegree(0);
+                            degree=panelFenetreJeu.getDegree();
+                        }
+                    }
+
+                    if(defilementFigureX == 800){
+                        panelFenetreJeu.setDefilementFigureX(0);
+                        defilementFigureX = panelFenetreJeu.getDefilementFigureX();
+                    }
 
                     if(defilementY == 1100){
                         panelFenetreJeu.setDefilementY(-200);
@@ -117,15 +142,17 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.choixFigure[i] = false;
                         i = (int) (Math.random() * 4 );
                         panelFenetreJeu.choixFigure[i] = true;
+                        panelFenetreJeu.setDegree(0);
+                        degree=panelFenetreJeu.getDegree();
 
                     }
                     if(defilementY == 550){
                         panelFenetreJeu.setDefilementRondChangementCouleur(-100);
                         defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
                     }
-
+                    arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(2);
+                        Thread.sleep(3);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

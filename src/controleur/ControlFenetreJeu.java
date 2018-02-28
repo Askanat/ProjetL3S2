@@ -2,6 +2,7 @@ package controleur;
 
 import model.Jeu;
 import vue.Fenetre;
+import vue.FenetreJeu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,6 +30,14 @@ public class ControlFenetreJeu extends Control implements ActionListener {
                     changerVue();
                 }
                 break;
+
+            case "Retour":
+                fenetre.setContentPane(fenetre.panelMenuPrincipal);
+                fenetre.panelFenetreJeu = null;
+                fenetre.redeclareFenetreJeu();
+                changerVue();
+                break;
+
         }
     }
 
