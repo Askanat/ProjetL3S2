@@ -64,6 +64,7 @@ public class FenetreJeu extends JPanel {
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
 
+            // rond Changement Couleur
             if(defilementRondChangementCouleur > -100){
                 g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
             }
@@ -96,8 +97,8 @@ public class FenetreJeu extends JPanel {
                 g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);
 
             }
-            AffineTransform old2 = g2d.getTransform();
 
+            AffineTransform old2 = g2d.getTransform();
             if (defilementY > -200 && choixFigure[2]){
                 //un carré
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
@@ -113,7 +114,6 @@ public class FenetreJeu extends JPanel {
             }
 
             g2d.setTransform(old);
-
             if (defilementY > -200 && choixFigure[3]) {
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
@@ -126,6 +126,7 @@ public class FenetreJeu extends JPanel {
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY, this);
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
