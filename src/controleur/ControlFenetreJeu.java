@@ -11,9 +11,12 @@ public class ControlFenetreJeu extends Control implements ActionListener {
     public ControlFenetreJeu(Jeu jeu, Fenetre fenetre) {
         super(jeu, fenetre);
         fenetre.setControlFenetreJeu(this);
+        ControlClavier controlClavier = new ControlClavier(jeu,fenetre);
     }
 
     public void actionPerformed(ActionEvent e) {
+
+
         switch (e.getActionCommand()) {
             case "Menu":
                 jeu.getEtat().inversePause();
@@ -28,4 +31,11 @@ public class ControlFenetreJeu extends Control implements ActionListener {
                 break;
         }
     }
+
+   /* public void Bla(ControlClavier controlClavier){
+        if(controlClavier.toucheEnfoncer[1] = true){
+            System.out.print("AAAAAAAAAAAAAAAAAAA");
+        }
+    } */
+
 }

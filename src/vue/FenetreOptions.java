@@ -32,6 +32,7 @@ public class FenetreOptions extends JPanel {
 
         retour = new Button("Retour");
         retour.setActionCommand("Retour");
+        retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         controlButton = new JButton[controlTouche.getNbActions() - 1];
         String[] repAction = new String[]{"Droite", "Gauche", "Sauter"};

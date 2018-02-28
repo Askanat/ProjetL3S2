@@ -3,12 +3,8 @@ package vue;
 import controleur.*;
 import model.Jeu;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER;
@@ -18,8 +14,8 @@ public class Fenetre extends JFrame {
     private static Dimension tailleEcran = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
     public static final double DEFAUT_X = 1920;
     public static final double DEFAUT_Y = 1080;
-    public static final int X = 960; // (int) tailleEcran.getWidth();
-    public static final int Y = 540; // (int) tailleEcran.getHeight();
+    public static final int X = 600; // (int) tailleEcran.getWidth();
+    public static final int Y = 900; // (int) tailleEcran.getHeight();
 
     private Jeu jeu;
 
@@ -65,9 +61,80 @@ public class Fenetre extends JFrame {
         vueJeu();
     }
 
+    public void bouleQuiAvanceJeu(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int positionY = panelFenetreJeu.getY();
+
+            boolean backY = false;
+            @Override
+            public void run() {
+                for (;;) {
+                    if(positionY < 0)
+                        backY = false;
+                    if(positionY > panelFenetreJeu.getHeight()-50)
+                        backY = true;
+
+                    if(!backY)
+                        panelFenetreJeu.setPosY(++positionY);
+                    else
+                        panelFenetreJeu.setPosY(--positionY);
+
+                    panelFenetreJeu.repaint();
+
+                    try {
+                        Thread.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+    public void formeDefilement(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
+            int defilementY = panelFenetreJeu.getDefilementY();
+            int degree = panelFenetreJeu.getDegree();
+            int i = (int) (Math.random() * 4 );
+            @Override
+            public void run() {
+                panelFenetreJeu.choixFigure[i] =true;
+                for (;;) {
+                    degree++;
+                    defilementY++;
+                    defilementRondChangementCouleur++;
+
+                    panelFenetreJeu.repaint();
+                    panelFenetreJeu.setDefilementY(defilementY);
+                    panelFenetreJeu.setDegree(degree);
+                    panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
+
+                    if(defilementY == 1100){
+                        panelFenetreJeu.setDefilementY(-200);
+                        defilementY=panelFenetreJeu.getDefilementY();
+                        panelFenetreJeu.choixFigure[i] = false;
+                        i = (int) (Math.random() * 4 );
+                        panelFenetreJeu.choixFigure[i] = true;
+
+                    }
+                    if(defilementY == 550){
+                        panelFenetreJeu.setDefilementRondChangementCouleur(-100);
+                        defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
+                    }
+
+                    try {
+                        Thread.sleep(2);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
     private void bouleQuiAvance(){
-
-
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionX = panelMenuPrincipal.getPosX();
@@ -140,10 +207,7 @@ public class Fenetre extends JFrame {
     }
 
     private void bouleColor(){
-
-
         new Thread(new Runnable(){
-
             @Override
             public void run() {
                 for (;;) {
