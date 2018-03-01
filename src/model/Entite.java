@@ -12,19 +12,21 @@ public class Entite {
 
 
 
-    protected Color couleur;
+
 
     protected int positionX, positionY;
     protected int vecteurDeplacementEnX, vecteurDeplacementEnY, vitesseDeDeplacementEnX, vitesseDeDeplacementEnY, vitesseDeSaut;
     protected Direction directionOrientation;
-
     protected boolean collision, deplacement;
+    protected Color couleur;
     protected Color couleurTab[] = {Color.BLUE, Color.RED, Color.YELLOW, Color.GREEN};
+    protected int score;
 
     public Entite(Color couleur) {
 
         this.couleur = couleur;
 
+        score = 0;
         vitesseDeDeplacementEnY = 0;
         vitesseDeDeplacementEnX = 0;
         vecteurDeplacementEnX = 0;
@@ -64,7 +66,7 @@ public class Entite {
         }
         bille.couleur= couleurTab[val];
     }
-
+    /* getters setters */
     public Color getCouleur() {
         return couleur;
     }
@@ -72,5 +74,13 @@ public class Entite {
     public void setCouleur(Color couleur) {
         this.couleur = couleur;
     }
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
 }
 

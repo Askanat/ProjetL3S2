@@ -26,6 +26,7 @@ public class FenetreJeu extends JPanel {
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
+    private boolean etoileUnSeulPointScore = false;
     private volatile boolean arretJeu = false;
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
     private int degree = 0;
@@ -45,7 +46,6 @@ public class FenetreJeu extends JPanel {
             choixFigure[i] = false;
         }
 
-
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
         this.add(retour);
@@ -58,10 +58,10 @@ public class FenetreJeu extends JPanel {
     protected void paintComponent(Graphics g) {
         // Le rond du joueur
         //Entite boule = new Entite(Color.WHITE);
-        g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
 
-            g.setColor(bille.getCouleur());
-            g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
+        g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
+        g.setColor(bille.getCouleur());
+        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
 
 
@@ -76,12 +76,17 @@ public class FenetreJeu extends JPanel {
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
+            Image imgCarreNoir = ImageIO.read(new File("images\\carreNoir.png"));
 
             // rond Changement Couleur
             if(defilementRondChangementCouleur > -100){
                 g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
                 if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
                     bille.changementCouleurBille(bille);
+                }
+                //pour cacher le rond changement couleur
+                if(posY + 50 + defilementRondChangementCouleur + 19 >= 900){
+                    g.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
                 }
             }
 
@@ -107,25 +112,30 @@ public class FenetreJeu extends JPanel {
                        // collision couleur bleu
                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                        arretJeu =true;
+                       g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
                    }
+
                    if(((defilementFigureX>=100 && defilementFigureX <=300) || (defilementFigureX>=900 && defilementFigureX <=1100)) && bille.getCouleur()== Color.GREEN){
                        //collision couleur vert
                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                        arretJeu =true;
+                       g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
                    }
+
                    if(((defilementFigureX>=300 && defilementFigureX <=500)|| (defilementFigureX>=1100 && defilementFigureX <=1300)) && bille.getCouleur()== Color.YELLOW){
                        //collision couleur jaune
                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                        arretJeu =true;
+                       g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
                    }
+
                    if(((defilementFigureX>=500 && defilementFigureX <=700)|| (defilementFigureX>=1300 && defilementFigureX <=1500))&& bille.getCouleur()== Color.RED){
                        //collision couleur rouge
                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                        arretJeu =true;
+                       g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
                    }
-
                }
-
            }
 
 
@@ -166,6 +176,15 @@ public class FenetreJeu extends JPanel {
                 //un carré
 
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
+
+                if(posY + 57 + defilementY + 20 >= 900){// collision avec etoile
+                    g2d.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementY - 19, this);
+                    if(!etoileUnSeulPointScore) {
+                        bille.setScore(bille.getScore() + 1);
+                        etoileUnSeulPointScore = true;
+                    }
+                }
+
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 , defilementY);
                 g2d.drawImage(imgBB, this.getWidth() / 2 - 100, 80 + defilementY, this);
                 g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY - 100, this);
@@ -177,12 +196,22 @@ public class FenetreJeu extends JPanel {
 
             }
 
+
             g2d.setTransform(old);
             if (defilementY > -200 && choixFigure[3]) {
-                g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
+
+                g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
+                if(posY + 57 + defilementY + 20 >= 900){//collision pour l'étoile
+                    g2d.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementY - 19, this);
+                    if(!etoileUnSeulPointScore) {
+                        bille.setScore(bille.getScore() + 1);
+                        etoileUnSeulPointScore = true;
+                    }
+                }
+
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
                 // une croix
-                //g2d.drawImage(imgCroixBlanche, this.getWidth() / 2 - 200, defilementY, this);
+
                 g2d.drawImage(imgBR, this.getWidth() / 2 - 100, defilementY, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBB, this.getWidth() / 2 - 100, defilementY, this);
@@ -190,7 +219,9 @@ public class FenetreJeu extends JPanel {
                 g2d.drawImage(imgBV, this.getWidth() / 2 - 100, defilementY, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY, this);
+
             }
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -257,5 +288,11 @@ public class FenetreJeu extends JPanel {
     public void setArretJeu(boolean arretJeu) {
         this.arretJeu = arretJeu;
     }
+    public boolean isEtoileUnSeulPointScore() {
+        return etoileUnSeulPointScore;
+    }
 
+    public void setEtoileUnSeulPointScore(boolean etoileUnSeulPointScore) {
+        this.etoileUnSeulPointScore = etoileUnSeulPointScore;
+    }
 }

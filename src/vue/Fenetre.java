@@ -109,7 +109,7 @@ public class Fenetre extends JFrame {
             int i = (int) (Math.random() * 4 );
             @Override
             public void run() {
-                panelFenetreJeu.choixFigure[i] =true;
+                panelFenetreJeu.choixFigure[i] =true; // pour 1ere figure
                 while(!arretJeu) {
 
                     defilementY++;
@@ -143,7 +143,7 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.choixFigure[i] = true;
                         panelFenetreJeu.setDegree(0);
                         degree=panelFenetreJeu.getDegree();
-
+                        panelFenetreJeu.setEtoileUnSeulPointScore(false);
                     }
 
                     if(defilementY == 450){
