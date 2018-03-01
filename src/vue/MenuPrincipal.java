@@ -29,7 +29,7 @@ public class MenuPrincipal extends JPanel {
 
         imageMenuPrincipal = getToolkit().getImage("images/menuPrincipale.jpg");
 
-        nouvellePartie = new Bouton("Nouvelle Partie");
+        nouvellePartie = new Bouton("Play");
         nouvellePartie.setActionCommand("Nouvelle Partie");
         guideJeu = new Bouton("Règles");
         guideJeu.setActionCommand("Règles");
