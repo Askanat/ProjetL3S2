@@ -32,7 +32,7 @@ public class FenetreJeu extends JPanel {
     public Bouton retour;
     private Image imageFenetreJeu;
     //private Entite boule;
-    Entite boule = new Entite(Color.WHITE);
+    Entite bille = new Entite(Color.WHITE);
 
     public FenetreJeu(Jeu jeu) {
 
@@ -44,6 +44,7 @@ public class FenetreJeu extends JPanel {
         for(int i = 0; i< choixFigure.length; i++){
             choixFigure[i] = false;
         }
+
 
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
@@ -59,7 +60,7 @@ public class FenetreJeu extends JPanel {
         //Entite boule = new Entite(Color.WHITE);
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
 
-            g.setColor(boule.getCouleur());
+            g.setColor(bille.getCouleur());
             g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
 
@@ -80,7 +81,7 @@ public class FenetreJeu extends JPanel {
             if(defilementRondChangementCouleur > -100){
                 g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
                 if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
-                    boule.changementCouleurBille(boule);
+                    bille.changementCouleurBille(bille);
                 }
             }
 
@@ -88,7 +89,7 @@ public class FenetreJeu extends JPanel {
            if (defilementY > -200 && choixFigure[0]) {
                // Les barres horizontales
 
-               g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);
+               g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
                g.drawImage(imgBB, 200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBV, 400 - defilementFigureX, defilementY, this);
                g.drawImage(imgBJ, 600 - defilementFigureX , defilementY, this);
@@ -97,33 +98,30 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBV, 1200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
                g.drawImage(imgBR, 1600 - defilementFigureX , defilementY, this);
+               g.drawImage(imgBB, 1800 - defilementFigureX , defilementY, this);
+               g.drawImage(imgBV, 2000 - defilementFigureX , defilementY, this);
                 // Collision avec barres horizontales
-               if(posY + 50 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
+               if(posY + 57 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
                    // la boule tape toujours en 300, milieu ecran
-                   if(defilementFigureX>=-25 && defilementFigureX <=75 || defilementFigureX>=675 && defilementFigureX<=775){ //-25 pour la moitié
-                        //collision couleur bleu
-
-                       g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
-
+                   if(((defilementFigureX>=0 && defilementFigureX <=100) || (defilementFigureX>=700 && defilementFigureX<=900) || (defilementFigureX>=1500 && defilementFigureX <=1600)) && bille.getCouleur()== Color.BLUE){
+                       // collision couleur bleu
+                       retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                       arretJeu =true;
                    }
-                   if(defilementFigureX>=75 && defilementFigureX <=275){
+                   if(((defilementFigureX>=100 && defilementFigureX <=300) || (defilementFigureX>=900 && defilementFigureX <=1100)) && bille.getCouleur()== Color.GREEN){
                        //collision couleur vert
-
-                       g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
-
+                       retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                       arretJeu =true;
                    }
-
-                   if(defilementFigureX>=275 && defilementFigureX <=475){
+                   if(((defilementFigureX>=300 && defilementFigureX <=500)|| (defilementFigureX>=1100 && defilementFigureX <=1300)) && bille.getCouleur()== Color.YELLOW){
                        //collision couleur jaune
-
-                       g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
-
+                       retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                       arretJeu =true;
                    }
-                   if(defilementFigureX>=475 && defilementFigureX <=675){
+                   if(((defilementFigureX>=500 && defilementFigureX <=700)|| (defilementFigureX>=1300 && defilementFigureX <=1500))&& bille.getCouleur()== Color.RED){
                        //collision couleur rouge
-
-                       g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
-
+                       retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                       arretJeu =true;
                    }
 
                }
@@ -133,7 +131,7 @@ public class FenetreJeu extends JPanel {
 
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-           if (defilementY > -200 && choixFigure[1]) {
+          /* if (defilementY > -200 && choixFigure[1]) {
 
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
@@ -142,34 +140,26 @@ public class FenetreJeu extends JPanel {
                 g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
                 g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
                 g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);
-                if((posY + 50 + defilementY + 109 >= 900 && posY + 50 + defilementY + 89 <= 900) || (posY + 50 + defilementY - 89 >= 900 && posY + 50 + defilementY - 109 <= 900)){
-                    if(degree >=0 && degree<=90){
-                        g.setColor(Color.BLUE);
-                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+                if((posY + 57 + defilementY + 109 >= 900 && posY + 57 + defilementY + 89 <= 900) || (posY + 57 + defilementY - 89 >= 900 && posY + 57 + defilementY - 109 <= 900)){
+                    if((degree >=0 && degree<=90)&& bille.getCouleur()== Color.BLUE){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                    if(degree >=90 && degree<=180){
-                        g.setColor(Color.RED);
-                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+                    if((degree >=90 && degree<=180)&& bille.getCouleur()== Color.RED){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                    if(degree >=180 && degree<=270){
-                        g.setColor(Color.BLUE);
-                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+                    if((degree >=180 && degree<=270)&& bille.getCouleur()== Color.YELLOW){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                    if(degree >=270 && degree<=360){
-                        g.setColor(Color.GREEN);
-                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+                    if((degree >=270 && degree<=360)&& bille.getCouleur()== Color.GREEN){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
                 }
 
-            }
+            }*/
 
             AffineTransform old2 = g2d.getTransform();
             if (defilementY > -200 && choixFigure[2]){

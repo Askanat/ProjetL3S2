@@ -88,7 +88,7 @@ public class Fenetre extends JFrame {
                     panelFenetreJeu.repaint();
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(3);
+                        Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -130,7 +130,7 @@ public class Fenetre extends JFrame {
                         }
                     }
 
-                    if(defilementFigureX == 800){
+                    if(defilementFigureX == 1600){
                         panelFenetreJeu.setDefilementFigureX(0);
                         defilementFigureX = panelFenetreJeu.getDefilementFigureX();
                     }
@@ -153,7 +153,7 @@ public class Fenetre extends JFrame {
 
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(3);
+                        Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
