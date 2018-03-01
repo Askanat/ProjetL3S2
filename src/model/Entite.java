@@ -10,19 +10,19 @@ import static java.lang.Math.random;
 
 public class Entite {
 
-    protected String nom, texture, couleur;
+
+
+    protected Color couleur;
 
     protected int positionX, positionY;
     protected int vecteurDeplacementEnX, vecteurDeplacementEnY, vitesseDeDeplacementEnX, vitesseDeDeplacementEnY, vitesseDeSaut;
     protected Direction directionOrientation;
 
     protected boolean collision, deplacement;
-    protected String color[] = {"ROUGE","BLEU","VERT","JAUNE","BLANC"};
+    protected Color couleurTab[] = {Color.BLUE, Color.RED, Color.YELLOW, Color.GREEN};
 
-    public Entite(String nom, String texture, String couleur) {
+    public Entite(Color couleur) {
 
-        this.nom = nom;
-        this.texture = texture;
         this.couleur = couleur;
 
         vitesseDeDeplacementEnY = 0;
@@ -56,12 +56,21 @@ public class Entite {
         }
     }
 
-    public void changementCouleurBille(Entite bille, Entite etoile){
-        if(collisionEntite(bille,etoile,true)){
-            Random rand = new Random();
-            int val = rand.nextInt(5);
-            bille.couleur = color[val];
+    public void changementCouleurBille(Entite bille) {
+        Random rand = new Random();
+        int val =rand.nextInt(4);
+        while (bille.couleur == couleurTab[val]) {
+             val = rand.nextInt(4);
         }
+        bille.couleur= couleurTab[val];
     }
 
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(Color couleur) {
+        this.couleur = couleur;
+    }
 }
+

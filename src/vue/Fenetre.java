@@ -118,7 +118,6 @@ public class Fenetre extends JFrame {
 
                     panelFenetreJeu.repaint();
                     panelFenetreJeu.setDefilementY(defilementY);
-
                     panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
                     panelFenetreJeu.setDefilementFigureX(defilementFigureX);
 
@@ -146,10 +145,12 @@ public class Fenetre extends JFrame {
                         degree=panelFenetreJeu.getDegree();
 
                     }
-                    if(defilementY == 550){
+
+                    if(defilementY == 450){
                         panelFenetreJeu.setDefilementRondChangementCouleur(-100);
                         defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
                     }
+
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
                         Thread.sleep(3);

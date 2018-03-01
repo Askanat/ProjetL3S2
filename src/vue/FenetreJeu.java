@@ -1,6 +1,7 @@
 package vue;
 
 import controleur.ControlFenetreJeu;
+import model.Entite;
 import model.Jeu;
 
 import javax.imageio.ImageIO;
@@ -25,15 +26,14 @@ public class FenetreJeu extends JPanel {
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
-
-
     private volatile boolean arretJeu = false;
-
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
-
     private int degree = 0;
     public Bouton retour;
     private Image imageFenetreJeu;
+    //private Entite boule;
+    Entite boule = new Entite(Color.WHITE);
+
     public FenetreJeu(Jeu jeu) {
 
         this.jeu = jeu;
@@ -56,9 +56,13 @@ public class FenetreJeu extends JPanel {
 
     protected void paintComponent(Graphics g) {
         // Le rond du joueur
+        //Entite boule = new Entite(Color.WHITE);
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
-        g.setColor(Color.white);
-        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
+
+            g.setColor(boule.getCouleur());
+            g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
+
+
 
         try {
             Image imgBR = ImageIO.read(new File("images\\rectangleRouge.png"));
@@ -69,14 +73,17 @@ public class FenetreJeu extends JPanel {
             Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
             Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
-
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
 
             // rond Changement Couleur
             if(defilementRondChangementCouleur > -100){
                 g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
+                if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
+                    boule.changementCouleurBille(boule);
+                }
             }
+
 
            if (defilementY > -200 && choixFigure[0]) {
                // Les barres horizontales
@@ -91,27 +98,32 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
                g.drawImage(imgBR, 1600 - defilementFigureX , defilementY, this);
                 // Collision avec barres horizontales
-               if(posY + 50 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){ //si boule fait une collision avec une barre
+               if(posY + 50 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
                    // la boule tape toujours en 300, milieu ecran
                    if(defilementFigureX>=-25 && defilementFigureX <=75 || defilementFigureX>=675 && defilementFigureX<=775){ //-25 pour la moitié
                         //collision couleur bleu
-                       g.setColor(Color.BLUE);
+
                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+
                    }
                    if(defilementFigureX>=75 && defilementFigureX <=275){
                        //collision couleur vert
-                       g.setColor(Color.GREEN);
+
                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+
                    }
+
                    if(defilementFigureX>=275 && defilementFigureX <=475){
                        //collision couleur jaune
-                       g.setColor(Color.YELLOW);
+
                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+
                    }
                    if(defilementFigureX>=475 && defilementFigureX <=675){
                        //collision couleur rouge
-                       g.setColor(Color.RED);
+
                        g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
+
                    }
 
                }
@@ -121,7 +133,7 @@ public class FenetreJeu extends JPanel {
 
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-            if (defilementY > -200 && choixFigure[1]) {
+           if (defilementY > -200 && choixFigure[1]) {
 
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
@@ -144,7 +156,7 @@ public class FenetreJeu extends JPanel {
                         arretJeu =true;
                     }
                     if(degree >=180 && degree<=270){
-                        g.setColor(Color.YELLOW);
+                        g.setColor(Color.BLUE);
                         g.drawString("COLISSION", this.getWidth() / 2 - 109, defilementY);
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
