@@ -15,22 +15,23 @@ import static vue.Fenetre.*;
 
 public class FenetreJeu extends JPanel {
 
-    public static final int NOMBRE_DE_SLOT_FENETRE_CHARGER = 3;
-
-
     private Jeu jeu;
+
     private Font taillePolice;
+
     private int posX = 0;
     private int posY = 0;
     private int defilementY = -200;
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
+
     private boolean etoileUnSeulPointScore = false;
     private volatile boolean arretJeu = false;
+
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
     private int degree = 0;
-    public Bouton retour;
+    public Bouton retour, menu;
     private Image imageFenetreJeu;
     //private Entite boule;
     Entite bille = new Entite(Color.WHITE);
@@ -48,11 +49,17 @@ public class FenetreJeu extends JPanel {
 
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
+
+        menu = new Bouton("");
+        menu.setActionCommand("Menu");
+
         this.add(retour);
+        this.add(menu);
     }
 
     public void setControl(ControlFenetreJeu controlFenetreJeu) {
        retour.addActionListener(controlFenetreJeu);
+       menu.addActionListener(controlFenetreJeu);
     }
 
     protected void paintComponent(Graphics g) {

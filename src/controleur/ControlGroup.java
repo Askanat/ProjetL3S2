@@ -19,6 +19,7 @@ public class ControlGroup {
 
 
         ControlClavier controlClavier = new ControlClavier(jeu, fenetre);
+        ControlTimer controlTimer = new ControlTimer(jeu, fenetre);
         ControlMenuEnJeu controlMenuEnJeu = new ControlMenuEnJeu(jeu, fenetre);
 
         ControlFenetreOptions controlFenetreOptions = new ControlFenetreOptions(jeu, fenetre, controlClavier);
