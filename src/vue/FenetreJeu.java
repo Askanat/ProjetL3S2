@@ -1,6 +1,7 @@
 package vue;
 
 import controleur.ControlFenetreJeu;
+import model.Bille;
 import model.Entite;
 import model.Jeu;
 
@@ -8,6 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.geom.Area;
 import java.io.File;
 import java.io.IOException;
 
@@ -17,7 +19,7 @@ public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
 
-    private Font taillePolice;
+
 
     private int posX = 0;
     private int posY = 0;
@@ -25,6 +27,7 @@ public class FenetreJeu extends JPanel {
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
+    Bille billeJoueur = new Bille();
 
     private boolean etoileUnSeulPointScore = false;
     private volatile boolean arretJeu = false;
@@ -70,6 +73,8 @@ public class FenetreJeu extends JPanel {
         g.setColor(bille.getCouleur());
         g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
+        billeJoueur.paintComponent(g);
+        billeJoueur.nouvellePosition(posY);
 
 
         try {
@@ -99,6 +104,7 @@ public class FenetreJeu extends JPanel {
 
 
            if (defilementY > -200 && choixFigure[0]) {
+
                // Les barres horizontales
 
                g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
@@ -148,8 +154,10 @@ public class FenetreJeu extends JPanel {
 
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
-          /* if (defilementY > -200 && choixFigure[1]) {
+           if (defilementY > -200 && choixFigure[1]) {
 
+
+                /*
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
                 // 4 morceaux d'un cercle qui tourne
@@ -174,9 +182,9 @@ public class FenetreJeu extends JPanel {
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                }
+                }*/
 
-            }*/
+            }
 
             AffineTransform old2 = g2d.getTransform();
             if (defilementY > -200 && choixFigure[2]){
