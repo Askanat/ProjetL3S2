@@ -94,7 +94,7 @@ public class FenetreJeu extends JPanel {
             // rond Changement Couleur
 
                 if(posY + 50 + defilementRondChangementCouleur + 19 >= 900){
-                    if((posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905  ) && (!rondChangementCouleurUnSeul)){
+                    if((posY + 50 + defilementRondChangementCouleur + 19 >= 900   ) && (!rondChangementCouleurUnSeul)){
                         bille.changementCouleurBille(bille);
                         rondChangementCouleurUnSeul = true;
                     }
@@ -179,8 +179,8 @@ public class FenetreJeu extends JPanel {
                 g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
                 g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
                 g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);
-                /*if((posY + 57 + defilementY + 109 >= 900 && posY + 57 + defilementY + 89 <= 900) || (posY + 57 + defilementY - 89 >= 900 && posY + 57 + defilementY - 109 <= 900)){
-                    if((degree >=0 && degree<=90)&& bille.getCouleur()== Color.BLUE){
+                if((posY + 57 + defilementY + 109 >= 900 && posY + 57 + defilementY + 89 <= 900)){
+                    if((degree >=0 && degree<=90)&& bille.getCouleur()== Color.YELLOW){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
@@ -188,7 +188,7 @@ public class FenetreJeu extends JPanel {
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                    if((degree >=180 && degree<=270)&& bille.getCouleur()== Color.YELLOW){
+                    if((degree >=180 && degree<=270)&& bille.getCouleur()== Color.BLUE){
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
@@ -196,7 +196,25 @@ public class FenetreJeu extends JPanel {
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                }*/
+                }
+                if((posY + 57 + defilementY - 89 >= 900 && posY + 57 + defilementY - 109 <= 900)){
+                    if((degree >=0 && degree<=90)&& bille.getCouleur()== Color.BLUE){
+                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                        arretJeu =true;
+                    }
+                    if((degree >=90 && degree<=180)&& bille.getCouleur()== Color.GREEN){
+                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                        arretJeu =true;
+                    }
+                    if((degree >=180 && degree<=270)&& bille.getCouleur()== Color.YELLOW){
+                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                        arretJeu =true;
+                    }
+                    if((degree >=270 && degree<=360)&& bille.getCouleur()== Color.RED){
+                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                        arretJeu =true;
+                    }
+                }
 
             }
 
