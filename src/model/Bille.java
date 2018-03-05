@@ -12,23 +12,27 @@ public class Bille extends JPanel {
     protected Color couleur;
     protected Color couleurTab[] = {Color.BLUE, Color.RED, Color.YELLOW, Color.GREEN};
     protected int score;
-    Ellipse2D ellipse = new Ellipse2D.Double(300-25, 900-50, 60, 60);
+    public Ellipse2D ellipse = new Ellipse2D.Double(300-25, 900-50, 60, 60);
+    public Area areaA ;
 
     public Bille(){
         score = 0;
         couleur = Color.WHITE;
-
     }
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
        // Polygon s = new Polygon();
-        Area areaA = new Area(ellipse);
+        areaA = new Area(ellipse);
         g2d.draw(areaA);
     }
     public void nouvellePosition (int posY){
             ellipse = new Ellipse2D.Double(300-25, 900-50-posY, 60, 60);
+    }
+    public boolean testIntersection(Area areaA) {
+        areaA.intersect(this.areaA);
+        return !areaA.isEmpty();
     }
 
 }

@@ -1,6 +1,7 @@
 package vue;
 
 import controleur.ControlFenetreJeu;
+import model.Barre;
 import model.Bille;
 import model.Entite;
 import model.Jeu;
@@ -19,7 +20,11 @@ public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
 
-
+    Bille billeJoueur = new Bille();
+    Barre barreRouge = new Barre(Color.RED);
+    Barre barreBleu = new Barre(Color.BLUE);
+    Barre barreJaune = new Barre(Color.YELLOW);
+    Barre barreVert = new Barre(Color.GREEN);
 
     private int posX = 0;
     private int posY = 0;
@@ -27,7 +32,6 @@ public class FenetreJeu extends JPanel {
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
-    Bille billeJoueur = new Bille();
 
     private boolean etoileUnSeulPointScore = false;
     private volatile boolean arretJeu = false;
@@ -71,7 +75,7 @@ public class FenetreJeu extends JPanel {
 
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(bille.getCouleur());
-        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
+        //g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
         billeJoueur.paintComponent(g);
         billeJoueur.nouvellePosition(posY);
@@ -104,10 +108,20 @@ public class FenetreJeu extends JPanel {
 
 
            if (defilementY > -200 && choixFigure[0]) {
+                barreRouge.nouvellePosition(0-defilementFigureX, defilementY);
+                barreRouge.paintComponents(g);
+                barreBleu.nouvellePosition(200-defilementFigureX, defilementY);
+                barreBleu.paintComponents(g);
+                barreVert.nouvellePosition(400-defilementFigureX, defilementY);
+                barreVert.paintComponents(g);
+                barreJaune.nouvellePosition(600-defilementFigureX, defilementY);
+                barreJaune.paintComponents(g);
+
+
 
                // Les barres horizontales
 
-               g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
+               /*g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
                g.drawImage(imgBB, 200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBV, 400 - defilementFigureX, defilementY, this);
                g.drawImage(imgBJ, 600 - defilementFigureX , defilementY, this);
@@ -117,7 +131,8 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
                g.drawImage(imgBR, 1600 - defilementFigureX , defilementY, this);
                g.drawImage(imgBB, 1800 - defilementFigureX , defilementY, this);
-               g.drawImage(imgBV, 2000 - defilementFigureX , defilementY, this);
+               g.drawImage(imgBV, 2000 - defilementFigureX , defilementY, this); */
+
                 // Collision avec barres horizontales
                if(posY + 57 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
                    // la boule tape toujours en 300, milieu ecran
@@ -157,7 +172,7 @@ public class FenetreJeu extends JPanel {
            if (defilementY > -200 && choixFigure[1]) {
 
 
-                /*
+
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
                 // 4 morceaux d'un cercle qui tourne
@@ -182,12 +197,13 @@ public class FenetreJeu extends JPanel {
                         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                         arretJeu =true;
                     }
-                }*/
+                }
 
             }
 
             AffineTransform old2 = g2d.getTransform();
             if (defilementY > -200 && choixFigure[2]){
+
                 //un carré
 
                 g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
@@ -201,14 +217,24 @@ public class FenetreJeu extends JPanel {
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 , defilementY);
-                g2d.drawImage(imgBB, this.getWidth() / 2 - 100, 80 + defilementY, this);
-                g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY - 100, this);
+                barreBleu.nouvellePosition(this.getWidth() / 2 - 100,80+ defilementY);
+                barreBleu.paintComponents(g2d);
+                barreJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY-100);
+                barreJaune.paintComponents(g2d);
+                //g2d.drawImage(imgBB, this.getWidth() / 2 - 100, 80 + defilementY, this);
+                //g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY - 100, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, defilementY);
-                g2d.drawImage(imgBR, this.getWidth() / 2 - 100, 80 + defilementY, this);
+                barreRouge.nouvellePosition(this.getWidth() / 2 - 100, 80 + defilementY);
+                barreRouge.paintComponents(g2d);
+               // g2d.drawImage(imgBR, this.getWidth() / 2 - 100, 80 + defilementY, this);
                 g2d.rotate((Math.toRadians(360)), this.getWidth() / 2, + defilementY);
-                g2d.drawImage(imgBV, this.getWidth() / 2 - 100,  defilementY - 100, this);
+                barreVert.nouvellePosition(this.getWidth() / 2 - 100, defilementY -100);
+                barreVert.paintComponents(g2d);
+               // g2d.drawImage(imgBV, this.getWidth() / 2 - 100,  defilementY - 100, this);
                 g2d.setTransform(old2);
-
+                if(billeJoueur.testIntersection(barreJaune.areaA)){
+                    arretJeu =true;
+                }
             }
 
 
@@ -226,17 +252,25 @@ public class FenetreJeu extends JPanel {
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
                 // une croix
-
-                g2d.drawImage(imgBR, this.getWidth() / 2 - 100, defilementY, this);
+                barreRouge.nouvellePosition(this.getWidth() / 2 - 100, defilementY);
+                barreRouge.paintComponents(g2d);
+                //g2d.drawImage(imgBR, this.getWidth() / 2 - 100, defilementY, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
-                g2d.drawImage(imgBB, this.getWidth() / 2 - 100, defilementY, this);
+                barreBleu.nouvellePosition(this.getWidth() / 2 - 100, defilementY );
+                barreBleu.paintComponents(g2d);
+              //  g2d.drawImage(imgBB, this.getWidth() / 2 - 100, defilementY, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
-                g2d.drawImage(imgBV, this.getWidth() / 2 - 100, defilementY, this);
+                barreVert.nouvellePosition(this.getWidth() / 2 - 100, defilementY);
+                barreVert.paintComponents(g2d);
+               // g2d.drawImage(imgBV, this.getWidth() / 2 - 100, defilementY, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
-                g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY, this);
-
+                barreJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY);
+                barreJaune.paintComponents(g2d);
+               // g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY, this);
+                if(billeJoueur.testIntersection(barreVert.areaA)){
+                    arretJeu =true;
+                }
             }
-
 
         } catch (IOException e) {
             e.printStackTrace();

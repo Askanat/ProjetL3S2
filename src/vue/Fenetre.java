@@ -88,7 +88,7 @@ public class Fenetre extends JFrame {
                     panelFenetreJeu.repaint();
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(2);
+                        Thread.sleep(3);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -115,20 +115,14 @@ public class Fenetre extends JFrame {
                     defilementY++;
                     defilementRondChangementCouleur++;
                     defilementFigureX++;
+                    degree++;
 
                     panelFenetreJeu.repaint();
                     panelFenetreJeu.setDefilementY(defilementY);
+                    panelFenetreJeu.setDegree(degree);
                     panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
                     panelFenetreJeu.setDefilementFigureX(defilementFigureX);
 
-                    if (panelFenetreJeu.choixFigure[1]){
-                        degree++;
-                        panelFenetreJeu.setDegree(degree);
-                        if(degree == 360){
-                            panelFenetreJeu.setDegree(0);
-                            degree=panelFenetreJeu.getDegree();
-                        }
-                    }
 
                     if(defilementFigureX == 1600){
                         panelFenetreJeu.setDefilementFigureX(0);
@@ -153,7 +147,7 @@ public class Fenetre extends JFrame {
 
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
-                        Thread.sleep(2);
+                        Thread.sleep(3);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
