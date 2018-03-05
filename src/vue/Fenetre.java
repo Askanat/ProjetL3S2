@@ -137,8 +137,11 @@ public class Fenetre extends JFrame {
                 panelFenetreJeu.choixFigure[i] =true; // pour 1ere figure
                 while(!arretJeu) {
 
-                    defilementY++;
-                    defilementRondChangementCouleur++;
+                    if(panelFenetreJeu.getPosY()>300){ //tier ecran
+                        defilementY++;
+                        defilementRondChangementCouleur++;
+                    }
+
                     defilementFigureX++;
 
                     panelFenetreJeu.repaint();
