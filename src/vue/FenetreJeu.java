@@ -1,7 +1,7 @@
 package vue;
 
 import controleur.ControlFenetreJeu;
-import model.Bille;
+
 import model.Entite;
 import model.Jeu;
 
@@ -88,16 +88,19 @@ public class FenetreJeu extends JPanel {
             Image imgCarreNoir = ImageIO.read(new File("images\\carreNoir.png"));
 
             // rond Changement Couleur
-            if(defilementRondChangementCouleur > -100){
-                g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
-                if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
-                    bille.changementCouleurBille(bille);
-                }
+
                 //pour cacher le rond changement couleur
                 if(posY + 50 + defilementRondChangementCouleur + 19 >= 900){
-                    g.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementRondChangementCouleur , this);
+                    if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
+                        bille.changementCouleurBille(bille);
+                    }
                 }
-            }
+                else{
+                    if(defilementRondChangementCouleur > -100) {
+                        g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur, this);
+                    }
+                }
+
 
 
            if (defilementY > -200 && choixFigure[0]) {
@@ -155,7 +158,17 @@ public class FenetreJeu extends JPanel {
 
 
 
-                g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
+               if(posY + 57 + defilementY + 20 >= 900){//collision pour l'étoile
+
+                   if(!etoileUnSeulPointScore) {
+                       bille.setScore(bille.getScore() + 1);
+                       etoileUnSeulPointScore = true;
+                   }
+               }
+               else{
+                   g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
+               }
+
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
                 // 4 morceaux d'un cercle qui tourne
                 g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
@@ -187,14 +200,15 @@ public class FenetreJeu extends JPanel {
             if (defilementY > -200 && choixFigure[2]){
                 //un carré
 
-                g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
-
                 if(posY + 57 + defilementY + 20 >= 900){// collision avec etoile
-                    g2d.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementY - 19, this);
+
                     if(!etoileUnSeulPointScore) {
                         bille.setScore(bille.getScore() + 1);
                         etoileUnSeulPointScore = true;
                     }
+                }
+                else{
+                    g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 , defilementY);
@@ -212,13 +226,16 @@ public class FenetreJeu extends JPanel {
             g2d.setTransform(old);
             if (defilementY > -200 && choixFigure[3]) {
 
-                g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
+
                 if(posY + 57 + defilementY + 20 >= 900){//collision pour l'étoile
-                    g2d.drawImage(imgCarreNoir, this.getWidth() / 2 - 20, defilementY - 19, this);
+
                     if(!etoileUnSeulPointScore) {
                         bille.setScore(bille.getScore() + 1);
                         etoileUnSeulPointScore = true;
                     }
+                }
+                else{
+                    g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);

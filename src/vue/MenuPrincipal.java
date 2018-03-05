@@ -17,8 +17,8 @@ public class MenuPrincipal extends JPanel {
     private Image imageMenuPrincipal;
     private int posX = -50;
     private int posY = -50;
-    private int posX2 = 100 ;
-    private int posY2 = 100;
+    private int posX2 = 400 ;
+    private int posY2 = 400;
 
     public Bouton nouvellePartie, guideJeu, options, credits, quitter;
 

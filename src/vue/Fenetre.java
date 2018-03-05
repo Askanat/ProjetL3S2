@@ -46,7 +46,7 @@ public class Fenetre extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        bouleQuiAvance();
+        boulesQuiAvancentMenu();
         bouleColor();
     }
 
@@ -190,7 +190,7 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    private void bouleQuiAvance(){
+    private void boulesQuiAvancentMenu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionX = panelMenuPrincipal.getPosX();
