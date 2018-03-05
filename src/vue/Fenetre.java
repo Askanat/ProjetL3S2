@@ -177,6 +177,8 @@ public class Fenetre extends JFrame {
                     if(defilementY == 450){
                         panelFenetreJeu.setDefilementRondChangementCouleur(-100);
                         defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
+                        panelFenetreJeu.setRondChangementCouleurUnSeul(false);
+
                     }
 
                     arretJeu =panelFenetreJeu.isArretJeu();

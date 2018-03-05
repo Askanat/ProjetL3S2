@@ -29,6 +29,10 @@ public class FenetreJeu extends JPanel {
     private int defilementFigureX =0;
 
     private boolean etoileUnSeulPointScore = false;
+
+
+
+    private boolean rondChangementCouleurUnSeul = false;
     private volatile boolean arretJeu = false;
 
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
@@ -89,13 +93,13 @@ public class FenetreJeu extends JPanel {
 
             // rond Changement Couleur
 
-                //pour cacher le rond changement couleur
                 if(posY + 50 + defilementRondChangementCouleur + 19 >= 900){
-                    if(posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905   ){
+                    if((posY + 50 + defilementRondChangementCouleur + 19 >= 900 &&  posY + 50 + defilementRondChangementCouleur + 19 <= 905  ) && (!rondChangementCouleurUnSeul)){
                         bille.changementCouleurBille(bille);
+                        rondChangementCouleurUnSeul = true;
                     }
                 }
-                else{
+                else if(!rondChangementCouleurUnSeul){
                     if(defilementRondChangementCouleur > -100) {
                         g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur, this);
                     }
@@ -165,7 +169,7 @@ public class FenetreJeu extends JPanel {
                        etoileUnSeulPointScore = true;
                    }
                }
-               else{
+               else if(!etoileUnSeulPointScore){
                    g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
                }
 
@@ -207,7 +211,7 @@ public class FenetreJeu extends JPanel {
                         etoileUnSeulPointScore = true;
                     }
                 }
-                else{
+                else if(!etoileUnSeulPointScore){
                     g2d.drawImage(imgEtoile, this.getWidth() / 2- 20, defilementY -19, this);
                 }
 
@@ -234,7 +238,7 @@ public class FenetreJeu extends JPanel {
                         etoileUnSeulPointScore = true;
                     }
                 }
-                else{
+                else if(!etoileUnSeulPointScore){
                     g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
                 }
 
@@ -323,5 +327,12 @@ public class FenetreJeu extends JPanel {
 
     public void setEtoileUnSeulPointScore(boolean etoileUnSeulPointScore) {
         this.etoileUnSeulPointScore = etoileUnSeulPointScore;
+    }
+    public boolean isRondChangementCouleurUnSeul() {
+        return rondChangementCouleurUnSeul;
+    }
+
+    public void setRondChangementCouleurUnSeul(boolean rondChangementCouleurUnSeul) {
+        this.rondChangementCouleurUnSeul = rondChangementCouleurUnSeul;
     }
 }
