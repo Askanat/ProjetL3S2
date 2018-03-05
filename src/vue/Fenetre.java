@@ -65,6 +65,31 @@ public class Fenetre extends JFrame {
         panelFenetreJeu = new FenetreJeu(jeu);
     }
 
+    public void deplacementClavier() {
+        new Thread(new Runnable(){
+            int positionY;
+
+            @Override
+            public void run() {
+                for(int i = 0; i<500; i++){
+                    if(i<=250) {
+                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
+                    }
+                    if(i>=250){
+                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()-1);
+                    }
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+
+            }
+
+        }).start();
+    }
+
     public void bouleQuiAvanceJeu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */

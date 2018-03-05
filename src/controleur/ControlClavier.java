@@ -38,14 +38,18 @@ public class ControlClavier extends Control implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        int i = 0;
+        int key = e.getKeyCode();
+        if (key == KeyEvent.VK_SPACE){
+            fenetre.deplacementClavier();
+        }
+        /*int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)
                 toucheEnfoncer[i] = true;
             i++;
         }
 
-        System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer
+        System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer */
     }
 
     @Override
