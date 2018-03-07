@@ -91,7 +91,7 @@ public class Fenetre extends JFrame {
 
         }).start();
     }
-    public void jouerMusique(){ new Thread(new Runnable(){
+    public void jouerMusiquePrincipal(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
         Mp3 musiquePendantJeu = new Mp3("musiques\\Der.mp3");
 
@@ -108,9 +108,46 @@ public class Fenetre extends JFrame {
                 e.printStackTrace();
             }
         }
-
     }).start();
+    }
 
+    public void jouerMusiqueFin(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreJeu.isArretJeu();
+        Mp3 musiqueFin = new Mp3("musiques\\finDePartie.mp3");
+        boolean buffer = true;
+        @Override
+        public void run() {
+            try {
+                while (buffer) {
+                    arretJeu = panelFenetreJeu.isArretJeu();
+                    if(arretJeu){
+                        musiqueFin.getPlayer().play();
+                    }
+                    if(arretJeu){
+                        buffer = false;
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void jouerMusiqueBouton(){ new Thread(new Runnable(){
+        Mp3 musiqueFinBouton = new Mp3("musiques\\caisseEnregistreuse.mp3");
+
+        @Override
+        public void run() {
+            try {
+                while (musiqueFinBouton.getPlayer().play(1)) {
+                        musiqueFinBouton.getPlayer().play();
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
     }
 
     public void formeDefilement(){

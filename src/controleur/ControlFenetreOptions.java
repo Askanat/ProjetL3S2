@@ -43,6 +43,7 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
         switch (e.getActionCommand()) {
             case "Retour":
                 if (!jeu.getEtat().getPause()) {
+                    fenetre.jouerMusiqueBouton();
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
                 } else {

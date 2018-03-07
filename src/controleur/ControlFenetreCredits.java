@@ -16,6 +16,7 @@ public class ControlFenetreCredits extends Control implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Retour":
+                fenetre.jouerMusiqueBouton();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 changerVue();
                 break;
