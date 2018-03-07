@@ -20,6 +20,8 @@ public class Fenetre extends JFrame {
     public static final int Y = 900; // (int) tailleEcran.getHeight();
 
 
+    private boolean finMusiqueMenu = false;
+
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
@@ -48,6 +50,7 @@ public class Fenetre extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+        jouerMusiqueMenu();
         boulesQuiAvancentMenu();
         bouleColor();
     }
@@ -91,17 +94,34 @@ public class Fenetre extends JFrame {
 
         }).start();
     }
-    public void jouerMusiquePrincipal(){ new Thread(new Runnable(){
+    public void jouerMusiqueJeu(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
-        Mp3 musiquePendantJeu = new Mp3("musiques\\Der.mp3");
+        Mp3 musiqueJeu = new Mp3("musiques\\musiqueJeu.mp3");
 
         @Override
         public void run() {
             try {
-                while (musiquePendantJeu.getPlayer().play(1)) {
+                while (musiqueJeu.getPlayer().play(1)) {
                     arretJeu = panelFenetreJeu.isArretJeu();
                     if(arretJeu){
-                        musiquePendantJeu.getPlayer().close();
+                        musiqueJeu.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void jouerMusiqueMenu(){ new Thread(new Runnable(){
+        Mp3 musiqueMenu = new Mp3("musiques\\musiqueMenu.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueMenu.getPlayer().play(1)){
+                    if(finMusiqueMenu){
+                        musiqueMenu.getPlayer().close();
                     }
                 }
             } catch(JavaLayerException e){
@@ -365,4 +385,8 @@ public class Fenetre extends JFrame {
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
+    public void setFinMusiqueMenu(boolean finMusiqueMenu) {
+        this.finMusiqueMenu = finMusiqueMenu;
+    }
+
 }

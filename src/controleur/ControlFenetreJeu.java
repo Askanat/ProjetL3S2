@@ -31,6 +31,8 @@ public class ControlFenetreJeu extends Control implements ActionListener {
                 break;
 
             case "Retour":
+                fenetre.setFinMusiqueMenu(false);
+                fenetre.jouerMusiqueMenu();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 fenetre.panelFenetreJeu = null;
                 fenetre.redeclareFenetreJeu();
