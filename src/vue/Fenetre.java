@@ -1,7 +1,9 @@
 package vue;
 
 import controleur.*;
+import javazoom.jl.decoder.JavaLayerException;
 import model.Jeu;
+import model.Mp3;
 
 import javax.swing.*;
 import java.awt.*;
@@ -89,38 +91,28 @@ public class Fenetre extends JFrame {
 
         }).start();
     }
+    public void jouerMusique(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreJeu.isArretJeu();
+        Mp3 musiquePendantJeu = new Mp3("musiques\\Der.mp3");
 
-    public void bouleQuiAvanceJeu(){
-        new Thread(new Runnable(){
-            /* variables pour pas get a chaque tour de boucle */
-            int positionY = panelFenetreJeu.getY();
-            boolean arretJeu = panelFenetreJeu.isArretJeu();
-            boolean backY = false;
-            @Override
-            public void run() {
-                while(!arretJeu) {
-
-                    if(positionY < 0)
-                        backY = false;
-                    if(positionY > panelFenetreJeu.getHeight()-50)
-                        backY = true;
-
-                    if(!backY)
-                        panelFenetreJeu.setPosY(++positionY);
-                    else
-                        panelFenetreJeu.setPosY(--positionY);
-
-                    panelFenetreJeu.repaint();
-                    arretJeu =panelFenetreJeu.isArretJeu();
-                    try {
-                        Thread.sleep(2);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+        @Override
+        public void run() {
+            try {
+                while (musiquePendantJeu.getPlayer().play(1)) {
+                    arretJeu = panelFenetreJeu.isArretJeu();
+                    if(arretJeu){
+                        musiquePendantJeu.getPlayer().close();
                     }
                 }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
             }
-        }).start();
+        }
+
+    }).start();
+
     }
+
     public void formeDefilement(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
