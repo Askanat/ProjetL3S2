@@ -20,7 +20,7 @@ public class MenuPrincipal extends JPanel {
     private int posX2 = 400 ;
     private int posY2 = 400;
 
-    public Bouton nouvellePartie, guideJeu, options, credits, quitter;
+    public Bouton nouvellePartie, guideJeu, options, credits, quitter, extension;
 
     public MenuPrincipal() {
 
@@ -39,12 +39,15 @@ public class MenuPrincipal extends JPanel {
         credits.setActionCommand("Crédits");
         quitter = new Bouton("Quitter");
         quitter.setActionCommand("Quitter");
+        extension = new Bouton("Extension");
+        extension.setActionCommand("Extension");
 
         this.add(nouvellePartie);
         this.add(guideJeu);
         this.add(options);
         this.add(credits);
         this.add(quitter);
+        this.add(extension);
     }
 
     public void setControl(ControlMenuPrincipal controlMenuPrincipal) {
@@ -53,6 +56,7 @@ public class MenuPrincipal extends JPanel {
         options.addActionListener(controlMenuPrincipal);
         credits.addActionListener(controlMenuPrincipal);
         quitter.addActionListener(controlMenuPrincipal);
+        extension.addActionListener(controlMenuPrincipal);
     }
 
     protected void paintComponent(Graphics g) {
@@ -76,6 +80,7 @@ public class MenuPrincipal extends JPanel {
         options.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(570), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         credits.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         quitter.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
+        extension.setBounds(Fenetre.adapterResolutionEnX(248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
     }
     public int getPosX() {
         return posX;

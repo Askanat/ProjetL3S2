@@ -7,6 +7,7 @@ import model.Mp3;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Random;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER;
@@ -29,7 +30,9 @@ public class Fenetre extends JFrame {
     public FenetreRegles    panelFenetreRegles;
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
+    public FenetreExtension panelFenetreExtension;
     public MenuEnJeu        panelMenuEnJeu;
+
 
     public ControlTouche    controlTouche;
 
@@ -63,6 +66,7 @@ public class Fenetre extends JFrame {
         panelFenetreRegles  = new FenetreRegles();
         panelFenetreCredits = new FenetreCredits();
         panelMenuEnJeu      = new MenuEnJeu();
+        panelFenetreExtension = new FenetreExtension();
 
         vueJeu();
     }
@@ -70,6 +74,28 @@ public class Fenetre extends JFrame {
         panelFenetreJeu = new FenetreJeu(jeu);
     }
 
+    public void changerMotExtension (){
+        Random rand = new Random();
+        int buffer = -1;
+        int val = -1;
+        boolean[] actualiserTab = new boolean[4];
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            actualiserTab[i] = false;
+        }
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            if(panelFenetreExtension.getMotTab()[i]){
+                buffer = i;
+            }
+        }
+        val = rand.nextInt(4);
+        while(val == buffer ){
+            val = rand.nextInt(4);
+        }
+        actualiserTab[val] = true;
+        panelFenetreExtension.setMotTab(actualiserTab);
+        panelFenetreJeu.repaint();
+
+    }
     public void deplacementClavier() {
         new Thread(new Runnable(){
             int positionY;
@@ -89,11 +115,29 @@ public class Fenetre extends JFrame {
                         e.printStackTrace();
                     }
                 }
-
             }
-
         }).start();
     }
+    public void deplacementClavierExtension() {
+        new Thread(new Runnable(){
+            int positionY;
+
+            @Override
+            public void run() {
+                for(int i = 0; i<100; i++){
+                    if(i<=100) {
+                        panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()+1);
+                    }
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
     public void jouerMusiqueJeu(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
         Mp3 musiqueJeu = new Mp3("musiques\\musiqueJeu.mp3");
@@ -377,6 +421,9 @@ public class Fenetre extends JFrame {
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
     }
+    public void setControlFenetreExtension(ControlFenetreExtension controlFenetreExtension) {
+        panelFenetreExtension.setControl(controlFenetreExtension);
+    }
 
     public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
         panelMenuEnJeu.setControl(controlMenuEnJeu);
@@ -385,6 +432,10 @@ public class Fenetre extends JFrame {
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
+    public void setControlClavierExtension(ControlClavierExtension controlClavierExtension) {
+        addKeyListener(controlClavierExtension);
+    }
+
     public void setFinMusiqueMenu(boolean finMusiqueMenu) {
         this.finMusiqueMenu = finMusiqueMenu;
     }

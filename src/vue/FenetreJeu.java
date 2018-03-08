@@ -89,7 +89,7 @@ public class FenetreJeu extends JPanel {
             Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
-            Image imgCarreNoir = ImageIO.read(new File("images\\carreNoir.png"));
+
 
             // rond Changement Couleur
 
