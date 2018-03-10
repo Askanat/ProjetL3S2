@@ -18,6 +18,7 @@ public class ControlGroup {
         ControlFenetreCredits controlFenetreCredits = new ControlFenetreCredits(jeu, fenetre);
         ControlFenetreExtension  controlFenetreExtension = new ControlFenetreExtension(jeu, fenetre);
 
+        ControlSouris controlSouris = new ControlSouris(jeu, fenetre);
         ControlClavierExtension controlClavierExtension = new ControlClavierExtension(jeu, fenetre);
         ControlClavier controlClavier = new ControlClavier(jeu, fenetre);
         ControlTimer controlTimer = new ControlTimer(jeu, fenetre);

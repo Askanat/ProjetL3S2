@@ -22,7 +22,7 @@ public class Fenetre extends JFrame {
 
 
     private boolean finMusiqueMenu = false;
-
+    public ControlSouris souris;
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
@@ -41,7 +41,7 @@ public class Fenetre extends JFrame {
     public JLayeredPane         layeredPane;
 
     public Fenetre(Jeu jeu) {
-
+        souris = new ControlSouris(jeu, this);
         this.jeu = jeu;
         init();
 
@@ -94,8 +94,13 @@ public class Fenetre extends JFrame {
         actualiserTab[val] = true;
         panelFenetreExtension.setMotTab(actualiserTab);
         panelFenetreJeu.repaint();
-
     }
+
+    public void deplacementSouris(){
+        panelFenetreJeu.setPosX(300+7-this.souris.getX());
+        panelFenetreJeu.setPosY(900+5-this.souris.getY());
+    }
+
     public void deplacementClavier() {
         new Thread(new Runnable(){
             int positionY;
@@ -118,6 +123,7 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
+
     public void deplacementClavierExtension() {
         new Thread(new Runnable(){
             int positionY;
@@ -434,6 +440,10 @@ public class Fenetre extends JFrame {
     }
     public void setControlClavierExtension(ControlClavierExtension controlClavierExtension) {
         addKeyListener(controlClavierExtension);
+    }
+
+    public void setControlSouris (ControlSouris controlSouris){
+        addMouseMotionListener(controlSouris);
     }
 
     public void setFinMusiqueMenu(boolean finMusiqueMenu) {

@@ -2,6 +2,7 @@ package vue;
 
 import controleur.ControlFenetreJeu;
 
+import controleur.ControlSouris;
 import model.Entite;
 import model.Jeu;
 
