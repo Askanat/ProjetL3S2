@@ -2,7 +2,7 @@ package vue;
 
 import controleur.ControlFenetreJeu;
 
-import model.Rectangle;
+import model.RectangleForme;
 import model.Bille;
 import model.Jeu;
 
@@ -10,6 +10,8 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
+import java.awt.Shape;
+import java.awt.geom.Rectangle2D;
 import java.io.File;
 import java.io.IOException;
 
@@ -34,19 +36,18 @@ public class FenetreJeu extends JPanel {
     private int degree = 0;
     public Bouton retour, menu;
     private Image imageFenetreJeu;
-    //private Entite boule;
 
     Bille billeJoueur = new Bille();
-    Rectangle rectangleRouge = new Rectangle(Color.RED);
-    Rectangle rectangleBleu = new Rectangle(Color.BLUE);
-    Rectangle rectangleJaune = new Rectangle(Color.YELLOW);
-    Rectangle rectangleVert = new Rectangle(Color.GREEN);
-    Rectangle rectangleRouge2 = new Rectangle(Color.RED);
-    Rectangle rectangleBleu2 = new Rectangle(Color.BLUE);
-    Rectangle rectangleJaune2 = new Rectangle(Color.YELLOW);
-    Rectangle rectangleVert2 = new Rectangle(Color.GREEN);
-    Rectangle etoileRectangle = new Rectangle(Color.WHITE);
-    Rectangle rondChangementCouleurRectangle = new Rectangle(Color.WHITE);
+    RectangleForme rectangleFormeRouge = new RectangleForme(Color.RED);
+    RectangleForme rectangleFormeBleu = new RectangleForme(Color.BLUE);
+    RectangleForme rectangleFormeJaune = new RectangleForme(Color.YELLOW);
+    RectangleForme rectangleFormeVert = new RectangleForme(Color.GREEN);
+    RectangleForme rectangleFormeRouge2 = new RectangleForme(Color.RED);
+    RectangleForme rectangleFormeBleu2 = new RectangleForme(Color.BLUE);
+    RectangleForme rectangleFormeJaune2 = new RectangleForme(Color.YELLOW);
+    RectangleForme rectangleFormeVert2 = new RectangleForme(Color.GREEN);
+    RectangleForme etoileRectangleForme = new RectangleForme(Color.WHITE);
+    RectangleForme rondChangementCouleurRectangleForme = new RectangleForme(Color.WHITE);
 
 
     public FenetreJeu(Jeu jeu) {
@@ -78,8 +79,6 @@ public class FenetreJeu extends JPanel {
 
     protected void paintComponent(Graphics g) {
         // Le rond du joueur
-        // Entite boule = new Entite(Color.WHITE);
-
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(billeJoueur.getCouleur());
         g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
@@ -102,10 +101,10 @@ public class FenetreJeu extends JPanel {
 
 
             // rond Changement Couleur
-                rondChangementCouleurRectangle.nouvellePosition(this.getWidth() / 2 - 20,defilementRondChangementCouleur, 40, 40 );
-                rondChangementCouleurRectangle.paintComponents(g);
-                if(billeJoueur.testIntersection(rondChangementCouleurRectangle.areaA)){
-                    if((billeJoueur.testIntersection(rondChangementCouleurRectangle.areaA)) && (!rondChangementCouleurUnSeul)){
+                rondChangementCouleurRectangleForme.nouvellePosition(this.getWidth() / 2 - 20,defilementRondChangementCouleur, 40, 40 );
+                rondChangementCouleurRectangleForme.paintComponents(g);
+                if(billeJoueur.testIntersection(rondChangementCouleurRectangleForme.areaA)){
+                    if((billeJoueur.testIntersection(rondChangementCouleurRectangleForme.areaA)) && (!rondChangementCouleurUnSeul)){
                         billeJoueur.changementCouleurBille(billeJoueur);
                         rondChangementCouleurUnSeul = true;
                     }
@@ -120,22 +119,22 @@ public class FenetreJeu extends JPanel {
 
            if (defilementY > -200 && choixFigure[0]) { // barres horizontales
 
-               rectangleRouge.nouvellePosition(0-defilementFigureX, defilementY, 200, 20);
-               rectangleRouge.paintComponents(g);
-               rectangleBleu.nouvellePosition(200-defilementFigureX, defilementY,200, 20);
-               rectangleBleu.paintComponents(g);
-               rectangleVert.nouvellePosition(400-defilementFigureX, defilementY,200, 20);
-               rectangleVert.paintComponents(g);
-               rectangleJaune.nouvellePosition(600-defilementFigureX, defilementY,200, 20);
-               rectangleJaune.paintComponents(g);
-               rectangleRouge2.nouvellePosition(800-defilementFigureX, defilementY,200, 20);
-               rectangleRouge2.paintComponents(g);
-               rectangleBleu2.nouvellePosition(1000-defilementFigureX, defilementY,200, 20);
-               rectangleBleu2.paintComponents(g);
-               rectangleVert2.nouvellePosition(1200-defilementFigureX, defilementY,200, 20);
-               rectangleVert2.paintComponents(g);
-               rectangleJaune2.nouvellePosition(1400-defilementFigureX, defilementY,200, 20);
-               rectangleJaune2.paintComponents(g);
+               rectangleFormeRouge.nouvellePosition(0-defilementFigureX, defilementY, 200, 20);
+               rectangleFormeRouge.paintComponents(g);
+               rectangleFormeBleu.nouvellePosition(200-defilementFigureX, defilementY,200, 20);
+               rectangleFormeBleu.paintComponents(g);
+               rectangleFormeVert.nouvellePosition(400-defilementFigureX, defilementY,200, 20);
+               rectangleFormeVert.paintComponents(g);
+               rectangleFormeJaune.nouvellePosition(600-defilementFigureX, defilementY,200, 20);
+               rectangleFormeJaune.paintComponents(g);
+               rectangleFormeRouge2.nouvellePosition(800-defilementFigureX, defilementY,200, 20);
+               rectangleFormeRouge2.paintComponents(g);
+               rectangleFormeBleu2.nouvellePosition(1000-defilementFigureX, defilementY,200, 20);
+               rectangleFormeBleu2.paintComponents(g);
+               rectangleFormeVert2.nouvellePosition(1200-defilementFigureX, defilementY,200, 20);
+               rectangleFormeVert2.paintComponents(g);
+               rectangleFormeJaune2.nouvellePosition(1400-defilementFigureX, defilementY,200, 20);
+               rectangleFormeJaune2.paintComponents(g);
                // Les barres horizontales
 
                g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
@@ -147,37 +146,35 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBV, 1200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
 
-              if((billeJoueur.testIntersection(rectangleRouge.areaA) || billeJoueur.testIntersection(rectangleRouge2.areaA))  && (billeJoueur.getCouleur() == Color.RED)){ // attention mixte Entité et Bille
+              if((billeJoueur.testIntersection(rectangleFormeRouge.areaA) || billeJoueur.testIntersection(rectangleFormeRouge2.areaA))  && (billeJoueur.getCouleur() == Color.RED)){ // attention mixte Entité et Bille
                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                   arretJeu =true;
                   g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
               }
-               if((billeJoueur.testIntersection(rectangleBleu.areaA) || billeJoueur.testIntersection(rectangleBleu2.areaA))  && (billeJoueur.getCouleur() == Color.BLUE)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeBleu.areaA) || billeJoueur.testIntersection(rectangleFormeBleu2.areaA))  && (billeJoueur.getCouleur() == Color.BLUE)){ // attention mixte Entité et Bille
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
-               if((billeJoueur.testIntersection(rectangleVert.areaA) || billeJoueur.testIntersection(rectangleVert2.areaA))  && (billeJoueur.getCouleur() == Color.GREEN)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeVert.areaA) || billeJoueur.testIntersection(rectangleFormeVert2.areaA))  && (billeJoueur.getCouleur() == Color.GREEN)){ // attention mixte Entité et Bille
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
-               if((billeJoueur.testIntersection(rectangleJaune.areaA) || billeJoueur.testIntersection(rectangleJaune2.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeJaune.areaA) || billeJoueur.testIntersection(rectangleFormeJaune2.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){ // attention mixte Entité et Bille
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
            }
 
-
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
            if (defilementY > -200 && choixFigure[1]) {
 
-               etoileRectangle.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
-               etoileRectangle.paintComponents(g);
-               if(billeJoueur.testIntersection(etoileRectangle.areaA)){//collision pour l'étoile
-
+               etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
+               etoileRectangleForme.paintComponents(g);
+               if(billeJoueur.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
                    if(!etoileUnSeulPointScore) {
                        billeJoueur.setScore(billeJoueur.getScore() + 1);
                        etoileUnSeulPointScore = true;
@@ -237,9 +234,9 @@ public class FenetreJeu extends JPanel {
             if (defilementY > -200 && choixFigure[2]){
                 //un carré
 
-                etoileRectangle.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
-                etoileRectangle.paintComponents(g);
-                if(billeJoueur.testIntersection(etoileRectangle.areaA)){//collision pour l'étoile
+                etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
+                etoileRectangleForme.paintComponents(g);
+                if(billeJoueur.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
                     if(!etoileUnSeulPointScore) {
                         billeJoueur.setScore(billeJoueur.getScore() + 1);
                         etoileUnSeulPointScore = true;
@@ -262,12 +259,11 @@ public class FenetreJeu extends JPanel {
 
 
             g2d.setTransform(old);
-            if (defilementY > -200 && choixFigure[3]) {
+            if (defilementY > -200 && choixFigure[3]) { // une croix
 
-                etoileRectangle.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
-                etoileRectangle.paintComponents(g);
-                if(billeJoueur.testIntersection(etoileRectangle.areaA)){//collision pour l'étoile
-
+                etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
+                etoileRectangleForme.paintComponents(g);
+                if(billeJoueur.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
                     if(!etoileUnSeulPointScore) {
                         billeJoueur.setScore(billeJoueur.getScore() + 1);
                         etoileUnSeulPointScore = true;
@@ -278,18 +274,64 @@ public class FenetreJeu extends JPanel {
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
-                // une croix
 
                 g2d.drawImage(imgBR, this.getWidth() / 2 - 100, defilementY, this);
+                rectangleFormeRouge.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
+                rectangleFormeRouge.paintComponents(g2d);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBB, this.getWidth() / 2 - 100, defilementY, this);
+                rectangleFormeBleu.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
+                rectangleFormeBleu.paintComponents(g2d);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBV, this.getWidth() / 2 - 100, defilementY, this);
+                rectangleFormeVert.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
+                rectangleFormeVert.paintComponents(g2d);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2 - 100, defilementY);
                 g2d.drawImage(imgBJ, this.getWidth() / 2 - 100, defilementY, this);
+                rectangleFormeJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
+                rectangleFormeJaune.paintComponents(g2d);
 
+
+                AffineTransform a = new AffineTransform();
+                AffineTransform b = new AffineTransform();
+                AffineTransform c = new AffineTransform();
+                AffineTransform d = new AffineTransform();
+                a.rotate(Math.toRadians(0+degree),this.getWidth() / 2 - 100, defilementY);
+                b.rotate(Math.toRadians(90+degree),this.getWidth() / 2 - 100, defilementY);
+                c.rotate(Math.toRadians(180+degree),this.getWidth() / 2 - 100, defilementY);
+                d.rotate(Math.toRadians(270+degree),this.getWidth() / 2 - 100, defilementY);
+
+                rectangleFormeRouge.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200 , 20);
+                rectangleFormeRouge.nouvelleArea(a.createTransformedShape(rectangleFormeRouge.barre));
+                rectangleFormeRouge.paintComponents(g2d);
+                rectangleFormeBleu.nouvellePosition(this.getWidth() / 2 - 100, defilementY,200 , 20);
+                rectangleFormeBleu.nouvelleArea(b.createTransformedShape(rectangleFormeBleu.barre));
+                rectangleFormeBleu.paintComponents(g2d);
+                rectangleFormeVert.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200 , 20);
+                rectangleFormeVert.nouvelleArea(c.createTransformedShape(rectangleFormeVert.barre));
+                rectangleFormeVert.paintComponents(g2d);
+                rectangleFormeJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY,200 , 20);
+                rectangleFormeJaune.nouvelleArea(d.createTransformedShape(rectangleFormeJaune.barre));
+                rectangleFormeJaune.paintComponents(g2d);
+
+
+                if((billeJoueur.testIntersection(rectangleFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
+                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                    arretJeu =true;
+                }
+                if((billeJoueur.testIntersection(rectangleFormeBleu.areaA)) && (billeJoueur.getCouleur() == Color.BLUE)){
+                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                    arretJeu =true;
+                }
+                if((billeJoueur.testIntersection(rectangleFormeVert.areaA)) && (billeJoueur.getCouleur() == Color.GREEN)){
+                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                    arretJeu =true;
+                }
+                if((billeJoueur.testIntersection(rectangleFormeJaune.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
+                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                    arretJeu =true;
+                }
             }
-
 
         } catch (IOException e) {
             e.printStackTrace();

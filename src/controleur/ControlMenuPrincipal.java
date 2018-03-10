@@ -21,6 +21,7 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
                 fenetre.setContentPane(fenetre.panelFenetreJeu);
                 fenetre.setFinMusiqueMenu(true);
                 fenetre.formeDefilement();
+                fenetre.incrementeDegree();
                fenetre.jouerMusiqueJeu();
                fenetre.jouerMusiqueFin();
                 changerVue();
