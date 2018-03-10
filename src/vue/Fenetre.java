@@ -257,7 +257,7 @@ public class Fenetre extends JFrame {
                         }
                     }
 
-                    if(defilementFigureX == 1600){
+                    if(defilementFigureX == 800){
                         panelFenetreJeu.setDefilementFigureX(0);
                         defilementFigureX = panelFenetreJeu.getDefilementFigureX();
                     }

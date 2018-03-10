@@ -3,6 +3,8 @@ package vue;
 import controleur.ControlFenetreJeu;
 
 import controleur.ControlSouris;
+import model.Barre;
+import model.Bille;
 import model.Entite;
 import model.Jeu;
 
@@ -28,20 +30,24 @@ public class FenetreJeu extends JPanel {
     private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
-
     private boolean etoileUnSeulPointScore = false;
-
-
-
     private boolean rondChangementCouleurUnSeul = false;
     private volatile boolean arretJeu = false;
-
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
     private int degree = 0;
     public Bouton retour, menu;
     private Image imageFenetreJeu;
     //private Entite boule;
     Entite bille = new Entite(Color.WHITE);
+    Bille billeJoueur = new Bille();
+    Barre barreRouge = new Barre(Color.RED);
+    Barre barreBleu = new Barre(Color.BLUE);
+    Barre barreJaune = new Barre(Color.YELLOW);
+    Barre barreVert = new Barre(Color.GREEN);
+    Barre barreRouge2 = new Barre(Color.RED);
+    Barre barreBleu2 = new Barre(Color.BLUE);
+    Barre barreJaune2 = new Barre(Color.YELLOW);
+    Barre barreVert2 = new Barre(Color.GREEN);
 
     public FenetreJeu(Jeu jeu) {
 
@@ -53,6 +59,7 @@ public class FenetreJeu extends JPanel {
         for(int i = 0; i< choixFigure.length; i++){
             choixFigure[i] = false;
         }
+
 
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
@@ -77,6 +84,8 @@ public class FenetreJeu extends JPanel {
         g.setColor(bille.getCouleur());
         g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
 
+        billeJoueur.paintComponent(g);
+        billeJoueur.nouvellePosition(this.getWidth()/2-25-posX, this.getHeight()-50- posY);
 
 
         try {
@@ -110,6 +119,22 @@ public class FenetreJeu extends JPanel {
 
            if (defilementY > -200 && choixFigure[0]) {
 
+               barreRouge.nouvellePosition(0-defilementFigureX, defilementY);
+               barreRouge.paintComponents(g);
+               barreBleu.nouvellePosition(200-defilementFigureX, defilementY);
+               barreBleu.paintComponents(g);
+               barreVert.nouvellePosition(400-defilementFigureX, defilementY);
+               barreVert.paintComponents(g);
+               barreJaune.nouvellePosition(600-defilementFigureX, defilementY);
+               barreJaune.paintComponents(g);
+               barreRouge2.nouvellePosition(800-defilementFigureX, defilementY);
+               barreRouge2.paintComponents(g);
+               barreBleu2.nouvellePosition(1000-defilementFigureX, defilementY);
+               barreBleu2.paintComponents(g);
+               barreVert2.nouvellePosition(1200-defilementFigureX, defilementY);
+               barreVert2.paintComponents(g);
+               barreJaune2.nouvellePosition(1400-defilementFigureX, defilementY);
+               barreJaune2.paintComponents(g);
                // Les barres horizontales
 
                g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);//comptepas
@@ -120,11 +145,31 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBB, 1000 - defilementFigureX , defilementY, this);
                g.drawImage(imgBV, 1200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
-               g.drawImage(imgBR, 1600 - defilementFigureX , defilementY, this);
+              /* g.drawImage(imgBR, 1600 - defilementFigureX , defilementY, this);
                g.drawImage(imgBB, 1800 - defilementFigureX , defilementY, this);
-               g.drawImage(imgBV, 2000 - defilementFigureX , defilementY, this);
+               g.drawImage(imgBV, 2000 - defilementFigureX , defilementY, this);*/
+              if((billeJoueur.testIntersection(barreRouge.areaA) || billeJoueur.testIntersection(barreRouge2.areaA))  && (bille.getCouleur() == Color.RED)){ // attention mixte Entité et Bille
+                  retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                  arretJeu =true;
+                  g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
+              }
+               if((billeJoueur.testIntersection(barreBleu.areaA) || billeJoueur.testIntersection(barreBleu2.areaA))  && (bille.getCouleur() == Color.BLUE)){ // attention mixte Entité et Bille
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+                   g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
+               }
+               if((billeJoueur.testIntersection(barreVert.areaA) || billeJoueur.testIntersection(barreVert2.areaA))  && (bille.getCouleur() == Color.GREEN)){ // attention mixte Entité et Bille
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+                   g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
+               }
+               if((billeJoueur.testIntersection(barreJaune.areaA) || billeJoueur.testIntersection(barreJaune2.areaA)) && (bille.getCouleur() == Color.YELLOW)){ // attention mixte Entité et Bille
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+                   g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
+               }
                 // Collision avec barres horizontales
-               if(posY + 57 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
+               /*if(posY + 57 + defilementY + 20 >= 900 && posY + 50 + defilementY + 20 <= 900 + 20){
                    // la boule tape toujours en 300, milieu ecran
                    if(((defilementFigureX>=0 && defilementFigureX <=100) || (defilementFigureX>=700 && defilementFigureX<=900) || (defilementFigureX>=1500 && defilementFigureX <=1600)) && bille.getCouleur()== Color.BLUE){
                        // collision couleur bleu
@@ -153,7 +198,7 @@ public class FenetreJeu extends JPanel {
                        arretJeu =true;
                        g.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
                    }
-               }
+               }*/
            }
 
 
