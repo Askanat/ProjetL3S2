@@ -26,7 +26,7 @@ public class RectangleForme extends JPanel {
 
         else{
             areaA = new Area(barre);
-            g2d.draw(areaA);
+            //g2d.draw(areaA);
         }
     }
 

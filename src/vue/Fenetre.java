@@ -73,6 +73,9 @@ public class Fenetre extends JFrame {
     public void redeclareFenetreJeu(){
         panelFenetreJeu = new FenetreJeu(jeu);
     }
+    public void redeclareFenetreExtension(){
+        panelFenetreExtension = new FenetreExtension();
+    }
 
     public void changerMotExtension (){
         Random rand = new Random();
@@ -124,7 +127,7 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    public void deplacementClavierExtension() {
+    public void deplacementClavierExtension(boolean bonneReponse) {
         new Thread(new Runnable(){
             int positionY;
 
@@ -132,7 +135,13 @@ public class Fenetre extends JFrame {
             public void run() {
                 for(int i = 0; i<100; i++){
                     if(i<=100) {
-                        panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()+1);
+                        if(bonneReponse)
+                            panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()+1);
+                        else
+                            panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()-1);
+                    }
+                    if (panelFenetreExtension.getPosY() == 900){
+                        //fin du jeu
                     }
                     try {
                         Thread.sleep(1);

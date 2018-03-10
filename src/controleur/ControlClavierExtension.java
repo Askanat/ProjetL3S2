@@ -32,37 +32,63 @@ public class ControlClavierExtension extends Control implements KeyListener{
         if(conteneurUneLettre.matches("[a-z]")){
             resultat = resultat + conteneurUneLettre;
         }
+        if (key == KeyEvent.VK_ENTER) {
+            switch (resultat) {
+                case "jaune":
+                    if (fenetre.panelFenetreExtension.getMotTab()[0]) {
+                        fenetre.deplacementClavierExtension(true);
+                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.changerMotExtension();
+                    }
+                    else{
+                        fenetre.deplacementClavierExtension(false);
+                        fenetre.changerMotExtension();
+                    }
+                    resultat = "";
+                    break;
+                case "vert":
+                    if (fenetre.panelFenetreExtension.getMotTab()[1]) {
+                        fenetre.deplacementClavierExtension(true);
+                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.changerMotExtension();
+                    }
+                    else{
+                        fenetre.deplacementClavierExtension(false);
+                        fenetre.changerMotExtension();
+                    }
+                    resultat = "";
+                    break;
+                case "rouge":
+                    if (fenetre.panelFenetreExtension.getMotTab()[2]) {
+                        fenetre.deplacementClavierExtension(true);
+                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.changerMotExtension();
+                    }
+                    else{
+                        fenetre.deplacementClavierExtension(false);
+                        fenetre.changerMotExtension();
+                    }
+                    resultat = "";
+                    break;
+                case "bleu":
+                    if (fenetre.panelFenetreExtension.getMotTab()[3]) {
+                        fenetre.deplacementClavierExtension(true);
+                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.changerMotExtension();
+                    }
+                    else{
+                        fenetre.deplacementClavierExtension(false);
+                        fenetre.changerMotExtension();
+                    }
 
-        switch(resultat){
-            case "rouge" :
-                if(fenetre.panelFenetreExtension.getMotTab()[0]){
-                    fenetre.deplacementClavierExtension();
-                    fenetre.changerMotExtension();
-                }
-                resultat="";
-                break;
-            case "bleu" :
-                if(fenetre.panelFenetreExtension.getMotTab()[1]){
-                    fenetre.deplacementClavierExtension();
-                    fenetre.changerMotExtension();
-                }
-                resultat="";
-                break;
-            case "vert" :
-                if(fenetre.panelFenetreExtension.getMotTab()[2]){
-                    fenetre.deplacementClavierExtension();
-                    fenetre.changerMotExtension();
-                }
-                resultat="";
-                break;
-            case "jaune" :
-                if(fenetre.panelFenetreExtension.getMotTab()[3]){
-                    fenetre.deplacementClavierExtension();
-                    fenetre.changerMotExtension();
-                }
-                resultat="";
-                break;
+                    resultat = "";
+                    break;
 
+                    default:
+                        fenetre.deplacementClavierExtension(false);
+                        fenetre.changerMotExtension();
+                        resultat = "";
+            }
         }
 
         if(key == KeyEvent.VK_BACK_SPACE){ // pour effacer

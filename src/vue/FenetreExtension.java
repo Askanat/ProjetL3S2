@@ -20,6 +20,7 @@ public class FenetreExtension extends JPanel{
     private int posY= 0;
     private boolean motTab[] = new boolean[4];
     public Bouton retour;
+    private int score = 0;
 
     public FenetreExtension() {
 
@@ -47,7 +48,7 @@ public class FenetreExtension extends JPanel{
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreExtension, 0, 0, getWidth(), getHeight(), this);
         Graphics2D g2 = (Graphics2D) g;
-        retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
+        //retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
 
         try {
             Image imgBonhommeBaton = ImageIO.read(new File("images\\bonhommeBaton.png"));
@@ -75,6 +76,10 @@ public class FenetreExtension extends JPanel{
                 repaint();
             }
 
+            if(posY == 900){
+                retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                g.drawString("Score " + String.valueOf(score) ,50, 50);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -104,6 +109,14 @@ public class FenetreExtension extends JPanel{
     public void setMotTab(boolean[] motTab) {
         this.motTab = motTab;
     }
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
 
 
 }

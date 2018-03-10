@@ -19,6 +19,8 @@ public class ControlFenetreExtension extends Control implements ActionListener {
             case "Retour":
                 fenetre.jouerMusiqueBouton();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
+                fenetre.panelFenetreExtension = null;
+                fenetre.redeclareFenetreExtension();
                 changerVue();
                 break;
         }
