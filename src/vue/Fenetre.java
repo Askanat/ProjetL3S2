@@ -27,18 +27,19 @@ public class Fenetre extends JFrame {
 
     public MenuPrincipal    panelMenuPrincipal;
     public FenetreJeu       panelFenetreJeu;
-    public FenetreRegles    panelFenetreRegles;
+    public FenetreScore     panelFenetreScore;
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
     public FenetreExtension panelFenetreExtension;
     public MenuEnJeu        panelMenuEnJeu;
-
 
     public ControlTouche    controlTouche;
 
     public static JScrollPane   scrollPane;
     public JPanel               panelScrollFenetreJeu;
     public JLayeredPane         layeredPane;
+
+    public boolean mute = false;
 
     public Fenetre(Jeu jeu) {
         souris = new ControlSouris(jeu, this);
@@ -63,7 +64,7 @@ public class Fenetre extends JFrame {
         panelMenuPrincipal  = new MenuPrincipal();
         panelFenetreJeu     = new FenetreJeu(jeu);
         panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
-        panelFenetreRegles  = new FenetreRegles();
+        panelFenetreScore = new FenetreScore();
         panelFenetreCredits = new FenetreCredits();
         panelMenuEnJeu      = new MenuEnJeu();
         panelFenetreExtension = new FenetreExtension();
@@ -162,7 +163,7 @@ public class Fenetre extends JFrame {
             try {
                 while (musiqueJeu.getPlayer().play(1)) {
                     arretJeu = panelFenetreJeu.isArretJeu();
-                    if(arretJeu){
+                    if(arretJeu || mute == true){
                         musiqueJeu.getPlayer().close();
                     }
                 }
@@ -179,7 +180,7 @@ public class Fenetre extends JFrame {
         public void run() {
             try {
                 while (musiqueMenu.getPlayer().play(1)){
-                    if(finMusiqueMenu){
+                    if(finMusiqueMenu || mute == true){
                         musiqueMenu.getPlayer().close();
                     }
                 }
@@ -199,7 +200,7 @@ public class Fenetre extends JFrame {
             try {
                 while (buffer) {
                     arretJeu = panelFenetreJeu.isArretJeu();
-                    if(arretJeu){
+                    if(arretJeu || mute == true){
                         musiqueFin.getPlayer().play();
                     }
                     if(arretJeu){
@@ -448,8 +449,8 @@ public class Fenetre extends JFrame {
         panelFenetreCredits.setControl(controlFenetreCredits);
     }
 
-    public void setControlFenetreRegles(ControlFenetreRegles controlFenetreRegles) {
-        panelFenetreRegles.setControl(controlFenetreRegles);
+    public void setControlFenetreRegles(ControlFenetreScores controlFenetreScores) {
+        panelFenetreScore.setControl(controlFenetreScores);
     }
 
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {

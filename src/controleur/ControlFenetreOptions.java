@@ -57,6 +57,15 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_SAUT - 1] = true;
                 break;
+
+            case "Mute":
+                fenetre.mute = true;
+                break;
+
+            case "Play":
+                fenetre.mute = false;
+                fenetre.jouerMusiqueMenu();
+                break;
         }
     }
 

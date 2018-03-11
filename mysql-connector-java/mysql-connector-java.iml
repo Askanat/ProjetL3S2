@@ -11,11 +11,10 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="file://C:/Games/JLayer1.0.1" />
+          <root url="jar://$MODULE_DIR$/../jlayer/jl1.0.1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
-        <jarDirectory url="file://C:/Games/JLayer1.0.1" recursive="false" />
       </library>
     </orderEntry>
   </component>

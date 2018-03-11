@@ -31,8 +31,8 @@ public class MenuPrincipal extends JPanel {
 
         nouvellePartie = new Bouton("Play");
         nouvellePartie.setActionCommand("Nouvelle Partie");
-        guideJeu = new Bouton("Règles");
-        guideJeu.setActionCommand("Règles");
+        guideJeu = new Bouton("Scores");
+        guideJeu.setActionCommand("Scores");
         options = new Bouton("Options");
         options.setActionCommand("Options");
         credits = new Bouton("Crédits");

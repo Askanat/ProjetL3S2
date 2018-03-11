@@ -1,8 +1,7 @@
 package controleur;
 
-import javazoom.jl.decoder.JavaLayerException;
+//import javazoom.jl.decoder.JavaLayerException;
 import model.Jeu;
-import model.Mp3;
 import vue.Fenetre;
 
 import java.awt.event.ActionEvent;
@@ -26,9 +25,9 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
                fenetre.jouerMusiqueFin();
                 changerVue();
                 break;
-            case "Règles":
+            case "Scores":
                 fenetre.jouerMusiqueBouton();
-                fenetre.setContentPane(fenetre.panelFenetreRegles);
+                fenetre.setContentPane(fenetre.panelFenetreScore);
                 changerVue();
                 break;
             case "Options":

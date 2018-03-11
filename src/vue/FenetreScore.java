@@ -1,17 +1,14 @@
 package vue;
 
-import controleur.ControlFenetreRegles;
+import controleur.ControlFenetreScores;
 import model.Jeu;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
 
 import static vue.Fenetre.*;
 
-public class FenetreRegles extends JPanel {
+public class FenetreScore extends JPanel {
 
     private Jeu jeu;
 
@@ -20,7 +17,7 @@ public class FenetreRegles extends JPanel {
     public JButton retour;
 
 
-    public FenetreRegles() {
+    public FenetreScore() {
 
         this.jeu = jeu;
 
@@ -34,8 +31,8 @@ public class FenetreRegles extends JPanel {
         this.add(retour);
     }
 
-    public void setControl(ControlFenetreRegles controlFenetreRegles) {
-        retour.addActionListener(controlFenetreRegles);
+    public void setControl(ControlFenetreScores controlFenetreScores) {
+        retour.addActionListener(controlFenetreScores);
 
     }
 

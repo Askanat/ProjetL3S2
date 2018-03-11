@@ -3,8 +3,6 @@ package controleur;
 import model.Jeu;
 import vue.Fenetre;
 
-import java.io.IOException;
-
 public class ControlGroup {
 
     public Fenetre fenetre;
@@ -14,7 +12,7 @@ public class ControlGroup {
 
         ControlMenuPrincipal controlMenuPrincipal = new ControlMenuPrincipal(jeu, fenetre);
         ControlFenetreJeu controlFenetreJeu = new ControlFenetreJeu(jeu, fenetre);
-        ControlFenetreRegles controlFenetreRegles = new ControlFenetreRegles(jeu, fenetre);
+        ControlFenetreScores controlFenetreScores = new ControlFenetreScores(jeu, fenetre);
         ControlFenetreCredits controlFenetreCredits = new ControlFenetreCredits(jeu, fenetre);
         ControlFenetreExtension  controlFenetreExtension = new ControlFenetreExtension(jeu, fenetre);
 
