@@ -3,12 +3,11 @@ package model;
 public class Jeu {
 
     private Etat etat;
-    private BDD bdd;
+    public BDD bdd;
 
     public Jeu() {
 
         etat = new Etat();
-
         bdd = new BDD();
     }
 

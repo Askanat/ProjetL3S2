@@ -1,6 +1,7 @@
 package vue;
 
 import controleur.ControlFenetreScores;
+import model.BDD;
 import model.Jeu;
 
 import javax.swing.*;
@@ -12,7 +13,7 @@ public class FenetreScore extends JPanel {
 
     private Jeu jeu;
 
-    private Image imageFenetreRegles;
+    private Image imageFenetreScore;
 
     public JButton retour;
 
@@ -24,7 +25,7 @@ public class FenetreScore extends JPanel {
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
 
-        imageFenetreRegles = getToolkit().getImage("images/menuPrincipale.jpg");
+        imageFenetreScore = getToolkit().getImage("images/menuPrincipale.jpg");
 
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
@@ -38,7 +39,7 @@ public class FenetreScore extends JPanel {
 
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        g.drawImage(imageFenetreRegles, 0, 0, getWidth(), getHeight(), this);
+        g.drawImage(imageFenetreScore, 0, 0, getWidth(), getHeight(), this);
 
         retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
     }
