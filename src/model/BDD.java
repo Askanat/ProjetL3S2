@@ -4,6 +4,8 @@ import java.sql.*;
 
 public class BDD {
 
+    public String result = "";
+
     private Connection connexion;
     private Statement instruction;
     private boolean bddIsOk = false;
@@ -27,18 +29,18 @@ public class BDD {
     }
 
     //AFFICHAGE SCORE DES JOUEURS
-    public String readNomJoueur() {
+    public void readNomJoueur() {
         ResultSet joueurs = null;
-        String result = "";
+        String score;
         try {
-            joueurs = instruction.executeQuery("Select nomJoueur,score FROM classement ORDER BY DESC score;");
+            joueurs = instruction.executeQuery("Select nomJoueur,score FROM classement ORDER BY score DESC;");
             while (joueurs.next()) {
-                result = joueurs.getString("nomJoueur") + " : " + joueurs.getString("score" ) + "Points";
+                score = joueurs.getString("nomJoueur") + " " + joueurs.getString("score" );
+                setResult(score);
             }
         } catch (Exception e) {
             System.out.println("Donnees nomJoueur/Score problem " + e);
         }
-        return result;
     }
 
     //AJOUT DONNEES SCORE JOUEURS
@@ -48,6 +50,10 @@ public class BDD {
         } catch (Exception e) {
             System.out.println("Probleme insertion nouveau joueur : " + e);
         }
+    }
+
+    public void setResult(String result){
+        this.result = result;
     }
 
 }
