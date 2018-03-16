@@ -32,7 +32,7 @@ public class FenetreJeu extends JPanel {
     private int defilementFigureX =0;
     private boolean etoileUnSeulPointScore = false;
     private boolean rondChangementCouleurUnSeul = false;
-    private volatile boolean arretJeu = false;
+    private boolean arretJeu = false;
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
     private int degree = 0;
     public Bouton retour, menu;
@@ -66,19 +66,13 @@ public class FenetreJeu extends JPanel {
             choixFigure[i] = false;
         }
 
-
-        retour = new Bouton("Retour");
-        retour.setActionCommand("Retour");
-
         menu = new Bouton("");
         menu.setActionCommand("Menu");
 
-        this.add(retour);
         this.add(menu);
     }
 
     public void setControl(ControlFenetreJeu controlFenetreJeu) {
-       retour.addActionListener(controlFenetreJeu);
        menu.addActionListener(controlFenetreJeu);
     }
 
@@ -87,7 +81,7 @@ public class FenetreJeu extends JPanel {
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(billeJoueur.getCouleur());
         g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
-
+        Graphics2D g2d = (Graphics2D)g;
         billeJoueur.paintComponent(g);
         billeJoueur.nouvellePosition(this.getWidth()/2-25-posX, this.getHeight()-50- posY);
 
@@ -152,29 +146,20 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
 
               if((billeJoueur.testIntersection(rectangleFormeRouge.areaA) || billeJoueur.testIntersection(rectangleFormeRouge2.areaA))  && (billeJoueur.getCouleur() == Color.RED)){
-                  retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                   arretJeu =true;
-                  g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
               }
                if((billeJoueur.testIntersection(rectangleFormeBleu.areaA) || billeJoueur.testIntersection(rectangleFormeBleu2.areaA))  && (billeJoueur.getCouleur() == Color.BLUE)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
-                   g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
                if((billeJoueur.testIntersection(rectangleFormeVert.areaA) || billeJoueur.testIntersection(rectangleFormeVert2.areaA))  && (billeJoueur.getCouleur() == Color.GREEN)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
-                   g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
                if((billeJoueur.testIntersection(rectangleFormeJaune.areaA) || billeJoueur.testIntersection(rectangleFormeJaune2.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
-                   g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
            }
-            Graphics2D g2d = (Graphics2D)g;
-            AffineTransform old = g2d.getTransform();
 
+            AffineTransform old = g2d.getTransform();
 
            if (defilementY > -200 && choixFigure[1]) {/////// un cercle ///////
 
@@ -220,24 +205,20 @@ public class FenetreJeu extends JPanel {
                arcFormeJaune.paintComponents(g);
 
                if((billeJoueur.testIntersection(arcFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                }
                if((billeJoueur.testIntersection(arcFormeBleu.areaA)) && (billeJoueur.getCouleur() == Color.BLUE)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                }
                if((billeJoueur.testIntersection(arcFormeVert.areaA)) && (billeJoueur.getCouleur() == Color.GREEN)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                }
                if((billeJoueur.testIntersection(arcFormeJaune.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
-                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                }
             }
+            g2d.setTransform(old);
 
-            AffineTransform old2 = g2d.getTransform();
 
             if (defilementY > -200 && choixFigure[2]){/////// un carré ///////
                 etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
@@ -260,7 +241,7 @@ public class FenetreJeu extends JPanel {
                 g2d.drawImage(imgBR, this.getWidth() / 2 - 100, 80 + defilementY, this);
                 g2d.rotate((Math.toRadians(360)), this.getWidth() / 2, defilementY);
                 g2d.drawImage(imgBJ, this.getWidth() / 2 - 100,  defilementY - 100, this);
-                g2d.setTransform(old2);
+                g2d.setTransform(old);
 
                 AffineTransform a = new AffineTransform();
                 AffineTransform b = new AffineTransform();
@@ -285,19 +266,15 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.paintComponents(g2d);
 
                 if((billeJoueur.testIntersection(rectangleFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeBleu.areaA)) && (billeJoueur.getCouleur() == Color.BLUE)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeVert.areaA)) && (billeJoueur.getCouleur() == Color.GREEN)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeJaune.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
             }
@@ -359,21 +336,24 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.paintComponents(g2d);
 
                 if((billeJoueur.testIntersection(rectangleFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeBleu.areaA)) && (billeJoueur.getCouleur() == Color.BLUE)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeVert.areaA)) && (billeJoueur.getCouleur() == Color.GREEN)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
                 if((billeJoueur.testIntersection(rectangleFormeJaune.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
-                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
                 }
+            }
+            g2d.setTransform(old);
+            if(arretJeu){
+
+                g2d.setFont(new Font("TimesRoman",Font.PLAIN, 50));
+                g2d.setColor(Color.WHITE);
+                g2d.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
             }
         } catch (IOException e) {
             e.printStackTrace();

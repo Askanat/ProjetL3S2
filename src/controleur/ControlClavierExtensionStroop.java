@@ -91,11 +91,21 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
                         resultat = "";
             }
         }
-
         if(key == KeyEvent.VK_BACK_SPACE){ // pour effacer
             resultat = "";
         }
         conteneurUneLettre = "";
+        if (key == KeyEvent.VK_ESCAPE){
+            if(fenetre.panelFenetreExtensionStroop.isArretJeu()){
+                fenetre.setContentPane(fenetre.panelMenuPrincipal);
+                fenetre.setFinMusiqueMenu(false);
+                fenetre.jouerMusiqueMenu();
+                fenetre.redeclareFenetreExtensionStroop();
+                changerVue();
+            }
+
+
+        }
     }
 
     @Override

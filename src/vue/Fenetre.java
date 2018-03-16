@@ -74,7 +74,7 @@ public class Fenetre extends JFrame {
 
         vueJeu();
     }
-    public void redeclareFenetreJeu(){
+    public void redeclareFenetreJeu() {
         panelFenetreJeu = new FenetreJeu(jeu);
     }
     public void redeclareFenetreExtensionStroop(){
@@ -181,7 +181,7 @@ public class Fenetre extends JFrame {
         new Thread(new Runnable(){
             int secondsInt;
             String secondsString;
-            boolean arretJeu = false;
+            boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
             @Override
             public void run() {
                 while(!arretJeu){
@@ -193,7 +193,9 @@ public class Fenetre extends JFrame {
 
                     if (panelFenetreExtensionStroop.getPosY() == 900){
                         arretJeu = true;
+                        panelFenetreExtensionStroop.setArretJeu(arretJeu);
                     }
+
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -207,7 +209,6 @@ public class Fenetre extends JFrame {
     public void jouerMusiqueJeu(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
         Mp3 musiqueJeu = new Mp3("musiques\\musiqueJeu.mp3");
-
         @Override
         public void run() {
             try {
@@ -333,12 +334,15 @@ public class Fenetre extends JFrame {
 
                     }
 
-                    arretJeu =panelFenetreJeu.isArretJeu();
+                    arretJeu = panelFenetreJeu.isArretJeu();
                     try {
                         Thread.sleep(2);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                }
+                if(!arretJeu){
+                    jouerMusiqueFin();
                 }
             }
         }).start();
@@ -454,15 +458,12 @@ public class Fenetre extends JFrame {
                 int degree = panelFenetreJeu.getDegree();
 
                 for (;;) {
-
-                    //if (panelFenetreJeu.choixFigure[1]){
                         degree++;
                         panelFenetreJeu.setDegree(degree);
                         if(degree == 360){
                             panelFenetreJeu.setDegree(0);
                             degree=panelFenetreJeu.getDegree();
                         }
-                    //}
                     try {
                         Thread.sleep(10);
                     } catch (InterruptedException e) {

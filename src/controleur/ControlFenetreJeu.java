@@ -16,7 +16,6 @@ public class ControlFenetreJeu extends Control implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
 
-
         switch (e.getActionCommand()) {
             case "Menu":
                 jeu.getEtat().inversePause();
@@ -29,16 +28,6 @@ public class ControlFenetreJeu extends Control implements ActionListener {
                     changerVue();
                 }
                 break;
-
-            case "Retour":
-                fenetre.setFinMusiqueMenu(false);
-                fenetre.jouerMusiqueMenu();
-                fenetre.setContentPane(fenetre.panelMenuPrincipal);
-                fenetre.panelFenetreJeu = null;
-                fenetre.redeclareFenetreJeu();
-                changerVue();
-                break;
-
         }
     }
 }

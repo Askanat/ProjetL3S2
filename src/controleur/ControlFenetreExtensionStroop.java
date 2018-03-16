@@ -15,14 +15,6 @@ public class ControlFenetreExtensionStroop extends Control implements ActionList
     }
 
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Retour":
-                fenetre.jouerMusiqueBouton();
-                fenetre.setContentPane(fenetre.panelMenuPrincipal);
-                fenetre.panelFenetreExtensionGuitarHero = null;
-                fenetre.redeclareFenetreExtensionStroop();
-                changerVue();
-                break;
-        }
+
     }
 }

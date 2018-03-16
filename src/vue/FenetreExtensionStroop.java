@@ -22,6 +22,7 @@ public class FenetreExtensionStroop extends JPanel{
     public Bouton retour;
     private int score = 0;
     private String seconds = "-1";
+    boolean arretJeu = false;
 
     public FenetreExtensionStroop() {
 
@@ -81,11 +82,6 @@ public class FenetreExtensionStroop extends JPanel{
                 repaint();
             }
 
-            if(posY == 900){
-                retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                g.drawString("Score " + String.valueOf(score) ,50, 50);
-            }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -130,6 +126,15 @@ public class FenetreExtensionStroop extends JPanel{
     public void setSeconds(String seconds) {
         this.seconds = seconds;
     }
+
+    public boolean isArretJeu() {
+        return arretJeu;
+    }
+
+    public void setArretJeu(boolean arretJeu) {
+        this.arretJeu = arretJeu;
+    }
+
 
 
 }
