@@ -15,9 +15,11 @@ public class ControlGroup {
         ControlFenetreScores controlFenetreScores = new ControlFenetreScores(jeu, fenetre);
         ControlFenetreCredits controlFenetreCredits = new ControlFenetreCredits(jeu, fenetre);
         ControlFenetreExtensionStroop controlFenetreExtensionStroop = new ControlFenetreExtensionStroop(jeu, fenetre);
+        ControlFenetreExtensionGuitarHero controlFenetreExtensionGuitarHero = new ControlFenetreExtensionGuitarHero(jeu, fenetre);
 
         ControlSouris controlSouris = new ControlSouris(jeu, fenetre);
         ControlClavierExtensionStroop controlClavierExtensionStroop = new ControlClavierExtensionStroop(jeu, fenetre);
+        ControlClavierExtensionGuitarHero controlClavierExtensionGuitarHero = new ControlClavierExtensionGuitarHero(jeu, fenetre);
         ControlClavier controlClavier = new ControlClavier(jeu, fenetre);
         ControlMenuEnJeu controlMenuEnJeu = new ControlMenuEnJeu(jeu, fenetre);
 

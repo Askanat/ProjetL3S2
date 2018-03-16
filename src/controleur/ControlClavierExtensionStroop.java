@@ -13,7 +13,7 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
 
     public ControlClavierExtensionStroop(Jeu jeu, Fenetre fenetre){
         super(jeu, fenetre);
-        fenetre.setControlClavierExtension(this);
+        fenetre.setControlClavierExtensionStroop(this);
     }
 
     @Override

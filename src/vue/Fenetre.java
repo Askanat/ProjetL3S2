@@ -31,6 +31,8 @@ public class Fenetre extends JFrame {
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
     public FenetreExtensionStroop panelFenetreExtensionStroop;
+    public FenetreExtensionGuitarHero panelFenetreExtensionGuitarHero;
+
     public MenuEnJeu        panelMenuEnJeu;
 
     public ControlTouche    controlTouche;
@@ -68,6 +70,7 @@ public class Fenetre extends JFrame {
         panelFenetreCredits = new FenetreCredits();
         panelMenuEnJeu      = new MenuEnJeu();
         panelFenetreExtensionStroop = new FenetreExtensionStroop();
+        panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
 
         vueJeu();
     }
@@ -482,8 +485,11 @@ public class Fenetre extends JFrame {
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
     }
-    public void setControlFenetreExtension(ControlFenetreExtensionStroop controlFenetreExtensionStroop) {
+    public void setControlFenetreExtensionStroop(ControlFenetreExtensionStroop controlFenetreExtensionStroop) {
         panelFenetreExtensionStroop.setControl(controlFenetreExtensionStroop);
+    }
+    public void setControlFenetreExtensionGuitarHero(ControlFenetreExtensionGuitarHero controlFenetreExtensionGuitarHero) {
+        panelFenetreExtensionGuitarHero.setControl(controlFenetreExtensionGuitarHero);
     }
 
     public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
@@ -493,8 +499,12 @@ public class Fenetre extends JFrame {
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
-    public void setControlClavierExtension(ControlClavierExtensionStroop controlClavierExtensionStroop) {
+    public void setControlClavierExtensionStroop(ControlClavierExtensionStroop controlClavierExtensionStroop) {
         addKeyListener(controlClavierExtensionStroop);
+    }
+
+    public void setControlClavierExtensionGuitarHero(ControlClavierExtensionGuitarHero controlClavierExtensionGuitarHero) {
+        addKeyListener(controlClavierExtensionGuitarHero);
     }
 
     public void setControlSouris (ControlSouris controlSouris){

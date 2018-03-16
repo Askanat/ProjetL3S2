@@ -6,13 +6,13 @@ import vue.Fenetre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+public class ControlFenetreExtensionGuitarHero extends Control implements ActionListener {
 
-public class ControlFenetreExtensionStroop extends Control implements ActionListener {
-
-    public ControlFenetreExtensionStroop(Jeu jeu, Fenetre fenetre) {
+    public ControlFenetreExtensionGuitarHero(Jeu jeu, Fenetre fenetre) {
         super(jeu, fenetre);
-        fenetre.setControlFenetreExtensionStroop(this);
+        fenetre.setControlFenetreExtensionGuitarHero(this);
     }
+
 
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
