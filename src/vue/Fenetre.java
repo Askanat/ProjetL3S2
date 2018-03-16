@@ -77,11 +77,11 @@ public class Fenetre extends JFrame {
     public void redeclareFenetreJeu(){
         panelFenetreJeu = new FenetreJeu(jeu);
     }
-    public void redeclareFenetreExtension(){
-        panelFenetreExtensionStroop = new FenetreExtensionStroop();
+    public void redeclareFenetreExtensionStroop(){
+        panelFenetreExtensionStroop= new FenetreExtensionStroop();
     }
 
-    public void changerMotExtension (){
+    public void changerMotExtensionStroop(){
         Random rand = new Random();
         int buffer = -1;
         int val = -1;
@@ -100,7 +100,28 @@ public class Fenetre extends JFrame {
         }
         actualiserTab[val] = true;
         panelFenetreExtensionStroop.setMotTab(actualiserTab);
-        panelFenetreJeu.repaint();
+        panelFenetreExtensionStroop.repaint();
+    }
+    public void changerCouleurBarreExtensionGuitarHero (){
+        Random rand = new Random();
+        int buffer = -1;
+        int val = -1;
+        boolean[] actualiserTab = new boolean[4];
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            actualiserTab[i] = false;
+        }
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            if(panelFenetreExtensionGuitarHero.getCouleurBarre()[i]){
+                buffer = i;
+            }
+        }
+        val = rand.nextInt(4);
+        while(val == buffer ){
+            val = rand.nextInt(4);
+        }
+        actualiserTab[val] = true;
+        panelFenetreExtensionGuitarHero.setCouleurBarre(actualiserTab);
+        panelFenetreExtensionGuitarHero.repaint();
     }
 
     public void deplacementSouris(){
@@ -131,7 +152,7 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    public void deplacementClavierExtension(boolean bonneReponse) {
+    public void deplacementClavierExtensionStroop(boolean bonneReponse) {
         new Thread(new Runnable(){
             int positionY;
 
@@ -156,7 +177,7 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
-    public void tempsExtension() {
+    public void tempsExtensionStroop() {
         new Thread(new Runnable(){
             int secondsInt;
             String secondsString;
@@ -315,6 +336,37 @@ public class Fenetre extends JFrame {
                     arretJeu =panelFenetreJeu.isArretJeu();
                     try {
                         Thread.sleep(2);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+    public void formeDefilementExtensionGuitarHero(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+            int defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
+
+            @Override
+            public void run() {
+
+                while(!arretJeu) {
+
+                    defilementY++;
+                    panelFenetreExtensionGuitarHero.setDefilementY(defilementY);
+
+                    if(defilementY == 900){
+                        panelFenetreExtensionGuitarHero.setDefilementY(0);
+                        defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
+                    }
+                    if (defilementY == 0){
+                        changerCouleurBarreExtensionGuitarHero();
+                    }
+
+                    try {
+                        Thread.sleep(3);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

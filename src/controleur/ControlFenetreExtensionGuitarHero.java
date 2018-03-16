@@ -19,8 +19,8 @@ public class ControlFenetreExtensionGuitarHero extends Control implements Action
             case "Retour":
                 fenetre.jouerMusiqueBouton();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
-                fenetre.panelFenetreExtensionStroop = null;
-                fenetre.redeclareFenetreExtension();
+                fenetre.panelFenetreExtensionGuitarHero = null;
+                fenetre.redeclareFenetreExtensionStroop();
                 changerVue();
                 break;
         }

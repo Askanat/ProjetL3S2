@@ -32,61 +32,62 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
         if(conteneurUneLettre.matches("[a-z]")){
             resultat = resultat + conteneurUneLettre;
         }
+
         if (key == KeyEvent.VK_ENTER) {
             switch (resultat) {
                 case "jaune":
                     if (fenetre.panelFenetreExtensionStroop.getMotTab()[0]) {
-                        fenetre.deplacementClavierExtension(true);
+                        fenetre.deplacementClavierExtensionStroop(true);
                         fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
-                        fenetre.changerMotExtension();
+                        fenetre.changerMotExtensionStroop();
                     }
                     else{
-                        fenetre.deplacementClavierExtension(false);
-                        fenetre.changerMotExtension();
+                        fenetre.deplacementClavierExtensionStroop(false);
+                        fenetre.changerMotExtensionStroop();
                     }
                     resultat = "";
                     break;
                 case "vert":
                     if (fenetre.panelFenetreExtensionStroop.getMotTab()[1]) {
-                        fenetre.deplacementClavierExtension(true);
+                        fenetre.deplacementClavierExtensionStroop(true);
                         fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
-                        fenetre.changerMotExtension();
+                        fenetre.changerMotExtensionStroop();
                     }
                     else{
-                        fenetre.deplacementClavierExtension(false);
-                        fenetre.changerMotExtension();
+                        fenetre.deplacementClavierExtensionStroop(false);
+                        fenetre.changerMotExtensionStroop();
                     }
                     resultat = "";
                     break;
                 case "rouge":
                     if (fenetre.panelFenetreExtensionStroop.getMotTab()[2]) {
-                        fenetre.deplacementClavierExtension(true);
+                        fenetre.deplacementClavierExtensionStroop(true);
                         fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
-                        fenetre.changerMotExtension();
+                        fenetre.changerMotExtensionStroop();
                     }
                     else{
-                        fenetre.deplacementClavierExtension(false);
-                        fenetre.changerMotExtension();
+                        fenetre.deplacementClavierExtensionStroop(false);
+                        fenetre.changerMotExtensionStroop();
                     }
                     resultat = "";
                     break;
                 case "bleu":
                     if (fenetre.panelFenetreExtensionStroop.getMotTab()[3]) {
-                        fenetre.deplacementClavierExtension(true);
+                        fenetre.deplacementClavierExtensionStroop(true);
                         fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
-                        fenetre.changerMotExtension();
+                        fenetre.changerMotExtensionStroop();
                     }
                     else{
-                        fenetre.deplacementClavierExtension(false);
-                        fenetre.changerMotExtension();
+                        fenetre.deplacementClavierExtensionStroop(false);
+                        fenetre.changerMotExtensionStroop();
                     }
 
                     resultat = "";
                     break;
 
                     default:
-                        fenetre.deplacementClavierExtension(false);
-                        fenetre.changerMotExtension();
+                        fenetre.deplacementClavierExtensionStroop(false);
+                        fenetre.changerMotExtensionStroop();
                         resultat = "";
             }
         }
@@ -95,12 +96,9 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
             resultat = "";
         }
         conteneurUneLettre = "";
-
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
 }

@@ -31,6 +31,7 @@ public class Bille extends JPanel {
     public void nouvellePosition (int posX, int posY){
         ellipse = new Ellipse2D.Double(posX, posY, 50, 50);
     }
+
     public boolean testIntersection(Area areaA) {
         areaA.intersect(this.areaA);
         return !areaA.isEmpty();
