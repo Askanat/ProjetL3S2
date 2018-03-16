@@ -22,7 +22,6 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
                 fenetre.formeDefilement();
                 fenetre.incrementeDegree();
                 fenetre.jouerMusiqueJeu();
-                fenetre.jouerMusiqueFin();
                 changerVue();
                 break;
             case "Scores":

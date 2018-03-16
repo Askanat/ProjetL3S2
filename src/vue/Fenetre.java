@@ -75,7 +75,8 @@ public class Fenetre extends JFrame {
         vueJeu();
     }
     public void redeclareFenetreJeu() {
-        panelFenetreJeu = new FenetreJeu(jeu);
+        //panelFenetreJeu = null;
+        panelFenetreJeu= new FenetreJeu(jeu);
     }
     public void redeclareFenetreExtensionStroop(){
         panelFenetreExtensionStroop= new FenetreExtensionStroop();
