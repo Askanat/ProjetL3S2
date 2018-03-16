@@ -19,23 +19,21 @@ public class RectangleForme extends JPanel {
     public void paintComponents(Graphics g) {
         super.paintComponents(g);
         Graphics2D g2d = (Graphics2D)g;
+        areaA = new Area(barre);
+        g2d.draw(areaA);
         if(b){
             areaA = new Area(shape);
            // g2d.draw(areaA);
         }
-
-        else{
-            areaA = new Area(barre);
-            //g2d.draw(areaA);
-        }
     }
 
     public void nouvellePosition (int posX, int posY, int tailleX, int tailleY){
+        b = false;
         barre = new Rectangle2D.Double(posX, posY, tailleX, tailleY);
     }
 
     public void nouvelleArea(Shape shape){
-        this.shape =  shape;
         b = true;
+        this.shape =  shape;
     }
 }

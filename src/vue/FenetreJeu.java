@@ -146,22 +146,22 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBV, 1200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
 
-              if((billeJoueur.testIntersection(rectangleFormeRouge.areaA) || billeJoueur.testIntersection(rectangleFormeRouge2.areaA))  && (billeJoueur.getCouleur() == Color.RED)){ // attention mixte Entité et Bille
+              if((billeJoueur.testIntersection(rectangleFormeRouge.areaA) || billeJoueur.testIntersection(rectangleFormeRouge2.areaA))  && (billeJoueur.getCouleur() == Color.RED)){
                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                   arretJeu =true;
                   g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
               }
-               if((billeJoueur.testIntersection(rectangleFormeBleu.areaA) || billeJoueur.testIntersection(rectangleFormeBleu2.areaA))  && (billeJoueur.getCouleur() == Color.BLUE)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeBleu.areaA) || billeJoueur.testIntersection(rectangleFormeBleu2.areaA))  && (billeJoueur.getCouleur() == Color.BLUE)){
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
-               if((billeJoueur.testIntersection(rectangleFormeVert.areaA) || billeJoueur.testIntersection(rectangleFormeVert2.areaA))  && (billeJoueur.getCouleur() == Color.GREEN)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeVert.areaA) || billeJoueur.testIntersection(rectangleFormeVert2.areaA))  && (billeJoueur.getCouleur() == Color.GREEN)){
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
-               if((billeJoueur.testIntersection(rectangleFormeJaune.areaA) || billeJoueur.testIntersection(rectangleFormeJaune2.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){ // attention mixte Entité et Bille
+               if((billeJoueur.testIntersection(rectangleFormeJaune.areaA) || billeJoueur.testIntersection(rectangleFormeJaune2.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
                    retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                    arretJeu =true;
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
