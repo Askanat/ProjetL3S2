@@ -2,6 +2,7 @@ package vue;
 
 import controleur.ControlFenetreJeu;
 
+import model.ArcForme;
 import model.RectangleForme;
 import model.Bille;
 import model.Jeu;
@@ -49,6 +50,10 @@ public class FenetreJeu extends JPanel {
     RectangleForme etoileRectangleForme = new RectangleForme(Color.WHITE);
     RectangleForme rondChangementCouleurRectangleForme = new RectangleForme(Color.WHITE);
 
+    ArcForme arcFormeRouge = new ArcForme(Color.RED);
+    ArcForme arcFormeBleu = new ArcForme(Color.BLUE);
+    ArcForme arcFormeJaune = new ArcForme(Color.YELLOW);
+    ArcForme arcFormeVert = new ArcForme(Color.GREEN);
 
     public FenetreJeu(Jeu jeu) {
 
@@ -167,9 +172,10 @@ public class FenetreJeu extends JPanel {
                    g.drawString("Score " + String.valueOf(billeJoueur.getScore()) ,50, 50);
                }
            }
-
             Graphics2D g2d = (Graphics2D)g;
             AffineTransform old = g2d.getTransform();
+
+
            if (defilementY > -200 && choixFigure[1]) {/////// un cercle ///////
 
                etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
@@ -184,50 +190,51 @@ public class FenetreJeu extends JPanel {
                    g2d.drawImage(imgEtoile, this.getWidth() / 2 - 20, defilementY - 19, this);
                }
 
-
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
                 // 4 morceaux d'un cercle qui tourne
-                g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
+               /* g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
                 g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
                 g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
-                g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);
-                /*if((posY + 57 + defilementY + 109 >= 900 && posY + 57 + defilementY + 89 <= 900)){
-                    if((degree >=0 && degree<=90)&& billeJoueur.getCouleur()== Color.YELLOW){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=90 && degree<=180)&& billeJoueur.getCouleur()== Color.RED){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=180 && degree<=270)&& billeJoueur.getCouleur()== Color.BLUE){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=270 && degree<=360)&& billeJoueur.getCouleur()== Color.GREEN){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                }
-                if((posY + 57 + defilementY - 89 >= 900 && posY + 57 + defilementY - 109 <= 900)){
-                    if((degree >=0 && degree<=90)&& billeJoueur.getCouleur()== Color.BLUE){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=90 && degree<=180)&& billeJoueur.getCouleur()== Color.GREEN){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=180 && degree<=270)&& billeJoueur.getCouleur()== Color.YELLOW){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                    if((degree >=270 && degree<=360)&& billeJoueur.getCouleur()== Color.RED){
-                        retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
-                        arretJeu =true;
-                    }
-                }*/
+                g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);*/
 
+               AffineTransform a = new AffineTransform();
+               AffineTransform b = new AffineTransform();
+               AffineTransform c = new AffineTransform();
+               AffineTransform d = new AffineTransform();
+               a.rotate(Math.toRadians(0+degree),this.getWidth() / 2 , defilementY);
+               b.rotate(Math.toRadians(90+degree),this.getWidth() / 2 , defilementY);
+               c.rotate(Math.toRadians(180+degree),this.getWidth() / 2 , defilementY);
+               d.rotate(Math.toRadians(270+degree),this.getWidth() / 2 , defilementY);
+
+               arcFormeRouge.nouvellePosition(this.getWidth()/2-100,defilementY-100, 200, 200, 0, 90);
+               arcFormeRouge.nouvelleArea(a.createTransformedShape(arcFormeRouge.arc));
+               arcFormeRouge.paintComponents(g);
+               arcFormeBleu.nouvellePosition(this.getWidth()/2-100, defilementY-100, 200, 200, 90, 90);
+               arcFormeBleu.nouvelleArea(a.createTransformedShape(arcFormeBleu.arc));
+               arcFormeBleu.paintComponents(g);
+               arcFormeVert.nouvellePosition(this.getWidth()/2-100, defilementY-100, 200, 200, 180, 90);
+               arcFormeVert.nouvelleArea(a.createTransformedShape(arcFormeVert.arc));
+               arcFormeVert.paintComponents(g);
+               arcFormeJaune.nouvellePosition(this.getWidth()/2-100, defilementY-100, 200, 200, 270, 90);
+               arcFormeJaune.nouvelleArea(a.createTransformedShape(arcFormeJaune.arc));
+               arcFormeJaune.paintComponents(g);
+
+               if((billeJoueur.testIntersection(arcFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+               }
+               if((billeJoueur.testIntersection(arcFormeBleu.areaA)) && (billeJoueur.getCouleur() == Color.BLUE)){
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+               }
+               if((billeJoueur.testIntersection(arcFormeVert.areaA)) && (billeJoueur.getCouleur() == Color.GREEN)){
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+               }
+               if((billeJoueur.testIntersection(arcFormeJaune.areaA)) && (billeJoueur.getCouleur() == Color.YELLOW)){
+                   retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
+                   arretJeu =true;
+               }
             }
 
             AffineTransform old2 = g2d.getTransform();
@@ -351,7 +358,6 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.nouvelleArea(d.createTransformedShape(rectangleFormeJaune.barre));
                 rectangleFormeJaune.paintComponents(g2d);
 
-
                 if((billeJoueur.testIntersection(rectangleFormeRouge.areaA)) && (billeJoueur.getCouleur() == Color.RED)){
                     retour.setBounds(Fenetre.adapterResolutionEnX(64), Fenetre.adapterResolutionEnY(985), Fenetre.adapterResolutionEnX(256), Fenetre.adapterResolutionEnY(41));
                     arretJeu =true;
@@ -369,7 +375,6 @@ public class FenetreJeu extends JPanel {
                     arretJeu =true;
                 }
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }

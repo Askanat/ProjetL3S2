@@ -6,9 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="Correction.">
+    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/ArcForme.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/model/RectangleForme.java" afterPath="$PROJECT_DIR$/src/model/RectangleForme.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -27,19 +29,54 @@
       <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="262" column="45" lean-forward="false" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
+            <state relative-caret-position="319">
+              <caret line="385" column="38" lean-forward="false" selection-start-line="385" selection-start-column="38" selection-end-line="385" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="267" column="72" lean-forward="false" selection-start-line="267" selection-start-column="67" selection-end-line="267" selection-end-column="72" />
-              <folding />
+            <state relative-caret-position="8664">
+              <caret line="377" column="33" lean-forward="true" selection-start-line="377" selection-start-column="33" selection-end-line="377" selection-end-column="33" />
+              <folding>
+                <element signature="e#22917#22918#0" expanded="true" />
+                <element signature="e#22944#22945#0" expanded="true" />
+                <element signature="e#22981#22982#0" expanded="true" />
+                <element signature="e#23013#23014#0" expanded="true" />
+                <element signature="e#23048#23049#0" expanded="true" />
+                <element signature="e#23082#23083#0" expanded="true" />
+                <element signature="e#23133#23134#0" expanded="true" />
+                <element signature="e#23179#23180#0" expanded="true" />
+                <element signature="e#23208#23209#0" expanded="true" />
+                <element signature="e#23237#23238#0" expanded="true" />
+                <element signature="e#23278#23279#0" expanded="true" />
+                <element signature="e#23314#23315#0" expanded="true" />
+                <element signature="e#23348#23349#0" expanded="true" />
+                <element signature="e#23382#23383#0" expanded="true" />
+                <element signature="e#23433#23434#0" expanded="true" />
+                <element signature="e#23479#23480#0" expanded="true" />
+                <element signature="e#23507#23508#0" expanded="true" />
+                <element signature="e#23534#23535#0" expanded="true" />
+                <element signature="e#23571#23572#0" expanded="true" />
+                <element signature="e#23603#23604#0" expanded="true" />
+                <element signature="e#23657#23658#0" expanded="true" />
+                <element signature="e#23711#23712#0" expanded="true" />
+                <element signature="e#23928#23929#0" expanded="true" />
+                <element signature="e#23968#23969#0" expanded="true" />
+                <element signature="e#24031#24032#0" expanded="true" />
+                <element signature="e#24089#24090#0" expanded="true" />
+                <element signature="e#24124#24125#0" expanded="true" />
+                <element signature="e#24155#24156#0" expanded="true" />
+                <element signature="e#24204#24205#0" expanded="true" />
+                <element signature="e#24244#24245#0" expanded="true" />
+                <element signature="e#24292#24293#0" expanded="true" />
+                <element signature="e#24337#24338#0" expanded="true" />
+                <element signature="e#24535#24536#0" expanded="true" />
+                <element signature="e#24585#24586#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,12 +94,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RectangleForme.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RectangleForme.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+            <state relative-caret-position="384">
+              <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArcForme.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,6 +157,8 @@
       <find>score</find>
       <find>redec</find>
       <find>shape</find>
+      <find>degree</find>
+      <find>white</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\maxime\IdeaProjects\ProjetL3S2</dir>
@@ -187,9 +240,10 @@
         <option value="$PROJECT_DIR$/src/vue/FenetreScore.java" />
         <option value="$PROJECT_DIR$/src/model/Jeu.java" />
         <option value="$PROJECT_DIR$/src/model/BDD.java" />
-        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
         <option value="$PROJECT_DIR$/src/model/RectangleForme.java" />
+        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/model/ArcForme.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
       </list>
     </option>
   </component>
@@ -438,7 +492,7 @@
       <workItem from="1520768828062" duration="7271000" />
       <workItem from="1520864975379" duration="640000" />
       <workItem from="1520868746301" duration="2761000" />
-      <workItem from="1521193960782" duration="4634000" />
+      <workItem from="1521193960782" duration="9175000" />
     </task>
     <task id="LOCAL-00001" summary="Bouton retour dans FenetreOptions fonctionne,&#10;FenetreOptions et ControlFenetreOption comme les autres">
       <created>1518971247582</created>
@@ -692,11 +746,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520692774893</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="barre horizontale plus de bugs">
+      <created>1521198639918</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1521198639918</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="243502000" />
+    <option name="totallyTimeSpent" value="248043000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -740,7 +801,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Carré et cercle bien au milieu&#10;Croix également" />
     <MESSAGE value="chaque forme descend l'une aprés l'autre" />
     <MESSAGE value="carré tourne bien" />
     <MESSAGE value="Etoile point et rond changement couleur" />
@@ -765,7 +825,8 @@
     <MESSAGE value="Croix collision plus de bug" />
     <MESSAGE value="Carré collision plus de bug" />
     <MESSAGE value="Correction, amélioration extension" />
-    <option name="LAST_COMMIT_MESSAGE" value="Correction, amélioration extension" />
+    <MESSAGE value="barre horizontale plus de bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="barre horizontale plus de bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -774,14 +835,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -1111,25 +1164,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="262" column="45" lean-forward="false" selection-start-line="262" selection-start-column="45" selection-end-line="262" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="267" column="72" lean-forward="false" selection-start-line="267" selection-start-column="67" selection-end-line="267" selection-end-column="72" />
+        <state relative-caret-position="319">
+          <caret line="385" column="38" lean-forward="false" selection-start-line="385" selection-start-column="38" selection-end-line="385" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="384">
+          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8664">
+          <caret line="377" column="33" lean-forward="true" selection-start-line="377" selection-start-column="33" selection-end-line="377" selection-end-column="33" />
+          <folding>
+            <element signature="e#22917#22918#0" expanded="true" />
+            <element signature="e#22944#22945#0" expanded="true" />
+            <element signature="e#22981#22982#0" expanded="true" />
+            <element signature="e#23013#23014#0" expanded="true" />
+            <element signature="e#23048#23049#0" expanded="true" />
+            <element signature="e#23082#23083#0" expanded="true" />
+            <element signature="e#23133#23134#0" expanded="true" />
+            <element signature="e#23179#23180#0" expanded="true" />
+            <element signature="e#23208#23209#0" expanded="true" />
+            <element signature="e#23237#23238#0" expanded="true" />
+            <element signature="e#23278#23279#0" expanded="true" />
+            <element signature="e#23314#23315#0" expanded="true" />
+            <element signature="e#23348#23349#0" expanded="true" />
+            <element signature="e#23382#23383#0" expanded="true" />
+            <element signature="e#23433#23434#0" expanded="true" />
+            <element signature="e#23479#23480#0" expanded="true" />
+            <element signature="e#23507#23508#0" expanded="true" />
+            <element signature="e#23534#23535#0" expanded="true" />
+            <element signature="e#23571#23572#0" expanded="true" />
+            <element signature="e#23603#23604#0" expanded="true" />
+            <element signature="e#23657#23658#0" expanded="true" />
+            <element signature="e#23711#23712#0" expanded="true" />
+            <element signature="e#23928#23929#0" expanded="true" />
+            <element signature="e#23968#23969#0" expanded="true" />
+            <element signature="e#24031#24032#0" expanded="true" />
+            <element signature="e#24089#24090#0" expanded="true" />
+            <element signature="e#24124#24125#0" expanded="true" />
+            <element signature="e#24155#24156#0" expanded="true" />
+            <element signature="e#24204#24205#0" expanded="true" />
+            <element signature="e#24244#24245#0" expanded="true" />
+            <element signature="e#24292#24293#0" expanded="true" />
+            <element signature="e#24337#24338#0" expanded="true" />
+            <element signature="e#24535#24536#0" expanded="true" />
+            <element signature="e#24585#24586#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
