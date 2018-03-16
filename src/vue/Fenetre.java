@@ -75,11 +75,13 @@ public class Fenetre extends JFrame {
         vueJeu();
     }
     public void redeclareFenetreJeu() {
-        //panelFenetreJeu = null;
         panelFenetreJeu= new FenetreJeu(jeu);
     }
     public void redeclareFenetreExtensionStroop(){
         panelFenetreExtensionStroop= new FenetreExtensionStroop();
+    }
+    public void redeclareFenetreExtensionGuitarHero(){
+        panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
     }
 
     public void changerMotExtensionStroop(){
@@ -225,6 +227,42 @@ public class Fenetre extends JFrame {
         }
     }).start();
     }
+    public void jouerMusiqueJeuExtensionGuitarHero(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+        Mp3 musiqueExtensionGuitarHero = new Mp3("musiques\\musiqueExtensionGuitarHero.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueExtensionGuitarHero.getPlayer().play(1)) {
+                    arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueExtensionGuitarHero.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+    public void jouerMusiqueJeuExtensionStroop(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
+        Mp3 musiqueExtensionStroop = new Mp3("musiques\\musiqueExtensionStroop.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueExtensionStroop.getPlayer().play(1)) {
+                    arretJeu = panelFenetreExtensionStroop.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueExtensionStroop.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
 
     public void jouerMusiqueMenu(){ new Thread(new Runnable(){
         Mp3 musiqueMenu = new Mp3("musiques\\musiqueMenu.mp3");
@@ -350,18 +388,16 @@ public class Fenetre extends JFrame {
     }
     public void formeDefilementExtensionGuitarHero(){
         new Thread(new Runnable(){
-            /* variables pour pas get a chaque tour de boucle */
             boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
             int defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
+            int buffer = 0;
+            int vitesse = 0;
 
             @Override
             public void run() {
-
                 while(!arretJeu) {
-
                     defilementY++;
                     panelFenetreExtensionGuitarHero.setDefilementY(defilementY);
-
                     if(defilementY == 900){
                         panelFenetreExtensionGuitarHero.setDefilementY(0);
                         defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
@@ -369,9 +405,17 @@ public class Fenetre extends JFrame {
                     if (defilementY == 0){
                         changerCouleurBarreExtensionGuitarHero();
                     }
+                    if (panelFenetreExtensionGuitarHero.getScore() == 10){
+                        arretJeu = true;
+                        panelFenetreExtensionGuitarHero.setArretJeu(arretJeu);
+                    }
+                    if(panelFenetreExtensionGuitarHero.getScore() == buffer+3){ //si le score a augmenté
+                        buffer = panelFenetreExtensionGuitarHero.getScore();
+                        vitesse++;
+                    }
 
                     try {
-                        Thread.sleep(3);
+                        Thread.sleep(4-vitesse);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }

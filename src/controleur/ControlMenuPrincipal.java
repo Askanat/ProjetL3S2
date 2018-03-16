@@ -40,17 +40,18 @@ public class ControlMenuPrincipal extends Control implements ActionListener {
                 changerVue();
                 break;
             case "Stroop":
-                fenetre.jouerMusiqueBouton();
+                fenetre.jouerMusiqueJeuExtensionStroop();
                 fenetre.setFinMusiqueMenu(true);
                 fenetre.setContentPane(fenetre.panelFenetreExtensionStroop);
                 fenetre.tempsExtensionStroop();
                 changerVue();
                 break;
             case "GuitarHero":
-                fenetre.jouerMusiqueBouton();
+                fenetre.jouerMusiqueJeuExtensionGuitarHero();
                 fenetre.setFinMusiqueMenu(true);
                 fenetre.setContentPane(fenetre.panelFenetreExtensionGuitarHero);
                 fenetre.formeDefilementExtensionGuitarHero();
+
                 changerVue();
                 break;
             case "Quitter":

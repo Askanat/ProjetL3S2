@@ -37,6 +37,15 @@ public class ControlClavierExtensionGuitarHero extends Control implements KeyLis
         if (key == KeyEvent.VK_J) {
             fenetre.panelFenetreExtensionGuitarHero.setValidationCouleur(3, true);
         }
+        if (key == KeyEvent.VK_ESCAPE) {
+            if (fenetre.panelFenetreExtensionGuitarHero.isArretJeu()) {
+                fenetre.setContentPane(fenetre.panelMenuPrincipal);
+                fenetre.setFinMusiqueMenu(false);
+                fenetre.jouerMusiqueMenu();
+                fenetre.redeclareFenetreExtensionGuitarHero();
+                changerVue();
+            }
+        }
 
     }
 

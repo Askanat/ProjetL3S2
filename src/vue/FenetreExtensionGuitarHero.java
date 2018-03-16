@@ -135,6 +135,11 @@ public class FenetreExtensionGuitarHero extends JPanel{
                     scoreBoolean = false;
                 }
             }
+            if(score%3 == 0 && score!=0){
+                //g2d.setColor(Color.WHITE);
+                //g2d.drawString("SCORE", 170, 100);
+                g2d.drawString("PLUS VITE",200,200);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -171,4 +176,12 @@ public class FenetreExtensionGuitarHero extends JPanel{
         this.validationCouleur[i] = b;
     }
 
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
 }
