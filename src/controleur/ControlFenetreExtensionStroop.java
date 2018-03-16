@@ -7,9 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class ControlFenetreExtension extends Control implements ActionListener {
+public class ControlFenetreExtensionStroop extends Control implements ActionListener {
 
-    public ControlFenetreExtension(Jeu jeu, Fenetre fenetre) {
+    public ControlFenetreExtensionStroop(Jeu jeu, Fenetre fenetre) {
         super(jeu, fenetre);
         fenetre.setControlFenetreExtension(this);
     }
@@ -19,7 +19,7 @@ public class ControlFenetreExtension extends Control implements ActionListener {
             case "Retour":
                 fenetre.jouerMusiqueBouton();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
-                fenetre.panelFenetreExtension = null;
+                fenetre.panelFenetreExtensionStroop = null;
                 fenetre.redeclareFenetreExtension();
                 changerVue();
                 break;

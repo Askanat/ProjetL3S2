@@ -6,12 +6,12 @@ import vue.Fenetre;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class ControlClavierExtension extends Control implements KeyListener{
+public class ControlClavierExtensionStroop extends Control implements KeyListener{
     private ControlTouche controlTouche;
     String conteneurUneLettre = "";
     String resultat = "";
 
-    public ControlClavierExtension(Jeu jeu, Fenetre fenetre){
+    public ControlClavierExtensionStroop(Jeu jeu, Fenetre fenetre){
         super(jeu, fenetre);
         fenetre.setControlClavierExtension(this);
     }
@@ -35,9 +35,9 @@ public class ControlClavierExtension extends Control implements KeyListener{
         if (key == KeyEvent.VK_ENTER) {
             switch (resultat) {
                 case "jaune":
-                    if (fenetre.panelFenetreExtension.getMotTab()[0]) {
+                    if (fenetre.panelFenetreExtensionStroop.getMotTab()[0]) {
                         fenetre.deplacementClavierExtension(true);
-                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
                         fenetre.changerMotExtension();
                     }
                     else{
@@ -47,9 +47,9 @@ public class ControlClavierExtension extends Control implements KeyListener{
                     resultat = "";
                     break;
                 case "vert":
-                    if (fenetre.panelFenetreExtension.getMotTab()[1]) {
+                    if (fenetre.panelFenetreExtensionStroop.getMotTab()[1]) {
                         fenetre.deplacementClavierExtension(true);
-                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
                         fenetre.changerMotExtension();
                     }
                     else{
@@ -59,9 +59,9 @@ public class ControlClavierExtension extends Control implements KeyListener{
                     resultat = "";
                     break;
                 case "rouge":
-                    if (fenetre.panelFenetreExtension.getMotTab()[2]) {
+                    if (fenetre.panelFenetreExtensionStroop.getMotTab()[2]) {
                         fenetre.deplacementClavierExtension(true);
-                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
                         fenetre.changerMotExtension();
                     }
                     else{
@@ -71,9 +71,9 @@ public class ControlClavierExtension extends Control implements KeyListener{
                     resultat = "";
                     break;
                 case "bleu":
-                    if (fenetre.panelFenetreExtension.getMotTab()[3]) {
+                    if (fenetre.panelFenetreExtensionStroop.getMotTab()[3]) {
                         fenetre.deplacementClavierExtension(true);
-                        fenetre.panelFenetreExtension.setScore(fenetre.panelFenetreExtension.getScore()+1);
+                        fenetre.panelFenetreExtensionStroop.setScore(fenetre.panelFenetreExtensionStroop.getScore()+1);
                         fenetre.changerMotExtension();
                     }
                     else{

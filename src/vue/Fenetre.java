@@ -30,7 +30,7 @@ public class Fenetre extends JFrame {
     public FenetreScore     panelFenetreScore;
     public FenetreCredits   panelFenetreCredits;
     public FenetreOptions   panelFenetreOptions;
-    public FenetreExtension panelFenetreExtension;
+    public FenetreExtensionStroop panelFenetreExtensionStroop;
     public MenuEnJeu        panelMenuEnJeu;
 
     public ControlTouche    controlTouche;
@@ -67,7 +67,7 @@ public class Fenetre extends JFrame {
         panelFenetreScore = new FenetreScore();
         panelFenetreCredits = new FenetreCredits();
         panelMenuEnJeu      = new MenuEnJeu();
-        panelFenetreExtension = new FenetreExtension();
+        panelFenetreExtensionStroop = new FenetreExtensionStroop();
 
         vueJeu();
     }
@@ -75,7 +75,7 @@ public class Fenetre extends JFrame {
         panelFenetreJeu = new FenetreJeu(jeu);
     }
     public void redeclareFenetreExtension(){
-        panelFenetreExtension = new FenetreExtension();
+        panelFenetreExtensionStroop = new FenetreExtensionStroop();
     }
 
     public void changerMotExtension (){
@@ -87,7 +87,7 @@ public class Fenetre extends JFrame {
             actualiserTab[i] = false;
         }
         for(int i = 0 ; i<actualiserTab.length ; i++){
-            if(panelFenetreExtension.getMotTab()[i]){
+            if(panelFenetreExtensionStroop.getMotTab()[i]){
                 buffer = i;
             }
         }
@@ -96,7 +96,7 @@ public class Fenetre extends JFrame {
             val = rand.nextInt(4);
         }
         actualiserTab[val] = true;
-        panelFenetreExtension.setMotTab(actualiserTab);
+        panelFenetreExtensionStroop.setMotTab(actualiserTab);
         panelFenetreJeu.repaint();
     }
 
@@ -135,17 +135,43 @@ public class Fenetre extends JFrame {
             @Override
             public void run() {
                 for(int i = 0; i<100; i++){
-                    if(i<=100) {
-                        if(bonneReponse)
-                            panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()+1);
-                        else
-                            panelFenetreExtension.setPosY(panelFenetreExtension.getPosY()-1);
-                    }
-                    if (panelFenetreExtension.getPosY() == 900){
+                    if (panelFenetreExtensionStroop.getPosY() < 900) {
                         //fin du jeu
+                        if (i <= 100) {
+                            if (bonneReponse)
+                                panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getPosY() + 1);
+                            else
+                                panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getPosY() - 1);
+                        }
                     }
                     try {
                         Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+    public void tempsExtension() {
+        new Thread(new Runnable(){
+            int secondsInt;
+            String secondsString;
+            boolean arretJeu = false;
+            @Override
+            public void run() {
+                while(!arretJeu){
+                    secondsString = panelFenetreExtensionStroop.getSeconds();
+                    secondsInt = Integer.parseInt(secondsString);
+                    secondsInt++;
+                    secondsString = String.valueOf(secondsInt);
+                    panelFenetreExtensionStroop.setSeconds(secondsString);
+
+                    if (panelFenetreExtensionStroop.getPosY() == 900){
+                        arretJeu = true;
+                    }
+                    try {
+                        Thread.sleep(1000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -456,8 +482,8 @@ public class Fenetre extends JFrame {
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
     }
-    public void setControlFenetreExtension(ControlFenetreExtension controlFenetreExtension) {
-        panelFenetreExtension.setControl(controlFenetreExtension);
+    public void setControlFenetreExtension(ControlFenetreExtensionStroop controlFenetreExtensionStroop) {
+        panelFenetreExtensionStroop.setControl(controlFenetreExtensionStroop);
     }
 
     public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
@@ -467,8 +493,8 @@ public class Fenetre extends JFrame {
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
     }
-    public void setControlClavierExtension(ControlClavierExtension controlClavierExtension) {
-        addKeyListener(controlClavierExtension);
+    public void setControlClavierExtension(ControlClavierExtensionStroop controlClavierExtensionStroop) {
+        addKeyListener(controlClavierExtensionStroop);
     }
 
     public void setControlSouris (ControlSouris controlSouris){
