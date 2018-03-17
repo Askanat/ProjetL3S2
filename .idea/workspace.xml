@@ -8,10 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/saveScore/score.txt" afterPath="$PROJECT_DIR$/saveScore/score.txt" />
       <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavier.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlSouris.java" afterPath="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreScores.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreScores.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Jeu.java" afterPath="$PROJECT_DIR$/src/model/Jeu.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/ScoreFile.java" afterPath="$PROJECT_DIR$/src/model/ScoreFile.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreScore.java" afterPath="$PROJECT_DIR$/src/vue/FenetreScore.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,15 +26,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ProjetL3S2$Appli.coverage" NAME="Appli Coverage Results" MODIFIED="1519558681899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProjetL3S2$Appli.coverage" NAME="Appli Coverage Results" MODIFIED="1521317345269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+            <state relative-caret-position="747">
+              <caret line="388" column="63" lean-forward="false" selection-start-line="388" selection-start-column="60" selection-end-line="388" selection-end-column="63" />
               <folding>
                 <element signature="e#2592#2593#0" expanded="true" />
                 <element signature="e#2644#2645#0" expanded="true" />
@@ -59,31 +63,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlClavier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
+      <file leaf-file-name="ControlFenetreJeu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="374">
+              <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlSouris.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
+      <file leaf-file-name="FenetreScore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state relative-caret-position="196">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="25" />
               <folding>
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#2984#2985#0" expanded="true" />
+                <element signature="e#3015#3016#0" expanded="true" />
+                <element signature="e#3044#3045#0" expanded="true" />
+                <element signature="e#3069#3070#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="score.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/saveScore/score.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,39 +103,64 @@
       <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="189" column="93" lean-forward="false" selection-start-line="189" selection-start-column="90" selection-end-line="189" selection-end-column="93" />
+            <state relative-caret-position="-12">
+              <caret line="340" column="17" lean-forward="true" selection-start-line="340" selection-start-column="17" selection-end-line="340" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ControlFenetreScores.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreScores.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoueurForme.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Control.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Jeu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScoreFile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/ScoreFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-756">
+              <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
               <folding>
-                <element signature="e#2471#2472#0" expanded="true" />
-                <element signature="e#2527#2528#0" expanded="true" />
-                <element signature="e#19498#19499#0" expanded="true" />
-                <element signature="e#19530#19531#0" expanded="true" />
-                <element signature="e#19565#19566#0" expanded="true" />
-                <element signature="e#19599#19600#0" expanded="true" />
-                <element signature="e#19650#19651#0" expanded="true" />
-                <element signature="e#19696#19697#0" expanded="true" />
-                <element signature="e#19725#19726#0" expanded="true" />
-                <element signature="e#19754#19755#0" expanded="true" />
-                <element signature="e#19795#19796#0" expanded="true" />
-                <element signature="e#19831#19832#0" expanded="true" />
-                <element signature="e#19859#19860#0" expanded="true" />
-                <element signature="e#19886#19887#0" expanded="true" />
-                <element signature="e#19923#19924#0" expanded="true" />
-                <element signature="e#19955#19956#0" expanded="true" />
-                <element signature="e#20009#20010#0" expanded="true" />
-                <element signature="e#20063#20064#0" expanded="true" />
-                <element signature="e#20280#20281#0" expanded="true" />
-                <element signature="e#20320#20321#0" expanded="true" />
-                <element signature="e#20383#20384#0" expanded="true" />
-                <element signature="e#20441#20442#0" expanded="true" />
-                <element signature="e#20476#20477#0" expanded="true" />
-                <element signature="e#20507#20508#0" expanded="true" />
-                <element signature="e#20845#20846#0" expanded="true" />
-                <element signature="e#20872#20873#0" expanded="true" />
-                <element signature="e#20906#20907#0" expanded="true" />
-                <element signature="e#20937#20938#0" expanded="true" />
-                <element signature="e#20986#20987#0" expanded="true" />
-                <element signature="e#21026#21027#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#2745#2746#0" expanded="true" />
+                <element signature="e#2779#2780#0" expanded="true" />
+                <element signature="e#2807#2808#0" expanded="true" />
+                <element signature="e#2835#2836#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -140,9 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Affine</find>
-      <find>extens</find>
-      <find>redec</find>
       <find>shape</find>
       <find>degree</find>
       <find>white</find>
@@ -170,6 +204,9 @@
       <find>degre</find>
       <find>300</find>
       <find>souris</find>
+      <find>getSco</find>
+      <find>getScore</find>
+      <find>sco</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\maxime\IdeaProjects\ProjetL3S2</dir>
@@ -237,14 +274,11 @@
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtension.java" />
         <option value="$PROJECT_DIR$/src/model/Mp3.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreScore.java" />
-        <option value="$PROJECT_DIR$/src/model/Jeu.java" />
         <option value="$PROJECT_DIR$/src/model/BDD.java" />
         <option value="$PROJECT_DIR$/src/model/ArcForme.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreExtension.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java" />
         <option value="$PROJECT_DIR$/src/model/RectangleForme.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlGroup.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
@@ -257,10 +291,16 @@
         <option value="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
-        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
+        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
+        <option value="$PROJECT_DIR$/src/model/Jeu.java" />
+        <option value="$PROJECT_DIR$/src/model/ScoreFile.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreScore.java" />
+        <option value="$PROJECT_DIR$/saveScore/score.txt" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreScores.java" />
       </list>
     </option>
   </component>
@@ -272,7 +312,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="-13" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -294,8 +334,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -306,12 +346,7 @@
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="musiques" type="462c0819:PsiDirectoryNode" />
+              <item name="saveScore" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
@@ -340,8 +375,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -354,15 +389,15 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jlayer/jl1.0.1.jar!/" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="controleur" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\images" />
+      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\images" />
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="controleur" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -858,41 +893,63 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="295404000" />
+    <option name="totallyTimeSpent" value="305272000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32435346" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19845645" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16702586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17672414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29988974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25426438" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19719827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1962096" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19719827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32435346" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16702586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17672414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -936,46 +993,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlTouche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/vue.Fenetre">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>vue.Fenetre</OriginalElement>
-          <nodes>
-            <node x="" y="">java.awt.Frame</node>
-            <node x="" y="">java.awt.Window</node>
-            <node x="" y="">java.beans.JavaBean</node>
-            <node x="" y="">java.awt.MenuContainer</node>
-            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
-            <node x="" y="">javax.swing.RootPaneContainer</node>
-            <node x="" y="">javax.swing.SwingContainer</node>
-            <node x="" y="">javax.accessibility.Accessible</node>
-            <node x="" y="">java.awt.Component</node>
-            <node x="" y="">java.awt.image.ImageObserver</node>
-            <node x="" y="">java.io.Serializable</node>
-            <node x="" y="">vue.Fenetre</node>
-            <node x="" y="">java.awt.Container</node>
-            <node x="" y="">javax.swing.JFrame</node>
-            <node x="" y="">javax.swing.WindowConstants</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="514.0" y="262.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Entite.java" />
     <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuEnJeu.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1007,19 +1024,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1028,16 +1032,6 @@
         <state relative-caret-position="425">
           <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,22 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -1126,26 +1104,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="93" column="58" lean-forward="false" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1184,22 +1146,6 @@
             <element signature="e#6620#6621#0" expanded="false" />
             <element signature="e#6654#6655#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1291,49 +1237,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="189" column="93" lean-forward="false" selection-start-line="189" selection-start-column="90" selection-end-line="189" selection-end-column="93" />
+        <state relative-caret-position="408">
+          <caret line="29" column="40" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
           <folding>
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#19498#19499#0" expanded="true" />
-            <element signature="e#19530#19531#0" expanded="true" />
-            <element signature="e#19565#19566#0" expanded="true" />
-            <element signature="e#19599#19600#0" expanded="true" />
-            <element signature="e#19650#19651#0" expanded="true" />
-            <element signature="e#19696#19697#0" expanded="true" />
-            <element signature="e#19725#19726#0" expanded="true" />
-            <element signature="e#19754#19755#0" expanded="true" />
-            <element signature="e#19795#19796#0" expanded="true" />
-            <element signature="e#19831#19832#0" expanded="true" />
-            <element signature="e#19859#19860#0" expanded="true" />
-            <element signature="e#19886#19887#0" expanded="true" />
-            <element signature="e#19923#19924#0" expanded="true" />
-            <element signature="e#19955#19956#0" expanded="true" />
-            <element signature="e#20009#20010#0" expanded="true" />
-            <element signature="e#20063#20064#0" expanded="true" />
-            <element signature="e#20280#20281#0" expanded="true" />
-            <element signature="e#20320#20321#0" expanded="true" />
-            <element signature="e#20383#20384#0" expanded="true" />
-            <element signature="e#20441#20442#0" expanded="true" />
-            <element signature="e#20476#20477#0" expanded="true" />
-            <element signature="e#20507#20508#0" expanded="true" />
-            <element signature="e#20845#20846#0" expanded="true" />
-            <element signature="e#20872#20873#0" expanded="true" />
-            <element signature="e#20906#20907#0" expanded="true" />
-            <element signature="e#20937#20938#0" expanded="true" />
-            <element signature="e#20986#20987#0" expanded="true" />
-            <element signature="e#21026#21027#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="59" column="64" lean-forward="false" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="14" lean-forward="true" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
+        <state relative-caret-position="747">
+          <caret line="388" column="63" lean-forward="false" selection-start-line="388" selection-start-column="60" selection-end-line="388" selection-end-column="63" />
           <folding>
             <element signature="e#2592#2593#0" expanded="true" />
             <element signature="e#2644#2645#0" expanded="true" />
@@ -1361,28 +1325,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
+        <state relative-caret-position="374">
+          <caret line="22" column="3" lean-forward="true" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="19" lean-forward="true" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
+    <entry file="file://$PROJECT_DIR$/src/model/ScoreFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state relative-caret-position="-756">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2745#2746#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2807#2808#0" expanded="true" />
+            <element signature="e#2835#2836#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-12">
+          <caret line="340" column="17" lean-forward="true" selection-start-line="340" selection-start-column="17" selection-end-line="340" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/saveScore/score.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="5" lean-forward="false" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#2984#2985#0" expanded="true" />
+            <element signature="e#3015#3016#0" expanded="true" />
+            <element signature="e#3044#3045#0" expanded="true" />
+            <element signature="e#3069#3070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreScores.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="52" lean-forward="true" selection-start-line="29" selection-start-column="52" selection-end-line="29" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>

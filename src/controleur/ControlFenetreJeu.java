@@ -14,6 +14,12 @@ public class ControlFenetreJeu extends Control implements ActionListener {
         fenetre.setControlFenetreJeu(this);
     }
 
+    public void score(){
+        fenetre.layeredPane.removeAll();
+        fenetre.setContentPane(fenetre.panelFenetreScore);
+        changerVue();
+    }
+
     public void actionPerformed(ActionEvent e) {
 
         switch (e.getActionCommand()) {

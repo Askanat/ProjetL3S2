@@ -19,6 +19,7 @@ import static vue.Fenetre.*;
 public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
+    private FenetreScore fenetreScore = new FenetreScore();
     private int posX = 0;
     private int posY = 0;
     private int defilementY = -200;
@@ -33,6 +34,7 @@ public class FenetreJeu extends JPanel {
     private int degree = 0;
     public Bouton retour, menu;
     private Image imageFenetreJeu;
+    private int score;
 
     JoueurForme bille = new JoueurForme();
     RectangleForme rectangleFormeRouge = new RectangleForme(Color.RED);
@@ -350,6 +352,7 @@ public class FenetreJeu extends JPanel {
                 g2d.setFont(new Font("TimesRoman",Font.PLAIN, 50));
                 g2d.setColor(Color.WHITE);
                 g2d.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
+                jeu.scoreFile.setScore(bille.getScore());
             }
         } catch (IOException e) {
             e.printStackTrace();
