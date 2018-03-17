@@ -138,11 +138,11 @@ public class Fenetre extends JFrame {
 
             @Override
             public void run() {
-                for(int i = 0; i<500; i++){
-                    if(i<=250) {
+                for(int i = 0; i<300; i++){
+                    if(i<=150) {
                         panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
                     }
-                    if(i>=250){
+                    if(i>=150){
                         panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()-1);
                     }
                     try {
@@ -158,10 +158,11 @@ public class Fenetre extends JFrame {
     public void deplacementClavierExtensionStroop(boolean bonneReponse) {
         new Thread(new Runnable(){
             int positionY;
-
+            boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
             @Override
             public void run() {
-                for(int i = 0; i<100; i++){
+
+                for(int i = 0; i<100; i++) {
                     if (panelFenetreExtensionStroop.getPosY() < 900) {
                         //fin du jeu
                         if (i <= 100) {
@@ -176,6 +177,7 @@ public class Fenetre extends JFrame {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+
                 }
             }
         }).start();
@@ -185,19 +187,33 @@ public class Fenetre extends JFrame {
             int secondsInt;
             String secondsString;
             boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
+            int posX = panelFenetreExtensionStroop.getPosX();
             @Override
             public void run() {
+
                 while(!arretJeu){
+                    arretJeu = panelFenetreExtensionStroop.isArretJeu();
+                    if(arretJeu){
+                        break;
+                    }
                     secondsString = panelFenetreExtensionStroop.getSeconds();
                     secondsInt = Integer.parseInt(secondsString);
                     secondsInt++;
                     secondsString = String.valueOf(secondsInt);
                     panelFenetreExtensionStroop.setSeconds(secondsString);
+                    posX++;
+                    panelFenetreExtensionStroop.setPosX(posX);
 
+                    if(posX == 7){
+                        posX = 0;
+                        panelFenetreExtensionStroop.setPosX(posX);
+                    }
                     if (panelFenetreExtensionStroop.getPosY() == 900){
                         arretJeu = true;
                         panelFenetreExtensionStroop.setArretJeu(arretJeu);
                     }
+
+
 
                     try {
                         Thread.sleep(1000);

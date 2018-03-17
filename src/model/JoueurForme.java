@@ -1,5 +1,4 @@
 package model;
-import vue.FenetreJeu;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,7 +7,7 @@ import java.awt.geom.Ellipse2D;
 import java.util.Random;
 
 
-public class Bille extends JPanel {
+public class JoueurForme extends JPanel {
 
     protected Color couleur;
     protected Color couleurTab[] = {Color.BLUE, Color.RED, Color.YELLOW, Color.GREEN};
@@ -16,9 +15,11 @@ public class Bille extends JPanel {
 
     Ellipse2D ellipse = new Ellipse2D.Double(300-25, 900-50, 60, 60);
     Area areaA ;
-    public Bille(){
+    public JoueurForme(){
         score = 0;
-        couleur = Color.WHITE;
+        Random rand = new Random();
+        int val =rand.nextInt(4);
+        couleur = couleurTab[val];
 
     }
 
@@ -37,13 +38,13 @@ public class Bille extends JPanel {
         return !areaA.isEmpty();
     }
 
-    public void changementCouleurBille(Bille bille) {
+    public void changementCouleurBille(JoueurForme joueurForme) {
         Random rand = new Random();
         int val =rand.nextInt(4);
-        while (bille.couleur == couleurTab[val]) {
+        while (joueurForme.couleur == couleurTab[val]) {
             val = rand.nextInt(4);
         }
-        bille.couleur= couleurTab[val];
+        joueurForme.couleur= couleurTab[val];
     }
 
     public Color getCouleur() {

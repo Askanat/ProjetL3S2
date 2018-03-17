@@ -6,14 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueExtensionGuitarHero.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueExtensionStroop.mp3" />
+    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="boule de feu extensionStroop">
+      <change beforePath="" afterPath="$PROJECT_DIR$/images/bouleDeFeu.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" afterPath="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Bille.java" afterPath="$PROJECT_DIR$/src/model/JoueurForme.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,34 +31,34 @@
       <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
+            <state relative-caret-position="504">
+              <caret line="212" column="74" lean-forward="false" selection-start-line="212" selection-start-column="74" selection-end-line="212" selection-end-column="74" />
               <folding>
                 <element signature="e#2558#2559#0" expanded="true" />
                 <element signature="e#2610#2611#0" expanded="true" />
                 <element signature="e#2661#2662#0" expanded="true" />
                 <element signature="e#2734#2735#0" expanded="true" />
-                <element signature="e#20007#20008#0" expanded="true" />
-                <element signature="e#20059#20060#0" expanded="true" />
-                <element signature="e#20117#20118#0" expanded="true" />
-                <element signature="e#20169#20170#0" expanded="true" />
-                <element signature="e#21559#21560#0" expanded="true" />
-                <element signature="e#21618#21619#0" expanded="true" />
-                <element signature="e#21686#21687#0" expanded="true" />
-                <element signature="e#21732#21733#0" expanded="true" />
-                <element signature="e#22160#22161#0" expanded="true" />
-                <element signature="e#22213#22214#0" expanded="true" />
-                <element signature="e#22274#22275#0" expanded="true" />
-                <element signature="e#22326#22327#0" expanded="true" />
+                <element signature="e#20556#20557#0" expanded="true" />
+                <element signature="e#20608#20609#0" expanded="true" />
+                <element signature="e#20666#20667#0" expanded="true" />
+                <element signature="e#20718#20719#0" expanded="true" />
+                <element signature="e#22108#22109#0" expanded="true" />
+                <element signature="e#22167#22168#0" expanded="true" />
+                <element signature="e#22235#22236#0" expanded="true" />
+                <element signature="e#22281#22282#0" expanded="true" />
+                <element signature="e#22709#22710#0" expanded="true" />
+                <element signature="e#22762#22763#0" expanded="true" />
+                <element signature="e#22823#22824#0" expanded="true" />
+                <element signature="e#22875#22876#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreExtensionGuitarHero.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FenetreExtensionGuitarHero.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
+            <state relative-caret-position="-190">
               <caret line="140" column="45" lean-forward="false" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
               <folding>
                 <element signature="e#6553#6554#0" expanded="true" />
@@ -70,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreExtensionStroop.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FenetreExtensionStroop.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+            <state relative-caret-position="480">
+              <caret line="93" column="58" lean-forward="false" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -83,8 +83,8 @@
       <file leaf-file-name="ControlClavierExtensionStroop.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
+            <state relative-caret-position="458">
+              <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -103,46 +103,44 @@
       <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7488">
-              <caret line="352" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+            <state relative-caret-position="336">
+              <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="83" selection-end-column="85" />
               <folding>
-                <element signature="e#2488#2489#0" expanded="true" />
-                <element signature="e#2544#2545#0" expanded="true" />
-                <element signature="e#19824#19825#0" expanded="true" />
-                <element signature="e#19851#19852#0" expanded="true" />
-                <element signature="e#19888#19889#0" expanded="true" />
-                <element signature="e#19920#19921#0" expanded="true" />
-                <element signature="e#19955#19956#0" expanded="true" />
-                <element signature="e#19989#19990#0" expanded="true" />
-                <element signature="e#20040#20041#0" expanded="true" />
-                <element signature="e#20086#20087#0" expanded="true" />
-                <element signature="e#20115#20116#0" expanded="true" />
-                <element signature="e#20144#20145#0" expanded="true" />
-                <element signature="e#20185#20186#0" expanded="true" />
-                <element signature="e#20221#20222#0" expanded="true" />
-                <element signature="e#20255#20256#0" expanded="true" />
-                <element signature="e#20289#20290#0" expanded="true" />
-                <element signature="e#20340#20341#0" expanded="true" />
-                <element signature="e#20386#20387#0" expanded="true" />
-                <element signature="e#20414#20415#0" expanded="true" />
-                <element signature="e#20441#20442#0" expanded="true" />
-                <element signature="e#20478#20479#0" expanded="true" />
-                <element signature="e#20510#20511#0" expanded="true" />
-                <element signature="e#20564#20565#0" expanded="true" />
-                <element signature="e#20618#20619#0" expanded="true" />
-                <element signature="e#20835#20836#0" expanded="true" />
-                <element signature="e#20875#20876#0" expanded="true" />
-                <element signature="e#20938#20939#0" expanded="true" />
-                <element signature="e#20996#20997#0" expanded="true" />
-                <element signature="e#21031#21032#0" expanded="true" />
-                <element signature="e#21062#21063#0" expanded="true" />
-                <element signature="e#21111#21112#0" expanded="true" />
-                <element signature="e#21151#21152#0" expanded="true" />
-                <element signature="e#21199#21200#0" expanded="true" />
-                <element signature="e#21244#21245#0" expanded="true" />
-                <element signature="e#21442#21443#0" expanded="true" />
-                <element signature="e#21492#21493#0" expanded="true" />
+                <element signature="e#2443#2444#0" expanded="true" />
+                <element signature="e#2499#2500#0" expanded="true" />
+                <element signature="e#19470#19471#0" expanded="true" />
+                <element signature="e#19502#19503#0" expanded="true" />
+                <element signature="e#19537#19538#0" expanded="true" />
+                <element signature="e#19571#19572#0" expanded="true" />
+                <element signature="e#19622#19623#0" expanded="true" />
+                <element signature="e#19668#19669#0" expanded="true" />
+                <element signature="e#19697#19698#0" expanded="true" />
+                <element signature="e#19726#19727#0" expanded="true" />
+                <element signature="e#19767#19768#0" expanded="true" />
+                <element signature="e#19803#19804#0" expanded="true" />
+                <element signature="e#19831#19832#0" expanded="true" />
+                <element signature="e#19858#19859#0" expanded="true" />
+                <element signature="e#19895#19896#0" expanded="true" />
+                <element signature="e#19927#19928#0" expanded="true" />
+                <element signature="e#19981#19982#0" expanded="true" />
+                <element signature="e#20035#20036#0" expanded="true" />
+                <element signature="e#20252#20253#0" expanded="true" />
+                <element signature="e#20292#20293#0" expanded="true" />
+                <element signature="e#20355#20356#0" expanded="true" />
+                <element signature="e#20413#20414#0" expanded="true" />
+                <element signature="e#20448#20449#0" expanded="true" />
+                <element signature="e#20479#20480#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JoueurForme.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,7 +148,7 @@
       <file leaf-file-name="Jeu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
+            <state relative-caret-position="504">
               <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
               <folding />
             </state>
@@ -160,8 +158,8 @@
       <file leaf-file-name="ControlMenuPrincipal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+            <state relative-caret-position="912">
+              <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -188,8 +186,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>etoileUn</find>
-      <find>r</find>
       <find>Clavier</find>
       <find>rando</find>
       <find>boule</find>
@@ -210,7 +206,6 @@
       <find>score</find>
       <find>old</find>
       <find>YELL</find>
-      <find>Stroop</find>
       <find>musique</find>
       <find>Jeu</find>
       <find>redecla</find>
@@ -218,6 +213,9 @@
       <find>content</find>
       <find>Musiqu</find>
       <find>guitar</find>
+      <find>arc</find>
+      <find>clav</find>
+      <find>Stroop</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\maxime\IdeaProjects\ProjetL3S2</dir>
@@ -296,19 +294,19 @@
         <option value="$PROJECT_DIR$/src/vue/FenetreExtension.java" />
         <option value="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/model/Bille.java" />
         <option value="$PROJECT_DIR$/src/model/RectangleForme.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlGroup.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+        <option value="$PROJECT_DIR$/src/model/Bille.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
+        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
       </list>
     </option>
   </component>
@@ -343,8 +341,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -352,6 +348,11 @@
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
@@ -385,6 +386,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -397,14 +400,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/jlayer/jl1.0.1.jar!/" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\images" />
-    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="controleur" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\images" />
       <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
     </key>
   </component>
@@ -565,7 +568,8 @@
       <workItem from="1520768828062" duration="7271000" />
       <workItem from="1520864975379" duration="640000" />
       <workItem from="1520868746301" duration="2761000" />
-      <workItem from="1521193960782" duration="38611000" />
+      <workItem from="1521193960782" duration="39042000" />
+      <workItem from="1521282540074" duration="5374000" />
     </task>
     <task id="LOCAL-00001" summary="Bouton retour dans FenetreOptions fonctionne,&#10;FenetreOptions et ControlFenetreOption comme les autres">
       <created>1518971247582</created>
@@ -868,15 +872,21 @@
       <option name="project" value="LOCAL" />
       <updated>1521233876684</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="musique,echap extension. Vitesse augmente GuitarHero">
+      <created>1521239410324</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1521239410324</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="277479000" />
+    <option name="totallyTimeSpent" value="283284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -886,26 +896,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17672414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16702586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17672414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19719827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19719827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -916,7 +926,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Correction de bug, cercle sous commentaire" />
     <MESSAGE value="Etoile et billeChangementCouleur disparaissent, score dans Entite" />
     <MESSAGE value="Ajout image carreNoir" />
     <MESSAGE value="control clavier avec espace, mal fait pour l'instant" />
@@ -941,7 +950,8 @@
     <MESSAGE value="GuitarHero Fonctionne" />
     <MESSAGE value="Echap pour quitter le jeu, probleme ralentissement" />
     <MESSAGE value="plus de ralentissement" />
-    <option name="LAST_COMMIT_MESSAGE" value="plus de ralentissement" />
+    <MESSAGE value="musique,echap extension. Vitesse augmente GuitarHero" />
+    <option name="LAST_COMMIT_MESSAGE" value="musique,echap extension. Vitesse augmente GuitarHero" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1170,10 +1180,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <marker date="1521193956435" expanded="true" signature="853:911" ph="Select nomJo... classement" />
-            <marker date="1521193956435" expanded="true" signature="1357:1430" ph="INSERT INTO classement... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,14 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Bille.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="7" lean-forward="false" selection-start-line="35" selection-start-column="7" selection-end-line="36" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -1257,62 +1255,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="42" column="57" lean-forward="true" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+        <state relative-caret-position="912">
+          <caret line="42" column="57" lean-forward="false" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
+        <state relative-caret-position="504">
           <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7488">
-          <caret line="352" column="0" lean-forward="false" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
-          <folding>
-            <element signature="e#2488#2489#0" expanded="true" />
-            <element signature="e#2544#2545#0" expanded="true" />
-            <element signature="e#19824#19825#0" expanded="true" />
-            <element signature="e#19851#19852#0" expanded="true" />
-            <element signature="e#19888#19889#0" expanded="true" />
-            <element signature="e#19920#19921#0" expanded="true" />
-            <element signature="e#19955#19956#0" expanded="true" />
-            <element signature="e#19989#19990#0" expanded="true" />
-            <element signature="e#20040#20041#0" expanded="true" />
-            <element signature="e#20086#20087#0" expanded="true" />
-            <element signature="e#20115#20116#0" expanded="true" />
-            <element signature="e#20144#20145#0" expanded="true" />
-            <element signature="e#20185#20186#0" expanded="true" />
-            <element signature="e#20221#20222#0" expanded="true" />
-            <element signature="e#20255#20256#0" expanded="true" />
-            <element signature="e#20289#20290#0" expanded="true" />
-            <element signature="e#20340#20341#0" expanded="true" />
-            <element signature="e#20386#20387#0" expanded="true" />
-            <element signature="e#20414#20415#0" expanded="true" />
-            <element signature="e#20441#20442#0" expanded="true" />
-            <element signature="e#20478#20479#0" expanded="true" />
-            <element signature="e#20510#20511#0" expanded="true" />
-            <element signature="e#20564#20565#0" expanded="true" />
-            <element signature="e#20618#20619#0" expanded="true" />
-            <element signature="e#20835#20836#0" expanded="true" />
-            <element signature="e#20875#20876#0" expanded="true" />
-            <element signature="e#20938#20939#0" expanded="true" />
-            <element signature="e#20996#20997#0" expanded="true" />
-            <element signature="e#21031#21032#0" expanded="true" />
-            <element signature="e#21062#21063#0" expanded="true" />
-            <element signature="e#21111#21112#0" expanded="true" />
-            <element signature="e#21151#21152#0" expanded="true" />
-            <element signature="e#21199#21200#0" expanded="true" />
-            <element signature="e#21244#21245#0" expanded="true" />
-            <element signature="e#21442#21443#0" expanded="true" />
-            <element signature="e#21492#21493#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1320,14 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="82" column="13" lean-forward="false" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1340,39 +1285,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="415" column="0" lean-forward="false" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
-          <folding>
-            <element signature="e#2558#2559#0" expanded="true" />
-            <element signature="e#2610#2611#0" expanded="true" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2734#2735#0" expanded="true" />
-            <element signature="e#20007#20008#0" expanded="true" />
-            <element signature="e#20059#20060#0" expanded="true" />
-            <element signature="e#20117#20118#0" expanded="true" />
-            <element signature="e#20169#20170#0" expanded="true" />
-            <element signature="e#21559#21560#0" expanded="true" />
-            <element signature="e#21618#21619#0" expanded="true" />
-            <element signature="e#21686#21687#0" expanded="true" />
-            <element signature="e#21732#21733#0" expanded="true" />
-            <element signature="e#22160#22161#0" expanded="true" />
-            <element signature="e#22213#22214#0" expanded="true" />
-            <element signature="e#22274#22275#0" expanded="true" />
-            <element signature="e#22326#22327#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="94" column="26" lean-forward="true" selection-start-line="94" selection-start-column="26" selection-end-line="94" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="578">
@@ -1381,9 +1293,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="8" selection-end-line="83" selection-end-column="85" />
+          <folding>
+            <element signature="e#2443#2444#0" expanded="true" />
+            <element signature="e#2499#2500#0" expanded="true" />
+            <element signature="e#19470#19471#0" expanded="true" />
+            <element signature="e#19502#19503#0" expanded="true" />
+            <element signature="e#19537#19538#0" expanded="true" />
+            <element signature="e#19571#19572#0" expanded="true" />
+            <element signature="e#19622#19623#0" expanded="true" />
+            <element signature="e#19668#19669#0" expanded="true" />
+            <element signature="e#19697#19698#0" expanded="true" />
+            <element signature="e#19726#19727#0" expanded="true" />
+            <element signature="e#19767#19768#0" expanded="true" />
+            <element signature="e#19803#19804#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19858#19859#0" expanded="true" />
+            <element signature="e#19895#19896#0" expanded="true" />
+            <element signature="e#19927#19928#0" expanded="true" />
+            <element signature="e#19981#19982#0" expanded="true" />
+            <element signature="e#20035#20036#0" expanded="true" />
+            <element signature="e#20252#20253#0" expanded="true" />
+            <element signature="e#20292#20293#0" expanded="true" />
+            <element signature="e#20355#20356#0" expanded="true" />
+            <element signature="e#20413#20414#0" expanded="true" />
+            <element signature="e#20448#20449#0" expanded="true" />
+            <element signature="e#20479#20480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="212" column="74" lean-forward="false" selection-start-line="212" selection-start-column="74" selection-end-line="212" selection-end-column="74" />
+          <folding>
+            <element signature="e#2558#2559#0" expanded="true" />
+            <element signature="e#2610#2611#0" expanded="true" />
+            <element signature="e#2661#2662#0" expanded="true" />
+            <element signature="e#2734#2735#0" expanded="true" />
+            <element signature="e#20556#20557#0" expanded="true" />
+            <element signature="e#20608#20609#0" expanded="true" />
+            <element signature="e#20666#20667#0" expanded="true" />
+            <element signature="e#20718#20719#0" expanded="true" />
+            <element signature="e#22108#22109#0" expanded="true" />
+            <element signature="e#22167#22168#0" expanded="true" />
+            <element signature="e#22235#22236#0" expanded="true" />
+            <element signature="e#22281#22282#0" expanded="true" />
+            <element signature="e#22709#22710#0" expanded="true" />
+            <element signature="e#22762#22763#0" expanded="true" />
+            <element signature="e#22823#22824#0" expanded="true" />
+            <element signature="e#22875#22876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
+        <state relative-caret-position="-190">
           <caret line="140" column="45" lean-forward="false" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
           <folding>
             <element signature="e#6553#6554#0" expanded="true" />
@@ -1391,6 +1369,22 @@
             <element signature="e#6620#6621#0" expanded="true" />
             <element signature="e#6654#6655#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="93" column="58" lean-forward="false" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
+          <folding />
         </state>
       </provider>
     </entry>
