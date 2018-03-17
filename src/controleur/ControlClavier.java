@@ -39,20 +39,31 @@ public class ControlClavier extends Control implements KeyListener {
     @Override
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
-        if (key == KeyEvent.VK_SPACE){
-            fenetre.deplacementClavier();
+        if(key == KeyEvent.VK_C){
+            fenetre.setSourisPosition(0,0);
+            fenetre.panelFenetreJeu.setPosY(0);
+            fenetre.panelFenetreJeu.setPosX(0);
+            if(fenetre.isClavier())
+                fenetre.setClavier(false);
+            else{
+                fenetre.setClavier(true);
+            }
         }
         if (key == KeyEvent.VK_ESCAPE) {
             if (fenetre.panelFenetreJeu.isArretJeu()) {
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 fenetre.setFinMusiqueMenu(false);
                 fenetre.jouerMusiqueMenu();
-               // fenetre.panelFenetreJeu = null;
+                // fenetre.panelFenetreJeu = null;
                 fenetre.redeclareFenetreJeu();
                 changerVue();
             }
         }
-
+        if(fenetre.isClavier()) {
+            if (key == KeyEvent.VK_SPACE) {
+                fenetre.deplacementClavier();
+            }
+        }
         /*int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)

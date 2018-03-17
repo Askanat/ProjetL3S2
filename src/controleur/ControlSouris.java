@@ -23,12 +23,12 @@ public class ControlSouris extends Control implements MouseMotionListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        x = e.getX();
-        y = e.getY();
-        fenetre.deplacementSouris();
-        //e.consume();
+        if (!fenetre.isClavier()) {
+            x = e.getX();
+            y = e.getY();
+            fenetre.deplacementSouris();
+        }
     }
-
     public int getX() {
         return x;
     }

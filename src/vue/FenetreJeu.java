@@ -20,8 +20,6 @@ public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
 
-
-
     private int posX = 0;
     private int posY = 0;
     private int defilementY = -200;

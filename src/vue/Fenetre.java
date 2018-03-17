@@ -22,7 +22,7 @@ public class Fenetre extends JFrame {
 
 
     private boolean finMusiqueMenu = false;
-    public ControlSouris souris;
+    private ControlSouris souris;
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
@@ -42,6 +42,9 @@ public class Fenetre extends JFrame {
     public JLayeredPane         layeredPane;
 
     public boolean mute = false;
+
+
+    public boolean clavier = true;
 
     public Fenetre(Jeu jeu) {
         souris = new ControlSouris(jeu, this);
@@ -628,5 +631,20 @@ public class Fenetre extends JFrame {
     public void setFinMusiqueMenu(boolean finMusiqueMenu) {
         this.finMusiqueMenu = finMusiqueMenu;
     }
+    public boolean isClavier() {
+        return clavier;
+    }
 
+    public void setClavier(boolean clavier) {
+        this.clavier = clavier;
+    }
+
+    public ControlSouris getSouris() {
+        return souris;
+    }
+
+    public void setSourisPosition(int posX, int posY) {
+        this.souris.setX(posX);
+        this.souris.setY(posY);
+    }
 }
