@@ -3,10 +3,7 @@ package model;
 import jdk.jfr.StackTrace;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.*;
 import java.util.ArrayList;
 
 public class ScoreFile {
@@ -15,24 +12,20 @@ public class ScoreFile {
     final File fichier =new File(chemin);
 
     public String scores[] = new String[65535];
-    public int taille;
+    private int score;
 
-    public ScoreFile(){
-        try {
-            fichier.createNewFile();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
-    }
+    public ScoreFile(){}
 
     public void writeScore(String nom, int score){
         try {
-            fichier .createNewFile();
-            FileWriter writer = new FileWriter(fichier);
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(
+                    fichier, true));
             try {
-                writer.write(nom + ":" + score + "\n");
+                bufferedWriter.newLine();
+                bufferedWriter.write(nom + " " + score);
+
             } finally {
-                writer.close();
+                bufferedWriter.close();
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -40,9 +33,8 @@ public class ScoreFile {
     }
 
     public void readScore(){
-        int i = 0;
+        int i = 1;
         try {
-            fichier.createNewFile();
             FileReader score = new FileReader(fichier);
             BufferedReader bfr = new BufferedReader(score);
             try{
@@ -70,24 +62,25 @@ public class ScoreFile {
         int partsi  = 0;
         int partsis = 0 ;
         readScore();
-        for (int i = 0 ; i < 65535 ; i++){
-            if(i < 65535 && scores[i] != null){
-                parti        = scores[i].split(":");
-                partsi      = Integer.parseInt(parti[1]);
-
-                if(scores[i+1] != null){
-                    parti2        = scores[i+1].split(":");
-                    partsis     = Integer.parseInt(parti2[1]);
+        for (int i = 0 ; i < scores.length ; i++){
+            if(i <  scores.length && scores[i] != null){
+                parti        = scores[i].split(" ");
+                partsi       = Integer.parseInt(parti[1]);
+                if(i <  scores.length && scores[i+1] != null){
+                    parti2   = scores[i+1].split(" ");
+                    partsis  = Integer.parseInt(parti2[1]);
                 }
-
                 if (partsi < partsis){
-                    String tampon;
-                    tampon = scores[i];
-                    scores[i] = scores[i+1];
-                    setScores(scores[i], i);
-                    scores[i+1] = tampon;
-                    setScores(scores[i+1], i+1);
+                    String tampon[] = new String[1];
+                    tampon[0] = scores[i];
+                    if(scores[i+1] != null) {
+                        scores[i] = scores[i + 1];
+                        setScores(scores[i], i);
+                        scores[i + 1] = tampon[0];
+                        setScores(scores[i + 1], i + 1);
+                    }
                     System.out.println(scores[i]);
+                    System.out.println(scores[i+1]);
                 }
             }
         }
@@ -97,5 +90,14 @@ public class ScoreFile {
         this.scores[i] = line;
         //System.out.println(scores[i]);
     }
+
+    public void setScore(int score){
+        this.score = score;
+    }
+
+    public int getScore(){
+        return score;
+    }
+
 
 }

@@ -57,7 +57,7 @@ public class ControlClavier extends Control implements KeyListener {
         if (key == KeyEvent.VK_ESCAPE) {
             if (fenetre.panelFenetreJeu.isArretJeu()) {
                 fenetre.setClavier(true);
-                fenetre.setContentPane(fenetre.panelMenuPrincipal);
+                fenetre.setContentPane(fenetre.panelFenetreScore);
                 fenetre.setFinMusiqueMenu(false);
                 fenetre.jouerMusiqueMenu();
                 // fenetre.panelFenetreJeu = null;

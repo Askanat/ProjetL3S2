@@ -20,6 +20,15 @@ public class ControlFenetreScores extends Control implements ActionListener {
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 changerVue();
                 break;
+
+            case "Ajouter":
+                String pseudo = fenetre.panelFenetreScore.pseudoScore.getText();
+                int score = jeu.scoreFile.getScore();
+                System.out.println(score);
+                jeu.scoreFile.writeScore(pseudo, score);
+                jeu.scoreFile.orderScore();
+                fenetre.panelFenetreScore.repaint();
+                break;
         }
     }
 }
