@@ -1,0 +1,5 @@
+didou:2
+pa:50
+pierre:100
+florian:25
+tom:1
