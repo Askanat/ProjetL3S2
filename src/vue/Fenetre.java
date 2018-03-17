@@ -28,7 +28,7 @@ public class Fenetre extends JFrame {
     public MenuPrincipal    panelMenuPrincipal;
     public FenetreJeu       panelFenetreJeu;
     public FenetreScore     panelFenetreScore;
-    public FenetreCredits   panelFenetreCredits;
+    public FenetreRegles panelFenetreRegles;
     public FenetreOptions   panelFenetreOptions;
     public FenetreExtensionStroop panelFenetreExtensionStroop;
     public FenetreExtensionGuitarHero panelFenetreExtensionGuitarHero;
@@ -67,7 +67,7 @@ public class Fenetre extends JFrame {
         panelFenetreJeu     = new FenetreJeu(jeu);
         panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
         panelFenetreScore = new FenetreScore();
-        panelFenetreCredits = new FenetreCredits();
+        panelFenetreRegles = new FenetreRegles();
         panelMenuEnJeu      = new MenuEnJeu();
         panelFenetreExtensionStroop = new FenetreExtensionStroop();
         panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
@@ -588,8 +588,8 @@ public class Fenetre extends JFrame {
         panelFenetreOptions.setControl(controlFenetreOptions);
     }
 
-    public void setControlFenetreCredits(ControlFenetreCredits controlFenetreCredits) {
-        panelFenetreCredits.setControl(controlFenetreCredits);
+    public void setControlFenetreCredits(ControlFenetreRegles controlFenetreRegles) {
+        panelFenetreRegles.setControl(controlFenetreRegles);
     }
 
     public void setControlFenetreRegles(ControlFenetreScores controlFenetreScores) {

@@ -6,9 +6,9 @@ import vue.Fenetre;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class ControlFenetreCredits extends Control implements ActionListener {
+public class ControlFenetreRegles extends Control implements ActionListener {
 
-    public ControlFenetreCredits(Jeu jeu, Fenetre fenetre) {
+    public ControlFenetreRegles(Jeu jeu, Fenetre fenetre) {
         super(jeu, fenetre);
         fenetre.setControlFenetreCredits(this);
     }

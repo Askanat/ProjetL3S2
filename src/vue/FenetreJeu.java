@@ -56,7 +56,7 @@ public class FenetreJeu extends JPanel {
     public FenetreJeu(Jeu jeu) {
 
         this.jeu = jeu;
-        imageFenetreJeu = getToolkit().getImage("images/menuPrincipale.jpg");
+        imageFenetreJeu = getToolkit().getImage("images\\espace.jpg");
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
 

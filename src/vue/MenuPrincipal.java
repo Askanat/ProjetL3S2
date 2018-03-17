@@ -20,7 +20,7 @@ public class MenuPrincipal extends JPanel {
     private int posX2 = 400 ;
     private int posY2 = 400;
 
-    public Bouton nouvellePartie, guideJeu, options, credits, quitter, stroop, guitarHero;
+    public Bouton nouvellePartie, guideJeu, options, regles, quitter, stroop, guitarHero;
 
     public MenuPrincipal() {
 
@@ -35,8 +35,8 @@ public class MenuPrincipal extends JPanel {
         guideJeu.setActionCommand("Scores");
         options = new Bouton("Options");
         options.setActionCommand("Options");
-        credits = new Bouton("Crédits");
-        credits.setActionCommand("Crédits");
+        regles = new Bouton("Regles");
+        regles.setActionCommand("Regles");
         quitter = new Bouton("Quitter");
         quitter.setActionCommand("Quitter");
         stroop = new Bouton("Stroop");
@@ -47,7 +47,7 @@ public class MenuPrincipal extends JPanel {
         this.add(nouvellePartie);
         this.add(guideJeu);
         this.add(options);
-        this.add(credits);
+        this.add(regles);
         this.add(quitter);
         this.add(stroop);
         this.add(guitarHero);
@@ -57,7 +57,7 @@ public class MenuPrincipal extends JPanel {
         nouvellePartie.addActionListener(controlMenuPrincipal);
         guideJeu.addActionListener(controlMenuPrincipal);
         options.addActionListener(controlMenuPrincipal);
-        credits.addActionListener(controlMenuPrincipal);
+        regles.addActionListener(controlMenuPrincipal);
         quitter.addActionListener(controlMenuPrincipal);
         stroop.addActionListener(controlMenuPrincipal);
         guitarHero.addActionListener(controlMenuPrincipal);
@@ -82,7 +82,7 @@ public class MenuPrincipal extends JPanel {
         nouvellePartie.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(420), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         guideJeu.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(496), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         options.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(570), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
-        credits.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
+        regles.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         quitter.setBounds(Fenetre.adapterResolutionEnX(1248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         stroop.setBounds(Fenetre.adapterResolutionEnX(248), Fenetre.adapterResolutionEnY(649), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
         guitarHero.setBounds(Fenetre.adapterResolutionEnX(248), Fenetre.adapterResolutionEnY(729), Fenetre.adapterResolutionEnX(400), Fenetre.adapterResolutionEnY(54));
