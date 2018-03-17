@@ -95,7 +95,7 @@ public class ScoreFile {
 
     public void setScores(String line, int i){
         this.scores[i] = line;
-       // System.out.println(scores[i]);
+        //System.out.println(scores[i]);
     }
 
 }
