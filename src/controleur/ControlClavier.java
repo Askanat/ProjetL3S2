@@ -40,17 +40,23 @@ public class ControlClavier extends Control implements KeyListener {
     public void keyPressed(KeyEvent e) {
         int key = e.getKeyCode();
         if(key == KeyEvent.VK_C){
-            fenetre.setSourisPosition(0,0);
-            fenetre.panelFenetreJeu.setPosY(0);
-            fenetre.panelFenetreJeu.setPosX(0);
-            if(fenetre.isClavier())
+            fenetre.panelFenetreJeu.setGraviter(false);
+           // fenetre.setSourisPosition(0,0);
+
+            if(fenetre.isClavier()) {
                 fenetre.setClavier(false);
+                fenetre.panelFenetreJeu.setPosY(900 + 9 - fenetre.getSouris().getY());
+                fenetre.panelFenetreJeu.setPosX(300 + 7 - fenetre.getSouris().getX());
+            }
             else{
                 fenetre.setClavier(true);
+                fenetre.panelFenetreJeu.setPosY(0);
+                fenetre.panelFenetreJeu.setPosX(0);
             }
         }
         if (key == KeyEvent.VK_ESCAPE) {
             if (fenetre.panelFenetreJeu.isArretJeu()) {
+                fenetre.setClavier(true);
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 fenetre.setFinMusiqueMenu(false);
                 fenetre.jouerMusiqueMenu();
@@ -61,6 +67,9 @@ public class ControlClavier extends Control implements KeyListener {
         }
         if(fenetre.isClavier()) {
             if (key == KeyEvent.VK_SPACE) {
+                if(!fenetre.panelFenetreJeu.isGraviter()){
+                    fenetre.panelFenetreJeu.setGraviter(true);
+                }
                 fenetre.deplacementClavier();
             }
         }

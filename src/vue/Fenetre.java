@@ -22,6 +22,8 @@ public class Fenetre extends JFrame {
 
 
     private boolean finMusiqueMenu = false;
+
+
     private ControlSouris souris;
     private Jeu jeu;
 
@@ -132,7 +134,7 @@ public class Fenetre extends JFrame {
 
     public void deplacementSouris(){
         panelFenetreJeu.setPosX(300+7-this.souris.getX());
-        panelFenetreJeu.setPosY(900+5-this.souris.getY());
+        panelFenetreJeu.setPosY(900+9-this.souris.getY());
     }
 
     public void deplacementClavier() {
@@ -141,13 +143,9 @@ public class Fenetre extends JFrame {
 
             @Override
             public void run() {
-                for(int i = 0; i<300; i++){
-                    if(i<=150) {
-                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
-                    }
-                    if(i>=150){
-                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()-1);
-                    }
+                for(int i = 0; i<250; i++){
+                    panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
+
                     try {
                         Thread.sleep(1);
                     } catch (InterruptedException e) {
@@ -215,8 +213,6 @@ public class Fenetre extends JFrame {
                         arretJeu = true;
                         panelFenetreExtensionStroop.setArretJeu(arretJeu);
                     }
-
-
 
                     try {
                         Thread.sleep(1000);
@@ -346,18 +342,26 @@ public class Fenetre extends JFrame {
 
             int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
             int defilementY = panelFenetreJeu.getDefilementY();
+            int posX = panelFenetreJeu.getPosX();
             int degree = panelFenetreJeu.getDegree();
             int defilementFigureX = panelFenetreJeu.getDefilementFigureX();
-
             int i = (int) (Math.random() * 4 );
             @Override
             public void run() {
                 panelFenetreJeu.choixFigure[i] =true; // pour 1ere figure
                 while(!arretJeu) {
 
-                    if(panelFenetreJeu.getPosY()>300){ //tier ecran
-                        defilementY++;
-                        defilementRondChangementCouleur++;
+                    if(!isClavier()){
+                        if(panelFenetreJeu.getPosY()>-50){ //tier ecran
+                            defilementY++;
+                            defilementRondChangementCouleur++;
+                        }
+                    }
+                    if(isClavier()){
+                        if(panelFenetreJeu.getPosY()>300){ //tier ecran
+                            defilementY++;
+                            defilementRondChangementCouleur++;
+                        }
                     }
 
                     defilementFigureX++;
@@ -391,7 +395,9 @@ public class Fenetre extends JFrame {
                         panelFenetreJeu.setRondChangementCouleurUnSeul(false);
 
                     }
-
+                    if(panelFenetreJeu.isGraviter()){
+                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY() - 1 );
+                    }
                     arretJeu = panelFenetreJeu.isArretJeu();
                     try {
                         Thread.sleep(2);
@@ -529,7 +535,7 @@ public class Fenetre extends JFrame {
                             degree=panelFenetreJeu.getDegree();
                         }
                     try {
-                        Thread.sleep(10);
+                        Thread.sleep(15);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -639,12 +645,11 @@ public class Fenetre extends JFrame {
         this.clavier = clavier;
     }
 
-    public ControlSouris getSouris() {
-        return souris;
-    }
-
     public void setSourisPosition(int posX, int posY) {
         this.souris.setX(posX);
         this.souris.setY(posY);
+    }
+    public ControlSouris getSouris() {
+        return souris;
     }
 }

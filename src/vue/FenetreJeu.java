@@ -19,7 +19,6 @@ import static vue.Fenetre.*;
 public class FenetreJeu extends JPanel {
 
     private Jeu jeu;
-
     private int posX = 0;
     private int posY = 0;
     private int defilementY = -200;
@@ -29,6 +28,7 @@ public class FenetreJeu extends JPanel {
     private boolean etoileUnSeulPointScore = false;
     private boolean rondChangementCouleurUnSeul = false;
     private boolean arretJeu = false;
+    private boolean graviter = false;
     Boolean choixFigure[] = new Boolean[4] ; // nombre de figures différentes
     private int degree = 0;
     public Bouton retour, menu;
@@ -76,10 +76,10 @@ public class FenetreJeu extends JPanel {
         // Le rond du joueur
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(bille.getCouleur());
-        g.fillOval(this.getWidth()/2-25-posX, this.getHeight()-50- posY, 50, 50);
+        g.fillOval(this.getWidth()/2-20-posX, this.getHeight()-40- posY, 40, 40);
         Graphics2D g2d = (Graphics2D)g;
         bille.paintComponent(g);
-        bille.nouvellePosition(this.getWidth()/2-25-posX, this.getHeight()-50- posY);
+        bille.nouvellePosition(this.getWidth()/2-20-posX, this.getHeight()-40- posY);
 
 
         try {
@@ -409,4 +409,16 @@ public class FenetreJeu extends JPanel {
     public void setRondChangementCouleurUnSeul(boolean rondChangementCouleurUnSeul) {
         this.rondChangementCouleurUnSeul = rondChangementCouleurUnSeul;
     }
+
+    public int getPosX() {
+        return posX;
+    }
+    public boolean isGraviter() {
+        return graviter;
+    }
+
+    public void setGraviter(boolean graviter) {
+        this.graviter = graviter;
+    }
+
 }
