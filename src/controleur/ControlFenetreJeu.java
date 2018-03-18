@@ -2,6 +2,7 @@ package controleur;
 
 import model.Jeu;
 import vue.Fenetre;
+import vue.FenetreJeu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +14,14 @@ public class ControlFenetreJeu extends Control implements ActionListener {
         fenetre.setControlFenetreJeu(this);
     }
 
+    public void score(){
+        fenetre.layeredPane.removeAll();
+        fenetre.setContentPane(fenetre.panelFenetreScore);
+        changerVue();
+    }
+
     public void actionPerformed(ActionEvent e) {
+
         switch (e.getActionCommand()) {
             case "Menu":
                 jeu.getEtat().inversePause();

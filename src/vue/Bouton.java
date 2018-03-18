@@ -1,5 +1,6 @@
 package vue;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -26,9 +27,12 @@ public class Bouton extends JButton implements MouseListener{
     }
 
     //Méthode appelée lors du clic de souris
-    public void mouseClicked(MouseEvent event) { }
+    public void mouseClicked(MouseEvent event) {
+    }
     //Méthode appelée lors du survol de la souris
-    public void mouseEntered(MouseEvent event) { }
+    public void mouseEntered(MouseEvent event) {
+
+    }
     //Méthode appelée lorsque la souris sort de la zone du bouton
     public void mouseExited(MouseEvent event) { }
     //Méthode appelée lorsque l'on presse le bouton gauche de la souris

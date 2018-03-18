@@ -16,7 +16,7 @@ public class MenuEnJeu extends JPanel {
 
     private Image imageMenuEnJeu;
 
-    public Button retourJeu, option, retourMenuPrincipal, retourBureau;
+    public Bouton retourJeu, option, retourMenuPrincipal, retourBureau;
 
     public MenuEnJeu() {
 
@@ -26,13 +26,13 @@ public class MenuEnJeu extends JPanel {
 
         imageMenuEnJeu = getToolkit().getImage("images/menuPause.png");
 
-        retourJeu = new Button("Retour au Jeu");
+        retourJeu = new Bouton("Retour au Jeu");
         retourJeu.setActionCommand("Retour");
-        option = new Button("Options");
+        option = new Bouton("Options");
         option.setActionCommand("Option");
-        retourMenuPrincipal = new Button("Mennu Principal");
+        retourMenuPrincipal = new Bouton("Mennu Principal");
         retourMenuPrincipal.setActionCommand("Retour au Menu Principal");
-        retourBureau = new Button("Retour Bureau");
+        retourBureau = new Bouton("Retour Bureau");
         retourBureau.setActionCommand("Retour Au Bureau");
 
         this.add(retourJeu);

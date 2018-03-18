@@ -38,20 +38,53 @@ public class ControlClavier extends Control implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        int key = e.getKeyCode();
+        if(key == KeyEvent.VK_C){
+            fenetre.panelFenetreJeu.setGraviter(false);
+           // fenetre.setSourisPosition(0,0);
 
-        int i = 0;
+            if(fenetre.isClavier()) {
+                fenetre.setClavier(false);
+                fenetre.panelFenetreJeu.setPosY(900 + 9 - fenetre.getSouris().getY());
+                fenetre.panelFenetreJeu.setPosX(300 + 7 - fenetre.getSouris().getX());
+            }
+            else{
+                fenetre.setClavier(true);
+                fenetre.panelFenetreJeu.setPosY(0);
+                fenetre.panelFenetreJeu.setPosX(0);
+            }
+        }
+        if (key == KeyEvent.VK_ESCAPE) {
+            if (fenetre.panelFenetreJeu.isArretJeu()) {
+                fenetre.setClavier(true);
+                fenetre.setContentPane(fenetre.panelFenetreScore);
+                fenetre.setFinMusiqueMenu(false);
+                fenetre.jouerMusiqueMenu();
+                // fenetre.panelFenetreJeu = null;
+                fenetre.redeclareFenetreJeu();
+                changerVue();
+            }
+        }
+        if(fenetre.isClavier()) {
+            if (key == KeyEvent.VK_SPACE) {
+                if(!fenetre.panelFenetreJeu.isGraviter()){
+                    fenetre.panelFenetreJeu.setGraviter(true);
+                }
+                fenetre.deplacementClavier();
+            }
+        }
+        /*int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)
                 toucheEnfoncer[i] = true;
             i++;
         }
 
-        //System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer
+        System.out.println("Touche pressée : " + e.getKeyCode() + " (" + e.getKeyChar() + ")"); // savoir la touche appuyer */
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
         int i = 0;
         for (int key : controlTouche.getTouches()) {
             if (e.getKeyCode() == key)

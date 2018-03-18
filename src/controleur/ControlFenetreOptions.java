@@ -43,6 +43,7 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
         switch (e.getActionCommand()) {
             case "Retour":
                 if (!jeu.getEtat().getPause()) {
+                    fenetre.jouerMusiqueBouton();
                     fenetre.setContentPane(fenetre.panelMenuPrincipal);
                     changerVue();
                 } else {
@@ -52,17 +53,18 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
                     fenetre.vueMenuEnJeu();
                 }
                 break;
-            case "Droite":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_DROITE - 1] = true;
-                break;
-            case "Gauche":
-                setTouchesSelectionneesToFalse();
-                toucheSelectionne[ControlTouche.ACTION_GAUCHE - 1] = true;
-                break;
             case "Sauter":
                 setTouchesSelectionneesToFalse();
                 toucheSelectionne[ControlTouche.ACTION_SAUT - 1] = true;
+                break;
+
+            case "Mute":
+                fenetre.mute = true;
+                break;
+
+            case "Play":
+                fenetre.mute = false;
+                fenetre.jouerMusiqueMenu();
                 break;
         }
     }
@@ -85,8 +87,8 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
 
             System.out.println(controlClavier.getControlTouche().getNomTouche(actionConcernee));
 
-            fenetre.panelFenetreOptions.controlButton[index].
-                    setText(controlClavier.getControlTouche().getNomTouche(actionConcernee));
+            /*fenetre.panelFenetreOptions.controlButton[index].
+                    setText(controlClavier.getControlTouche().getNomTouche(actionConcernee));*/
         }
     }
 

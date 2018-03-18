@@ -13,8 +13,9 @@ public class FenetreOptions extends JPanel {
 
     Jeu jeu;
     ControlTouche controlTouche;
-    public Button retour;
-    public JButton[] controlButton;
+    public Bouton retour;
+    public Bouton soundOff, soundOn;
+   // public JButton[] controlButton;
 
     private Image imageFenetreOption;
     private Font f, fControlTouche;
@@ -28,32 +29,45 @@ public class FenetreOptions extends JPanel {
 
         imageFenetreOption = getToolkit().getImage("images/menuPrincipale.jpg");
         f = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(20));
-        fControlTouche = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(35));
+        //fControlTouche = new Font("Arial", Font.BOLD, Fenetre.adapterResolutionEnX(35));
 
-        retour = new Button("Retour");
+        retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
+        retour.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
-        controlButton = new JButton[controlTouche.getNbActions() - 1];
+        soundOff = new Bouton("Mute");
+        soundOff.setActionCommand("Mute");
+        soundOff.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        soundOn = new Bouton("Play");
+        soundOn.setActionCommand("Play");
+        soundOn.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        /*controlButton = new JButton[controlTouche.getNbActions() - 1];
         String[] repAction = new String[]{"Droite", "Gauche", "Sauter"};
 
         for (int i = 0; i < controlButton.length; i++) {
             controlButton[i] = new JButton(controlTouche.getNomTouche(i + 1));
             controlButton[i].setActionCommand(repAction[i]);
-        }
+        }*/
 
         this.add(retour);
+        this.add(soundOff);
+        this.add(soundOn);
 
-        for (JButton b : controlButton)
-            this.add(b);
+        /*for (JButton b : controlButton)
+            this.add(b);*/
     }
 
     public void setControl(ControlFenetreOptions controlFenetreOptions) {
         retour.addActionListener(controlFenetreOptions);
+        soundOff.addActionListener(controlFenetreOptions);
+        soundOn.addActionListener(controlFenetreOptions);
 
-        for (JButton b : controlButton) {
+       /* for (JButton b : controlButton) {
             b.addActionListener(controlFenetreOptions);
             b.addKeyListener(controlFenetreOptions);
-        }
+        }*/
     }
 
     protected void paintComponent(Graphics g) {
@@ -61,10 +75,11 @@ public class FenetreOptions extends JPanel {
 
         g.drawImage(imageFenetreOption, 0, 0, getWidth(), getHeight(), this);
 
-        retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
+        retour.setBounds(50,800,125,45);
+        soundOff.setBounds(250,500,125,45);
+        soundOn.setBounds(50,500,125,45);
 
-        int x1 = 600, y1 = 390;
-        int x2 = 1300, y2 = 323;
+        /*int x1 = 750, y1 = 390;
 
         for (int i = 0; i < controlButton.length; i++) {
             if (i <= 4) {
@@ -75,14 +90,6 @@ public class FenetreOptions extends JPanel {
                 controlButton[i].setBorder(null);
                 y1 += 75;
             }
-            /*if (i >= 5) {
-                controlButton[i].setBounds(Fenetre.adapterResolutionEnX(x2), Fenetre.adapterResolutionEnY(y2), Fenetre.adapterResolutionEnX(270), Fenetre.adapterResolutionEnY(50));
-                controlButton[i].setBackground(new Color(0, 0, 0, 0));
-                controlButton[i].setForeground(Color.WHITE);
-                controlButton[i].setFont(fControlTouche);
-                controlButton[i].setBorder(null);
-                y2 += 58;
-            }*/
-        }
+        }*/
     }
 }

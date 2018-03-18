@@ -1,14 +1,13 @@
 package vue;
 
 import controleur.*;
+import javazoom.jl.decoder.JavaLayerException;
 import model.Jeu;
+import model.Mp3;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.util.Random;
 
 import static javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER;
 import static javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER;
@@ -18,16 +17,24 @@ public class Fenetre extends JFrame {
     private static Dimension tailleEcran = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
     public static final double DEFAUT_X = 1920;
     public static final double DEFAUT_Y = 1080;
-    public static final int X = 960; // (int) tailleEcran.getWidth();
-    public static final int Y = 540; // (int) tailleEcran.getHeight();
+    public static final int X = 600; // (int) tailleEcran.getWidth();
+    public static final int Y = 900; // (int) tailleEcran.getHeight();
 
+
+    private boolean finMusiqueMenu = false;
+
+
+    private ControlSouris souris;
     private Jeu jeu;
 
     public MenuPrincipal    panelMenuPrincipal;
     public FenetreJeu       panelFenetreJeu;
-    public FenetreRegles    panelFenetreRegles;
-    public FenetreCredits   panelFenetreCredits;
+    public FenetreScore     panelFenetreScore;
+    public FenetreRegles panelFenetreRegles;
     public FenetreOptions   panelFenetreOptions;
+    public FenetreExtensionStroop panelFenetreExtensionStroop;
+    public FenetreExtensionGuitarHero panelFenetreExtensionGuitarHero;
+
     public MenuEnJeu        panelMenuEnJeu;
 
     public ControlTouche    controlTouche;
@@ -36,8 +43,13 @@ public class Fenetre extends JFrame {
     public JPanel               panelScrollFenetreJeu;
     public JLayeredPane         layeredPane;
 
-    public Fenetre(Jeu jeu) {
+    public boolean mute = false;
 
+
+    public boolean clavier = true;
+
+    public Fenetre(Jeu jeu) {
+        souris = new ControlSouris(jeu, this);
         this.jeu = jeu;
         init();
 
@@ -49,7 +61,8 @@ public class Fenetre extends JFrame {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setVisible(true);
-        bouleQuiAvance();
+        jouerMusiqueMenu();
+        boulesQuiAvancentMenu();
         bouleColor();
     }
 
@@ -58,16 +71,405 @@ public class Fenetre extends JFrame {
         panelMenuPrincipal  = new MenuPrincipal();
         panelFenetreJeu     = new FenetreJeu(jeu);
         panelFenetreOptions = new FenetreOptions(jeu, controlTouche);
-        panelFenetreRegles  = new FenetreRegles();
-        panelFenetreCredits = new FenetreCredits();
+        panelFenetreScore = new FenetreScore();
+        panelFenetreRegles = new FenetreRegles();
         panelMenuEnJeu      = new MenuEnJeu();
+        panelFenetreExtensionStroop = new FenetreExtensionStroop();
+        panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
 
         vueJeu();
     }
+    public void redeclareFenetreJeu() {
+        panelFenetreJeu= new FenetreJeu(jeu);
+    }
+    public void redeclareFenetreExtensionStroop(){
+        panelFenetreExtensionStroop= new FenetreExtensionStroop();
+    }
+    public void redeclareFenetreExtensionGuitarHero(){
+        panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
+    }
 
-    private void bouleQuiAvance(){
+    public void changerMotExtensionStroop(){
+        Random rand = new Random();
+        int buffer = -1;
+        int val = -1;
+        boolean[] actualiserTab = new boolean[4];
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            actualiserTab[i] = false;
+        }
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            if(panelFenetreExtensionStroop.getMotTab()[i]){
+                buffer = i;
+            }
+        }
+        val = rand.nextInt(4);
+        while(val == buffer ){
+            val = rand.nextInt(4);
+        }
+        actualiserTab[val] = true;
+        panelFenetreExtensionStroop.setMotTab(actualiserTab);
+        panelFenetreExtensionStroop.repaint();
+    }
+    public void changerCouleurBarreExtensionGuitarHero (){
+        Random rand = new Random();
+        int buffer = -1;
+        int val = -1;
+        boolean[] actualiserTab = new boolean[4];
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            actualiserTab[i] = false;
+        }
+        for(int i = 0 ; i<actualiserTab.length ; i++){
+            if(panelFenetreExtensionGuitarHero.getCouleurBarre()[i]){
+                buffer = i;
+            }
+        }
+        val = rand.nextInt(4);
+        while(val == buffer ){
+            val = rand.nextInt(4);
+        }
+        actualiserTab[val] = true;
+        panelFenetreExtensionGuitarHero.setCouleurBarre(actualiserTab);
+        panelFenetreExtensionGuitarHero.repaint();
+    }
+
+    public void deplacementSouris(){
+        panelFenetreJeu.setPosX(300+8-this.souris.getX());
+        panelFenetreJeu.setPosY(900+14-this.souris.getY());
+    }
+
+    public void deplacementClavier() {
+        new Thread(new Runnable(){
+            int positionY;
+
+            @Override
+            public void run() {
+                for(int i = 0; i<150; i++){
+                    panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
+
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    public void deplacementClavierExtensionStroop(boolean bonneReponse) {
+        new Thread(new Runnable(){
+            int positionY;
+            boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
+            @Override
+            public void run() {
+
+                for(int i = 0; i<100; i++) {
+                    if (panelFenetreExtensionStroop.getPosY() < 900) {
+                        //fin du jeu
+                        if (i <= 100) {
+                            if (bonneReponse) {
+                                panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getPosY() + 1);
+                            }
+                            else{
+                                if(panelFenetreExtensionStroop.getPosY() !=0){
+                                    panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getY()-1);
+                                }
+                            }
+                        }
+                    }
+                    try {
+                        Thread.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        }).start();
+    }
+    public void tempsExtensionStroop() {
+        new Thread(new Runnable(){
+            int secondsInt;
+            String secondsString;
+            boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
+            int posX = panelFenetreExtensionStroop.getPosX();
+            @Override
+            public void run() {
+
+                while(!arretJeu){
+                    arretJeu = panelFenetreExtensionStroop.isArretJeu();
+                    if(arretJeu){
+                        break;
+                    }
+                    secondsString = panelFenetreExtensionStroop.getSeconds();
+                    secondsInt = Integer.parseInt(secondsString);
+                    secondsInt++;
+                    secondsString = String.valueOf(secondsInt);
+                    panelFenetreExtensionStroop.setSeconds(secondsString);
+                    posX++;
+                    panelFenetreExtensionStroop.setPosX(posX);
+
+                    if(posX == 7){
+                        posX = 0;
+                        panelFenetreExtensionStroop.setPosX(posX);
+                    }
+                    if (panelFenetreExtensionStroop.getPosY() == 900){
+                        arretJeu = true;
+                        panelFenetreExtensionStroop.setArretJeu(arretJeu);
+                        break;
+                    }
+
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    public void jouerMusiqueJeu(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreJeu.isArretJeu();
+        Mp3 musiqueJeu = new Mp3("musiques\\musiqueJeu.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueJeu.getPlayer().play(1)) {
+                    arretJeu = panelFenetreJeu.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueJeu.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+    public void jouerMusiqueJeuExtensionGuitarHero(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+        Mp3 musiqueExtensionGuitarHero = new Mp3("musiques\\musiqueExtensionGuitarHero.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueExtensionGuitarHero.getPlayer().play(1)) {
+                    arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueExtensionGuitarHero.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+    public void jouerMusiqueJeuExtensionStroop(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
+        Mp3 musiqueExtensionStroop = new Mp3("musiques\\musiqueExtensionStroop.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueExtensionStroop.getPlayer().play(1)) {
+                    arretJeu = panelFenetreExtensionStroop.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueExtensionStroop.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void jouerMusiqueMenu(){ new Thread(new Runnable(){
+        Mp3 musiqueMenu = new Mp3("musiques\\musiqueMenu.mp3");
+        @Override
+        public void run() {
+            try {
+                while (musiqueMenu.getPlayer().play(1)){
+                    if(finMusiqueMenu || mute == true){
+                        musiqueMenu.getPlayer().close();
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void jouerMusiqueFin(){ new Thread(new Runnable(){
+        boolean arretJeu = panelFenetreJeu.isArretJeu();
+        Mp3 musiqueFin = new Mp3("musiques\\finDePartie.mp3");
+        boolean buffer = true;
+        @Override
+        public void run() {
+            try {
+                while (buffer) {
+                    arretJeu = panelFenetreJeu.isArretJeu();
+                    if(arretJeu || mute == true){
+                        musiqueFin.getPlayer().play();
+                    }
+                    if(arretJeu){
+                        buffer = false;
+                    }
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void jouerMusiqueBouton(){ new Thread(new Runnable(){
+        Mp3 musiqueFinBouton = new Mp3("musiques\\caisseEnregistreuse.mp3");
+
+        @Override
+        public void run() {
+            try {
+                while (musiqueFinBouton.getPlayer().play(1)) {
+                        musiqueFinBouton.getPlayer().play();
+                }
+            } catch(JavaLayerException e){
+                e.printStackTrace();
+            }
+        }
+    }).start();
+    }
+
+    public void formeDefilement(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            boolean arretJeu = panelFenetreJeu.isArretJeu();
+
+            int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
+            int defilementY = panelFenetreJeu.getDefilementY();
+            int posX = panelFenetreJeu.getPosX();
+            int degree = panelFenetreJeu.getDegree();
+            int defilementFigureX = panelFenetreJeu.getDefilementFigureX();
+            int i = (int) (Math.random() * 4 );
+            @Override
+            public void run() {
+                panelFenetreJeu.choixFigure[i] =true; // pour 1ere figure
+                while(!arretJeu) {
+
+                    if(!isClavier()){
+                        if(panelFenetreJeu.getPosY()>-50){ //tier ecran
+                            defilementY++;
+                            defilementRondChangementCouleur++;
+                        }
+                    }
+                    if(isClavier()){
+                        if(panelFenetreJeu.getPosY()>300){ //tier ecran
+                            defilementY++;
+                            defilementRondChangementCouleur++;
+                        }
+                    }
+
+                    defilementFigureX++;
+
+                    panelFenetreJeu.repaint();
+                    panelFenetreJeu.setDefilementY(defilementY);
+                    panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
+                    panelFenetreJeu.setDefilementFigureX(defilementFigureX);
 
 
+
+                    if(defilementFigureX == 800){
+                        panelFenetreJeu.setDefilementFigureX(0);
+                        defilementFigureX = panelFenetreJeu.getDefilementFigureX();
+                    }
+
+                    if(defilementY == 1100){
+                        panelFenetreJeu.setDefilementY(-200);
+                        defilementY=panelFenetreJeu.getDefilementY();
+                        panelFenetreJeu.choixFigure[i] = false;
+                        i = (int) (Math.random() * 4 );
+                        panelFenetreJeu.choixFigure[i] = true;
+                        panelFenetreJeu.setDegree(0);
+                        degree=panelFenetreJeu.getDegree();
+                        panelFenetreJeu.setEtoileUnSeulPointScore(false);
+                    }
+
+                    if(defilementY == 450){
+                        panelFenetreJeu.setDefilementRondChangementCouleur(-100);
+                        defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
+                        panelFenetreJeu.setRondChangementCouleurUnSeul(false);
+
+                    }
+                    if(panelFenetreJeu.getPosY() == -50){
+                        arretJeu = true;
+                        panelFenetreJeu.setArretJeu(arretJeu);
+                    }
+                    if(panelFenetreJeu.isGraviter()){
+                        panelFenetreJeu.setPosY(panelFenetreJeu.getPosY() - 1 );
+                    }
+                    arretJeu = panelFenetreJeu.isArretJeu();
+                    try {
+                        Thread.sleep(3);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+                if(!arretJeu){
+                    jouerMusiqueFin();
+                }
+            }
+        }).start();
+    }
+    public void formeDefilementExtensionGuitarHero(){
+        new Thread(new Runnable(){
+            boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
+            int defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
+            int buffer = 0;
+            int scoreBuffer = 0;
+            int vitesse = 0;
+
+            @Override
+            public void run() {
+                while(!arretJeu) {
+
+                    panelFenetreExtensionGuitarHero.setDefilementY(defilementY);
+                    if(defilementY == 900){
+                        if(panelFenetreExtensionGuitarHero.getScore() == scoreBuffer){
+                            panelFenetreExtensionGuitarHero.setVie(panelFenetreExtensionGuitarHero.getVie()-1);
+                        }
+                        else{
+                            scoreBuffer = panelFenetreExtensionGuitarHero.getScore();
+                        }
+                        panelFenetreExtensionGuitarHero.setDefilementY(0);
+                        defilementY = panelFenetreExtensionGuitarHero.getDefilementY();
+                    }
+                    if (panelFenetreExtensionGuitarHero.getScore() == 16){
+                        arretJeu = true;
+                        panelFenetreExtensionGuitarHero.setArretJeu(arretJeu);
+                    }
+                    if(defilementY == 0){
+                        changerCouleurBarreExtensionGuitarHero();
+                    }
+                    if(panelFenetreExtensionGuitarHero.getScore() == buffer+4){ //si le score a augmenté
+                        buffer = panelFenetreExtensionGuitarHero.getScore();
+                        vitesse++;
+                    }
+                    if(panelFenetreExtensionGuitarHero.getVie() == 0){
+                        arretJeu = true;
+                        panelFenetreExtensionGuitarHero.setArretJeu(arretJeu);
+                    }
+                    defilementY++;
+                    try {
+                        Thread.sleep(4-vitesse);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private void boulesQuiAvancentMenu(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             int positionX = panelMenuPrincipal.getPosX();
@@ -139,11 +541,31 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    private void bouleColor(){
-
-
+    public void incrementeDegree(){
         new Thread(new Runnable(){
+            @Override
+            public void run() {
+                int degree = panelFenetreJeu.getDegree();
 
+                for (;;) {
+                        degree++;
+                        panelFenetreJeu.setDegree(degree);
+                        if(degree == 360){
+                            panelFenetreJeu.setDegree(0);
+                            degree=panelFenetreJeu.getDegree();
+                        }
+                    try {
+                        Thread.sleep(15);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+
+    private void bouleColor(){
+        new Thread(new Runnable(){
             @Override
             public void run() {
                 for (;;) {
@@ -195,16 +617,22 @@ public class Fenetre extends JFrame {
         panelFenetreOptions.setControl(controlFenetreOptions);
     }
 
-    public void setControlFenetreCredits(ControlFenetreCredits controlFenetreCredits) {
-        panelFenetreCredits.setControl(controlFenetreCredits);
+    public void setControlFenetreCredits(ControlFenetreRegles controlFenetreRegles) {
+        panelFenetreRegles.setControl(controlFenetreRegles);
     }
 
-    public void setControlFenetreRegles(ControlFenetreRegles controlFenetreRegles) {
-        panelFenetreRegles.setControl(controlFenetreRegles);
+    public void setControlFenetreRegles(ControlFenetreScores controlFenetreScores) {
+        panelFenetreScore.setControl(controlFenetreScores);
     }
 
     public void setControlFenetreJeu(ControlFenetreJeu controlFenetreJeu) {
         panelFenetreJeu.setControl(controlFenetreJeu);
+    }
+    public void setControlFenetreExtensionStroop(ControlFenetreExtensionStroop controlFenetreExtensionStroop) {
+        panelFenetreExtensionStroop.setControl(controlFenetreExtensionStroop);
+    }
+    public void setControlFenetreExtensionGuitarHero(ControlFenetreExtensionGuitarHero controlFenetreExtensionGuitarHero) {
+        panelFenetreExtensionGuitarHero.setControl(controlFenetreExtensionGuitarHero);
     }
 
     public void setControlMenuEnJeu(ControlMenuEnJeu controlMenuEnJeu) {
@@ -213,5 +641,35 @@ public class Fenetre extends JFrame {
 
     public void setControlClavier(ControlClavier controlClavier) {
         addKeyListener(controlClavier);
+    }
+    public void setControlClavierExtensionStroop(ControlClavierExtensionStroop controlClavierExtensionStroop) {
+        addKeyListener(controlClavierExtensionStroop);
+    }
+
+    public void setControlClavierExtensionGuitarHero(ControlClavierExtensionGuitarHero controlClavierExtensionGuitarHero) {
+        addKeyListener(controlClavierExtensionGuitarHero);
+    }
+
+    public void setControlSouris (ControlSouris controlSouris){
+        addMouseMotionListener(controlSouris);
+    }
+
+    public void setFinMusiqueMenu(boolean finMusiqueMenu) {
+        this.finMusiqueMenu = finMusiqueMenu;
+    }
+    public boolean isClavier() {
+        return clavier;
+    }
+
+    public void setClavier(boolean clavier) {
+        this.clavier = clavier;
+    }
+
+    public void setSourisPosition(int posX, int posY) {
+        this.souris.setX(posX);
+        this.souris.setY(posY);
+    }
+    public ControlSouris getSouris() {
+        return souris;
     }
 }

@@ -10,12 +10,13 @@ public class ControlFenetreRegles extends Control implements ActionListener {
 
     public ControlFenetreRegles(Jeu jeu, Fenetre fenetre) {
         super(jeu, fenetre);
-        fenetre.setControlFenetreRegles(this);
+        fenetre.setControlFenetreCredits(this);
     }
 
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Retour":
+                fenetre.jouerMusiqueBouton();
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 changerVue();
                 break;

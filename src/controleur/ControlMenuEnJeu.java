@@ -1,6 +1,5 @@
 package controleur;
 
-import model.Direction;
 import model.Jeu;
 import vue.Fenetre;
 
@@ -8,10 +7,6 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
-
-/**
- * Created by bastien on 07/10/16.
- */
 
 public class ControlMenuEnJeu extends Control implements ActionListener {
 

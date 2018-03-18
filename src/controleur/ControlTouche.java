@@ -8,9 +8,7 @@ public class ControlTouche {
 
     public static final int
             ACTION_MENU = 0,
-            ACTION_GAUCHE = 1,
-            ACTION_DROITE = 2,
-            ACTION_SAUT = 3;
+            ACTION_SAUT = 1;
     private int[] touches;
     private int nbActions;
 
@@ -21,10 +19,7 @@ public class ControlTouche {
         touches = new int[nbActions];
 
         // Touches par défaut
-
         touches[ACTION_MENU] = KeyEvent.VK_ESCAPE;
-        touches[ACTION_GAUCHE] = KeyEvent.VK_LEFT;
-        touches[ACTION_DROITE] = KeyEvent.VK_RIGHT;
         touches[ACTION_SAUT] = KeyEvent.VK_SPACE;
     }
 
@@ -42,11 +37,9 @@ public class ControlTouche {
 
     /*
      * setActionTouche : Change la touche associée à une action
-     *
      * @codeAction : une des constantes définie dans ControlTouche
      * @touche : une touche définie dans la classe KeyEvent
      */
-
     public void setActionTouche(int codeAction, int touche) {
         touches[codeAction] = touche;
     }
