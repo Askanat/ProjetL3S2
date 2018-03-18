@@ -83,6 +83,11 @@ public class ScoreFile {
                             setScores(scores[i + 1], i + 1);
                         }
                     }
+<<<<<<< HEAD
+=======
+                    System.out.println(scores[i]);
+                    System.out.println(scores[i+1]);
+>>>>>>> parent of d1f6603... correction un peu partout v2
                 }
             }
             j--;

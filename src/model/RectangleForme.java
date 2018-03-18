@@ -22,10 +22,10 @@ public class RectangleForme extends JPanel {
        /* g2d.setColor(couleur);
         ((Graphics2D) g).fill(barre);*/
         areaA = new Area(barre);
-        //g2d.draw(areaA);
+       // g2d.draw(areaA);
         if(b){
             areaA = new Area(shape);
-           //g2d.draw(areaA);
+           // g2d.draw(areaA);
         }
     }
 

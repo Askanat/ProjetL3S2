@@ -51,7 +51,7 @@ public class FenetreRegles extends JPanel {
         g2.drawString("GuitarHero",50,420);
         g2.setFont(new Font("TimesRoman",Font.PLAIN, 14));
         g2.drawString("Appuyer sur la touche correspondant a la 1er lettre de la couleur de la barre quand elles sont" ,5,450);
-        g2.drawString("sur la ligne d'arrivée. La partie est en 16 points " ,5,500);
+        g2.drawString("sur la ligne d'arrivée. " ,5,500);
         retour.setBounds(50,800,125,45);
 
     }

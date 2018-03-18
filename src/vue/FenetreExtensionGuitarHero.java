@@ -17,7 +17,7 @@ public class FenetreExtensionGuitarHero extends JPanel{
     private Image imageFenetreExtension;
     private int defilementY= 0;
     private boolean arretJeu;
-    private int vie = 5;
+
     public Bouton retour;
     RectangleForme rectangleFormeRouge = new RectangleForme(Color.RED);
     RectangleForme rectangleFormeBleu = new RectangleForme(Color.BLUE);
@@ -45,12 +45,12 @@ public class FenetreExtensionGuitarHero extends JPanel{
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreExtension, 0, 0, getWidth(), getHeight(), this);
         Graphics2D g2d = (Graphics2D) g;
+
+        //retour.setBounds(Fenetre.adapterResolutionEnX(40), Fenetre.adapterResolutionEnY(980), Fenetre.adapterResolutionEnX(228), Fenetre.adapterResolutionEnX(40));
         g2d.setFont(new Font("TimesRoman",Font.PLAIN, 50));
         g2d.setColor(Color.WHITE);
-        g2d.drawString("SCORE", 100, 100);
-        g2d.drawString(String.valueOf(score),40,100);
-        g2d.drawString("VIE", 350, 100);
-        g2d.drawString(String.valueOf(vie),320,100);
+        g2d.drawString("SCORE", 170, 100);
+        g2d.drawString(String.valueOf(score),100,100);
         try {
             Image imgBR = ImageIO.read(new File("images\\rectangleRouge.png"));
             Image imgBB = ImageIO.read(new File("images\\rectangleBleu.png"));
@@ -58,6 +58,7 @@ public class FenetreExtensionGuitarHero extends JPanel{
             Image imgBJ = ImageIO.read(new File("images\\rectangleJaune.png"));
             Image imgCoeur = ImageIO.read(new File("images\\coeur.png"));
             Image damier = ImageIO.read(new File("images\\damier.png"));
+
             g.drawImage(damier,20,850, this);
             g.drawImage(imgCoeur,430,50, this);
             zoneDeValidation.nouvellePosition(20, 850, 560, 20);
@@ -67,14 +68,15 @@ public class FenetreExtensionGuitarHero extends JPanel{
                 rectangleFormeRouge.nouvellePosition(50,-20 + defilementY,200,20);
                 g.drawImage(imgBR, 50 , -20+defilementY, this);
                 rectangleFormeRouge.paintComponents(g2d);
+                repaint();
+
                 zoneDeValidation.areaA.intersect(rectangleFormeRouge.areaA);
                 if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[0] ){
-                    g2d.drawString("YEAH !",50,800);
                     if(!scoreBoolean){
-
                         score++;
                         scoreBoolean = true;
                     }
+
                 }
                 else{
                     validationCouleur[0] = false;
@@ -85,9 +87,10 @@ public class FenetreExtensionGuitarHero extends JPanel{
                 rectangleFormeBleu.nouvellePosition(150,-20 + defilementY,200,20);
                 g.drawImage(imgBB, 150 , -20+defilementY, this);
                 rectangleFormeBleu.paintComponents(g2d);
+                repaint();
+
                 zoneDeValidation.areaA.intersect(rectangleFormeBleu.areaA);
                 if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[1] ){
-                    g2d.drawString("YEAH !",150,800);
                     if(!scoreBoolean){
                         score++;
                         scoreBoolean = true;
@@ -102,9 +105,10 @@ public class FenetreExtensionGuitarHero extends JPanel{
                 rectangleFormeVert.nouvellePosition(250,-20 + defilementY,200,20);
                 g.drawImage(imgBV, 250 , -20+defilementY, this);
                 rectangleFormeVert.paintComponents(g2d);
+                repaint();
+
                 zoneDeValidation.areaA.intersect(rectangleFormeVert.areaA);
                 if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[2] ){
-                    g2d.drawString("YEAH !",250,800);
                     if(!scoreBoolean){
                         score++;
                         scoreBoolean = true;
@@ -119,9 +123,10 @@ public class FenetreExtensionGuitarHero extends JPanel{
                 rectangleFormeJaune.nouvellePosition(350,-20 + defilementY,200,20);
                 g.drawImage(imgBJ, 350 , -20+defilementY, this);
                 rectangleFormeJaune.paintComponents(g2d);
+                repaint();
+
                 zoneDeValidation.areaA.intersect(rectangleFormeJaune.areaA);
                 if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[3] ){
-                    g2d.drawString("YEAH !",350,800);
                     if(!scoreBoolean){
                         score++;
                         scoreBoolean = true;
@@ -132,10 +137,11 @@ public class FenetreExtensionGuitarHero extends JPanel{
                     scoreBoolean = false;
                 }
             }
-            if(score%4 == 0 && score!=0 && score!=16){
+            if(score%3 == 0 && score!=0){
+                //g2d.setColor(Color.WHITE);
+                //g2d.drawString("SCORE", 170, 100);
                 g2d.drawString("PLUS VITE",200,200);
             }
-            repaint();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -173,13 +179,6 @@ public class FenetreExtensionGuitarHero extends JPanel{
     }
 
 
-    public int getVie() {
-        return vie;
-    }
-
-    public void setVie(int vie) {
-        this.vie = vie;
-    }
     public int getScore() {
         return score;
     }

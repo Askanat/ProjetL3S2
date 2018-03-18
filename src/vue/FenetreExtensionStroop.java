@@ -73,25 +73,25 @@ public class FenetreExtensionStroop extends JPanel{
             if(motTab[0]){
                 g2.setColor(Color.YELLOW);
                 g2.setFont(new Font("TimesRoman",Font.PLAIN, 100));
-                g2.drawString("rouge",this.getWidth()/2-120,200);
+                g2.drawString("rouge",this.getWidth()/2-100,200);
                 repaint();
             }
             if(motTab[1]){
                 g2.setColor(Color.GREEN);
                 g2.setFont(new Font("TimesRoman",Font.PLAIN, 100));
-                g2.drawString("bleu",this.getWidth()/2-120,200);
+                g2.drawString("bleu",this.getWidth()/2-100,200);
                 repaint();
             }
             if(motTab[2]){
                 g2.setColor(Color.RED);
                 g2.setFont(new Font("TimesRoman",Font.PLAIN, 100));
-                g2.drawString("vert",this.getWidth()/2-120,200);
+                g2.drawString("vert",this.getWidth()/2-100,200);
                 repaint();
             }
             if(motTab[3]){
                 g2.setColor(Color.BLUE);
                 g2.setFont(new Font("TimesRoman",Font.PLAIN, 100));
-                g2.drawString("jaune",this.getWidth()/2-120,200);
+                g2.drawString("jaune",this.getWidth()/2-100,200);
                 repaint();
             }
 
