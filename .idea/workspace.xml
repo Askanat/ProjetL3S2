@@ -10,7 +10,23 @@
       <change beforePath="" afterPath="$PROJECT_DIR$/images/coeur.png" />
       <change beforePath="" afterPath="$PROJECT_DIR$/sources.odt" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+=======
+      <change beforePath="$PROJECT_DIR$/saveScore/score.txt" afterPath="$PROJECT_DIR$/saveScore/score.txt" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/JoueurForme.java" afterPath="$PROJECT_DIR$/src/model/JoueurForme.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/RectangleForme.java" afterPath="$PROJECT_DIR$/src/model/RectangleForme.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/ScoreFile.java" afterPath="$PROJECT_DIR$/src/model/ScoreFile.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreOptions.java" afterPath="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreRegles.java" afterPath="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" afterPath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
+>>>>>>> parent of e66e4b1... correction un peu partout v2
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -508,8 +524,12 @@
       <workItem from="1521193960782" duration="39042000" />
       <workItem from="1521282540074" duration="17494000" />
       <workItem from="1521321334417" duration="4793000" />
+<<<<<<< HEAD
       <workItem from="1521362857402" duration="7838000" />
       <workItem from="1521385912796" duration="378000" />
+=======
+      <workItem from="1521362857402" duration="7732000" />
+>>>>>>> parent of e66e4b1... correction un peu partout v2
     </task>
     <task id="LOCAL-00001" summary="Bouton retour dans FenetreOptions fonctionne,&#10;FenetreOptions et ControlFenetreOption comme les autres">
       <created>1518971247582</created>
@@ -847,21 +867,19 @@
       <option name="project" value="LOCAL" />
       <updated>1521325135869</updated>
     </task>
-    <task id="LOCAL-00049" summary="correction un peu partout v2">
-      <created>1521372680639</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1521372680639</updated>
-    </task>
-    <option name="localTasksCounter" value="50" />
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="308430000" />
+=======
+    <option name="totallyTimeSpent" value="307929000" />
+>>>>>>> parent of e66e4b1... correction un peu partout v2
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -901,6 +919,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Plus besoin imgCarreNoir" />
     <MESSAGE value="les etoiles et rondChangementCouleur disparaissent" />
     <MESSAGE value="intersection cercle fonctionne a peu près" />
     <MESSAGE value="Musique pendant le jeu, il faut javazoom en librairie extern" />
@@ -925,8 +944,7 @@
     <MESSAGE value="FenetreCredit transformer en FenetreRegle avec les regles dedans" />
     <MESSAGE value="changement clavier/souris en appuyant sur c" />
     <MESSAGE value="correction un peu partout" />
-    <MESSAGE value="correction un peu partout v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction un peu partout v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction un peu partout" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
