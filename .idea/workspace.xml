@@ -1,38 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="ProjetL3S2:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/coeur.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sources.odt" />
+    <list default="true" id="57604296-1175-48d0-86d3-213e21b8283f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
-=======
-      <change beforePath="$PROJECT_DIR$/saveScore/score.txt" afterPath="$PROJECT_DIR$/saveScore/score.txt" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
-      <change beforePath="$PROJECT_DIR$/src/model/JoueurForme.java" afterPath="$PROJECT_DIR$/src/model/JoueurForme.java" />
-      <change beforePath="$PROJECT_DIR$/src/model/RectangleForme.java" afterPath="$PROJECT_DIR$/src/model/RectangleForme.java" />
       <change beforePath="$PROJECT_DIR$/src/model/ScoreFile.java" afterPath="$PROJECT_DIR$/src/model/ScoreFile.java" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavier.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlSouris.java" afterPath="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
->>>>>>> parent of d1f6603... correction un peu partout v2
       <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreOptions.java" afterPath="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreRegles.java" afterPath="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" afterPath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
->>>>>>> parent of e66e4b1... correction un peu partout v2
-=======
->>>>>>> parent of d1f6603... correction un peu partout v2
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,278 +15,34 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/ProjetL3S2$Appli.coverage" NAME="Appli Coverage Results" MODIFIED="1519558681899" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/ProjetL3S2$Appli.coverage" NAME="Appli Coverage Results" MODIFIED="1521389923223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-<<<<<<< HEAD
-      <file leaf-file-name="ControlClavier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1872">
-              <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-=======
-      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
-              <folding>
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
-                <element signature="e#2695#2696#0" expanded="true" />
-                <element signature="e#2768#2769#0" expanded="true" />
-                <element signature="e#20942#20943#0" expanded="true" />
-                <element signature="e#20994#20995#0" expanded="true" />
-                <element signature="e#21052#21053#0" expanded="true" />
-                <element signature="e#21104#21105#0" expanded="true" />
-                <element signature="e#22490#22491#0" expanded="true" />
-                <element signature="e#22549#22550#0" expanded="true" />
-                <element signature="e#22617#22618#0" expanded="true" />
-                <element signature="e#22663#22664#0" expanded="true" />
-                <element signature="e#23091#23092#0" expanded="true" />
-                <element signature="e#23144#23145#0" expanded="true" />
-                <element signature="e#23205#23206#0" expanded="true" />
-                <element signature="e#23257#23258#0" expanded="true" />
-                <element signature="e#23290#23291#0" expanded="true" />
-                <element signature="e#23320#23321#0" expanded="true" />
-                <element signature="e#23367#23368#0" expanded="true" />
-                <element signature="e#23405#23406#0" expanded="true" />
-                <element signature="e#23571#23572#0" expanded="true" />
-                <element signature="e#23600#23601#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlClavier.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="488">
-              <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
->>>>>>> parent of d1f6603... correction un peu partout v2
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="ControlSouris.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-              <folding />
-=======
-      <file leaf-file-name="ControlSouris.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
-              <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-              <folding>
-                <element signature="e#660#661#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#821#822#0" expanded="true" />
-                <element signature="e#847#848#0" expanded="true" />
-              </folding>
->>>>>>> parent of d1f6603... correction un peu partout v2
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-<<<<<<< HEAD
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3696">
-              <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FenetreScore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file leaf-file-name="ScoreFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/ScoreFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2799#2800#0" expanded="true" />
-                <element signature="e#2833#2834#0" expanded="true" />
-                <element signature="e#2861#2862#0" expanded="true" />
-                <element signature="e#2889#2890#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlFenetreScores.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreScores.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding />
-=======
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="189" column="93" lean-forward="false" selection-start-line="189" selection-start-column="90" selection-end-line="189" selection-end-column="93" />
-              <folding>
-                <element signature="e#2471#2472#0" expanded="true" />
-                <element signature="e#2527#2528#0" expanded="true" />
-                <element signature="e#19498#19499#0" expanded="true" />
-                <element signature="e#19530#19531#0" expanded="true" />
-                <element signature="e#19565#19566#0" expanded="true" />
-                <element signature="e#19599#19600#0" expanded="true" />
-                <element signature="e#19650#19651#0" expanded="true" />
-                <element signature="e#19696#19697#0" expanded="true" />
-                <element signature="e#19725#19726#0" expanded="true" />
-                <element signature="e#19754#19755#0" expanded="true" />
-                <element signature="e#19795#19796#0" expanded="true" />
-                <element signature="e#19831#19832#0" expanded="true" />
-                <element signature="e#19859#19860#0" expanded="true" />
-                <element signature="e#19886#19887#0" expanded="true" />
-                <element signature="e#19923#19924#0" expanded="true" />
-                <element signature="e#19955#19956#0" expanded="true" />
-                <element signature="e#20009#20010#0" expanded="true" />
-                <element signature="e#20063#20064#0" expanded="true" />
-                <element signature="e#20280#20281#0" expanded="true" />
-                <element signature="e#20320#20321#0" expanded="true" />
-                <element signature="e#20383#20384#0" expanded="true" />
-                <element signature="e#20441#20442#0" expanded="true" />
-                <element signature="e#20476#20477#0" expanded="true" />
-                <element signature="e#20507#20508#0" expanded="true" />
-                <element signature="e#20845#20846#0" expanded="true" />
-                <element signature="e#20872#20873#0" expanded="true" />
-                <element signature="e#20906#20907#0" expanded="true" />
-                <element signature="e#20937#20938#0" expanded="true" />
-                <element signature="e#20986#20987#0" expanded="true" />
-                <element signature="e#21026#21027#0" expanded="true" />
-              </folding>
->>>>>>> parent of d1f6603... correction un peu partout v2
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="FenetreExtensionGuitarHero.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
+            <state relative-caret-position="130">
+              <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4392">
-              <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-=======
->>>>>>> parent of d1f6603... correction un peu partout v2
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>Affine</find>
-      <find>extens</find>
-      <find>redec</find>
-      <find>shape</find>
-      <find>degree</find>
-      <find>white</find>
-      <find>ext</find>
-      <find>sion</find>
-      <find>exten</find>
-      <find>1</find>
-      <find>score</find>
-      <find>old</find>
-      <find>YELL</find>
-      <find>musique</find>
-      <find>Jeu</find>
-      <find>redecla</find>
-      <find>setConte</find>
-      <find>content</find>
-      <find>Musiqu</find>
-      <find>guitar</find>
-      <find>arc</find>
-      <find>clav</find>
-      <find>cred</find>
-      <find>retour</find>
-      <find>Stroop</find>
-      <find>depl</find>
-      <find>clavier</find>
-      <find>degre</find>
-      <find>300</find>
-      <find>souris</find>
-    </findStrings>
-    <dirStrings>
-      <dir>C:\Users\maxime\IdeaProjects\ProjetL3S2</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="Nouvelle-Class-button" />
-      </map>
-    </option>
-    <push-targets>
-      <push-target-info target-remote="origin" target-branch="JeuFormeCollision" repo="$PROJECT_DIR$" source="master" />
-    </push-targets>
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/JeuFormeCollision" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -324,62 +52,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/model/Joueur.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Appli.java" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreCredits.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlTouche.java" />
-        <option value="$PROJECT_DIR$/src/vue/MenuEnJeu.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierr.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreCredits.java" />
-        <option value="$PROJECT_DIR$/src/vue/Bouton.java" />
-        <option value="$PROJECT_DIR$/src/model/Barre.java" />
-        <option value="$PROJECT_DIR$/src/model/Entite.java" />
-        <option value="$PROJECT_DIR$/src/model/Rectangle.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtension.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtension.java" />
-        <option value="$PROJECT_DIR$/src/model/Mp3.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreScore.java" />
-        <option value="$PROJECT_DIR$/src/model/Jeu.java" />
-        <option value="$PROJECT_DIR$/src/model/BDD.java" />
-        <option value="$PROJECT_DIR$/src/model/ArcForme.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtension.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/model/RectangleForme.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlGroup.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/model/Bille.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" />
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
-        <option value="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
-=======
-        <option value="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
->>>>>>> parent of d1f6603... correction un peu partout v2
-        <option value="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
-        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/src/model/ScoreFile.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
-=======
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
->>>>>>> parent of d1f6603... correction un peu partout v2
+        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
       </list>
     </option>
   </component>
@@ -394,9 +68,6 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -413,8 +84,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -425,29 +96,7 @@
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
               <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="musiques" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="controleur" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ProjetL3S2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjetL3S2" type="b2602c69:ProjectViewProjectNode" />
@@ -460,29 +109,12 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/jlayer/jl1.0.1.jar!/" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\images" />
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\maxime\IdeaProjects\ProjetL3S2\musiques" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="controleur" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -611,425 +243,52 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="" />
-      <created>1517843827854</created>
+      <changelist id="57604296-1175-48d0-86d3-213e21b8283f" name="Default" comment="" />
+      <created>1521389574887</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1517843827854</updated>
-      <workItem from="1517843832637" duration="5111000" />
-      <workItem from="1517903809227" duration="1054000" />
-      <workItem from="1517904981751" duration="1626000" />
-      <workItem from="1518352174245" duration="446000" />
-      <workItem from="1518352738824" duration="4787000" />
-      <workItem from="1518963800060" duration="9961000" />
-      <workItem from="1519060289214" duration="10715000" />
-      <workItem from="1519461536776" duration="35277000" />
-      <workItem from="1519557768369" duration="961000" />
-      <workItem from="1519558758804" duration="16438000" />
-      <workItem from="1519626374032" duration="8934000" />
-      <workItem from="1519822801296" duration="214000" />
-      <workItem from="1519824728980" duration="24999000" />
-      <workItem from="1519887685644" duration="21366000" />
-      <workItem from="1520091120185" duration="1675000" />
-      <workItem from="1520175533097" duration="1786000" />
-      <workItem from="1520242813897" duration="5499000" />
-      <workItem from="1520260201519" duration="7013000" />
-      <workItem from="1520281495085" duration="9305000" />
-      <workItem from="1520418384729" duration="13747000" />
-      <workItem from="1520508094813" duration="13120000" />
-      <workItem from="1520663364352" duration="32598000" />
-      <workItem from="1520768828062" duration="7271000" />
-      <workItem from="1520864975379" duration="640000" />
-      <workItem from="1520868746301" duration="2761000" />
-      <workItem from="1521193960782" duration="39042000" />
-      <workItem from="1521282540074" duration="17494000" />
-<<<<<<< HEAD
-      <workItem from="1521321334417" duration="4793000" />
-<<<<<<< HEAD
-      <workItem from="1521362857402" duration="7838000" />
-      <workItem from="1521385912796" duration="378000" />
-=======
-      <workItem from="1521362857402" duration="7732000" />
->>>>>>> parent of e66e4b1... correction un peu partout v2
-=======
->>>>>>> parent of d1f6603... correction un peu partout v2
+      <updated>1521389574887</updated>
+      <workItem from="1521389601050" duration="129000" />
+      <workItem from="1521389810272" duration="669000" />
     </task>
-    <task id="LOCAL-00001" summary="Bouton retour dans FenetreOptions fonctionne,&#10;FenetreOptions et ControlFenetreOption comme les autres">
-      <created>1518971247582</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1518971247582</updated>
-    </task>
-    <task id="LOCAL-00002" summary="2 Boules sont sur l'écran principale et bouge,&#10;Ce ne sont pas des entitées">
-      <created>1518976366640</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1518976366640</updated>
-    </task>
-    <task id="LOCAL-00003" summary="on peut cliquer sur les boutons pendant animation.&#10;les boules rebondissent sur les bords">
-      <created>1519065657856</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1519065657856</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Couleurs et titre">
-      <created>1519073717886</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1519073717886</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Commit initial">
-      <created>1519467330763</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1519467330763</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Boule jeu avance">
-      <created>1519478727846</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1519478727846</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Images de barre de couleur qui bouge,">
-      <created>1519486568974</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1519486568974</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Cercle découpé">
-      <created>1519494756914</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1519494756914</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Cercle tourne a peu prés au milieu">
-      <created>1519505999990</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1519505999990</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Carré tourne a peu prés au milieu">
-      <created>1519510957951</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1519510957951</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Carré et cercle bien au milieu&#10;Croix également">
-      <created>1519564377727</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1519564377728</updated>
-    </task>
-    <task id="LOCAL-00012" summary="chaque forme descend l'une aprés l'autre">
-      <created>1519578182115</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1519578182115</updated>
-    </task>
-    <task id="LOCAL-00013" summary="carré tourne bien">
-      <created>1519588612330</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1519588612330</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Etoile point et rond changement couleur">
-      <created>1519631383934</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1519631383934</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Etoile point et rond changement couleur">
-      <created>1519631537149</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1519631537149</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Collision entre la boule et les barres horizontales">
-      <created>1519844094201</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1519844094201</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Collision entre la boule et cercle quitter le jeu et revenir">
-      <created>1519853172536</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1519853172536</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Changement couleur bille, utilisation entité">
-      <created>1519896587324</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1519896587324</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Correction de bug, cercle sous commentaire">
-      <created>1519903448921</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1519903448921</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Etoile et billeChangementCouleur disparaissent, score dans Entite">
-      <created>1519910607569</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1519910607569</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Ajout image carreNoir">
-      <created>1520091995472</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1520091995472</updated>
-    </task>
-    <task id="LOCAL-00022" summary="control clavier avec espace, mal fait pour l'instant">
-      <created>1520264150350</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1520264150350</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Le jeu avance lorsque balle &gt; au tier de l'écran">
-      <created>1520265851132</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1520265851132</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Plus besoin imgCarreNoir">
-      <created>1520283800935</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1520283800936</updated>
-    </task>
-    <task id="LOCAL-00025" summary="les etoiles et rondChangementCouleur disparaissent">
-      <created>1520288668757</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1520288668757</updated>
-    </task>
-    <task id="LOCAL-00026" summary="intersection cercle fonctionne a peu près">
-      <created>1520291912246</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1520291912246</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Musique pendant le jeu, il faut javazoom en librairie extern">
-      <created>1520423539405</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1520423539405</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Musique fin partie et lors clique boutons">
-      <created>1520428018618</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1520428018618</updated>
-    </task>
-    <task id="LOCAL-00029" summary="Musique menu et tout est libre de droit">
-      <created>1520430084382</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1520430084382</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Extension, jeu écrire les bonnes couleurs">
-      <created>1520518916884</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1520518916884</updated>
-    </task>
-    <task id="LOCAL-00031" summary="ControlSouris">
-      <created>1520666551413</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1520666551413</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Retour des Area indispensable pour controlSouris">
-      <created>1520668925058</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1520668925058</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Plus Entité, etoile et rondChangementCouleur collision">
-      <created>1520672563095</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1520672563095</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Croix collision plus de bug">
-      <created>1520686343722</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1520686343722</updated>
-    </task>
-    <task id="LOCAL-00035" summary="Carré collision plus de bug">
-      <created>1520686788881</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1520686788881</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Correction, amélioration extension">
-      <created>1520692774893</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1520692774893</updated>
-    </task>
-    <task id="LOCAL-00037" summary="barre horizontale plus de bugs">
-      <created>1521198639918</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1521198639918</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Cercle collision">
-      <created>1521203187390</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1521203187390</updated>
-    </task>
-    <task id="LOCAL-00039" summary="temps extension, rename en Stroop">
-      <created>1521206665842</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1521206665842</updated>
-    </task>
-    <task id="LOCAL-00040" summary="ajout des class extension GuitarHero">
-      <created>1521207992845</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1521207992845</updated>
-    </task>
-    <task id="LOCAL-00041" summary="GuitarHero Fonctionne">
-      <created>1521219708052</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1521219708052</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Echap pour quitter le jeu, probleme ralentissement">
-      <created>1521231225890</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1521231225890</updated>
-    </task>
-    <task id="LOCAL-00043" summary="plus de ralentissement">
-      <created>1521233876684</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1521233876684</updated>
-    </task>
-    <task id="LOCAL-00044" summary="musique,echap extension. Vitesse augmente GuitarHero">
-      <created>1521239410324</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1521239410324</updated>
-    </task>
-    <task id="LOCAL-00045" summary="boule de feu extensionStroop">
-      <created>1521288444500</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1521288444500</updated>
-    </task>
-    <task id="LOCAL-00046" summary="FenetreCredit transformer en FenetreRegle avec les regles dedans">
-      <created>1521292415505</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1521292415505</updated>
-    </task>
-    <task id="LOCAL-00047" summary="changement clavier/souris en appuyant sur c">
-      <created>1521294524320</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1521294524320</updated>
-    </task>
-    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="308430000" />
-=======
-    <option name="totallyTimeSpent" value="307929000" />
->>>>>>> parent of e66e4b1... correction un peu partout v2
-=======
-    <option name="totallyTimeSpent" value="295404000" />
->>>>>>> parent of d1f6603... correction un peu partout v2
+    <option name="totallyTimeSpent" value="798000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32435346" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16702586" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17672414" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1359375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2322239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19719827" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1038,692 +297,34 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Le jeu avance lorsque balle &gt; au tier de l'écran" />
-    <MESSAGE value="Plus besoin imgCarreNoir" />
-    <MESSAGE value="les etoiles et rondChangementCouleur disparaissent" />
-    <MESSAGE value="intersection cercle fonctionne a peu près" />
-    <MESSAGE value="Musique pendant le jeu, il faut javazoom en librairie extern" />
-    <MESSAGE value="Musique fin partie et lors clique boutons" />
-    <MESSAGE value="Musique menu et tout est libre de droit" />
-    <MESSAGE value="Extension, jeu écrire les bonnes couleurs" />
-    <MESSAGE value="ControlSouris" />
-    <MESSAGE value="Retour des Area indispensable pour controlSouris" />
-    <MESSAGE value="Plus Entité, etoile et rondChangementCouleur collision" />
-    <MESSAGE value="Croix collision plus de bug" />
-    <MESSAGE value="Carré collision plus de bug" />
-    <MESSAGE value="Correction, amélioration extension" />
-    <MESSAGE value="barre horizontale plus de bugs" />
-    <MESSAGE value="Cercle collision" />
-    <MESSAGE value="temps extension, rename en Stroop" />
-    <MESSAGE value="ajout des class extension GuitarHero" />
-    <MESSAGE value="GuitarHero Fonctionne" />
-    <MESSAGE value="Echap pour quitter le jeu, probleme ralentissement" />
-    <MESSAGE value="plus de ralentissement" />
-    <MESSAGE value="musique,echap extension. Vitesse augmente GuitarHero" />
-    <MESSAGE value="boule de feu extensionStroop" />
-    <MESSAGE value="FenetreCredit transformer en FenetreRegle avec les regles dedans" />
-    <MESSAGE value="changement clavier/souris en appuyant sur c" />
-    <option name="LAST_COMMIT_MESSAGE" value="changement clavier/souris en appuyant sur c" />
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlTouche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/vue.Fenetre">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>vue.Fenetre</OriginalElement>
-          <nodes>
-            <node x="" y="">java.awt.Frame</node>
-            <node x="" y="">java.awt.Window</node>
-            <node x="" y="">java.beans.JavaBean</node>
-            <node x="" y="">java.awt.MenuContainer</node>
-            <node x="" y="">javax.swing.TransferHandler.HasGetTransferHandler</node>
-            <node x="" y="">javax.swing.RootPaneContainer</node>
-            <node x="" y="">javax.swing.SwingContainer</node>
-            <node x="" y="">javax.accessibility.Accessible</node>
-            <node x="" y="">java.awt.Component</node>
-            <node x="" y="">java.awt.image.ImageObserver</node>
-            <node x="" y="">java.io.Serializable</node>
-            <node x="" y="">vue.Fenetre</node>
-            <node x="" y="">java.awt.Container</node>
-            <node x="" y="">javax.swing.JFrame</node>
-            <node x="" y="">javax.swing.WindowConstants</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="514.0" y="262.0" />
-          <SelectedNodes />
-          <Categories />
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Entite.java" />
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuEnJeu.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlTimer.java" />
-    <entry file="file://$PROJECT_DIR$/mysql-connector-java/src/com/mysql/jdbc/jdbc2/optional/MysqlXAConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-166">
-          <caret line="220" column="158" lean-forward="false" selection-start-line="220" selection-start-column="158" selection-end-line="220" selection-end-column="158" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="66" column="43" lean-forward="true" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Mp3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/MenuEnJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/BDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="18" column="26" lean-forward="true" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Appli.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="9" column="34" lean-forward="false" selection-start-line="9" selection-start-column="34" selection-end-line="9" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="25" column="43" lean-forward="false" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="44" column="24" lean-forward="false" selection-start-line="44" selection-start-column="24" selection-end-line="44" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="93" column="58" lean-forward="false" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/MenuPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1869">
-          <caret line="85" column="35" lean-forward="true" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="39" column="29" lean-forward="true" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="16" column="17" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="140" column="45" lean-forward="false" selection-start-line="140" selection-start-column="45" selection-end-line="140" selection-end-column="45" />
-          <folding>
-            <element signature="e#6553#6554#0" expanded="false" />
-            <element signature="e#6581#6582#0" expanded="false" />
-            <element signature="e#6620#6621#0" expanded="false" />
-            <element signature="e#6654#6655#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="19" column="24" lean-forward="true" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/rectangleBleu.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/rectangleJaune.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/rectangleRouge.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/rectangleVert.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/rondChangementCouleur.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/menuPrincipale.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/etoile.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/espace.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/damier.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/cercleVert.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/cercleRouge.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/cercleBleu.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/cercleJaune.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/carreNoir.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/bonhommeBaton.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/bouleDeFeu.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1538">
-          <caret line="98" column="44" lean-forward="false" selection-start-line="98" selection-start-column="44" selection-end-line="98" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="504">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1896">
-          <caret line="91" column="40" lean-forward="false" selection-start-line="91" selection-start-column="40" selection-end-line="91" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/ScoreFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="101" column="21" lean-forward="false" selection-start-line="101" selection-start-column="21" selection-end-line="101" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2799#2800#0" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2861#2862#0" expanded="true" />
-            <element signature="e#2889#2890#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="90" column="95" lean-forward="false" selection-start-line="90" selection-start-column="95" selection-end-line="90" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/MenuPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="65" column="51" lean-forward="false" selection-start-line="65" selection-start-column="51" selection-end-line="65" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreOptions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="79" column="28" lean-forward="false" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="22" lean-forward="true" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="673">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="53" column="47" lean-forward="false" selection-start-line="53" selection-start-column="47" selection-end-line="53" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlTouche.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="24" column="10" lean-forward="false" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
-=======
-        <state relative-caret-position="223">
-          <caret line="189" column="93" lean-forward="false" selection-start-line="189" selection-start-column="90" selection-end-line="189" selection-end-column="93" />
-          <folding>
-            <element signature="e#2471#2472#0" expanded="true" />
-            <element signature="e#2527#2528#0" expanded="true" />
-            <element signature="e#19498#19499#0" expanded="true" />
-            <element signature="e#19530#19531#0" expanded="true" />
-            <element signature="e#19565#19566#0" expanded="true" />
-            <element signature="e#19599#19600#0" expanded="true" />
-            <element signature="e#19650#19651#0" expanded="true" />
-            <element signature="e#19696#19697#0" expanded="true" />
-            <element signature="e#19725#19726#0" expanded="true" />
-            <element signature="e#19754#19755#0" expanded="true" />
-            <element signature="e#19795#19796#0" expanded="true" />
-            <element signature="e#19831#19832#0" expanded="true" />
-            <element signature="e#19859#19860#0" expanded="true" />
-            <element signature="e#19886#19887#0" expanded="true" />
-            <element signature="e#19923#19924#0" expanded="true" />
-            <element signature="e#19955#19956#0" expanded="true" />
-            <element signature="e#20009#20010#0" expanded="true" />
-            <element signature="e#20063#20064#0" expanded="true" />
-            <element signature="e#20280#20281#0" expanded="true" />
-            <element signature="e#20320#20321#0" expanded="true" />
-            <element signature="e#20383#20384#0" expanded="true" />
-            <element signature="e#20441#20442#0" expanded="true" />
-            <element signature="e#20476#20477#0" expanded="true" />
-            <element signature="e#20507#20508#0" expanded="true" />
-            <element signature="e#20845#20846#0" expanded="true" />
-            <element signature="e#20872#20873#0" expanded="true" />
-            <element signature="e#20906#20907#0" expanded="true" />
-            <element signature="e#20937#20938#0" expanded="true" />
-            <element signature="e#20986#20987#0" expanded="true" />
-            <element signature="e#21026#21027#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="136" column="37" lean-forward="false" selection-start-line="136" selection-start-column="37" selection-end-line="136" selection-end-column="37" />
-          <folding>
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2644#2645#0" expanded="true" />
-            <element signature="e#2695#2696#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-            <element signature="e#20942#20943#0" expanded="true" />
-            <element signature="e#20994#20995#0" expanded="true" />
-            <element signature="e#21052#21053#0" expanded="true" />
-            <element signature="e#21104#21105#0" expanded="true" />
-            <element signature="e#22490#22491#0" expanded="true" />
-            <element signature="e#22549#22550#0" expanded="true" />
-            <element signature="e#22617#22618#0" expanded="true" />
-            <element signature="e#22663#22664#0" expanded="true" />
-            <element signature="e#23091#23092#0" expanded="true" />
-            <element signature="e#23144#23145#0" expanded="true" />
-            <element signature="e#23205#23206#0" expanded="true" />
-            <element signature="e#23257#23258#0" expanded="true" />
-            <element signature="e#23290#23291#0" expanded="true" />
-            <element signature="e#23320#23321#0" expanded="true" />
-            <element signature="e#23367#23368#0" expanded="true" />
-            <element signature="e#23405#23406#0" expanded="true" />
-            <element signature="e#23571#23572#0" expanded="true" />
-            <element signature="e#23600#23601#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
->>>>>>> parent of d1f6603... correction un peu partout v2
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="53" column="49" lean-forward="false" selection-start-line="53" selection-start-column="49" selection-end-line="53" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3696">
-          <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
+        <state relative-caret-position="130">
+          <caret line="84" column="21" lean-forward="false" selection-start-line="84" selection-start-column="21" selection-end-line="84" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4392">
-          <caret line="197" column="0" lean-forward="false" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreScores.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-          <folding />
-=======
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="35" lean-forward="false" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
-          <folding>
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#847#848#0" expanded="true" />
-          </folding>
->>>>>>> parent of d1f6603... correction un peu partout v2
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <last-edited>ProjetL3S2:jar</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>9.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>ProjetL3S2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
