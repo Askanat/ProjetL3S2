@@ -56,8 +56,10 @@ public class FenetreExtensionGuitarHero extends JPanel{
             Image imgBB = ImageIO.read(new File("images\\rectangleBleu.png"));
             Image imgBV = ImageIO.read(new File("images\\rectangleVert.png"));
             Image imgBJ = ImageIO.read(new File("images\\rectangleJaune.png"));
+            Image imgCoeur = ImageIO.read(new File("images\\coeur.png"));
             Image damier = ImageIO.read(new File("images\\damier.png"));
             g.drawImage(damier,20,850, this);
+            g.drawImage(imgCoeur,430,50, this);
             zoneDeValidation.nouvellePosition(20, 850, 560, 20);
             zoneDeValidation.paintComponents(g2d);
 
