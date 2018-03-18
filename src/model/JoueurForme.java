@@ -13,7 +13,7 @@ public class JoueurForme extends JPanel {
     protected Color couleurTab[] = {Color.BLUE, Color.RED, Color.YELLOW, Color.GREEN};
     protected int score;
 
-    Ellipse2D ellipse = new Ellipse2D.Double(300-25, 900-50, 60, 60);
+    Ellipse2D ellipse = new Ellipse2D.Double(300-25, 900-50, 30, 30);
     Area areaA ;
     public JoueurForme(){
         score = 0;
@@ -27,10 +27,10 @@ public class JoueurForme extends JPanel {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D)g;
         areaA = new Area(ellipse);
-       // g2d.draw(areaA);
+       //g2d.draw(areaA);
     }
     public void nouvellePosition (int posX, int posY){
-        ellipse = new Ellipse2D.Double(posX, posY, 50, 50);
+        ellipse = new Ellipse2D.Double(posX, posY, 30, 30);
     }
 
     public boolean testIntersection(Area areaA) {

@@ -34,7 +34,6 @@ public class FenetreJeu extends JPanel {
     private int degree = 0;
     public Bouton retour, menu;
     private Image imageFenetreJeu;
-    private int score;
 
     JoueurForme bille = new JoueurForme();
     RectangleForme rectangleFormeRouge = new RectangleForme(Color.RED);
@@ -78,10 +77,10 @@ public class FenetreJeu extends JPanel {
         // Le rond du joueur
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
         g.setColor(bille.getCouleur());
-        g.fillOval(this.getWidth()/2-20-posX, this.getHeight()-40- posY, 40, 40);
+        g.fillOval(this.getWidth()/2-15-posX, this.getHeight()-30- posY, 30, 30);
         Graphics2D g2d = (Graphics2D)g;
         bille.paintComponent(g);
-        bille.nouvellePosition(this.getWidth()/2-20-posX, this.getHeight()-40- posY);
+        bille.nouvellePosition(this.getWidth()/2-15-posX, this.getHeight()-30- posY);
 
 
         try {
@@ -89,13 +88,8 @@ public class FenetreJeu extends JPanel {
             Image imgBB = ImageIO.read(new File("images\\rectangleBleu.png"));
             Image imgBV = ImageIO.read(new File("images\\rectangleVert.png"));
             Image imgBJ = ImageIO.read(new File("images\\rectangleJaune.png"));
-            Image imgCR = ImageIO.read(new File("images\\cercleRouge.png"));
-            Image imgCB = ImageIO.read(new File("images\\cercleBleu.png"));
-            Image imgCJ = ImageIO.read(new File("images\\cercleJaune.png"));
-            Image imgCV = ImageIO.read(new File("images\\cercleVert.png"));
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
-
 
             // rond Changement Couleur
                 rondChangementCouleurRectangleForme.nouvellePosition(this.getWidth() / 2 - 20,defilementRondChangementCouleur, 40, 40 );
@@ -174,11 +168,6 @@ public class FenetreJeu extends JPanel {
                }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
-                // 4 morceaux d'un cercle qui tourne
-               /* g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
-                g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
-                g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
-                g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);*/
 
                AffineTransform a = new AffineTransform();
                AffineTransform b = new AffineTransform();
@@ -403,6 +392,11 @@ public class FenetreJeu extends JPanel {
 
     public boolean isArretJeu() {
         return arretJeu;
+    }
+
+
+    public void setArretJeu(boolean arretJeu) {
+        this.arretJeu = arretJeu;
     }
 
     public void setEtoileUnSeulPointScore(boolean etoileUnSeulPointScore) {

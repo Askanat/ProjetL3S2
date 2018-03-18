@@ -46,7 +46,6 @@ public class ControlClavierExtensionGuitarHero extends Control implements KeyLis
                 changerVue();
             }
         }
-
     }
 
     @Override

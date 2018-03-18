@@ -79,8 +79,8 @@ public class ScoreFile {
                         scores[i + 1] = tampon[0];
                         setScores(scores[i + 1], i + 1);
                     }
-                    System.out.println(scores[i]);
-                    System.out.println(scores[i+1]);
+                    //System.out.println(scores[i]);
+                    //System.out.println(scores[i+1]);
                 }
             }
         }

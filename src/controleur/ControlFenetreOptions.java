@@ -87,8 +87,8 @@ public class ControlFenetreOptions extends Control implements ActionListener, Ke
 
             System.out.println(controlClavier.getControlTouche().getNomTouche(actionConcernee));
 
-            fenetre.panelFenetreOptions.controlButton[index].
-                    setText(controlClavier.getControlTouche().getNomTouche(actionConcernee));
+           /* fenetre.panelFenetreOptions.controlButton[index].
+                    setText(controlClavier.getControlTouche().getNomTouche(actionConcernee));*/
         }
     }
 
