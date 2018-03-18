@@ -15,10 +15,8 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
         super(jeu, fenetre);
         fenetre.setControlClavierExtensionStroop(this);
     }
-
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     @Override
@@ -31,7 +29,7 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
         char lettre = e.getKeyChar();
         conteneurUneLettre = conteneurUneLettre + lettre;
 
-        if (conteneurUneLettre.matches("[a-z]")) {
+        if (conteneurUneLettre.matches("[a-z]")) { // si ce sont des lettres
             resultat = resultat + conteneurUneLettre;
         }
         if(!fenetre.panelFenetreExtensionStroop.isArretJeu()) {
@@ -94,7 +92,7 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
             conteneurUneLettre = "";
         }
 
-        if (key == KeyEvent.VK_ESCAPE) {
+        if (key == KeyEvent.VK_ESCAPE) { // Pour quitter le jeu une fois celui-ci terminé
             if (fenetre.panelFenetreExtensionStroop.isArretJeu()) {
                 resultat = "";
                 conteneurUneLettre = "";
@@ -103,10 +101,8 @@ public class ControlClavierExtensionStroop extends Control implements KeyListene
                 fenetre.jouerMusiqueMenu();
                 fenetre.redeclareFenetreExtensionStroop();
                 changerVue();
-
             }
         }
-
     }
 
     @Override

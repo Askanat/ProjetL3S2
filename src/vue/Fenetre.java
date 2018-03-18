@@ -79,6 +79,7 @@ public class Fenetre extends JFrame {
 
         vueJeu();
     }
+    /* Redeclare les fenetres, utile pour rejouer sans relancer l'appli */
     public void redeclareFenetreJeu() {
         panelFenetreJeu= new FenetreJeu(jeu);
     }
@@ -89,6 +90,7 @@ public class Fenetre extends JFrame {
         panelFenetreExtensionGuitarHero = new FenetreExtensionGuitarHero();
     }
 
+    /* Permet de choisir un mot aléatoirement et different du précédent */
     public void changerMotExtensionStroop(){
         Random rand = new Random();
         int buffer = -1;
@@ -110,6 +112,7 @@ public class Fenetre extends JFrame {
         panelFenetreExtensionStroop.setMotTab(actualiserTab);
         panelFenetreExtensionStroop.repaint();
     }
+    /* Permet de changer la barre qui descendra, et different du precedent */
     public void changerCouleurBarreExtensionGuitarHero (){
         Random rand = new Random();
         int buffer = -1;
@@ -131,21 +134,17 @@ public class Fenetre extends JFrame {
         panelFenetreExtensionGuitarHero.setCouleurBarre(actualiserTab);
         panelFenetreExtensionGuitarHero.repaint();
     }
-
     public void deplacementSouris(){
         panelFenetreJeu.setPosX(300+8-this.souris.getX());
         panelFenetreJeu.setPosY(900+14-this.souris.getY());
     }
-
+    /* Permet de faire monter la bille, appelée lorsque la barre espace est appuyé */
     public void deplacementClavier() {
         new Thread(new Runnable(){
-            int positionY;
-
             @Override
             public void run() {
                 for(int i = 0; i<150; i++){
                     panelFenetreJeu.setPosY(panelFenetreJeu.getPosY()+1);
-
                     try {
                         Thread.sleep(1);
                     } catch (InterruptedException e) {
@@ -155,25 +154,19 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
-
+    /* Permet de deplacer le bonhomme baton, appelée lorsque le mot ecrit est bon */
     public void deplacementClavierExtensionStroop(boolean bonneReponse) {
         new Thread(new Runnable(){
-            int positionY;
-            boolean arretJeu = panelFenetreExtensionStroop.isArretJeu();
             @Override
             public void run() {
-
                 for(int i = 0; i<100; i++) {
                     if (panelFenetreExtensionStroop.getPosY() < 900) {
-                        //fin du jeu
                         if (i <= 100) {
-                            if (bonneReponse) {
+                            if (bonneReponse)
                                 panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getPosY() + 1);
-                            }
                             else{
-                                if(panelFenetreExtensionStroop.getPosY() !=0){
+                                if(panelFenetreExtensionStroop.getPosY() !=0)
                                     panelFenetreExtensionStroop.setPosY(panelFenetreExtensionStroop.getY()-1);
-                                }
                             }
                         }
                     }
@@ -182,11 +175,11 @@ public class Fenetre extends JFrame {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-
                 }
             }
         }).start();
     }
+    /* Thread principal d'extension Stroop, Permet d'augmenter le compteur et de bouger les boules de feu */
     public void tempsExtensionStroop() {
         new Thread(new Runnable(){
             int secondsInt;
@@ -195,7 +188,6 @@ public class Fenetre extends JFrame {
             int posX = panelFenetreExtensionStroop.getPosX();
             @Override
             public void run() {
-
                 while(!arretJeu){
                     arretJeu = panelFenetreExtensionStroop.isArretJeu();
                     if(arretJeu){
@@ -208,7 +200,6 @@ public class Fenetre extends JFrame {
                     panelFenetreExtensionStroop.setSeconds(secondsString);
                     posX++;
                     panelFenetreExtensionStroop.setPosX(posX);
-
                     if(posX == 7){
                         posX = 0;
                         panelFenetreExtensionStroop.setPosX(posX);
@@ -218,7 +209,6 @@ public class Fenetre extends JFrame {
                         panelFenetreExtensionStroop.setArretJeu(arretJeu);
                         break;
                     }
-
                     try {
                         Thread.sleep(1000);
                     } catch (InterruptedException e) {
@@ -228,7 +218,6 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
-
     public void jouerMusiqueJeu(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
         Mp3 musiqueJeu = new Mp3("musiques\\musiqueJeu.mp3");
@@ -283,7 +272,6 @@ public class Fenetre extends JFrame {
         }
     }).start();
     }
-
     public void jouerMusiqueMenu(){ new Thread(new Runnable(){
         Mp3 musiqueMenu = new Mp3("musiques\\musiqueMenu.mp3");
         @Override
@@ -300,7 +288,6 @@ public class Fenetre extends JFrame {
         }
     }).start();
     }
-
     public void jouerMusiqueFin(){ new Thread(new Runnable(){
         boolean arretJeu = panelFenetreJeu.isArretJeu();
         Mp3 musiqueFin = new Mp3("musiques\\finDePartie.mp3");
@@ -323,15 +310,13 @@ public class Fenetre extends JFrame {
         }
     }).start();
     }
-
     public void jouerMusiqueBouton(){ new Thread(new Runnable(){
         Mp3 musiqueFinBouton = new Mp3("musiques\\caisseEnregistreuse.mp3");
-
         @Override
         public void run() {
             try {
                 while (musiqueFinBouton.getPlayer().play(1)) {
-                        musiqueFinBouton.getPlayer().play();
+                    musiqueFinBouton.getPlayer().play();
                 }
             } catch(JavaLayerException e){
                 e.printStackTrace();
@@ -339,15 +324,13 @@ public class Fenetre extends JFrame {
         }
     }).start();
     }
-
+    /* Thread principale du jeu color switch. Permet de deplacer et faire apparaitre/disparaitre les formes */
     public void formeDefilement(){
         new Thread(new Runnable(){
             /* variables pour pas get a chaque tour de boucle */
             boolean arretJeu = panelFenetreJeu.isArretJeu();
-
             int defilementRondChangementCouleur = panelFenetreJeu.getDefilementRondChangementCouleur();
             int defilementY = panelFenetreJeu.getDefilementY();
-            int posX = panelFenetreJeu.getPosX();
             int degree = panelFenetreJeu.getDegree();
             int defilementFigureX = panelFenetreJeu.getDefilementFigureX();
             int i = (int) (Math.random() * 4 );
@@ -357,7 +340,7 @@ public class Fenetre extends JFrame {
                 while(!arretJeu) {
 
                     if(!isClavier()){
-                        if(panelFenetreJeu.getPosY()>-50){ //tier ecran
+                        if(panelFenetreJeu.getPosY()>-50){ // mouvement continue lorsque controle a la souris
                             defilementY++;
                             defilementRondChangementCouleur++;
                         }
@@ -368,21 +351,15 @@ public class Fenetre extends JFrame {
                             defilementRondChangementCouleur++;
                         }
                     }
-
                     defilementFigureX++;
-
                     panelFenetreJeu.repaint();
                     panelFenetreJeu.setDefilementY(defilementY);
                     panelFenetreJeu.setDefilementRondChangementCouleur(defilementRondChangementCouleur);
                     panelFenetreJeu.setDefilementFigureX(defilementFigureX);
-
-
-
                     if(defilementFigureX == 800){
                         panelFenetreJeu.setDefilementFigureX(0);
                         defilementFigureX = panelFenetreJeu.getDefilementFigureX();
                     }
-
                     if(defilementY == 1100){
                         panelFenetreJeu.setDefilementY(-200);
                         defilementY=panelFenetreJeu.getDefilementY();
@@ -393,12 +370,10 @@ public class Fenetre extends JFrame {
                         degree=panelFenetreJeu.getDegree();
                         panelFenetreJeu.setEtoileUnSeulPointScore(false);
                     }
-
                     if(defilementY == 450){
                         panelFenetreJeu.setDefilementRondChangementCouleur(-100);
                         defilementRondChangementCouleur=panelFenetreJeu.getDefilementRondChangementCouleur();
                         panelFenetreJeu.setRondChangementCouleurUnSeul(false);
-
                     }
                     if(panelFenetreJeu.getPosY() == -50){
                         arretJeu = true;
@@ -420,6 +395,7 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
+    /*Thread principal d'extension guitar hero. Permet de deplacer les barres et de gérer les scores/vies */
     public void formeDefilementExtensionGuitarHero(){
         new Thread(new Runnable(){
             boolean arretJeu = panelFenetreExtensionGuitarHero.isArretJeu();
@@ -427,11 +403,9 @@ public class Fenetre extends JFrame {
             int buffer = 0;
             int scoreBuffer = 0;
             int vitesse = 0;
-
             @Override
             public void run() {
                 while(!arretJeu) {
-
                     panelFenetreExtensionGuitarHero.setDefilementY(defilementY);
                     if(defilementY == 900){
                         if(panelFenetreExtensionGuitarHero.getScore() == scoreBuffer){
@@ -469,84 +443,12 @@ public class Fenetre extends JFrame {
         }).start();
     }
 
-    private void boulesQuiAvancentMenu(){
-        new Thread(new Runnable(){
-            /* variables pour pas get a chaque tour de boucle */
-            int positionX = panelMenuPrincipal.getPosX();
-            int positionY = panelMenuPrincipal.getPosY();
-            int positionX2 = panelMenuPrincipal.getPosX2();
-            int positionY2 = panelMenuPrincipal.getPosY2();
-
-            boolean backX = false;
-            boolean backY = false;
-            boolean backX2 = false;
-            boolean backY2 = false;
-
-            @Override
-            public void run() {
-                for (;;) {
-                    /*1er rond*/
-                    if(positionX < 1) //on avance
-                        backX = false;
-                    if(positionX > panelMenuPrincipal.getWidth()-50) //on recule
-                        backX = true;
-
-                    if(positionY < 1)
-                        backY = false;
-                    if(positionY > panelMenuPrincipal.getHeight()-50)
-                        backY = true;
-
-
-                    if(!backX)// si on avance on incremente
-                        panelMenuPrincipal.setPosX(++positionX);
-                    else// si on recule on decremente
-                        panelMenuPrincipal.setPosX(--positionX);
-
-                    if(!backY)
-                        panelMenuPrincipal.setPosY(++positionY);
-                    else
-                        panelMenuPrincipal.setPosY(--positionY);
-
-                    /*2eme rond */
-                    if(positionX2 < 1) //on avance
-                        backX2 = false;
-                    if(positionX2 > panelMenuPrincipal.getWidth()-100) //on recule
-                        backX2 = true;
-
-                    if(positionY2 < 1)
-                        backY2 = false;
-                    if(positionY2 > panelMenuPrincipal.getHeight()-100)
-                        backY2 = true;
-
-
-                    if(!backX2)// si on avance on incremente
-                        panelMenuPrincipal.setPosX2(++positionX2);
-                    else// si on recule on decremente
-                        panelMenuPrincipal.setPosX2(--positionX2);
-
-                    if(!backY2)
-                        panelMenuPrincipal.setPosY2(++positionY2);
-                    else
-                        panelMenuPrincipal.setPosY2(--positionY2);
-
-
-                    panelMenuPrincipal.repaint();
-                    try {
-                        Thread.sleep(4);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        }).start();
-    }
-
+    /* Permet de gerer la vitesse de rotation des formes */
     public void incrementeDegree(){
         new Thread(new Runnable(){
             @Override
             public void run() {
                 int degree = panelFenetreJeu.getDegree();
-
                 for (;;) {
                         degree++;
                         panelFenetreJeu.setDegree(degree);
@@ -563,7 +465,71 @@ public class Fenetre extends JFrame {
             }
         }).start();
     }
+    /* Permet de deplacer les boules du menu (decoratif) */
+    private void boulesQuiAvancentMenu(){
+        new Thread(new Runnable(){
+            /* variables pour pas get a chaque tour de boucle */
+            int positionX = panelMenuPrincipal.getPosX();
+            int positionY = panelMenuPrincipal.getPosY();
+            int positionX2 = panelMenuPrincipal.getPosX2();
+            int positionY2 = panelMenuPrincipal.getPosY2();
+            boolean backX = false;
+            boolean backY = false;
+            boolean backX2 = false;
+            boolean backY2 = false;
+            @Override
+            public void run() {
+                for (;;) {
+                    /*1er rond*/
+                    if(positionX < 1) //on avance
+                        backX = false;
+                    if(positionX > panelMenuPrincipal.getWidth()-50) //on recule
+                        backX = true;
+                    if(positionY < 1)
+                        backY = false;
+                    if(positionY > panelMenuPrincipal.getHeight()-50)
+                        backY = true;
 
+                    if(!backX)// si on avance on incremente
+                        panelMenuPrincipal.setPosX(++positionX);
+                    else// si on recule on decremente
+                        panelMenuPrincipal.setPosX(--positionX);
+                    if(!backY)
+                        panelMenuPrincipal.setPosY(++positionY);
+                    else
+                        panelMenuPrincipal.setPosY(--positionY);
+
+                    /*2eme rond */
+                    if(positionX2 < 1) //on avance
+                        backX2 = false;
+                    if(positionX2 > panelMenuPrincipal.getWidth()-100) //on recule
+                        backX2 = true;
+                    if(positionY2 < 1)
+                        backY2 = false;
+                    if(positionY2 > panelMenuPrincipal.getHeight()-100)
+                        backY2 = true;
+
+
+                    if(!backX2)// si on avance on incremente
+                        panelMenuPrincipal.setPosX2(++positionX2);
+                    else// si on recule on decremente
+                        panelMenuPrincipal.setPosX2(--positionX2);
+                    if(!backY2)
+                        panelMenuPrincipal.setPosY2(++positionY2);
+                    else
+                        panelMenuPrincipal.setPosY2(--positionY2);
+
+                    panelMenuPrincipal.repaint();
+                    try {
+                        Thread.sleep(4);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+        }).start();
+    }
+     /* Permet de changer la couleur des boules du menu (decoratif) */
     private void bouleColor(){
         new Thread(new Runnable(){
             @Override
@@ -588,7 +554,6 @@ public class Fenetre extends JFrame {
         top.setBounds((int) (X / 4.0), (int) (Y / 4.0), (int) (X / 2.0), (int) (Y / 2.0));
         layeredPane.add(top, new Integer(1));
     }
-
     public void vueJeu() {
         scrollPane = new JScrollPane(panelFenetreJeu, VERTICAL_SCROLLBAR_NEVER, HORIZONTAL_SCROLLBAR_NEVER);
         scrollPane.setBounds(0, 0, X, Y);
@@ -597,6 +562,7 @@ public class Fenetre extends JFrame {
         panelScrollFenetreJeu.add(scrollPane);
     }
 
+    /* GETTER SETTER */
     public static int adapterResolutionEnX(int valeur) {
         return (int) (valeur / DEFAUT_X * X);
     }

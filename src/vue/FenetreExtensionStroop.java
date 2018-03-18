@@ -22,26 +22,22 @@ public class FenetreExtensionStroop extends JPanel{
     RectangleForme bouleDeFeuForme3= new RectangleForme(Color.RED);
     RectangleForme bouleDeFeuForme4= new RectangleForme(Color.RED);
     JoueurForme bonhommeBaton = new JoueurForme();
-
     private int posX= 0;
     private int posY= 0;
-    private boolean motTab[] = new boolean[4];
+    private boolean motTab[] = new boolean[4]; // 4 mots differents
     public Bouton retour;
     private int score = 0;
     private String seconds = "-1";
     boolean arretJeu = false;
 
     public FenetreExtensionStroop() {
-
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
         imageFenetreExtension = getToolkit().getImage("images/menuPrincipale.jpg");
         retour = new Bouton("Retour");
         retour.setActionCommand("Retour");
         this.add(retour);
-
         for(int i = 0 ; i<motTab.length ; i++){
-
             motTab[i] = false;
         }
         /* pour le 1er mot */
@@ -49,15 +45,12 @@ public class FenetreExtensionStroop extends JPanel{
         int val = rand.nextInt(4);
         motTab[val] = true;
     }
-
     public void setControl(ControlFenetreExtensionStroop controlFenetreExtensionStroop) {
         retour.addActionListener(controlFenetreExtensionStroop);
     }
-
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreExtension, 0, 0, getWidth(), getHeight(), this);
         Graphics2D g2 = (Graphics2D) g;
-
         g2.setFont(new Font("TimesRoman",Font.PLAIN, 40));
         g2.setColor(Color.WHITE);
         g2.drawString(seconds ,30 ,880);
@@ -69,7 +62,7 @@ public class FenetreExtensionStroop extends JPanel{
             g.drawImage(imgBonhommeBaton,this.getWidth()/2-25, this.getHeight()-50-posY, this);
             bonhommeBaton.nouvellePosition(this.getWidth()/2-25, this.getHeight()-50- posY);
             bonhommeBaton.paintComponent(g);
-
+            /* Affichage du mot a ecrire (rouge/bleu/vert/jaune) */
             if(motTab[0]){
                 g2.setColor(Color.YELLOW);
                 g2.setFont(new Font("TimesRoman",Font.PLAIN, 100));
@@ -94,12 +87,11 @@ public class FenetreExtensionStroop extends JPanel{
                 g2.drawString("jaune",this.getWidth()/2-120,200);
                 repaint();
             }
-
+            /* Mouvement des boules de feu */
             g.drawImage(imgBouleDeFeu, -230 + ((posX + 1) *100), 150, this);
             g.drawImage(imgBouleDeFeu, 770 - ((posX + 1) *100), 350, this);
             g.drawImage(imgBouleDeFeu, 670 - ((posX + 2) *100), 550, this);
             g.drawImage(imgBouleDeFeu, -130 + (posX *100), 750, this);
-
             bouleDeFeuForme1.nouvellePosition( -230 + ((posX+1) *100), 150, 50,50);
             bouleDeFeuForme1.paintComponents(g);
             bouleDeFeuForme2.nouvellePosition( 770 - ((posX+1) *100), 350, 50,50);
@@ -108,65 +100,50 @@ public class FenetreExtensionStroop extends JPanel{
             bouleDeFeuForme3.paintComponents(g);
             bouleDeFeuForme4.nouvellePosition( -130 + (posX *100), 750, 50,50);
             bouleDeFeuForme4.paintComponents(g);
-
             if(bonhommeBaton.testIntersection(bouleDeFeuForme1.areaA) || bonhommeBaton.testIntersection(bouleDeFeuForme2.areaA) ||
                     bonhommeBaton.testIntersection(bouleDeFeuForme3.areaA) || bonhommeBaton.testIntersection(bouleDeFeuForme4.areaA)){
                 arretJeu =true;
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
+    /* GETTER SETTER */
     public int getPosX() {
         return posX;
     }
-
     public void setPosX(int posX) {
         this.posX = posX;
     }
-
     public int getPosY() {
         return posY;
     }
-
     public void setPosY(int posY) {
         this.posY = posY;
     }
     public boolean[] getMotTab() {
         return motTab;
     }
-
     public void setMotTab(boolean[] motTab) {
         this.motTab = motTab;
     }
     public int getScore() {
         return score;
     }
-
     public void setScore(int score) {
         this.score = score;
     }
-
-
     public String getSeconds() {
         return seconds;
     }
-
     public void setSeconds(String seconds) {
         this.seconds = seconds;
     }
-
     public boolean isArretJeu() {
         return arretJeu;
     }
-
     public void setArretJeu(boolean arretJeu) {
         this.arretJeu = arretJeu;
     }
-
-
-
 }

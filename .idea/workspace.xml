@@ -1,211 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="coreection">
-      <change beforePath="" afterPath="$PROJECT_DIR$/BDD/defaultBDD.sql" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/bonhommeBaton.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/bouleDeFeu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/carreNoir.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/cercleBleu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/cercleJaune.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/cercleRouge.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/cercleVert.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/coeur.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/damier.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/espace.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/etoile.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/rectangleBleu.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/rectangleJaune.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/rectangleRouge.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/rectangleVert.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/images/rondChangementCouleur.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/CHANGES.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/README.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/build-unix.sh" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/build-win32.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/classes/javazoom/jl/decoder/au2lin.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/classes/javazoom/jl/decoder/l3reorder.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/classes/javazoom/jl/decoder/lin2au.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/classes/javazoom/jl/decoder/sfd.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/allclasses-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/allclasses-noframe.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/constant-values.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/deprecated-list.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/help-doc.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/index-all.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/Converter.PrintWriterProgressListener.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/Converter.ProgressListener.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/Converter.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/RiffFile.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/WaveFile.WaveFileSample.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/WaveFile.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/WaveFileObuffer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/jlc.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/package-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/package-summary.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/converter/package-tree.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Bitstream.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/BitstreamErrors.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/BitstreamException.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Control.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Crc16.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Decoder.Params.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Decoder.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/DecoderErrors.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/DecoderException.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Equalizer.EQFunction.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Equalizer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/FrameDecoder.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Header.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/InputStreamSource.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/JavaLayerError.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/JavaLayerErrors.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/JavaLayerException.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/JavaLayerHook.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/JavaLayerUtils.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Manager.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Obuffer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/OutputChannels.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/SampleBuffer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/Source.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/package-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/package-summary.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/decoder/package-tree.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/AudioDevice.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/AudioDeviceBase.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/AudioDeviceFactory.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/FactoryRegistry.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/JavaSoundAudioDevice.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/JavaSoundAudioDeviceFactory.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/NullAudioDevice.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/Player.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/PlayerApplet.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/AdvancedPlayer.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/PlaybackEvent.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/PlaybackListener.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/jlap.InfoListener.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/jlap.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/package-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/package-summary.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/advanced/package-tree.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/jlp.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/package-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/package-summary.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/javazoom/jl/player/package-tree.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/overview-frame.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/overview-summary.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/overview-tree.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/package-list" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/packages.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/resources/inherit.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/serialized-form.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/doc/stylesheet.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/jl1.0.1.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/playerapplet.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/setEnvAnt.bat" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/converter/Converter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/converter/RiffFile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/converter/WaveFile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/converter/WaveFileObuffer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/converter/jlc.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/BitReserve.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Bitstream.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/BitstreamErrors.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/BitstreamException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Control.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Crc16.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Decoder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/DecoderErrors.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/DecoderException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Equalizer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/FrameDecoder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Header.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/InputStreamSource.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/JavaLayerError.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/JavaLayerErrors.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/JavaLayerException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/JavaLayerHook.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/JavaLayerUtils.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/LayerIDecoder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/LayerIIDecoder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/LayerIIIDecoder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Manager.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Obuffer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/OutputChannels.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/SampleBuffer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/Source.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/SynthesisFilter.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/au2lin.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/huffcodetab.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/l3reorder.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/lin2au.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/readme.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/sfd.ser" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/AudioDevice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/AudioDeviceBase.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/AudioDeviceFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/FactoryRegistry.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/JavaSoundAudioDevice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/JavaSoundAudioDeviceFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/NullAudioDevice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/Player.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/PlayerApplet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/advanced/AdvancedPlayer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/advanced/PlaybackEvent.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/advanced/PlaybackListener.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/advanced/jlap.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/src/javazoom/jl/player/jlp.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/srctest/AllTests.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/srctest/javazoom/jl/decoder/BitstreamTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/srctest/javazoom/jl/player/jlpTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/jlayer/srctest/test.mp3.properties" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/caisseEnregistreuse.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/finDePartie.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueExtensionGuitarHero.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueExtensionStroop.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueJeu.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/musiques/musiqueMenu.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/saveScore/score.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/sources.odt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionStroop.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreScores.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/ArcForme.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/JoueurForme.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/Mp3.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/RectangleForme.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/model/ScoreFile.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/vue/FenetreScore.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="71878ecc-7235-4dd7-8d6b-c602f7f927a3" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/ProjetL3S2.iml" afterPath="$PROJECT_DIR$/ProjetL3S2.iml" />
-      <change beforePath="$PROJECT_DIR$/mysql-connector-java/mysql-connector-java.iml" afterPath="$PROJECT_DIR$/mysql-connector-java/mysql-connector-java.iml" />
       <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavier.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreCredits.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java" afterPath="$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlGroup.java" afterPath="$PROJECT_DIR$/src/controleur/ControlGroup.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlMenuEnJeu.java" afterPath="$PROJECT_DIR$/src/controleur/ControlMenuEnJeu.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" afterPath="$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java" />
-      <change beforePath="$PROJECT_DIR$/src/controleur/ControlTouche.java" afterPath="$PROJECT_DIR$/src/controleur/ControlTouche.java" />
-      <change beforePath="$PROJECT_DIR$/src/model/BDD.java" afterPath="$PROJECT_DIR$/src/model/BDD.java" />
-      <change beforePath="$PROJECT_DIR$/src/model/Entite.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/model/Jeu.java" afterPath="$PROJECT_DIR$/src/model/Jeu.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" afterPath="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
+      <change beforePath="$PROJECT_DIR$/src/controleur/ControlSouris.java" afterPath="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/ArcForme.java" afterPath="$PROJECT_DIR$/src/model/ArcForme.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/JoueurForme.java" afterPath="$PROJECT_DIR$/src/model/JoueurForme.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/Mp3.java" afterPath="$PROJECT_DIR$/src/model/Mp3.java" />
+      <change beforePath="$PROJECT_DIR$/src/model/RectangleForme.java" afterPath="$PROJECT_DIR$/src/model/RectangleForme.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/Bouton.java" afterPath="$PROJECT_DIR$/src/vue/Bouton.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/Fenetre.java" afterPath="$PROJECT_DIR$/src/vue/Fenetre.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreCredits.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+      <change beforePath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" afterPath="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/FenetreJeu.java" afterPath="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/FenetreOptions.java" afterPath="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
       <change beforePath="$PROJECT_DIR$/src/vue/FenetreRegles.java" afterPath="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/MenuEnJeu.java" afterPath="$PROJECT_DIR$/src/vue/MenuEnJeu.java" />
-      <change beforePath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" afterPath="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -220,40 +31,42 @@
       <file leaf-file-name="Fenetre.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="136" column="38" lean-forward="true" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
+            <state relative-caret-position="-1056">
+              <caret line="289" column="5" lean-forward="true" selection-start-line="289" selection-start-column="5" selection-end-line="289" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2592#2593#0" expanded="true" />
-                <element signature="e#2644#2645#0" expanded="true" />
-                <element signature="e#21945#21946#0" expanded="true" />
-                <element signature="e#21997#21998#0" expanded="true" />
-                <element signature="e#22055#22056#0" expanded="true" />
-                <element signature="e#22107#22108#0" expanded="true" />
-                <element signature="e#23493#23494#0" expanded="true" />
-                <element signature="e#23552#23553#0" expanded="true" />
-                <element signature="e#23620#23621#0" expanded="true" />
-                <element signature="e#23666#23667#0" expanded="true" />
-                <element signature="e#24094#24095#0" expanded="true" />
-                <element signature="e#24147#24148#0" expanded="true" />
-                <element signature="e#24208#24209#0" expanded="true" />
-                <element signature="e#24260#24261#0" expanded="true" />
-                <element signature="e#24293#24294#0" expanded="true" />
+                <element signature="e#2667#2668#0" expanded="true" />
+                <element signature="e#2719#2720#0" expanded="true" />
+                <element signature="e#2770#2771#0" expanded="true" />
+                <element signature="e#2843#2844#0" expanded="true" />
+                <element signature="e#22602#22603#0" expanded="true" />
+                <element signature="e#22654#22655#0" expanded="true" />
+                <element signature="e#22712#22713#0" expanded="true" />
+                <element signature="e#22764#22765#0" expanded="true" />
+                <element signature="e#24150#24151#0" expanded="true" />
+                <element signature="e#24209#24210#0" expanded="true" />
+                <element signature="e#24277#24278#0" expanded="true" />
                 <element signature="e#24323#24324#0" expanded="true" />
-                <element signature="e#24370#24371#0" expanded="true" />
-                <element signature="e#24408#24409#0" expanded="true" />
-                <element signature="e#24574#24575#0" expanded="true" />
-                <element signature="e#24603#24604#0" expanded="true" />
+                <element signature="e#24751#24752#0" expanded="true" />
+                <element signature="e#24804#24805#0" expanded="true" />
+                <element signature="e#24865#24866#0" expanded="true" />
+                <element signature="e#24917#24918#0" expanded="true" />
+                <element signature="e#24950#24951#0" expanded="true" />
+                <element signature="e#24980#24981#0" expanded="true" />
+                <element signature="e#25027#25028#0" expanded="true" />
+                <element signature="e#25065#25066#0" expanded="true" />
+                <element signature="e#25231#25232#0" expanded="true" />
+                <element signature="e#25260#25261#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ControlClavierExtensionStroop.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
+      <file leaf-file-name="Mp3.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Mp3.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
-              <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -262,8 +75,25 @@
       <file leaf-file-name="JoueurForme.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+            <state relative-caret-position="48">
+              <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
+              <folding>
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1522#1523#0" expanded="true" />
+                <element signature="e#1550#1551#0" expanded="true" />
+                <element signature="e#1588#1589#0" expanded="true" />
+                <element signature="e#1622#1623#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RectangleForme.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="499">
+              <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -272,73 +102,40 @@
       <file leaf-file-name="ArcForme.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="35" />
+            <state relative-caret-position="499">
+              <caret line="35" column="87" lean-forward="true" selection-start-line="35" selection-start-column="87" selection-end-line="35" selection-end-column="87" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreFile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/ScoreFile.java">
+      <file leaf-file-name="ControlFenetreJeu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+            <state relative-caret-position="259">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="score.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/saveScore/score.txt">
+      <file leaf-file-name="Control.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FenetreExtensionGuitarHero.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="137" column="22" lean-forward="false" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+            <state relative-caret-position="120">
+              <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding>
-                <element signature="e#5988#5989#0" expanded="true" />
-                <element signature="e#6022#6023#0" expanded="true" />
-                <element signature="e#6073#6074#0" expanded="true" />
-                <element signature="e#6119#6120#0" expanded="true" />
-                <element signature="e#6153#6154#0" expanded="true" />
-                <element signature="e#6184#6185#0" expanded="true" />
-                <element signature="e#6233#6234#0" expanded="true" />
-                <element signature="e#6273#6274#0" expanded="true" />
-                <element signature="e#6315#6316#0" expanded="true" />
-                <element signature="e#6350#6351#0" expanded="true" />
-                <element signature="e#6409#6410#0" expanded="true" />
-                <element signature="e#6457#6458#0" expanded="true" />
-                <element signature="e#6504#6505#0" expanded="true" />
-                <element signature="e#6544#6545#0" expanded="true" />
-                <element signature="e#6602#6603#0" expanded="true" />
-                <element signature="e#6647#6648#0" expanded="true" />
-                <element signature="e#6677#6678#0" expanded="true" />
-                <element signature="e#6705#6706#0" expanded="true" />
-                <element signature="e#6731#6732#0" expanded="true" />
-                <element signature="e#6757#6758#0" expanded="true" />
-                <element signature="e#6792#6793#0" expanded="true" />
-                <element signature="e#6822#6823#0" expanded="true" />
-                <element signature="e#6860#6861#0" expanded="true" />
-                <element signature="e#6894#6895#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FenetreScore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
+      <file leaf-file-name="ControlClavierExtensionStroop.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-221">
-              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            <state relative-caret-position="666">
+              <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -347,22 +144,48 @@
       <file leaf-file-name="FenetreJeu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+            <state relative-caret-position="220">
+              <caret line="173" column="65" lean-forward="false" selection-start-line="173" selection-start-column="60" selection-end-line="173" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#20391#20392#0" expanded="true" />
-                <element signature="e#20431#20432#0" expanded="true" />
+                <element signature="e#19126#19127#0" expanded="true" />
+                <element signature="e#19158#19159#0" expanded="true" />
+                <element signature="e#19193#19194#0" expanded="true" />
+                <element signature="e#19227#19228#0" expanded="true" />
+                <element signature="e#19278#19279#0" expanded="true" />
+                <element signature="e#19324#19325#0" expanded="true" />
+                <element signature="e#19353#19354#0" expanded="true" />
+                <element signature="e#19382#19383#0" expanded="true" />
+                <element signature="e#19423#19424#0" expanded="true" />
+                <element signature="e#19459#19460#0" expanded="true" />
+                <element signature="e#19487#19488#0" expanded="true" />
+                <element signature="e#19514#19515#0" expanded="true" />
+                <element signature="e#19551#19552#0" expanded="true" />
+                <element signature="e#19583#19584#0" expanded="true" />
+                <element signature="e#19637#19638#0" expanded="true" />
+                <element signature="e#19691#19692#0" expanded="true" />
+                <element signature="e#19908#19909#0" expanded="true" />
+                <element signature="e#19948#19949#0" expanded="true" />
+                <element signature="e#20011#20012#0" expanded="true" />
+                <element signature="e#20069#20070#0" expanded="true" />
+                <element signature="e#20104#20105#0" expanded="true" />
+                <element signature="e#20135#20136#0" expanded="true" />
+                <element signature="e#20183#20184#0" expanded="true" />
+                <element signature="e#20223#20224#0" expanded="true" />
+                <element signature="e#20568#20569#0" expanded="true" />
+                <element signature="e#20599#20600#0" expanded="true" />
+                <element signature="e#20648#20649#0" expanded="true" />
+                <element signature="e#20688#20689#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="huffcodetab.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/huffcodetab.java">
+      <file leaf-file-name="FenetreRegles.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1241">
-              <caret line="531" column="11" lean-forward="false" selection-start-line="531" selection-start-column="11" selection-end-line="531" selection-end-column="11" />
+            <state relative-caret-position="115">
+              <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -386,6 +209,7 @@
       <find>bu</find>
       <find>but</find>
       <find>14</find>
+      <find>shape</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -412,17 +236,24 @@
         <option value="$PROJECT_DIR$/src/vue/FenetreCredits.java" />
         <option value="$PROJECT_DIR$/src/model/Entite.java" />
         <option value="$PROJECT_DIR$/src/model/ScoreFile.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
         <option value="$PROJECT_DIR$/src/vue/MenuPrincipal.java" />
         <option value="$PROJECT_DIR$/src/controleur/ControlFenetreOptions.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreOptions.java" />
         <option value="$PROJECT_DIR$/saveScore/score.txt" />
-        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
-        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
-        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
-        <option value="$PROJECT_DIR$/src/model/JoueurForme.java" />
         <option value="$PROJECT_DIR$/src/vue/FenetreJeu.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlClavier.java" />
+        <option value="$PROJECT_DIR$/src/controleur/ControlSouris.java" />
+        <option value="$PROJECT_DIR$/src/vue/Bouton.java" />
+        <option value="$PROJECT_DIR$/src/vue/FenetreRegles.java" />
+        <option value="$PROJECT_DIR$/src/vue/Fenetre.java" />
+        <option value="$PROJECT_DIR$/src/model/Mp3.java" />
+        <option value="$PROJECT_DIR$/src/model/JoueurForme.java" />
+        <option value="$PROJECT_DIR$/src/model/RectangleForme.java" />
+        <option value="$PROJECT_DIR$/src/model/ArcForme.java" />
       </list>
     </option>
   </component>
@@ -642,12 +473,20 @@
       <workItem from="1517904981751" duration="1626000" />
       <workItem from="1518352174245" duration="446000" />
       <workItem from="1518352738824" duration="4787000" />
-      <workItem from="1521389230692" duration="4258000" />
+      <workItem from="1521389230692" duration="9762000" />
     </task>
+    <task id="LOCAL-00001" summary="coreection">
+      <created>1521393567755</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1521393567755</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18846000" />
+    <option name="totallyTimeSpent" value="24350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -655,13 +494,13 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3265086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265086" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18426724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18426724" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -699,61 +538,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/BDD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="40" column="22" lean-forward="false" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
-          <folding>
-            <element signature="e#632#633#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Entite.java" />
-    <entry file="file://$PROJECT_DIR$/src/model/Jeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="37" lean-forward="false" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#20391#20392#0" expanded="true" />
-            <element signature="e#20431#20432#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/MenuPrincipal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Joueur.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controleur/ControlMenuPrincipal.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -874,22 +658,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#20391#20392#0" expanded="true" />
-            <element signature="e#20431#20432#0" expanded="true" />
+            <element signature="e#20183#20184#0" expanded="true" />
+            <element signature="e#20223#20224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,44 +678,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreCredits.java" />
     <entry file="file://$PROJECT_DIR$/src/model/Entite.java" />
     <entry file="file://$PROJECT_DIR$/src/model/Joueur.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="93" column="58" lean-forward="false" selection-start-line="93" selection-start-column="58" selection-end-line="93" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -976,16 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="53" column="73" lean-forward="true" selection-start-line="53" selection-start-column="73" selection-end-line="53" selection-end-column="73" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreOptions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
@@ -1012,117 +746,285 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
+    <entry file="file://$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/huffcodetab.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="136" column="38" lean-forward="true" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
+        <state relative-caret-position="4318">
+          <caret line="531" column="11" lean-forward="false" selection-start-line="531" selection-start-column="11" selection-end-line="531" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreExtensionGuitarHero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionGuitarHero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="22" column="31" lean-forward="false" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionStroop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3096">
+          <caret line="147" column="5" lean-forward="false" selection-start-line="147" selection-start-column="5" selection-end-line="147" selection-end-column="5" />
+          <folding>
+            <element signature="e#4801#4802#0" expanded="true" />
+            <element signature="e#4828#4829#0" expanded="true" />
+            <element signature="e#4864#4865#0" expanded="true" />
+            <element signature="e#4896#4897#0" expanded="true" />
+            <element signature="e#4923#4924#0" expanded="true" />
+            <element signature="e#4950#4951#0" expanded="true" />
+            <element signature="e#4986#4987#0" expanded="true" />
+            <element signature="e#5018#5019#0" expanded="true" />
+            <element signature="e#5053#5054#0" expanded="true" />
+            <element signature="e#5082#5083#0" expanded="true" />
+            <element signature="e#5128#5129#0" expanded="true" />
+            <element signature="e#5164#5165#0" expanded="true" />
+            <element signature="e#5192#5193#0" expanded="true" />
+            <element signature="e#5220#5221#0" expanded="true" />
+            <element signature="e#5258#5259#0" expanded="true" />
+            <element signature="e#5292#5293#0" expanded="true" />
+            <element signature="e#5325#5326#0" expanded="true" />
+            <element signature="e#5355#5356#0" expanded="true" />
+            <element signature="e#5400#5401#0" expanded="true" />
+            <element signature="e#5438#5439#0" expanded="true" />
+            <element signature="e#5472#5473#0" expanded="true" />
+            <element signature="e#5503#5504#0" expanded="true" />
+            <element signature="e#5551#5552#0" expanded="true" />
+            <element signature="e#5591#5592#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="121" column="131" lean-forward="false" selection-start-line="121" selection-start-column="131" selection-end-line="121" selection-end-column="131" />
+          <folding>
+            <element signature="e#6403#6404#0" expanded="true" />
+            <element signature="e#6437#6438#0" expanded="true" />
+            <element signature="e#6487#6488#0" expanded="true" />
+            <element signature="e#6533#6534#0" expanded="true" />
+            <element signature="e#6567#6568#0" expanded="true" />
+            <element signature="e#6598#6599#0" expanded="true" />
+            <element signature="e#6646#6647#0" expanded="true" />
+            <element signature="e#6686#6687#0" expanded="true" />
+            <element signature="e#6727#6728#0" expanded="true" />
+            <element signature="e#6762#6763#0" expanded="true" />
+            <element signature="e#6820#6821#0" expanded="true" />
+            <element signature="e#6868#6869#0" expanded="true" />
+            <element signature="e#6925#6926#0" expanded="true" />
+            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="e#6998#6999#0" expanded="true" />
+            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#7052#7053#0" expanded="true" />
+            <element signature="e#7078#7079#0" expanded="true" />
+            <element signature="e#7112#7113#0" expanded="true" />
+            <element signature="e#7142#7143#0" expanded="true" />
+            <element signature="e#7180#7181#0" expanded="true" />
+            <element signature="e#7214#7215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2592#2593#0" expanded="true" />
-            <element signature="e#2644#2645#0" expanded="true" />
-            <element signature="e#21945#21946#0" expanded="true" />
-            <element signature="e#21997#21998#0" expanded="true" />
-            <element signature="e#22055#22056#0" expanded="true" />
-            <element signature="e#22107#22108#0" expanded="true" />
-            <element signature="e#23493#23494#0" expanded="true" />
-            <element signature="e#23552#23553#0" expanded="true" />
-            <element signature="e#23620#23621#0" expanded="true" />
-            <element signature="e#23666#23667#0" expanded="true" />
-            <element signature="e#24094#24095#0" expanded="true" />
-            <element signature="e#24147#24148#0" expanded="true" />
-            <element signature="e#24208#24209#0" expanded="true" />
-            <element signature="e#24260#24261#0" expanded="true" />
-            <element signature="e#24293#24294#0" expanded="true" />
-            <element signature="e#24323#24324#0" expanded="true" />
-            <element signature="e#24370#24371#0" expanded="true" />
-            <element signature="e#24408#24409#0" expanded="true" />
-            <element signature="e#24574#24575#0" expanded="true" />
-            <element signature="e#24603#24604#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreRegles.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlSouris.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/vue/Bouton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="26" column="5" lean-forward="false" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreScore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-221">
+        <state relative-caret-position="24">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
+    <entry file="file://$PROJECT_DIR$/src/vue/FenetreRegles.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        <state relative-caret-position="115">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
+    <entry file="file://$PROJECT_DIR$/src/vue/Fenetre.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1056">
+          <caret line="289" column="5" lean-forward="true" selection-start-line="289" selection-start-column="5" selection-end-line="289" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2667#2668#0" expanded="true" />
+            <element signature="e#2719#2720#0" expanded="true" />
+            <element signature="e#2770#2771#0" expanded="true" />
+            <element signature="e#2843#2844#0" expanded="true" />
+            <element signature="e#22602#22603#0" expanded="true" />
+            <element signature="e#22654#22655#0" expanded="true" />
+            <element signature="e#22712#22713#0" expanded="true" />
+            <element signature="e#22764#22765#0" expanded="true" />
+            <element signature="e#24150#24151#0" expanded="true" />
+            <element signature="e#24209#24210#0" expanded="true" />
+            <element signature="e#24277#24278#0" expanded="true" />
+            <element signature="e#24323#24324#0" expanded="true" />
+            <element signature="e#24751#24752#0" expanded="true" />
+            <element signature="e#24804#24805#0" expanded="true" />
+            <element signature="e#24865#24866#0" expanded="true" />
+            <element signature="e#24917#24918#0" expanded="true" />
+            <element signature="e#24950#24951#0" expanded="true" />
+            <element signature="e#24980#24981#0" expanded="true" />
+            <element signature="e#25027#25028#0" expanded="true" />
+            <element signature="e#25065#25066#0" expanded="true" />
+            <element signature="e#25231#25232#0" expanded="true" />
+            <element signature="e#25260#25261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Mp3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="35" />
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/JoueurForme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/vue/FenetreExtensionGuitarHero.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="137" column="22" lean-forward="false" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
+        <state relative-caret-position="48">
+          <caret line="9" column="41" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="41" />
           <folding>
-            <element signature="e#5988#5989#0" expanded="true" />
-            <element signature="e#6022#6023#0" expanded="true" />
-            <element signature="e#6073#6074#0" expanded="true" />
-            <element signature="e#6119#6120#0" expanded="true" />
-            <element signature="e#6153#6154#0" expanded="true" />
-            <element signature="e#6184#6185#0" expanded="true" />
-            <element signature="e#6233#6234#0" expanded="true" />
-            <element signature="e#6273#6274#0" expanded="true" />
-            <element signature="e#6315#6316#0" expanded="true" />
-            <element signature="e#6350#6351#0" expanded="true" />
-            <element signature="e#6409#6410#0" expanded="true" />
-            <element signature="e#6457#6458#0" expanded="true" />
-            <element signature="e#6504#6505#0" expanded="true" />
-            <element signature="e#6544#6545#0" expanded="true" />
-            <element signature="e#6602#6603#0" expanded="true" />
-            <element signature="e#6647#6648#0" expanded="true" />
-            <element signature="e#6677#6678#0" expanded="true" />
-            <element signature="e#6705#6706#0" expanded="true" />
-            <element signature="e#6731#6732#0" expanded="true" />
-            <element signature="e#6757#6758#0" expanded="true" />
-            <element signature="e#6792#6793#0" expanded="true" />
-            <element signature="e#6822#6823#0" expanded="true" />
-            <element signature="e#6860#6861#0" expanded="true" />
-            <element signature="e#6894#6895#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1522#1523#0" expanded="true" />
+            <element signature="e#1550#1551#0" expanded="true" />
+            <element signature="e#1588#1589#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/vue/FenetreJeu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="81" column="8" lean-forward="false" selection-start-line="81" selection-start-column="8" selection-end-line="81" selection-end-column="8" />
+        <state relative-caret-position="220">
+          <caret line="173" column="65" lean-forward="false" selection-start-line="173" selection-start-column="60" selection-end-line="173" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#20391#20392#0" expanded="true" />
-            <element signature="e#20431#20432#0" expanded="true" />
+            <element signature="e#19126#19127#0" expanded="true" />
+            <element signature="e#19158#19159#0" expanded="true" />
+            <element signature="e#19193#19194#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19278#19279#0" expanded="true" />
+            <element signature="e#19324#19325#0" expanded="true" />
+            <element signature="e#19353#19354#0" expanded="true" />
+            <element signature="e#19382#19383#0" expanded="true" />
+            <element signature="e#19423#19424#0" expanded="true" />
+            <element signature="e#19459#19460#0" expanded="true" />
+            <element signature="e#19487#19488#0" expanded="true" />
+            <element signature="e#19514#19515#0" expanded="true" />
+            <element signature="e#19551#19552#0" expanded="true" />
+            <element signature="e#19583#19584#0" expanded="true" />
+            <element signature="e#19637#19638#0" expanded="true" />
+            <element signature="e#19691#19692#0" expanded="true" />
+            <element signature="e#19908#19909#0" expanded="true" />
+            <element signature="e#19948#19949#0" expanded="true" />
+            <element signature="e#20011#20012#0" expanded="true" />
+            <element signature="e#20069#20070#0" expanded="true" />
+            <element signature="e#20104#20105#0" expanded="true" />
+            <element signature="e#20135#20136#0" expanded="true" />
+            <element signature="e#20183#20184#0" expanded="true" />
+            <element signature="e#20223#20224#0" expanded="true" />
+            <element signature="e#20568#20569#0" expanded="true" />
+            <element signature="e#20599#20600#0" expanded="true" />
+            <element signature="e#20648#20649#0" expanded="true" />
+            <element signature="e#20688#20689#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jlayer/src/javazoom/jl/decoder/huffcodetab.java">
+    <entry file="file://$PROJECT_DIR$/src/model/RectangleForme.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1241">
-          <caret line="531" column="11" lean-forward="false" selection-start-line="531" selection-start-column="11" selection-end-line="531" selection-end-column="11" />
+        <state relative-caret-position="499">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ArcForme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="35" column="87" lean-forward="true" selection-start-line="35" selection-start-column="87" selection-end-line="35" selection-end-column="87" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlFenetreJeu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controleur/ControlClavierExtensionStroop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="106" column="0" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
           <folding />
         </state>
       </provider>

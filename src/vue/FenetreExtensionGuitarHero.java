@@ -24,8 +24,8 @@ public class FenetreExtensionGuitarHero extends JPanel{
     RectangleForme rectangleFormeJaune = new RectangleForme(Color.YELLOW);
     RectangleForme rectangleFormeVert = new RectangleForme(Color.GREEN);
     RectangleForme zoneDeValidation = new RectangleForme(Color.WHITE);
-    private boolean couleurBarre[] = new boolean[4];
-    private boolean validationCouleur[] = new boolean[4];
+    private boolean couleurBarre[] = new boolean[4]; // Choisir la couleur de la barre qui descend
+    private boolean validationCouleur[] = new boolean[4]; // Permet de valider la couleur, passe a true lors d'un appuie clavier
     private int score = 0;
     private boolean scoreBoolean = false;
 
@@ -45,8 +45,6 @@ public class FenetreExtensionGuitarHero extends JPanel{
     protected void paintComponent(Graphics g) {
         g.drawImage(imageFenetreExtension, 0, 0, getWidth(), getHeight(), this);
         Graphics2D g2d = (Graphics2D) g;
-
-
         g2d.setFont(new Font("TimesRoman",Font.PLAIN, 50));
         g2d.setColor(Color.WHITE);
         g2d.drawString("SCORE", 100, 100);
@@ -60,36 +58,34 @@ public class FenetreExtensionGuitarHero extends JPanel{
             Image imgBJ = ImageIO.read(new File("images\\rectangleJaune.png"));
             Image imgCoeur = ImageIO.read(new File("images\\coeur.png"));
             Image damier = ImageIO.read(new File("images\\damier.png"));
-
             g.drawImage(damier,20,850, this);
             g.drawImage(imgCoeur,430,50, this);
             zoneDeValidation.nouvellePosition(20, 850, 560, 20);
             zoneDeValidation.paintComponents(g2d);
 
-            if(couleurBarre[0]){
+            if(couleurBarre[0]){ // rouge
                 rectangleFormeRouge.nouvellePosition(50,-20 + defilementY,200,20);
                 g.drawImage(imgBR, 50 , -20+defilementY, this);
                 rectangleFormeRouge.paintComponents(g2d);
                 zoneDeValidation.areaA.intersect(rectangleFormeRouge.areaA);
-                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[0] ){
+                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[0] ){ // Si collision et la bonne touche est enfoncé (r)
                     g2d.drawString("YEAH !", 50, 800);
                     if(!scoreBoolean){
                         score++;
                         scoreBoolean = true;
                     }
-
                 }
                 else{
                     validationCouleur[0] = false;
                     scoreBoolean = false;
                 }
             }
-            if(couleurBarre[1]){
+            if(couleurBarre[1]){ // bleu
                 rectangleFormeBleu.nouvellePosition(150,-20 + defilementY,200,20);
                 g.drawImage(imgBB, 150 , -20+defilementY, this);
                 rectangleFormeBleu.paintComponents(g2d);
                 zoneDeValidation.areaA.intersect(rectangleFormeBleu.areaA);
-                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[1] ){
+                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[1] ){ // Si collision et la bonne touche est enfoncé (b)
                     g2d.drawString("YEAH !", 150, 800);
                     if(!scoreBoolean){
                         score++;
@@ -101,12 +97,12 @@ public class FenetreExtensionGuitarHero extends JPanel{
                     scoreBoolean = false;
                 }
             }
-            if(couleurBarre[2]){
+            if(couleurBarre[2]){ // vert
                 rectangleFormeVert.nouvellePosition(250,-20 + defilementY,200,20);
                 g.drawImage(imgBV, 250 , -20+defilementY, this);
                 rectangleFormeVert.paintComponents(g2d);
                 zoneDeValidation.areaA.intersect(rectangleFormeVert.areaA);
-                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[2] ){
+                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[2] ){ // Si collision et la bonne touche est enfoncé (v)
                     g2d.drawString("YEAH !", 250, 800);
                     if(!scoreBoolean){
                         score++;
@@ -118,12 +114,12 @@ public class FenetreExtensionGuitarHero extends JPanel{
                     scoreBoolean = false;
                 }
             }
-            if(couleurBarre[3]){
+            if(couleurBarre[3]){ // jaune
                 rectangleFormeJaune.nouvellePosition(350,-20 + defilementY,200,20);
                 g.drawImage(imgBJ, 350 , -20+defilementY, this);
                 rectangleFormeJaune.paintComponents(g2d);
                 zoneDeValidation.areaA.intersect(rectangleFormeJaune.areaA);
-                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[3] ){
+                if((!zoneDeValidation.areaA.isEmpty()) && validationCouleur[3] ){ // Si collision et la bonne touche est enfoncé (j)
                     g2d.drawString("YEAH !", 350, 800);
                     if(!scoreBoolean){
                         score++;
@@ -136,8 +132,7 @@ public class FenetreExtensionGuitarHero extends JPanel{
                 }
             }
             repaint();
-            if(score%4 == 0 && score!=0 && score!=16){
-
+            if(score%4 == 0 && score!=0 && score!=16){ // affiche le message tout les 4 points.
                 g2d.drawString("PLUS VITE",200,200);
             }
         } catch (IOException e) {
@@ -145,45 +140,34 @@ public class FenetreExtensionGuitarHero extends JPanel{
         }
     }
 
+    /* GETTER SETTER */
     public int getDefilementY() {
         return defilementY;
     }
-
     public void setDefilementY(int defilementY) {
         this.defilementY = defilementY;
     }
     public boolean isArretJeu() {
         return arretJeu;
     }
-
     public void setArretJeu(boolean arretJeu) {
         this.arretJeu = arretJeu;
     }
-
     public boolean[] getCouleurBarre() {
         return couleurBarre;
     }
-
     public void setCouleurBarre(boolean[] couleurBarre) {
         this.couleurBarre = couleurBarre;
     }
-
-    public boolean[] getValidationCouleur() {
-        return validationCouleur;
-    }
-
     public void setValidationCouleur(int i, boolean b) {
         this.validationCouleur[i] = b;
     }
-
-
     public int getScore() {
         return score;
     }
     public int getVie() {
         return vie;
     }
-
     public void setVie(int vie) {
         this.vie = vie;
     }

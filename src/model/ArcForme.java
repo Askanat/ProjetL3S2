@@ -35,7 +35,7 @@ public class ArcForme extends JPanel{
         b = false;
         arc = new Arc2D.Double(posX, posY, tailleX, tailleY, start, angle, Arc2D.OPEN);
     }
-
+    /* Permet de creer area a partir d'une shape, utile lorsque l'arc rotate */
     public void nouvelleArea(Shape shape){
         b = true;
         this.shape =  shape;

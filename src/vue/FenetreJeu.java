@@ -23,7 +23,6 @@ public class FenetreJeu extends JPanel {
     private int posX = 0;
     private int posY = 0;
     private int defilementY = -200;
-    private int defilementX = 0;
     private int defilementRondChangementCouleur = -1100;
     private int defilementFigureX =0;
     private boolean etoileUnSeulPointScore = false;
@@ -34,8 +33,6 @@ public class FenetreJeu extends JPanel {
     private int degree = 0;
     public Bouton retour, menu;
     private Image imageFenetreJeu;
-    private int score;
-
     JoueurForme bille = new JoueurForme();
     RectangleForme rectangleFormeRouge = new RectangleForme(Color.RED);
     RectangleForme rectangleFormeBleu = new RectangleForme(Color.BLUE);
@@ -47,26 +44,21 @@ public class FenetreJeu extends JPanel {
     RectangleForme rectangleFormeVert2 = new RectangleForme(Color.GREEN);
     RectangleForme etoileRectangleForme = new RectangleForme(Color.WHITE);
     RectangleForme rondChangementCouleurRectangleForme = new RectangleForme(Color.WHITE);
-
     ArcForme arcFormeRouge = new ArcForme(Color.RED);
     ArcForme arcFormeBleu = new ArcForme(Color.BLUE);
     ArcForme arcFormeJaune = new ArcForme(Color.YELLOW);
     ArcForme arcFormeVert = new ArcForme(Color.GREEN);
 
     public FenetreJeu(Jeu jeu) {
-
         this.jeu = jeu;
         imageFenetreJeu = getToolkit().getImage("images\\espace.jpg");
         this.setLayout(null);
         this.setPreferredSize(new Dimension(X, Y));
-
         for(int i = 0; i< choixFigure.length; i++){
             choixFigure[i] = false;
         }
-
         menu = new Bouton("");
         menu.setActionCommand("Menu");
-
         this.add(menu);
     }
 
@@ -77,13 +69,11 @@ public class FenetreJeu extends JPanel {
     protected void paintComponent(Graphics g) {
         // Le rond du joueur
         g.drawImage(imageFenetreJeu, 0, 0, getWidth(), getHeight(), this);
-
         g.setColor(bille.getCouleur());
         g.fillOval(this.getWidth()/2-15-posX, this.getHeight()-30- posY, 30, 30);
         Graphics2D g2d = (Graphics2D)g;
         bille.paintComponent(g);
         bille.nouvellePosition(this.getWidth()/2-20-posX, this.getHeight()-40- posY);
-
 
         try {
             Image imgBR = ImageIO.read(new File("images\\rectangleRouge.png"));
@@ -93,8 +83,7 @@ public class FenetreJeu extends JPanel {
             Image imgEtoile = ImageIO.read(new File("images\\etoile.png"));
             Image imgRondChangementCouleur = ImageIO.read(new File("images\\rondChangementCouleur.png"));
 
-
-            // rond Changement Couleur
+            /* Rond changement couleur */
                 rondChangementCouleurRectangleForme.nouvellePosition(this.getWidth() / 2 - 20,defilementRondChangementCouleur, 40, 40 );
                 rondChangementCouleurRectangleForme.paintComponents(g);
                 if(bille.testIntersection(rondChangementCouleurRectangleForme.areaA)){
@@ -108,11 +97,8 @@ public class FenetreJeu extends JPanel {
                         g.drawImage(imgRondChangementCouleur, this.getWidth() / 2 - 20, defilementRondChangementCouleur, this);
                     }
                 }
-
-
-
-           if (defilementY > -200 && choixFigure[0]) { /////// barres ///////
-
+                /////// barres ///////
+           if (defilementY > -200 && choixFigure[0]) {
                rectangleFormeRouge.nouvellePosition(0-defilementFigureX, defilementY, 200, 20);
                rectangleFormeRouge.paintComponents(g);
                rectangleFormeBleu.nouvellePosition(200-defilementFigureX, defilementY,200, 20);
@@ -130,7 +116,6 @@ public class FenetreJeu extends JPanel {
                rectangleFormeJaune2.nouvellePosition(1400-defilementFigureX, defilementY,200, 20);
                rectangleFormeJaune2.paintComponents(g);
 
-
                g.drawImage(imgBR, 0 - defilementFigureX , defilementY, this);
                g.drawImage(imgBB, 200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBV, 400 - defilementFigureX, defilementY, this);
@@ -139,10 +124,10 @@ public class FenetreJeu extends JPanel {
                g.drawImage(imgBB, 1000 - defilementFigureX , defilementY, this);
                g.drawImage(imgBV, 1200 - defilementFigureX , defilementY, this);
                g.drawImage(imgBJ, 1400 - defilementFigureX , defilementY, this);
-
-              if((bille.testIntersection(rectangleFormeRouge.areaA) || bille.testIntersection(rectangleFormeRouge2.areaA))  && (bille.getCouleur() != Color.RED)){
-                  arretJeu =true;
-              }
+               /* Collision */
+               if((bille.testIntersection(rectangleFormeRouge.areaA) || bille.testIntersection(rectangleFormeRouge2.areaA))  && (bille.getCouleur() != Color.RED)){
+                   arretJeu =true;
+               }
                if((bille.testIntersection(rectangleFormeBleu.areaA) || bille.testIntersection(rectangleFormeBleu2.areaA))  && (bille.getCouleur() != Color.BLUE)){
                    arretJeu =true;
                }
@@ -155,9 +140,9 @@ public class FenetreJeu extends JPanel {
            }
 
             AffineTransform old = g2d.getTransform();
-
-           if (defilementY > -200 && choixFigure[1]) {/////// un cercle ///////
-
+            /////// un cercle ///////
+           if (defilementY > -200 && choixFigure[1]) {
+               /* Etoile du score */
                etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
                etoileRectangleForme.paintComponents(g);
                if(bille.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
@@ -171,12 +156,6 @@ public class FenetreJeu extends JPanel {
                }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2, defilementY);
-                // 4 morceaux d'un cercle qui tourne
-               /* g2d.drawImage(imgCJ, this.getWidth() / 2, defilementY, this);//109 = taille de l'image
-                g2d.drawImage(imgCV, this.getWidth() / 2 - 109, defilementY, this);
-                g2d.drawImage(imgCR, this.getWidth() / 2, defilementY - 109, this);
-                g2d.drawImage(imgCB, this.getWidth() / 2 - 109, defilementY - 109, this);*/
-
                AffineTransform a = new AffineTransform();
                AffineTransform b = new AffineTransform();
                AffineTransform c = new AffineTransform();
@@ -185,7 +164,6 @@ public class FenetreJeu extends JPanel {
                b.rotate(Math.toRadians(90+degree),this.getWidth() / 2 , defilementY);
                c.rotate(Math.toRadians(180+degree),this.getWidth() / 2 , defilementY);
                d.rotate(Math.toRadians(270+degree),this.getWidth() / 2 , defilementY);
-
                arcFormeRouge.nouvellePosition(this.getWidth()/2-150,defilementY-150, 300, 300, 0, 90);
                arcFormeRouge.nouvelleArea(a.createTransformedShape(arcFormeRouge.arc));
                arcFormeRouge.paintComponents(g);
@@ -198,7 +176,7 @@ public class FenetreJeu extends JPanel {
                arcFormeJaune.nouvellePosition(this.getWidth()/2-150, defilementY-150, 300, 300, 270, 90);
                arcFormeJaune.nouvelleArea(a.createTransformedShape(arcFormeJaune.arc));
                arcFormeJaune.paintComponents(g);
-
+                /* Collision */
                if((bille.testIntersection(arcFormeRouge.areaA)) && (bille.getCouleur() != Color.RED)){
                    arretJeu =true;
                }
@@ -213,9 +191,9 @@ public class FenetreJeu extends JPanel {
                }
             }
             g2d.setTransform(old);
-
-
-            if (defilementY > -200 && choixFigure[2]){/////// un carré ///////
+           /////// un carré ///////
+            if (defilementY > -200 && choixFigure[2]){
+                /* Etoile du score */
                 etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
                 etoileRectangleForme.paintComponents(g);
                 if(bille.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
@@ -229,7 +207,6 @@ public class FenetreJeu extends JPanel {
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 , defilementY);
-
                 g2d.drawImage(imgBB, this.getWidth() / 2 - 100, 80 + defilementY, this);
                 g2d.drawImage(imgBV, this.getWidth() / 2 - 100, defilementY - 100, this);
                 g2d.rotate((Math.toRadians(90)), this.getWidth() / 2, defilementY);
@@ -246,7 +223,6 @@ public class FenetreJeu extends JPanel {
                 b.rotate(Math.toRadians(0+degree),this.getWidth() / 2 , defilementY);
                 c.rotate(Math.toRadians(90+degree),this.getWidth() / 2 , defilementY);
                 d.rotate(Math.toRadians(90+degree),this.getWidth() / 2 , defilementY);
-
                 rectangleFormeBleu.nouvellePosition(this.getWidth() / 2 - 100, 80+defilementY,200 , 20);
                 rectangleFormeBleu.nouvelleArea(a.createTransformedShape(rectangleFormeBleu.barre));
                 rectangleFormeBleu.paintComponents(g2d);
@@ -259,7 +235,7 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY - 100,200 , 20);
                 rectangleFormeJaune.nouvelleArea(d.createTransformedShape(rectangleFormeJaune.barre));
                 rectangleFormeJaune.paintComponents(g2d);
-
+                /* Collision */
                 if((bille.testIntersection(rectangleFormeRouge.areaA)) && (bille.getCouleur() != Color.RED)){
                     arretJeu =true;
                 }
@@ -273,10 +249,9 @@ public class FenetreJeu extends JPanel {
                     arretJeu =true;
                 }
             }
-
-
-            if (defilementY > -200 && choixFigure[3]) { /////// une croix ///////
-
+            /////// une croix ///////
+            if (defilementY > -200 && choixFigure[3]) {
+                /*Etoile du score */
                 etoileRectangleForme.nouvellePosition(this.getWidth() / 2 - 20, defilementY - 19, 40, 40);
                 etoileRectangleForme.paintComponents(g);
                 if(bille.testIntersection(etoileRectangleForme.areaA)){//collision pour l'étoile
@@ -290,7 +265,6 @@ public class FenetreJeu extends JPanel {
                 }
 
                 g2d.rotate((Math.toRadians(degree)), this.getWidth() / 2 - 100, defilementY);
-
                 g2d.drawImage(imgBR, this.getWidth() / 2 - 100, defilementY, this);
                 rectangleFormeRouge.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
                 rectangleFormeRouge.paintComponents(g2d);
@@ -307,7 +281,6 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200, 20);
                 rectangleFormeJaune.paintComponents(g2d);
 
-
                 AffineTransform a = new AffineTransform();
                 AffineTransform b = new AffineTransform();
                 AffineTransform c = new AffineTransform();
@@ -316,7 +289,6 @@ public class FenetreJeu extends JPanel {
                 b.rotate(Math.toRadians(90+degree),this.getWidth() / 2 - 100, defilementY);
                 c.rotate(Math.toRadians(180+degree),this.getWidth() / 2 - 100, defilementY);
                 d.rotate(Math.toRadians(270+degree),this.getWidth() / 2 - 100, defilementY);
-
                 rectangleFormeRouge.nouvellePosition(this.getWidth() / 2 - 100, defilementY, 200 , 20);
                 rectangleFormeRouge.nouvelleArea(a.createTransformedShape(rectangleFormeRouge.barre));
                 rectangleFormeRouge.paintComponents(g2d);
@@ -329,7 +301,7 @@ public class FenetreJeu extends JPanel {
                 rectangleFormeJaune.nouvellePosition(this.getWidth() / 2 - 100, defilementY,200 , 20);
                 rectangleFormeJaune.nouvelleArea(d.createTransformedShape(rectangleFormeJaune.barre));
                 rectangleFormeJaune.paintComponents(g2d);
-
+                /* Collision */
                 if((bille.testIntersection(rectangleFormeRouge.areaA)) && (bille.getCouleur() != Color.RED)){
                     arretJeu =true;
                 }
@@ -345,7 +317,6 @@ public class FenetreJeu extends JPanel {
             }
             g2d.setTransform(old);
             if(arretJeu){
-
                 g2d.setFont(new Font("TimesRoman",Font.PLAIN, 50));
                 g2d.setColor(Color.WHITE);
                 g2d.drawString("Score " + String.valueOf(bille.getScore()) ,50, 50);
@@ -356,7 +327,7 @@ public class FenetreJeu extends JPanel {
         }
     }
 
-    // Getters Setters
+    /* GETTER SETTER */
     public void setPosX(int posX) {
         this.posX = posX;
     }
@@ -413,9 +384,6 @@ public class FenetreJeu extends JPanel {
         this.rondChangementCouleurUnSeul = rondChangementCouleurUnSeul;
     }
 
-    public int getPosX() {
-        return posX;
-    }
     public boolean isGraviter() {
         return graviter;
     }

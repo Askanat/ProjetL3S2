@@ -10,11 +10,8 @@ import java.io.FileNotFoundException;
 
 public class Mp3 {
     private FileInputStream fileInputStream;
-
     private Player player;
-
     public Mp3(String cheminAcces){
-
         try {
             fileInputStream = new FileInputStream(cheminAcces);
             player = new Player(fileInputStream);

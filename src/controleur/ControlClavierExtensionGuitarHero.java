@@ -7,8 +7,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class ControlClavierExtensionGuitarHero extends Control implements KeyListener {
-    String conteneurUneLettre = "";
-    String resultat = "";
 
     public ControlClavierExtensionGuitarHero(Jeu jeu, Fenetre fenetre){
         super(jeu, fenetre);
@@ -17,14 +15,12 @@ public class ControlClavierExtensionGuitarHero extends Control implements KeyLis
 
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
+
     @Override
     public void keyPressed(KeyEvent e) {
-
         int key = e.getKeyCode();
-        char lettre = e.getKeyChar();
-
+        /* Lors d'un appuie de la touche la valeur correspondant dans le tableau prend true */
         if (key == KeyEvent.VK_R) {
             fenetre.panelFenetreExtensionGuitarHero.setValidationCouleur(0, true);
         }
@@ -37,7 +33,7 @@ public class ControlClavierExtensionGuitarHero extends Control implements KeyLis
         if (key == KeyEvent.VK_J) {
             fenetre.panelFenetreExtensionGuitarHero.setValidationCouleur(3, true);
         }
-        if (key == KeyEvent.VK_ESCAPE) {
+        if (key == KeyEvent.VK_ESCAPE) { // Permet de quitter le jeu une fois la partie terminé.
             if (fenetre.panelFenetreExtensionGuitarHero.isArretJeu()) {
                 fenetre.setContentPane(fenetre.panelMenuPrincipal);
                 fenetre.setFinMusiqueMenu(false);
@@ -46,11 +42,9 @@ public class ControlClavierExtensionGuitarHero extends Control implements KeyLis
                 changerVue();
             }
         }
-
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
 }

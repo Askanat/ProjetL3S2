@@ -18,12 +18,10 @@ public class ControlSouris extends Control implements MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
-
     }
 
     @Override
     public void mouseMoved(MouseEvent e) {
-
             x = e.getX();
             y = e.getY();
         if (!fenetre.isClavier()) {
