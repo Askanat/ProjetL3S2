@@ -68,7 +68,7 @@ public class FenetreScore extends JPanel {
         g1.drawString("Scores",275, 200);
 
 
-        for (int i = 0; i < 65535; i++){
+        for (int i = 0; i < 10; i++){
             Graphics2D g2 = (Graphics2D) g;
             g2.setFont(new Font("TimesRoman",Font.PLAIN, 20));
             g2.setColor(Color.white);

@@ -27,7 +27,7 @@ public class ControlFenetreScores extends Control implements ActionListener {
                 System.out.println(score);
                 jeu.scoreFile.writeScore(pseudo, score);
                 jeu.scoreFile.orderScore();
-                fenetre.panelFenetreScore.repaint();
+                fenetre.panelFenetreScore.updateUI();
                 break;
         }
     }

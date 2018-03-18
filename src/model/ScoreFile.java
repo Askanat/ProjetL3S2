@@ -62,33 +62,36 @@ public class ScoreFile {
         int partsi  = 0;
         int partsis = 0 ;
         readScore();
-        for (int i = 0 ; i < scores.length ; i++){
-            if(i <  scores.length && scores[i] != null){
-                parti        = scores[i].split(" ");
-                partsi       = Integer.parseInt(parti[1]);
-                if(i <  scores.length && scores[i+1] != null){
-                    parti2   = scores[i+1].split(" ");
-                    partsis  = Integer.parseInt(parti2[1]);
-                }
-                if (partsi < partsis){
-                    String tampon[] = new String[1];
-                    tampon[0] = scores[i];
-                    if(scores[i+1] != null) {
-                        scores[i] = scores[i + 1];
-                        setScores(scores[i], i);
-                        scores[i + 1] = tampon[0];
-                        setScores(scores[i + 1], i + 1);
+        int j = nbrTour();
+
+        while(j > 0){
+            for (int i = 0 ; i < scores.length ; i++){
+                if(i <  scores.length && scores[i] != null){
+                    parti        = scores[i].split(" ");
+                    partsi       = Integer.parseInt(parti[1]);
+                    if(i <  scores.length && scores[i+1] != null){
+                        parti2   = scores[i+1].split(" ");
+                        partsis  = Integer.parseInt(parti2[1]);
                     }
-                    //System.out.println(scores[i]);
-                    //System.out.println(scores[i+1]);
+                    if (partsi < partsis){
+                        String tampon[] = new String[1];
+                        tampon[0] = scores[i];
+                        if(scores[i+1] != null) {
+                            scores[i] = scores[i + 1];
+                            setScores(scores[i], i);
+                            scores[i + 1] = tampon[0];
+                            setScores(scores[i + 1], i + 1);
+                        }
+                    }
                 }
             }
+            j--;
         }
     }
 
     public void setScores(String line, int i){
         this.scores[i] = line;
-        //System.out.println(scores[i]);
+        // System.out.println(scores[i]);
     }
 
     public void setScore(int score){
@@ -99,5 +102,8 @@ public class ScoreFile {
         return score;
     }
 
-
+    public int nbrTour(){
+        int nombre = (int)(scores.length/3);
+        return nombre;
+    }
 }
