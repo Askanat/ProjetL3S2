@@ -12,6 +12,7 @@ public class ArcForme extends JPanel{
     public Area areaA;
     public Shape shape;
     boolean b = false;
+    public boolean b2 = false;
 
     public ArcForme(Color couleur){
         this.couleur = couleur;
@@ -34,6 +35,7 @@ public class ArcForme extends JPanel{
     public void nouvellePosition (int posX, int posY, int tailleX, int tailleY, int start, int angle){
         b = false;
         arc = new Arc2D.Double(posX, posY, tailleX, tailleY, start, angle, Arc2D.OPEN);
+
     }
     /* Permet de creer area a partir d'une shape, utile lorsque l'arc rotate */
     public void nouvelleArea(Shape shape){
